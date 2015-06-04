@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'kiosk_cms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'kiosk_cms',
         'USER': 'intern',
         'PASSWORD': 'cgrocks',
