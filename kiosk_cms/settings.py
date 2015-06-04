@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'kiosk_cms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgres_psycopg2',
+        'NAME': 'kiosk_cms',
+        'USER': 'intern',
+        'PASSWORD': 'cgrocks',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
