@@ -1,28 +1,33 @@
 # intern-cms
 
-To set up python's virtualenv, run
+### Project Setup
+First copy .bash_profile to your root directory with
 ```
-pip install -r virtual.txt
+cp .bash_profile ~/
 ```
 
-When virtualenv is installed, create a virtualenv called intern-cms by running
+To set up python's virtualenv, run
+```
+sudo pip install -r virtual.txt
+```
+
+Once virtualenv is installed, create a virtualenv called intern-cms by running
 ```
 mkvirtualenv intern-cms
 ```
-and then install the project packages by running
+then install the project packages by running
 
-``` 
+```
 pip install -r requirements.txt
 ```
 
-To set up the Postgres database, in console run
+To set up the Postgres database, from the repo root run
 ```
 bash postgres.sh
 ```
- from the repo root.
 
-Then run
+Then run a DB migration with
 ```
 python manage.py migrate
 ```
- to run the DB migration.
+#
