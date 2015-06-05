@@ -2,8 +2,10 @@ var voteContent;
 var galleryContent;
 var submitContent;
 var aboutContent;
+var displaySetting;
 
 function voteButton() {
+	console.log("here");
 	//get the content
 	voteContent = document.getElementById("vote"); 
 	//get the current value of the display
@@ -11,16 +13,20 @@ function voteButton() {
 	//button text
 	var voteButton = document.getElementById('voteButton');
 	//make content conditionaly visible
+	console.log("before if/else");
 	if (displaySetting === 'none') {
+		console.log("here now");
 		//meaning the vote page is not visible
 		voteContent.style.display = 'block';
 		//change text on button
 		voteButton.innerHTML = 'HIDE VOTE';
 	}
 	else {
+		console.log("else");
 		voteContent.style.display = 'none';
 		//change text on button
 		voteButton.innerHTML = 'SHOW VOTE';
+		return displaySetting;
 	}
 }
 

@@ -2,8 +2,8 @@
     display: none;
 }
 
-#vote{
-    display: none;
+#vote {
+    display: block;
 }
 #gallery{
     display: none;
@@ -29,11 +29,13 @@
     font-size: 15px;
 }
 
+
+
 #voteButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: red;
+    background-color: #476BB2;
     font-size: 15px;
 }
 
@@ -41,21 +43,21 @@
     height: 100%;
     width: 20%;
     border: none;
-    background-color: yellow;
+    background-color: #476BB2;
     font-size: 15px;
 }
 #galleryButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: green;
+    background-color: #476BB2;
     font-size: 15px;
 }
 #aboutButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: purple;
+    background-color: #476BB2;
     font-size: 15px;
 }
 
@@ -101,4 +103,7 @@ h1 {
     font-size: 50px;
     text-align: center;
 }
+
+
+
 
