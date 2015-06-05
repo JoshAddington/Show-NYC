@@ -37,6 +37,28 @@
     font-size: 15px;
 }
 
+#submitButton{
+    height: 100%;
+    width: 20%;
+    border: none;
+    background-color: yellow;
+    font-size: 15px;
+}
+#galleryButton{
+    height: 100%;
+    width: 20%;
+    border: none;
+    background-color: green;
+    font-size: 15px;
+}
+#aboutButton{
+    height: 100%;
+    width: 20%;
+    border: none;
+    background-color: purple;
+    font-size: 15px;
+}
+
 .tabs:hover {
     background: #5C8AE6;
 }
