@@ -10,10 +10,6 @@ $(document).ready(function() {
     }); 
   });
 
-  $("h2").mouseenter(function(){
-    $("h2").css("color", "red");
-});
-
   $('#voteButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -53,7 +49,5 @@ $(document).ready(function() {
       $('#about').show();
       }
    }); 
-
-
 
 });
