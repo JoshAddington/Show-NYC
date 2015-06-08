@@ -7,3 +7,6 @@ class Image(models.Model):
     user_id = models.ForeignKey('auth.User')
     flagged = models.BooleanField(default=False)
     campaign_id = models.ForeignKey('campaigns.Campaign')
+
+    def __str__(self):
+    	return self.image.name
