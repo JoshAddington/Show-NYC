@@ -39,11 +39,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
-INSTALLED_APPS += (
-    'images',
-    'campaigns',
-)
-
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
