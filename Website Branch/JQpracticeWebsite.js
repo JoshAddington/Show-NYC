@@ -1,14 +1,18 @@
 $(document).ready(function() {
-  $('h1').mouseenter(function() {
+  $('.tabs').mouseenter(function() {
     $(this).animate({
       height: '+=10px'
     });
   });
-  $('h1').mouseleave(function() {
+  $('.tabs').mouseleave(function() {
     $(this).animate({
       height: '-=10px'
     }); 
   });
+
+  $("h2").mouseenter(function(){
+    $("h2").css("color", "red");
+});
 
   $('#voteButton').click(function() {
     var condition = true;
@@ -49,5 +53,7 @@ $(document).ready(function() {
       $('#about').show();
       }
    }); 
+
+
 
 });
