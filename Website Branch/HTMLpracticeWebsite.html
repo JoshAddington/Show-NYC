@@ -1,85 +1,67 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <!--Links-->
     <link href="demo.css" rel="stylesheet">
     <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
+    <!--Header-->
+    <header>
     <h1>SHOW NYC</h1>
-</head>
-
-<body>
-
-    <div class = "menu">
-        <div class = "icon-close">
-            <img src="https://cdn4.iconfinder.com/data/icons/flat-black/128/menu.png">
+    <div class = "menu"> <!--Slide out menu option--> <!--Right now the slide out menu is otu when the page initially loads-->
+        <div class = "icon-close"> <!--This image belongs on the header-->
+            <strong>M E N U</strong>
         </div>
-
-        <ul>
-            <li><a href="#">VOTE</a></li>
-            <li><a href="#">GALLERY</a></li>
-            <li><a href="#">SUBMIT</a></li>
-            <li><a href="#">ABOUT</a></li>
+        <ul> <!--Four menu options--> <!--These need to be made clickable-->
+            <li><a href="#">V O T E</a></li>
+            <li><a href="#">G A L L E R Y</a></li>
+            <li><a href="#">S U B M I T</a></li>
+            <li><a href="#">A B O U T</a></li>
         </ul>
     </div>
-    <!--main body-->
-    <div class = "jumbotron">
+    <div class = "slide-menu">
         <div class = "icon-menu">
-            <i class = fa fa-bars>Menu</i>
+            <img src="http://nerdsrpg.com/img/menu.png">             <!--Change the string "menu" to a menu icon-->
         </div>
     </div>
+    <header>
+</head>
 
-    <div id = "tabs">
+<body> <!--Main body-->
+    <!--Buttons-->
+    <div class= "tabs"> <!--Ultimately need to get rid of these buttons-->
         <button id = "voteButton" type = "button"> V O T E</button>
         <button id = "galleryButton" type = "button" > G A L L E R Y</button>
         <button id = "submitButton" type = "button" >S U B M I T</button>
         <button id = "aboutButton" type = "button" > A B O U T</button>
     </div>
-    
+    <!--Vote page-->                       <!--There is not voting functionality as of right now-->
     <div id = "vote" class = "wrap">
-        <h2 align = "center">Smorgasburg</h2>
-        <h3 align = "center">A BROOKLYN FLEA FOOD MARKET</h3>
-        <div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom">
-            <img src="http://static1.businessinsider.com/image/51cdace76bb3f7ff53000001-400-300/chow-down-at-brooklyn-fleas-smorgasburg-the-weekly-food-festival-that-takes-place-on-saturday-afternoons-on-the-williamsburg-and-dumbo-waterfronts.jpg">
-            <img src="http://static2.uk.businessinsider.com/image/551eafdedd0895dc258b462e-400-300/sample-some-of-the-best-treats-nyc-restaurants-have-to-offer-at-smorgasburg-which-returns-april-4th-and-continues-every-weekend-till-november.jpg">
-            <img src="http://4.bp.blogspot.com/-OFBozJ4mP9I/TiNoo68HHxI/AAAAAAAAAuI/fTAoh3zNGHI/s400/ginger+mint.jpg">
-            <img src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/0a/df/0adf8f19cae0087b916dfba9429a2b64.JPG?itok=-PJnexuU">
+        <h2 align = "center">CAMPAIGN TITLE</h2> 
+        <h3 align = "center">LINE ABOUT THE CAMPAIGN/CAMPAIGN SLOGAN</h3> <!--Do we want this additional line?-->
+        <div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom"> <!--Automatically moving photo gallery-->
             <img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
             <img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
             <img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
         </div>
     </div>
-    
-    <div id = "gallery">
+    <!--Gallery page-->
+    <div id = "gallery">               <!--There should ultimately be a grid plugin for this page-->
         <h2 align = "center">Gallery page</h2>
         <p align = "center">ALL SUBMITTED CONTENT</p>
-        <div class="fotorama" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-shuffle = "true" data-swipe = "true" data-arrows = "true" data-click = "true" align = "center">
-            <img src="http://static1.businessinsider.com/image/51cdace76bb3f7ff53000001-400-300/chow-down-at-brooklyn-fleas-smorgasburg-the-weekly-food-festival-that-takes-place-on-saturday-afternoons-on-the-williamsburg-and-dumbo-waterfronts.jpg">
-            <img src="http://static2.uk.businessinsider.com/image/551eafdedd0895dc258b462e-400-300/sample-some-of-the-best-treats-nyc-restaurants-have-to-offer-at-smorgasburg-which-returns-april-4th-and-continues-every-weekend-till-november.jpg">
-            <img src="http://4.bp.blogspot.com/-OFBozJ4mP9I/TiNoo68HHxI/AAAAAAAAAuI/fTAoh3zNGHI/s400/ginger+mint.jpg">
-            <img src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/0a/df/0adf8f19cae0087b916dfba9429a2b64.JPG?itok=-PJnexuU">
-            <img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
-            <img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
-            <img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
+        <div class="fotorama" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-shuffle = "true" data-swipe = "true" data-arrows = "true" data-click = "true" align = "center"><!--Automatically moving photo gallery--> <!--This is the same gallery as the vote page-->
             <img src="http://www.beautyofnyc.org/HighLine/Assets/IMG_4036-sm.jpg">
             <img src="http://imagesus.homeaway.com/mda01/742a2594-4ec5-4491-afaf-0c1a91f5c4c4.1.6">
             <img src="http://i56.tinypic.com/11t4x6t.jpg">
-            <img src="https://s-media-cache-ak0.pinimg.com/736x/06/d2/a3/06d2a3017cce21312c9e6dadc3bf9f35.jpg">
-            <img src="http://4.bp.blogspot.com/_xsbK1Gf9eRk/SklQIbSrAJI/AAAAAAAAAdg/VrBghyu2r8A/s400/Bertol-NYC-HighLine-090611+(2).jpg">
-            <img src="http://tclf.org/sites/default/files/blog/CityShapingIV/NY----NYC---High-Line-07-09-049.jpg">
-            <img src="http://1.bp.blogspot.com/_xsbK1Gf9eRk/SklQIkBrxmI/AAAAAAAAAdw/78QIHYORiwo/s400/Bertol-NYC-HighLine-090611+(12).jpg">
-            <img src="http://photos2.demandstudios.com/DM-Resize/photos.demandstudios.com/getty/article/199/81/174280032_XS.jpg?w=1200&h=630&crop_min=1&keep_ratio=1">
-            <img src="https://res.cloudinary.com/relay-foods/image/upload/q_40,h_300,w_400,c_fill/2UHTPEWXE9V4.JPG">
-            <img src="https://res.cloudinary.com/relay-foods/image/upload/q_40,h_300,w_400,c_fill/TG43TLS2U9HM.JPG">
-            <img src="http://www.foodielovesfitness.com/wp-content/uploads/2012/11/pomegranate-3-400x300.jpg">
             <img src="http://fyi.uwex.edu/safepreserving/files/2014/04/yogurt.jpg">
         </div>
     </div>
-
+    <!--Submit page-->
     <div id = "submit">
         <h2 align = "center">Submit page</h2>
         <p align = "center">S U B M I T -- T E X T</p>
-        <p>Animated photo banner</p>
-        <div class = "slide">
+        <p>Animated photo banner</p> <!--This photo banner does not belong on this page-->
+        <div class = "slide">            <!--The banner is not functioning properly-->
             <img src="http://media.bonnint.net/seattle/9/924/92408.jpg">
             <img src="http://associatesmind.com/wp-content/uploads/2012/08/number-two-law.jpeg">
             <img src="http://www.userlogos.org/files/logos/aameerp/3-logo.gif">
@@ -92,18 +74,18 @@
             <img src="http://playrific.com/images/media/1_10rhymingnumbers.jpg">
         </div>  
     </div>
-
+    <!--About page-->
     <div id="about">
-        <h2 align = "center">About page</h2>
+        <h2 align = "center">About page</h2>       <!--The about page has all of its needed place holder text-->
         <div>
-            <br>
+            <br>                                   <!--The general layout of the page needs to be worked on-->
             <h3>Get your photo on the MTA Kiosks!</h3>
             <p>Each week a contest will be lauched by a different sponsoring company, and those companies are looking for <em>your</em> photos!  Be sure to submit photos relevant to that week's specified company. You can submit photos on both our website and mobile app in hopes that your best shot will make it onto all 140 kiosk screens to be seen by millions of New York City subway riders. Remember to vote for your favorite photo and see if it makes it onto the big screen in the big apple!</p>
             <br>
             <br>
         </div>
         <div id = "centerCenter">
-            <h3>Check Out Past Campaign Winners</h3>
+            <h3>Check Out Past Campaign Winners</h3>            <!--The option to learn more about the content on the page still needs to be added-->
             <h4>CAMPAIGN ONE TITLE</h4>
             <img src="http://www.vintechnology.com/journal/wp-content/uploads/2011/04/times-square-new-york.jpg" align: "center">
             <br>

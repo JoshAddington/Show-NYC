@@ -1,208 +1,147 @@
-/*inital display*/
+body {                                        /*Body*/
+  font-family: 100% "Changa One";
+  font-size: 16px;
+  background-color: white; 
+  color: black; 
+  padding: 18px;
+  background: white;
+  left: 0;
+  margin: 0;}
+h1 {                                               /*Heading 1*/ 
+  font-family: 100% "Changa One";
+  color: white;
+  font-size: 50px;
+  text-align: center;}
+h2 {                                               /*Heading 2*/
+  font-family: 100% "Changa One";
+  color: white;
+  font-size: 30px;
+  background-color: #7A0000;}
+h3 {                                               /*Heading 3*/
+  font-family: 100% "Changa One";
+  font-size: 20px;
+  font-style: italic;
+  color: #7A0000;
+  text-align: center;}
+h4 {                                               /*Heading 4*/
+  font-family: 100% "Changa One";
+  font-size: 15px;
+  font-style: bold;
+  color: #7A0000;
+  text-align: center;}
+header {                                           /*Header*/
+  background-color: #00ff73;}
+p{                                                 /*Paragraphs*/
+  color: #7A0000;
+  font-size: 15px;}
+a{                                                 /*Links*/
+  color: yellow;}
+/* unvisited link */
+a:link {
+  color: red;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 100% "Changa One";}
+/* visited link */
+a:visited {
+  color: black;}
+/* mouse over link */
+a:hover {
+  color: #7A0000;}
+/* selected link */
+a:active {
+  color: #7A0000;}
+/*WHY CAN'T I RESIZE THESE?*/
+#centerCenter {                                    /*Center images*/
+  vertical-align: center;
+  background-color: white;
+  text-align: center;}
+/*Four page displays*/                            /*Initial page display*/
 #about {display: none;}
 #vote {display: block;}
 #gallery{display: none;}
 #submit{display: none;}
-
-/*buttons*/
-#tabs {
-    font-family: Georgia;
+/*Buttons*/
+.tabs {                                           /*Buttons class (.tabs)*/
+    font-family: 100% "Changa One";
     color: black;
     font-size: 20px;
-    background: white;
+    background: pink;
     padding: 10px 10px 10px 10px;
     text-align: center;}
-#button {
-    height: 100%;
-    width: 20%;
-    border: none;
-    background-color: #476BB2;
-    font-size: 15px;}
+/*Four buttons*/                                  /*Buttons*/
 #voteButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: #476BB2;
+    background-color: purple;
     font-size: 15px;
     color: white;}
 #submitButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: #476BB2;
+    background-color: purple;
     font-size: 15px;
     color: white;}
 #galleryButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: #476BB2;
+    background-color:purple;
     font-size: 15px;
     color: white;}
 #aboutButton{
     height: 100%;
     width: 20%;
     border: none;
-    background-color: #476BB2;
+    background-color:purple;
     font-size: 15px;
     color: white;}
-.tabs:hover {
-    background: white;
-    background-color: white;}
-
-body {
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-    font-size: 16px;
-    background-color: white; 
-    color: black; 
-    padding: 18px;
-    background: white;
-    left: 0;
-    margin: 0;
-}
-#a1 {
-    padding: 5px;
-    padding-left:  15px;
-    padding-right: 15px;
-    background-color: white;
-    border-radius: 0 0 18px 18px;
-}
-
-h4{
-    font-family: Georgia, serif;
-    font-size: 15px;
-    font-style: bold;
-    color: #7A0000;
-    text-align: center;
-}
-
-h3 {
-    font-family: Georgia, serif;
-    font-size: 20px;
-    font-style: italic;
-    color: #7A0000;
-    text-align: center;
-}
-h2 {
-    font-family: Georgia, serif;
-    color: white;
-    font-size: 30px;
-    background-color: #7A0000;
-}
-h1 {
-    font-family: Georgia, serif;
-    color: #476BB2;
-    font-size: 50px;
-    text-align: center;
-    border-bottom: 3px solid #476BB2;
-}
- p{
-    color: #7A0000;
-    font-size: 15px;
- }
-
- a{
-    color: yellow;
- }
-
- /* unvisited link */
-a:link {
-    color: red;
-    font-style: normal;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Georgia, serif;
-}
-
-/* visited link */
-a:visited {
-    color: black;
-}
-
-/* mouse over link */
-a:hover {
-    color: #7A0000;
-}
-
-/* selected link */
-a:active {
-    color: #7A0000;
-}
-
-/*WHY CAN'T I RESIZE THESE?*/
-#centerCenter {
-    vertical-align: center;
-    background-color: white;
-    text-align: center;
-}
-
-
-
-/* Initial menu */
-.menu {
-  background: #202024 url('http://img1.findthebest.com/sites/default/files/2307/media/images/Up_Maroon_429535_i0.png') repeat left top;
-  left: -285px;  /* start off behind the scenes */
+/*Menu*/
+.menu {                                          /*Slide out menu*/
+  background-color: #ef962e;
   height: 100%;
   position: fixed;
-  width: 285px;
-}
-
-/* Basic styling */
-
-.jumbotron {
-  background-image: url('http://img1.findthebest.com/sites/default/files/2307/media/images/Up_Maroon_429535_i0.png'); 
-  height: 100%;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-}
-
-.menu ul {
-  /*border-top: 1px solid #636366;*/
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  /*border-bottom: 1px solid #636366;*/
-  font-family: Georgia, serif;
-  /*line-height: 45px;*/
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
-}
-
-.menu a {
-  color: white;
+  width: 200px;}
+.icon-close {                                    /*Menu slide out icon*/
+  cursor: pointer;
   font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.icon-close {
-  cursor: pointer;
-  padding-left: 10px;
-  padding-top: 10px;
-}
-
-.icon-menu {
   color: white;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  padding-top: 10px;}
+.icon-menu {                                     /*Menu banner*/
+  color: white;
+  background-color: magenta;
   cursor: pointer;
-  font-family: Georgia, serif;
+  font-family: 100% "Changa One";
   font-size: 18px;
   padding-bottom: 25px;
   padding-left: 25px;
   padding-top: 25px;
   text-decoration: none;
-  text-transform: uppercase;
-}
-
-.icon-menu i {
-  margin-right: 5px;
-}
-
-
-
-
+  text-transform: uppercase;}
+.slide-menu {
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;}
+.menu ul {                                      /*Menu option layout*/
+  list-style: none;
+  margin: 0;
+  padding: 0;}
+.menu li {                                      /*Menu option style*/
+  font-family: 100% "Changa One";
+  background-color: blue;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;}
+.menu a {                                       /*Menu listing style*/
+  color: white;
+  font-family: 100% "Changa One"; 
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;}
