@@ -1,65 +1,133 @@
 <!DOCTYPE html>
 <html>
-<!-- ******************************************************************** -->
+
 <head>
-	<link href="CSSpracticeWebsite.css" rel="stylesheet">
-	<link href="css/hover.css" rel="stylesheet" media="all">
-	<h1>SHOW NYC</h1>
+    <link href="demo.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <h1>SHOW NYC</h1>
 </head>
-<!-- ******************************************************************** -->
+
 <body>
-	<!-- 0000000000000000000000000000000000000000000000000000000000 -->
 
-	<div class = "tabs">
-		<button id = "voteButton" type = "button"> V O T E</button>
-		<button id = "galleryButton" type = "button" > G A L L E R Y</button>
-		<button id = "submitButton" type = "button" >S U B M I T</button>
-		<button id = "aboutButton" type = "button" > A B O U T</button>
-	</div>
+    <div class = "menu">
+        <div class = "icon-close">
+            <img src="https://cdn4.iconfinder.com/data/icons/flat-black/128/menu.png">
+        </div>
 
-	<!-- 0000000000000000000000000000000000000000000000000000000000 -->
-	
-	<div id = "vote">
-		<h2 align = "center">Smorgasburg</h2>
-		<p align = "center">A BROOKLYN FLEA FOOD MARKET</p>
-		<div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom">
-  			<img src="http://static1.businessinsider.com/image/51cdace76bb3f7ff53000001-400-300/chow-down-at-brooklyn-fleas-smorgasburg-the-weekly-food-festival-that-takes-place-on-saturday-afternoons-on-the-williamsburg-and-dumbo-waterfronts.jpg">
-  			<img src="http://static2.uk.businessinsider.com/image/551eafdedd0895dc258b462e-400-300/sample-some-of-the-best-treats-nyc-restaurants-have-to-offer-at-smorgasburg-which-returns-april-4th-and-continues-every-weekend-till-november.jpg">
-  			<img src="http://4.bp.blogspot.com/-OFBozJ4mP9I/TiNoo68HHxI/AAAAAAAAAuI/fTAoh3zNGHI/s400/ginger+mint.jpg">
-  			<img src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/0a/df/0adf8f19cae0087b916dfba9429a2b64.JPG?itok=-PJnexuU">
-  			<img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
-  			<img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
-  			<img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
-		</div>
-	</div>
-	
-	<!-- 0000000000000000000000000000000000000000000000000000000000 -->
-	<div id = "gallery">
-		<h2>Gallery page</h2>
-		<p>G A L L E R Y -- T E X T</p>
-		<div class="fotorama" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-shuffle = "true" data-swipe = "true" data-arrows = "true" data-click = "true">
-  			<img src="http://static1.businessinsider.com/image/51cdace76bb3f7ff53000001-400-300/chow-down-at-brooklyn-fleas-smorgasburg-the-weekly-food-festival-that-takes-place-on-saturday-afternoons-on-the-williamsburg-and-dumbo-waterfronts.jpg">
-  			<img src="http://static2.uk.businessinsider.com/image/551eafdedd0895dc258b462e-400-300/sample-some-of-the-best-treats-nyc-restaurants-have-to-offer-at-smorgasburg-which-returns-april-4th-and-continues-every-weekend-till-november.jpg">
-  			<img src="http://4.bp.blogspot.com/-OFBozJ4mP9I/TiNoo68HHxI/AAAAAAAAAuI/fTAoh3zNGHI/s400/ginger+mint.jpg">
-  			<img src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/0a/df/0adf8f19cae0087b916dfba9429a2b64.JPG?itok=-PJnexuU">
-  			<img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
-  			<img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
-  			<img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
-		</div>
-	</div>
-	<!-- 0000000000000000000000000000000000000000000000000000000000 -->
-	<div id = "submit">
-		<h2>Submit page</h2>
-		<p>S U B M I T -- T E X T</p>
-	</div>
-	<!-- 0000000000000000000000000000000000000000000000000000000000 -->
-	<div id="about">
-		<h2>About page</h2>
-		<p>A B O U T -- T E X T</p>
-	</div>
-	<!-- 0000000000000000000000000000000000000000000000000000000000 -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src= "JQpracticeWebsite.js"></script>
-	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+        <ul>
+            <li><a href="#">VOTE</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">SUBMIT</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </div>
+    <!--main body-->
+    <div class = "jumbotron">
+        <div class = "icon-menu">
+            <i class = fa fa-bars>Menu</i>
+        </div>
+    </div>
+
+    <div id = "tabs">
+        <button id = "voteButton" type = "button"> V O T E</button>
+        <button id = "galleryButton" type = "button" > G A L L E R Y</button>
+        <button id = "submitButton" type = "button" >S U B M I T</button>
+        <button id = "aboutButton" type = "button" > A B O U T</button>
+    </div>
+    
+    <div id = "vote" class = "wrap">
+        <h2 align = "center">Smorgasburg</h2>
+        <h3 align = "center">A BROOKLYN FLEA FOOD MARKET</h3>
+        <div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom">
+            <img src="http://static1.businessinsider.com/image/51cdace76bb3f7ff53000001-400-300/chow-down-at-brooklyn-fleas-smorgasburg-the-weekly-food-festival-that-takes-place-on-saturday-afternoons-on-the-williamsburg-and-dumbo-waterfronts.jpg">
+            <img src="http://static2.uk.businessinsider.com/image/551eafdedd0895dc258b462e-400-300/sample-some-of-the-best-treats-nyc-restaurants-have-to-offer-at-smorgasburg-which-returns-april-4th-and-continues-every-weekend-till-november.jpg">
+            <img src="http://4.bp.blogspot.com/-OFBozJ4mP9I/TiNoo68HHxI/AAAAAAAAAuI/fTAoh3zNGHI/s400/ginger+mint.jpg">
+            <img src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/0a/df/0adf8f19cae0087b916dfba9429a2b64.JPG?itok=-PJnexuU">
+            <img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
+            <img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
+            <img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
+        </div>
+    </div>
+    
+    <div id = "gallery">
+        <h2 align = "center">Gallery page</h2>
+        <p align = "center">ALL SUBMITTED CONTENT</p>
+        <div class="fotorama" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-shuffle = "true" data-swipe = "true" data-arrows = "true" data-click = "true" align = "center">
+            <img src="http://static1.businessinsider.com/image/51cdace76bb3f7ff53000001-400-300/chow-down-at-brooklyn-fleas-smorgasburg-the-weekly-food-festival-that-takes-place-on-saturday-afternoons-on-the-williamsburg-and-dumbo-waterfronts.jpg">
+            <img src="http://static2.uk.businessinsider.com/image/551eafdedd0895dc258b462e-400-300/sample-some-of-the-best-treats-nyc-restaurants-have-to-offer-at-smorgasburg-which-returns-april-4th-and-continues-every-weekend-till-november.jpg">
+            <img src="http://4.bp.blogspot.com/-OFBozJ4mP9I/TiNoo68HHxI/AAAAAAAAAuI/fTAoh3zNGHI/s400/ginger+mint.jpg">
+            <img src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/0a/df/0adf8f19cae0087b916dfba9429a2b64.JPG?itok=-PJnexuU">
+            <img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
+            <img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
+            <img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
+            <img src="http://www.beautyofnyc.org/HighLine/Assets/IMG_4036-sm.jpg">
+            <img src="http://imagesus.homeaway.com/mda01/742a2594-4ec5-4491-afaf-0c1a91f5c4c4.1.6">
+            <img src="http://i56.tinypic.com/11t4x6t.jpg">
+            <img src="https://s-media-cache-ak0.pinimg.com/736x/06/d2/a3/06d2a3017cce21312c9e6dadc3bf9f35.jpg">
+            <img src="http://4.bp.blogspot.com/_xsbK1Gf9eRk/SklQIbSrAJI/AAAAAAAAAdg/VrBghyu2r8A/s400/Bertol-NYC-HighLine-090611+(2).jpg">
+            <img src="http://tclf.org/sites/default/files/blog/CityShapingIV/NY----NYC---High-Line-07-09-049.jpg">
+            <img src="http://1.bp.blogspot.com/_xsbK1Gf9eRk/SklQIkBrxmI/AAAAAAAAAdw/78QIHYORiwo/s400/Bertol-NYC-HighLine-090611+(12).jpg">
+            <img src="http://photos2.demandstudios.com/DM-Resize/photos.demandstudios.com/getty/article/199/81/174280032_XS.jpg?w=1200&h=630&crop_min=1&keep_ratio=1">
+            <img src="https://res.cloudinary.com/relay-foods/image/upload/q_40,h_300,w_400,c_fill/2UHTPEWXE9V4.JPG">
+            <img src="https://res.cloudinary.com/relay-foods/image/upload/q_40,h_300,w_400,c_fill/TG43TLS2U9HM.JPG">
+            <img src="http://www.foodielovesfitness.com/wp-content/uploads/2012/11/pomegranate-3-400x300.jpg">
+            <img src="http://fyi.uwex.edu/safepreserving/files/2014/04/yogurt.jpg">
+        </div>
+    </div>
+
+    <div id = "submit">
+        <h2 align = "center">Submit page</h2>
+        <p align = "center">S U B M I T -- T E X T</p>
+        <p>Animated photo banner</p>
+        <div class = "slide">
+            <img src="http://media.bonnint.net/seattle/9/924/92408.jpg">
+            <img src="http://associatesmind.com/wp-content/uploads/2012/08/number-two-law.jpeg">
+            <img src="http://www.userlogos.org/files/logos/aameerp/3-logo.gif">
+            <img src="http://www.clipartbest.com/cliparts/ecM/oyg/ecMoygecn.jpeg">
+            <img src="https://d13yacurqjgara.cloudfront.net/users/20291/screenshots/700377/number5.png">
+            <img src="http://91ef69bade70f992a001-b6054e05bb416c4c4b6f3b0ef3e0f71d.r93.cf3.rackcdn.com/number-six-on-the-start-10046197.jpg">
+            <img src="http://images0.pulsd.com/pulses/images/000/017/724/show_box/number-7-may13.jpg">
+            <img src="https://d13yacurqjgara.cloudfront.net/users/153131/screenshots/1536336/luckynumber8_1x.png">
+            <img src="http://www.allstarsdirect.co.uk/images/products/1406033480_main.png">
+            <img src="http://playrific.com/images/media/1_10rhymingnumbers.jpg">
+        </div>  
+    </div>
+
+    <div id="about">
+        <h2 align = "center">About page</h2>
+        <div>
+            <br>
+            <h3>Get your photo on the MTA Kiosks!</h3>
+            <p>Each week a contest will be lauched by a different sponsoring company, and those companies are looking for <em>your</em> photos!  Be sure to submit photos relevant to that week's specified company. You can submit photos on both our website and mobile app in hopes that your best shot will make it onto all 140 kiosk screens to be seen by millions of New York City subway riders. Remember to vote for your favorite photo and see if it makes it onto the big screen in the big apple!</p>
+            <br>
+            <br>
+        </div>
+        <div id = "centerCenter">
+            <h3>Check Out Past Campaign Winners</h3>
+            <h4>CAMPAIGN ONE TITLE</h4>
+            <img src="http://www.vintechnology.com/journal/wp-content/uploads/2011/04/times-square-new-york.jpg" align: "center">
+            <br>
+            <br>
+            <h4>CAMPAIGN TWO TITLE</h4>
+            <img src="http://www.hiorangeburg.com/wp-content/uploads/2012/08/att.jpg"align: "center">
+            <br>
+            <br>
+            <h4>CAMPAIGN THREE TITLE</h4>
+            <img src="http://static2.businessinsider.com/image/4bb33e047f8b9a197c860000/for-the-good-of-the-nyc-venture-scene-id-like-to-see.jpg" align: "center">
+            <br>
+            <br>
+            <h4>CAMPAIGN FOUR TITLE</h4>
+            <img src="http://c3e308.medialib.glogster.com/media/8b/8b026e2a64ed825689a1e07eab024aab232b1585228dbc3894ebe8bf647fdaf3/bibikow-walter-central-park-new-york-city-ny-usa-jpg.jpg" align: "center">
+            <br>
+            <br>
+            <p> Loading more content...</p>
+        </div>  
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src= "demo.js"></script>
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+    <script src="path/to/jquery.min.js"></script>
+    <script src="path/to/jquery.row-grid.min.js"></script>
 </body>
