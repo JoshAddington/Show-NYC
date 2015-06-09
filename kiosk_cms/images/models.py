@@ -7,6 +7,16 @@ class Image(models.Model):
     user_id = models.ForeignKey('auth.User')
     flagged = models.BooleanField(default=False)
     campaign_id = models.ForeignKey('campaigns.Campaign')
+    campaign_winner = models.BooleanField(default=False)
+
 
     def __str__(self):
     	return self.image.name
+
+    def thumb(self):
+        if self.image:
+            return u'<img src="%s" width=80 height=80 />' % (self.image.url)
+        else:
+            return u'No image file found'
+    thumb.short_description = 'Image'
+    thumb.allow_tags = True
