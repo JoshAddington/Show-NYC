@@ -14,5 +14,3 @@ class Campaign(models.Model):
 
     def is_active(self):
     	return datetime.now() > start_date and datetime.now() < end_date
-
-    # def limit_sponsor_campaigns():
