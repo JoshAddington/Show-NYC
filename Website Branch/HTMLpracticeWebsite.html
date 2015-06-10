@@ -8,20 +8,20 @@
     <!--Header-->
     <header>
     <h1>SHOW NYC</h1>
-    <div class = "menu"> <!--Slide out menu option--> <!--Right now the slide out menu is otu when the page initially loads-->
-        <div class = "icon-close"> <!--This image belongs on the header-->
+    <div class = "menu"> <!--Slide out menu option--> <!--Right now the slide out menu is out when the page initially loads-->
+        <div class = "icon-close"> 
             <strong>M E N U</strong>
         </div>
         <ul> <!--Four menu options--> <!--These need to be made clickable-->
-            <li><a href="#">V O T E</a></li>
-            <li><a href="#">G A L L E R Y</a></li>
-            <li><a href="#">S U B M I T</a></li>
-            <li><a href="#">A B O U T</a></li>
+            <li><a href="#">Vote</a><i class = "fa fa-angle-right"></i></li>
+            <li><a href="#">Gallery</a><i class = "fa fa-angle-right"></i></li>
+            <li><a href="#">Submit</a><i class = "fa fa-angle-right"></i></li>
+            <li><a href="#">About</a><i class = "fa fa-angle-right"></i></li>
         </ul>
     </div>
     <div class = "slide-menu">
         <div class = "icon-menu">
-            <img src="http://nerdsrpg.com/img/menu.png">             <!--Change the string "menu" to a menu icon-->
+            <img src="http://nerdsrpg.com/img/menu.png">        
         </div>
     </div>
     <header>
@@ -39,7 +39,8 @@
     <div id = "vote" class = "wrap">
         <h2 align = "center">CAMPAIGN TITLE</h2> 
         <h3 align = "center">LINE ABOUT THE CAMPAIGN/CAMPAIGN SLOGAN</h3> <!--Do we want this additional line?-->
-        <div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom"> <!--Automatically moving photo gallery-->
+
+        <div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom">  <!--Automatically moving photo gallery-->
             <img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
             <img src="http://www.brooklynize.jp/wp-content/uploads/pic314.jpg">
             <img src="http://cdn.brooklynheightsblog.com/wp-content/uploads/jsw_img_0610_edited-1.jpg">
@@ -49,12 +50,52 @@
     <div id = "gallery">               <!--There should ultimately be a grid plugin for this page-->
         <h2 align = "center">Gallery page</h2>
         <p align = "center">ALL SUBMITTED CONTENT</p>
-        <div class="fotorama" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-shuffle = "true" data-swipe = "true" data-arrows = "true" data-click = "true" align = "center"><!--Automatically moving photo gallery--> <!--This is the same gallery as the vote page-->
+
+        <div class = "image-zoom-container">
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
+                </a>
+            </div>
+            <p align = center>Loading more images...</p>
+            <br>
+        </div>
+        <!--
+        <div class="fotorama" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-shuffle = "true" data-swipe = "true" data-arrows = "true" data-click = "true" align = "center">
+            -->
+            <!--Automatically moving photo gallery--> <!--This is the same gallery as the vote page-->
+            <!--
             <img src="http://www.beautyofnyc.org/HighLine/Assets/IMG_4036-sm.jpg">
             <img src="http://imagesus.homeaway.com/mda01/742a2594-4ec5-4491-afaf-0c1a91f5c4c4.1.6">
             <img src="http://i56.tinypic.com/11t4x6t.jpg">
             <img src="http://fyi.uwex.edu/safepreserving/files/2014/04/yogurt.jpg">
         </div>
+        -->
     </div>
     <!--Submit page-->
     <div id = "submit">
