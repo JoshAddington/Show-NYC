@@ -1,61 +1,47 @@
-body {                                        /*Body*/
-  font-family: 100% "Changa One";
+body {                                             /*Body*/
+  font-family: "Raleway";
   font-size: 16px;
-  background-color: white; 
   color: black; 
-  padding: 18px;
-  background: white;
+  padding: 0px;
   left: 0;
   margin: 0;}
 h1 {                                               /*Heading 1*/ 
-  font-family: 100% "Changa One";
+  font-family: "Changa One";
   color: white;
-  font-size: 50px;
+  font-size: 70px;
+  padding: -100px;
   text-align: center;}
 h2 {                                               /*Heading 2*/
-  font-family: 100% "Changa One";
-  color: white;
+  font-family: "Raleway";
+  color: black;
   font-size: 30px;
-  background-color: #7A0000;}
+  background-color: red;
+  text-align: center;
+  vertical-align: center;}
 h3 {                                               /*Heading 3*/
-  font-family: 100% "Changa One";
+  font-family: "Raleway";
   font-size: 20px;
-  font-style: italic;
-  color: #7A0000;
+  font-style: normal;
+  color: orange;
   text-align: center;}
 h4 {                                               /*Heading 4*/
-  font-family: 100% "Changa One";
+  font-family: "Raleway";
   font-size: 15px;
   font-style: bold;
   color: #7A0000;
   text-align: center;}
 header {                                           /*Header*/
-  background-color: #00ff73;}
+  background: yellow;
+  margin: 0;
+  top: 0;
+  overflow: hidden;}
 p{                                                 /*Paragraphs*/
-  color: #7A0000;
+  color: lightgreen;
+  background: green;
   font-size: 15px;}
-a{                                                 /*Links*/
-  color: yellow;}
-/* unvisited link */
-a:link {
-  color: red;
-  font-style: normal;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: 100% "Changa One";}
-/* visited link */
-a:visited {
-  color: black;}
-/* mouse over link */
-a:hover {
-  color: #7A0000;}
-/* selected link */
-a:active {
-  color: #7A0000;}
-/*WHY CAN'T I RESIZE THESE?*/
 #centerCenter {                                    /*Center images*/
   vertical-align: center;
-  background-color: white;
+  background-color: hotpink; /*this is used on the about page*/
   text-align: center;}
 /*Four page displays*/                            /*Initial page display*/
 #about {display: none;}
@@ -64,15 +50,13 @@ a:active {
 #submit{display: none;}
 /*Buttons*/
 .tabs {                                           /*Buttons class (.tabs)*/
-    font-family: 100% "Changa One";
-    color: black;
-    font-size: 20px;
-    background: pink;
-    padding: 10px 10px 10px 10px;
+    font-family: "Raleway";
+    padding: 10px 0px 0px 0px;
     text-align: center;}
 /*Four buttons*/                                  /*Buttons*/
 #voteButton{
     height: 100%;
+    cursor: pointer;
     width: 20%;
     border: none;
     background-color: purple;
@@ -80,6 +64,7 @@ a:active {
     color: white;}
 #submitButton{
     height: 100%;
+    cursor: pointer;  
     width: 20%;
     border: none;
     background-color: purple;
@@ -87,6 +72,7 @@ a:active {
     color: white;}
 #galleryButton{
     height: 100%;
+    cursor: pointer;
     width: 20%;
     border: none;
     background-color:purple;
@@ -94,6 +80,7 @@ a:active {
     color: white;}
 #aboutButton{
     height: 100%;
+    cursor: pointer;  
     width: 20%;
     border: none;
     background-color:purple;
@@ -101,26 +88,31 @@ a:active {
     color: white;}
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #ef962e;
+  background-color: blue;
   height: 100%;
   position: fixed;
-  width: 200px;}
+  top: 0;
+  padding: 0;
+  left: -250px;
+  width: 250px; /*width of the menu*/
+  z-index: 15;}
 .icon-close {                                    /*Menu slide out icon*/
   cursor: pointer;
-  font-size: 18px;
-  color: white;
-  padding-left: 20px;
-  padding-bottom: 30px;
-  padding-top: 10px;}
+  position: relative;
+  font-size: 30px; /*size of the "Menu" text*/
+  color: black;
+  letter-spacing: 2px;
+  padding-left: 20px; /*"Menu" spacing*/
+  padding-bottom: 50px; /*"Menu" to options spacing*/
+  padding-top: 30px;} /*top to "Menu" spacing*/
+.icon-close:hover{
+  color: red;}
 .icon-menu {                                     /*Menu banner*/
-  color: white;
   background-color: magenta;
   cursor: pointer;
-  font-family: 100% "Changa One";
-  font-size: 18px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
   text-decoration: none;
   text-transform: uppercase;}
 .slide-menu {
@@ -132,16 +124,52 @@ a:active {
 .menu ul {                                      /*Menu option layout*/
   list-style: none;
   margin: 0;
-  padding: 0;}
+  letter-spacing: 3px;
+  padding: 0px 0px 0px 0px;}
 .menu li {                                      /*Menu option style*/
-  font-family: 100% "Changa One";
+  font-family: "Raleway";
   background-color: blue;
   padding-bottom: 3px;
   padding-left: 20px;
-  padding-top: 3px;}
+  padding-top: 20px;}
 .menu a {                                       /*Menu listing style*/
-  color: white;
-  font-family: 100% "Changa One"; 
+  color: black;
+  font-family: "Raleway"; 
+  letter-spacing: 2px;
   font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;}
+  text-decoration: none;}
+.image-zoom-container{
+  list-style: none;
+  font-size: 0px;
+  background-color: pink;}
+.zoom-container{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 50%; /*two */
+  border: 25px solid white; /*border around the images*/
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+.zoom-container img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all .7s ease; /*ease into image zoom*/
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;}
+.zoom-container:hover img { /*image hover animation*/
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform:scale(1.25);}
+.zoom-container:hover .zoom-caption{
+  background: none;/*What you see when you hover over an image*/} 
+@media (max-width: :767px) {
+  .zoom-container{
+    width: 100%;}
+}

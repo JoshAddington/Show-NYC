@@ -50,26 +50,27 @@ $(document).ready(function() {
       $('#about').show();
       }
    }); 
+
 var main = function() {
-  /* Push the body and the nav over by 285px over */
+//Push the body and the nav over by 285px over 
   $('.icon-menu').click(function() {
     $('.menu').animate({
       left: "0px"
     }, 200);
 
     $('body').animate({
-      left: "200px"
+      left: "250px"
     }, 200);
   });
 
-  /* Then push them back */
+//Then push them back 
   $('.icon-close').click(function() {
     $('.menu').animate({
-      left: "-200px"
+      left: "-250px"
     }, 200);
 
     $('body').animate({
-      left: "0px"
+      left: "-250px"
     }, 200);
   });
 };
