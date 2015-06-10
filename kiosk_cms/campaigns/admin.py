@@ -1,12 +1,12 @@
 from django.contrib import admin
+from django.contrib.admin import SimpleListFilter
 from .models import Campaign
 from images.models import Image
 
+
 class ImageInline(admin.TabularInline):
     model = Image
-
     fields = ('thumb', 'user_id', 'score', 'flagged')
-
     readonly_fields = ('thumb', )
 
     def thumb(self, obj):
@@ -20,13 +20,14 @@ class ImageInline(admin.TabularInline):
 
 class CampaignAdmin(admin.ModelAdmin):
     list_display = ('name', 'start_date', 'end_date')
+    # list_filter = (
+    #     ('sponsor_id', admin.RelatedOnlyFieldListFilter),
+    # )
 
+    fields = ('sponsor', 'name', 'slug', 'start_date', 'end_date')
     inlines = [ImageInline, ]
-
-    # populates slug field using the title
     prepopulated_fields = {'slug' : ('name',), }
     
-
 
 # Register your models here.
 admin.site.register(Campaign, CampaignAdmin)
