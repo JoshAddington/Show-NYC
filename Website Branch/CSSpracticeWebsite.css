@@ -8,46 +8,78 @@ body {                                             /*Body*/
 h1 {                                               /*Heading 1*/ 
   font-family: "Changa One";
   color: white;
-  font-size: 70px;
-  padding: -100px;
+  letter-spacing: 4px;
+  font-size: 50px;
   text-align: center;}
 h2 {                                               /*Heading 2*/
   font-family: "Raleway";
-  color: black;
+  color: white;
   font-size: 30px;
-  background-color: red;
+  background-color: #66da59;
   text-align: center;
+  font-weight: bold;
   vertical-align: center;}
 h3 {                                               /*Heading 3*/
   font-family: "Raleway";
   font-size: 20px;
   font-style: normal;
-  color: orange;
+  color: black;
+  font-weight: bold;
   text-align: center;}
 h4 {                                               /*Heading 4*/
   font-family: "Raleway";
   font-size: 15px;
   font-style: bold;
-  color: #7A0000;
+  color: black;
   text-align: center;}
 header {                                           /*Header*/
-  background: yellow;
+  background: #66da59;
   margin: 0;
   top: 0;
   overflow: hidden;}
 p{                                                 /*Paragraphs*/
-  color: lightgreen;
-  background: green;
+  color: black;
+  background: white;
   font-size: 15px;}
+/*Links*/
+/*
+a{                                                 
+  color: black;} */
+/* unvisited link */
+/*
+a:link {
+  color: red;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 100% "Changa One";}*/
+/* visited link */
+/*a:visited {
+  color: black;}*/
+/* mouse over link */
+/*a:hover {
+  color: #7A0000;}*/
+/* selected link */
+/*a:active {
+  color: #7A0000;}*/
+/*WHY CAN'T I RESIZE THESE?*/
 #centerCenter {                                    /*Center images*/
   vertical-align: center;
-  background-color: hotpink; /*this is used on the about page*/
+  background-color: white; /*this is used on the about page*/
   text-align: center;}
 /*Four page displays*/                            /*Initial page display*/
-#about {display: none;}
-#vote {display: block;}
-#gallery{display: none;}
-#submit{display: none;}
+#about {
+  display: none;
+  background-color: white;}
+#vote {
+  display: block;
+  background-color: white;}
+#gallery{
+  display: none;
+  background-color: white;}
+#submit{
+  display: none;
+  background-color: white;}
 /*Buttons*/
 .tabs {                                           /*Buttons class (.tabs)*/
     font-family: "Raleway";
@@ -55,40 +87,25 @@ p{                                                 /*Paragraphs*/
     text-align: center;}
 /*Four buttons*/                                  /*Buttons*/
 #voteButton{
-    height: 100%;
     cursor: pointer;
-    width: 20%;
-    border: none;
-    background-color: purple;
-    font-size: 15px;
-    color: white;}
+    font-size: 20px;
+    color: white;
+    font-family: "Raleway"; }
 #submitButton{
-    height: 100%;
-    cursor: pointer;  
-    width: 20%;
-    border: none;
-    background-color: purple;
-    font-size: 15px;
+    cursor: pointer;
+    font-size: 20px;
     color: white;}
 #galleryButton{
-    height: 100%;
     cursor: pointer;
-    width: 20%;
-    border: none;
-    background-color:purple;
-    font-size: 15px;
+    font-size: 20px;
     color: white;}
 #aboutButton{
-    height: 100%;
-    cursor: pointer;  
-    width: 20%;
-    border: none;
-    background-color:purple;
-    font-size: 15px;
+    cursor: pointer;
+    font-size: 20px;
     color: white;}
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: blue;
+  background-color: #ef962c;
   height: 100%;
   position: fixed;
   top: 0;
@@ -100,7 +117,7 @@ p{                                                 /*Paragraphs*/
   cursor: pointer;
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
-  color: black;
+  color: white;
   letter-spacing: 2px;
   padding-left: 20px; /*"Menu" spacing*/
   padding-bottom: 50px; /*"Menu" to options spacing*/
@@ -108,7 +125,7 @@ p{                                                 /*Paragraphs*/
 .icon-close:hover{
   color: red;}
 .icon-menu {                                     /*Menu banner*/
-  background-color: magenta;
+  background-color: #66da59;
   cursor: pointer;
   padding-bottom: 0px;
   padding-left: 0px;
@@ -127,13 +144,11 @@ p{                                                 /*Paragraphs*/
   letter-spacing: 3px;
   padding: 0px 0px 0px 0px;}
 .menu li {                                      /*Menu option style*/
-  font-family: "Raleway";
-  background-color: blue;
+  background-color: none;
   padding-bottom: 3px;
   padding-left: 20px;
   padding-top: 20px;}
 .menu a {                                       /*Menu listing style*/
-  color: black;
   font-family: "Raleway"; 
   letter-spacing: 2px;
   font-size: 18px;
@@ -141,7 +156,7 @@ p{                                                 /*Paragraphs*/
 .image-zoom-container{
   list-style: none;
   font-size: 0px;
-  background-color: pink;}
+  background-color: white;}
 .zoom-container{
   position: relative;
   overflow: hidden;
@@ -172,4 +187,34 @@ p{                                                 /*Paragraphs*/
 @media (max-width: :767px) {
   .zoom-container{
     width: 100%;}
+  }
+.share-prime{
+  padding: 0px 10px 10px 18px;
+}
+.st_facebook{
+  position:relative;
+  left:87%;
+}
+.st_twitter{
+  position:relative;
+  left:87%;
+}
+.st_pinterest{
+  position:relative;
+  left:87%;
+}
+.st_googleplus{
+  position:relative;
+  left:87%;
+}
+#sharePrompt{
+  letter-spacing: 3px;
+  background-color: #ef962c;
+  color: white;
+  font-size: 20px;
+  padding-top: 55px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-family: "Raleway";
 }
