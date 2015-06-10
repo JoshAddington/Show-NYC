@@ -20,13 +20,11 @@ class ImageInline(admin.TabularInline):
 
 class CampaignAdmin(admin.ModelAdmin):
     list_display = ('name', 'start_date', 'end_date')
-    # list_filter = (
-    #     ('sponsor_id', admin.RelatedOnlyFieldListFilter),
-    # )
 
     fields = ('sponsor', 'name', 'slug', 'start_date', 'end_date')
     inlines = [ImageInline, ]
     prepopulated_fields = {'slug' : ('name',), }
+    
     
 
 # Register your models here.
