@@ -7,34 +7,38 @@
     <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
     <!--Header-->
     <header>
-    <h1>SHOW NYC</h1>
+        <h1>SHOW NYC</h1>
     <div class = "menu"> <!--Slide out menu option--> <!--Right now the slide out menu is out when the page initially loads-->
         <div class = "icon-close"> 
             <strong>M E N U</strong>
+            
         </div>
-        <ul> <!--Four menu options--> <!--These need to be made clickable-->
-            <li><a href="#">Vote</a><i class = "fa fa-angle-right"></i></li>
-            <li><a href="#">Gallery</a><i class = "fa fa-angle-right"></i></li>
-            <li><a href="#">Submit</a><i class = "fa fa-angle-right"></i></li>
-            <li><a href="#">About</a><i class = "fa fa-angle-right"></i></li>
-        </ul>
+            <ul> <!--Four menu options--> <!--These need to be made clickable-->
+                <li><a href="#" id = "voteButton" >Vote</a></li>
+                <li><a href="#" id = "galleryButton">Gallery</a></li>
+                <li><a href="#" id = "submitButton">Submit</a></li>
+                <li><a href="#" id = "aboutButton">About</a></li>
+            </ul>
+            <p id = "sharePrompt">Share</p>
+            <div class = "share-prime">
+                <span class='st_facebook_large' displayText='Facebook'></span>
+                <span class='st_twitter_large' displayText='Tweet'></span>
+                <span class='st_pinterest_large' displayText='Pinterest'></span>
+                <span class='st_googleplus_large' displayText='Google +'></span>
+            </div>
     </div>
     <div class = "slide-menu">
         <div class = "icon-menu">
-            <img src="http://nerdsrpg.com/img/menu.png">        
+            <img src="http://nerdsrpg.com/img/menu.png">    
+
         </div>
     </div>
     <header>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "3d484258-68cb-4e80-b286-ef191078786b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 </head>
 
 <body> <!--Main body-->
-    <!--Buttons-->
-    <div class= "tabs"> <!--Ultimately need to get rid of these buttons-->
-        <button id = "voteButton" type = "button"> V O T E</button>
-        <button id = "galleryButton" type = "button" > G A L L E R Y</button>
-        <button id = "submitButton" type = "button" >S U B M I T</button>
-        <button id = "aboutButton" type = "button" > A B O U T</button>
-    </div>
     <!--Vote page-->                       <!--There is not voting functionality as of right now-->
     <div id = "vote" class = "wrap">
         <h2 align = "center">CAMPAIGN TITLE</h2> 
@@ -101,19 +105,6 @@
     <div id = "submit">
         <h2 align = "center">Submit page</h2>
         <p align = "center">S U B M I T -- T E X T</p>
-        <p>Animated photo banner</p> <!--This photo banner does not belong on this page-->
-        <div class = "slide">            <!--The banner is not functioning properly-->
-            <img src="http://media.bonnint.net/seattle/9/924/92408.jpg">
-            <img src="http://associatesmind.com/wp-content/uploads/2012/08/number-two-law.jpeg">
-            <img src="http://www.userlogos.org/files/logos/aameerp/3-logo.gif">
-            <img src="http://www.clipartbest.com/cliparts/ecM/oyg/ecMoygecn.jpeg">
-            <img src="https://d13yacurqjgara.cloudfront.net/users/20291/screenshots/700377/number5.png">
-            <img src="http://91ef69bade70f992a001-b6054e05bb416c4c4b6f3b0ef3e0f71d.r93.cf3.rackcdn.com/number-six-on-the-start-10046197.jpg">
-            <img src="http://images0.pulsd.com/pulses/images/000/017/724/show_box/number-7-may13.jpg">
-            <img src="https://d13yacurqjgara.cloudfront.net/users/153131/screenshots/1536336/luckynumber8_1x.png">
-            <img src="http://www.allstarsdirect.co.uk/images/products/1406033480_main.png">
-            <img src="http://playrific.com/images/media/1_10rhymingnumbers.jpg">
-        </div>  
     </div>
     <!--About page-->
     <div id="about">
