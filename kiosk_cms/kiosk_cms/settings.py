@@ -43,6 +43,7 @@ INSTALLED_APPS += (
     'images', 
     'campaigns',
     'debug_toolbar',
+    'restless',
 )
 
 MIDDLEWARE_CLASSES = (
