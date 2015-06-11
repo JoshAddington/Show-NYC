@@ -51,7 +51,6 @@ $(document).ready(function() {
       }
    }); 
 
-
 var main = function() {
 //Push the body and the nav over by 285px over 
   $('.icon-menu').click(function() {
@@ -60,21 +59,22 @@ var main = function() {
     }, 200);
 
     $('body').animate({
-      left: "250px"
+      left: "350px"
     }, 200);
   });
 
 //Then push them back 
   $('.icon-close').click(function() {
     $('.menu').animate({
-      left: "-250px"
+      left: "-350px"
     }, 200);
 
     $('body').animate({
-      left: "-250px"
+      left: "-350px"
     }, 200);
   });
-};
+//push back after clilcking elsewhere
+}
 
 $(document).ready(main);
 

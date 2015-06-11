@@ -10,7 +10,10 @@ h1 {                                               /*Heading 1*/
   color: white;
   letter-spacing: 4px;
   font-size: 50px;
-  text-align: center;}
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-left: 20px;}
 h2 {                                               /*Heading 2*/
   font-family: "Raleway";
   color: white;
@@ -39,6 +42,7 @@ header {                                           /*Header*/
   overflow: hidden;}
 p{                                                 /*Paragraphs*/
   color: black;
+  padding: 10px 10px 10px 10px;
   background: white;
   font-size: 15px;}
 /*Links*/
@@ -110,20 +114,17 @@ a:link {
   position: fixed;
   top: 0;
   padding: 0;
-  left: -250px;
-  width: 250px; /*width of the menu*/
+  left: -300px;
+  width: 300px; /*width of the menu*/
   z-index: 15;}
 .icon-close {                                    /*Menu slide out icon*/
   cursor: pointer;
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
-  letter-spacing: 2px;
-  padding-left: 20px; /*"Menu" spacing*/
+  padding-left: 0px; /*"Menu" spacing*/
   padding-bottom: 50px; /*"Menu" to options spacing*/
-  padding-top: 30px;} /*top to "Menu" spacing*/
-.icon-close:hover{
-  color: red;}
+  padding-top: 0px;} /*top to "Menu" spacing*/
 .icon-menu {                                     /*Menu banner*/
   background-color: #66da59;
   cursor: pointer;
@@ -161,7 +162,7 @@ a:link {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 50%; /*two */
+  width: 33.33%; /*two */
   border: 25px solid white; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
@@ -188,33 +189,10 @@ a:link {
   .zoom-container{
     width: 100%;}
   }
-.share-prime{
-  padding: 0px 10px 10px 18px;
-}
-.st_facebook{
-  position:relative;
-  left:87%;
-}
-.st_twitter{
-  position:relative;
-  left:87%;
-}
-.st_pinterest{
-  position:relative;
-  left:87%;
-}
-.st_googleplus{
-  position:relative;
-  left:87%;
-}
-#sharePrompt{
-  letter-spacing: 3px;
-  background-color: #ef962c;
-  color: white;
-  font-size: 20px;
-  padding-top: 55px;
-  padding-right: 10px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  font-family: "Raleway";
+#share-buttons img {
+  width: 20px;
+  height: 20px;
+  padding-top: 100px;
+  margin-left: 20px;
+  display: inline;
 }
