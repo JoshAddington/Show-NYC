@@ -12,13 +12,14 @@ h1 {                                               /*Heading 1*/
   font-size: 50px;
   padding-top: 0px;
   padding-right: 10px;
-  padding-bottom: 15px;
+  padding-bottom:0px;
   padding-left: 20px;}
 h2 {                                               /*Heading 2*/
   font-family: "Raleway";
-  color: white;
+  margin-top: -30px;
+  color: black;
   font-size: 30px;
-  background-color: #66da59;
+  background-color: white;
   text-align: center;
   font-weight: bold;
   vertical-align: center;}
@@ -76,6 +77,7 @@ a:link {
   display: none;
   background-color: white;}
 #vote {
+
   display: block;
   background-color: white;}
 #gallery{
@@ -123,16 +125,19 @@ a:link {
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
   padding-left: 0px; /*"Menu" spacing*/
-  padding-bottom: 50px; /*"Menu" to options spacing*/
-  padding-top: 0px;} /*top to "Menu" spacing*/
-.icon-menu {                                     /*Menu banner*/
-  background-color: #66da59;
-  cursor: pointer;
-  padding-bottom: 0px;
-  padding-left: 0px;
+  padding-bottom: 0px; /*"Menu" to options spacing*/
   padding-top: 0px;
+  } /*top to "Menu" spacing*/
+
+.icon-menu {                                     /*Menu banner*/
+  background-color: white;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: 15px;
   text-decoration: none;
-  text-transform: uppercase;}
+  text-transform: uppercase;
+}
+
 .slide-menu {
   height: 100%;
   -webkit-background-size: cover;
@@ -195,4 +200,7 @@ a:link {
   padding-top: 100px;
   margin-left: 20px;
   display: inline;
+}
+#step-one{
+  text-align: center;
 }
