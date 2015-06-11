@@ -10,22 +10,28 @@
         <h1>SHOW NYC</h1>
     <div class = "menu"> <!--Slide out menu option--> <!--Right now the slide out menu is out when the page initially loads-->
         <div class = "icon-close"> 
-            <strong>M E N U</strong>
-            
-        </div>
+            <h1>SHOW NYC</h1>
             <ul> <!--Four menu options--> <!--These need to be made clickable-->
                 <li><a href="#" id = "voteButton" >Vote</a></li>
                 <li><a href="#" id = "galleryButton">Gallery</a></li>
                 <li><a href="#" id = "submitButton">Submit</a></li>
                 <li><a href="#" id = "aboutButton">About</a></li>
             </ul>
-            <p id = "sharePrompt">Share</p>
-            <div class = "share-prime">
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_pinterest_large' displayText='Pinterest'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
+            <div id="share-buttons">
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
+                    <img src="file:///Users/emma/Desktop/social-network2.png" alt="Facebook" />
+                </a>
+                <!-- Twitter -->
+                <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
+                    <img src="file:///Users/emma/Desktop/twitter1.png" alt="Tumblr" />
+                </a>
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
+                    <img src="file:///Users/emma/Desktop/google1.png" alt="Google" />
+                </a>
             </div>
+        </div>
     </div>
     <div class = "slide-menu">
         <div class = "icon-menu">
@@ -41,8 +47,8 @@
 <body> <!--Main body-->
     <!--Vote page-->                       <!--There is not voting functionality as of right now-->
     <div id = "vote" class = "wrap">
-        <h2 align = "center">CAMPAIGN TITLE</h2> 
-        <h3 align = "center">LINE ABOUT THE CAMPAIGN/CAMPAIGN SLOGAN</h3> <!--Do we want this additional line?-->
+        <h2 align = "center">Vote Page</h2> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et commodo lacus. Phasellus ex enim, convallis non iaculis quis, mattis eu dolor. Aenean quis pharetra magna. Quisque id tempus nibh. Maecenas ac iaculis arcu. Integer libero risus, congue in condimentum at, ullamcorper sit amet libero. Fusce vel justo dolor. Aliquam eget aliquam mauris. Proin libero libero, semper quis mollis a, egestas suscipit sapien.</p> <!--Do we want this additional line?-->
 
         <div class="fotorama" align = "center" data-transition = "slide" data-width: "800" data-height: "600" data-allowfullscreen = true data-fit = "contain" data-has = "true" data-loop = "true" data-autoplay = "true" data-navposition = "bottom">  <!--Automatically moving photo gallery-->
             <img src="http://www.inspiralized.com/wp-content/uploads/2013/08/IMG_4065.jpg">
@@ -52,8 +58,8 @@
     </div>
     <!--Gallery page-->
     <div id = "gallery">               <!--There should ultimately be a grid plugin for this page-->
-        <h2 align = "center">Gallery page</h2>
-        <p align = "center">ALL SUBMITTED CONTENT</p>
+        <h2 align = "center">Gallery Page</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et commodo lacus. Phasellus ex enim, convallis non iaculis quis, mattis eu dolor. Aenean quis pharetra magna. Quisque id tempus nibh. Maecenas ac iaculis arcu. Integer libero risus, congue in condimentum at, ullamcorper sit amet libero. Fusce vel justo dolor. Aliquam eget aliquam mauris. Proin libero libero, semper quis mollis a, egestas suscipit sapien.</p>
 
         <div class = "image-zoom-container">
             <div class = "zoom-container">
@@ -86,6 +92,36 @@
                     <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
                 </a>
             </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
+                </a>
+            </div>
+            <div class = "zoom-container">
+                <a href="#">
+                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
+                </a>
+            </div>            
             <p align = center>Loading more images...</p>
             <br>
         </div>
@@ -104,7 +140,7 @@
     <!--Submit page-->
     <div id = "submit">
         <h2 align = "center">Submit page</h2>
-        <p align = "center">S U B M I T -- T E X T</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et commodo lacus. Phasellus ex enim, convallis non iaculis quis, mattis eu dolor. Aenean quis pharetra magna. Quisque id tempus nibh. Maecenas ac iaculis arcu. Integer libero risus, congue in condimentum at, ullamcorper sit amet libero. Fusce vel justo dolor. Aliquam eget aliquam mauris. Proin libero libero, semper quis mollis a, egestas suscipit sapien.</p>
     </div>
     <!--About page-->
     <div id="about">
