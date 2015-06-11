@@ -42,6 +42,7 @@ INSTALLED_APPS = (
 INSTALLED_APPS += (
     'images', 
     'campaigns',
+    'apis',
     'debug_toolbar',
     'restless',
 )

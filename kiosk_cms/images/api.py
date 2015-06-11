@@ -1,8 +1,11 @@
+from django.contrib.auth.models import User
 from restless.dj import DjangoResource
 from restless.preparers import FieldsPreparer
 from campaigns.api import CampaignResource
+from apis.models import ApiKey
 
 from .models import Image
+from campaigns.models import Campaign
 
 class ImageResource(DjangoResource):
 	preparer = FieldsPreparer(fields={
@@ -16,6 +19,17 @@ class ImageResource(DjangoResource):
 		'campaign_winner': 'campaign_winner',
 		'flagged': 'flagged',
 	})
+
+	def is_authenticated(self):
+		return True
+
+		# TODO Implement API authentication
+		# 
+		# try:
+		# 	key = ApiKey.objects.get(key=self.request.GET.get('api_key'))
+		# 	return True
+		# except ApiKey.DoesNotExist:
+		# 	return False
 
 	# GET /api/images/
 	def list(self):
