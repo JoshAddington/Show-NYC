@@ -14,6 +14,19 @@ class Image(models.Model):
     def __str__(self):
     	return self.image.name
 
+    def upvote(self):
+        if self.campaigns.is_active:
+            score += 1
+        else:
+            return "Campaign %s is no longer active" % self.campaigns.name
+
+    def downvote(self):
+        if self.score > 0:
+            if self.campaigns.is_active:
+                score -= 1
+            else:
+                return "Campaign %s is no longer active" % self.campaigns.name
+
     def thumb(self):
         if self.image:
             return u'<img src="%s" width=80 height=80 />' % (self.image.url)
