@@ -10,7 +10,7 @@ h1 {                                               /*Heading 1*/
   font-family: "Changa One";
   color: white;
   letter-spacing: 4px;
-  font-size: 50px;
+  font-size: 30px;
   padding-top: 0px;
   padding-right: 10px;
   padding-bottom:0px;
@@ -43,9 +43,11 @@ h4 {                                               /*Heading 4*/
 
 header {                                           /*Header*/
   background: #66da59;
-  margin: 0;
-  top: 0;
-  overflow: hidden;
+  height: 100px;
+}
+header > h1 {
+  margin-left: 95px;
+  margin-top: -32px;
 }
 p{                                                 /*Paragraphs*/
   color: black;
@@ -117,25 +119,28 @@ a:hover {
   width: 300px; /*width of the menu*/
   z-index: 15;
 }
-.icon-close {                                    /*Menu slide out icon*/
+.icon-close {    
+                                  /*Menu slide out icon*/
+  top:60px;
   cursor: pointer;
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
+  left: 15px;
   padding-left: 0px; /*"Menu" spacing*/
   padding-bottom: 0px; /*"Menu" to options spacing*/
   padding-top: 0px;
   } /*top to "Menu" spacing*/
-
-.icon-menu {                                     /*Menu banner*/
-  background-color: white;
-  cursor: pointer;
-  padding-left: 20px;
-  padding-top: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
+.icon-close > h1 {
+  font-size: 40px;
 }
-
+.icon-menu {                                    /*Menu banner*/
+  margin-top: 25px;
+  margin-left: 60px;
+}
+.wrap {
+    position: relative;
+}
 .slide-menu {
   height: 100%;
   -webkit-background-size: cover;
@@ -153,7 +158,7 @@ a:hover {
   background-color: none;
   padding-bottom: 3px;
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .menu a {                                       /*Menu listing style*/
   font-family: "Raleway"; 
@@ -201,10 +206,12 @@ a:hover {
   .zoom-container{
     width: 100%;}
   }
+#share-buttons {
+    margin-top: 100px;
+    margin-left: 30px;
+}
 #share-buttons img {
   width: 20px;
   height: 20px;
-  padding-top: 120px;
-  margin-left: 20px;
-  display: inline;
+  padding: 10px;
 }
