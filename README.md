@@ -45,4 +45,5 @@ Then cd into Kiosk_cms and run a DB migration with
 ```
 python manage.py migrate
 ```
-#
+ 
+Run the local django server with ``` python manage.py runserver``` and create your admin user with ``` python manage.py createsuperuser```.
