@@ -4,7 +4,8 @@ body {                                             /*Body*/
   color: black; 
   padding: 0px;
   left: 0;
-  margin: 0;}
+  margin: 0;
+}
 h1 {                                               /*Heading 1*/ 
   font-family: "Changa One";
   color: white;
@@ -13,7 +14,8 @@ h1 {                                               /*Heading 1*/
   padding-top: 0px;
   padding-right: 10px;
   padding-bottom:0px;
-  padding-left: 20px;}
+  padding-left: 20px;
+}
 h2 {                                               /*Heading 2*/
   font-family: "Raleway";
   margin-top: -30px;
@@ -22,93 +24,88 @@ h2 {                                               /*Heading 2*/
   background-color: white;
   text-align: center;
   font-weight: bold;
-  vertical-align: center;}
+  vertical-align: center;
+}
 h3 {                                               /*Heading 3*/
   font-family: "Raleway";
   font-size: 20px;
   font-style: normal;
   color: black;
   font-weight: bold;
-  text-align: center;}
+  text-align: center;
+}
 h4 {                                               /*Heading 4*/
   font-family: "Raleway";
   font-size: 15px;
   font-style: bold;
   color: black;
   text-align: center;}
+
 header {                                           /*Header*/
   background: #66da59;
   margin: 0;
   top: 0;
-  overflow: hidden;}
+  overflow: hidden;
+}
 p{                                                 /*Paragraphs*/
   color: black;
   padding: 10px 10px 10px 10px;
   background: white;
-  font-size: 15px;}
-/*Links*/
-/*
-a{                                                 
-  color: black;} */
-/* unvisited link */
-/*
-a:link {
-  color: red;
-  font-style: normal;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: 100% "Changa One";}*/
-/* visited link */
-/*a:visited {
-  color: black;}*/
-/* mouse over link */
-/*a:hover {
-  color: #7A0000;}*/
-/* selected link */
-/*a:active {
-  color: #7A0000;}*/
-/*WHY CAN'T I RESIZE THESE?*/
+  font-size: 15px;
+}
+a:hover {
+  opacity: 0.5;
+}
 #centerCenter {                                    /*Center images*/
   vertical-align: center;
   background-color: white; /*this is used on the about page*/
-  text-align: center;}
+  text-align: center;
+}
 /*Four page displays*/                            /*Initial page display*/
 #about {
   display: none;
-  background-color: white;}
+  background-color: white;
+}
 #vote {
-
   display: block;
-  background-color: white;}
+  background-color: white;
+}
 #gallery{
   display: none;
-  background-color: white;}
+  background-color: white;
+}
 #submit{
   display: none;
-  background-color: white;}
+  background-color: white;
+}
 /*Buttons*/
 .tabs {                                           /*Buttons class (.tabs)*/
     font-family: "Raleway";
     padding: 10px 0px 0px 0px;
-    text-align: center;}
+    text-align: center;
+  }
 /*Four buttons*/                                  /*Buttons*/
 #voteButton{
     cursor: pointer;
     font-size: 20px;
     color: white;
-    font-family: "Raleway"; }
+    font-family: "Raleway"; 
+  }
 #submitButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;}
+    color: white;
+  }
 #galleryButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;}
+    color: white;
+  }
 #aboutButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;}
+    color: white;
+  }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
   background-color: #ef962c;
@@ -118,7 +115,8 @@ a:link {
   padding: 0;
   left: -300px;
   width: 300px; /*width of the menu*/
-  z-index: 15;}
+  z-index: 15;
+}
 .icon-close {                                    /*Menu slide out icon*/
   cursor: pointer;
   position: relative;
@@ -143,26 +141,31 @@ a:link {
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
-          background-size: cover;}
+          background-size: cover;
+}
 .menu ul {                                      /*Menu option layout*/
   list-style: none;
   margin: 0;
   letter-spacing: 3px;
-  padding: 0px 0px 0px 0px;}
+  padding: 0px 0px 0px 0px;
+}
 .menu li {                                      /*Menu option style*/
   background-color: none;
   padding-bottom: 3px;
   padding-left: 20px;
-  padding-top: 20px;}
+  padding-top: 20px;
+}
 .menu a {                                       /*Menu listing style*/
   font-family: "Raleway"; 
   letter-spacing: 2px;
   font-size: 18px;
-  text-decoration: none;}
+  text-decoration: none;
+}
 .image-zoom-container{
   list-style: none;
   font-size: 0px;
-  background-color: white;}
+  background-color: white;
+}
 .zoom-container{
   position: relative;
   overflow: hidden;
@@ -172,7 +175,8 @@ a:link {
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;}
+  -webkit-box-sizing: border-box;
+}
 .zoom-container img{
   display: block;
   width: 100%;
@@ -181,15 +185,18 @@ a:link {
   -moz-transition: all .7s ease;
   -ms-transition: all .7s ease;
   -o-transition: all .7s ease;
-  transition: all .7s ease;}
+  transition: all .7s ease;
+}
 .zoom-container:hover img { /*image hover animation*/
   -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
   -o-transform: scale(1.25);
-  transform:scale(1.25);}
+  transform:scale(1.25);
+}
 .zoom-container:hover .zoom-caption{
-  background: none;/*What you see when you hover over an image*/} 
+  background: none;/*What you see when you hover over an image*/
+} 
 @media (max-width: :767px) {
   .zoom-container{
     width: 100%;}
@@ -197,10 +204,7 @@ a:link {
 #share-buttons img {
   width: 20px;
   height: 20px;
-  padding-top: 100px;
+  padding-top: 120px;
   margin-left: 20px;
   display: inline;
-}
-#step-one{
-  text-align: center;
 }
