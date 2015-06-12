@@ -1,10 +1,12 @@
 branch-defaults:
+  aws:
+    environment: intern-cms-dev
   master:
     environment: intern-cms-dev
 global:
   application_name: intern-cms
-  default_ec2_keyname: aws-eb
+  default_ec2_keyname: cg-intern
   default_platform: Python 2.7
   default_region: us-east-1
-  profile: eb-cli
+  profile: null
   sc: git
