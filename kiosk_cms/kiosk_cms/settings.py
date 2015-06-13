@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f77mn7eor1jiklnd5kh4d$_xcqec$g$eq$1c4$hc&_pa2*4g^h'
+SECRET_KEY = os.environ['DJ_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -125,6 +125,7 @@ USE_TZ = True
 
 
 if 'RDS_DB_NAME' in os.environ:
+    DEBUG = (os.environ['DJ_DEBUG'] is "False")
     STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
