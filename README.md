@@ -1,4 +1,6 @@
-# intern-cms
+# Intern CMS Platform
+
+Initial deployment is at http://intern-cms-dev.elasticbeanstalk.com/
 
 ### Project Setup
 These install instructions are based on running Postgres.app version 9.4 on Mac OSX Yosemite. 

@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f77mn7eor1jiklnd5kh4d$_xcqec$g$eq$1c4$hc&_pa2*4g^h'
+SECRET_KEY = os.environ['DJ_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,17 +82,28 @@ WSGI_APPLICATION = 'kiosk_cms.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kiosk_cms',
-        'USER': 'intern',
-        'PASSWORD': 'cgrocks',
-        'HOST': '',
-        'PORT': '',
+if 'RDS_DB_NAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': 'interncmsdb.cvfu0nmtfjvk.us-east-1.rds.amazonaws.com',
+            'PORT': os.environ['RDS_PORT'],
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'kiosk_cms',
+            'USER': 'intern',
+            'PASSWORD': 'cgrocks',
+            'HOST': '',
+            'PORT': '',
+        }
+    }
 
 
 # Internationalization
@@ -112,7 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+if 'RDS_DB_NAME' in os.environ:
+    DEBUG = (os.environ['DJ_DEBUG'] is "False")
+    STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

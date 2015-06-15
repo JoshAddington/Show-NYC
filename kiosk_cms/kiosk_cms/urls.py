@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 
 urlpatterns = patterns('',
+    url(r'^$', 'campaigns.views.index', name='index'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('apis.urls')),
     url(r'^images/', include('images.urls')),
