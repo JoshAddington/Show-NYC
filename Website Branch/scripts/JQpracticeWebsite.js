@@ -6,6 +6,8 @@ $(document).ready(function() {
       $('#gallery').hide();
       $('#submit').hide();
       $('#about').hide();
+      $('#show-nyc-always').show();
+      $('#show-nyc-about').hide();
     }
    }); 
 
@@ -16,6 +18,8 @@ $(document).ready(function() {
       $('#gallery').show();
       $('#submit').hide();
       $('#about').hide();
+      $('#show-nyc-always').show();
+      $('#show-nyc-about').hide();
       }
    }); 
 
@@ -26,6 +30,8 @@ $(document).ready(function() {
       $('#gallery').hide();
       $('#submit').show();
       $('#about').hide();
+      $('#show-nyc-always').show();
+      $('#show-nyc-about').hide();
       }
    }); 
 
@@ -36,6 +42,8 @@ $(document).ready(function() {
       $('#gallery').hide();
       $('#submit').hide();
       $('#about').show();
+      $('#show-nyc-always').hide();
+      $('#show-nyc-about').show();
       }
    }); 
   $('.slide').hover(
