@@ -11,6 +11,7 @@ h1 {                                               /*Heading 1*/
   color: white;
   letter-spacing: 4px;
   font-size: 30px;
+  background-color: none;
   padding-top: 0px;
   padding-right: 10px;
   padding-bottom:0px;
@@ -121,7 +122,6 @@ a:hover {
 }
 .icon-close {    
                                   /*Menu slide out icon*/
-  top:60px;
   cursor: pointer;
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
@@ -129,8 +129,8 @@ a:hover {
   left: 15px;
   padding-left: 0px; /*"Menu" spacing*/
   padding-bottom: 0px; /*"Menu" to options spacing*/
-  padding-top: 0px;
-  } /*top to "Menu" spacing*/
+  padding-top: -100px;
+  } 
 .icon-close > h1 {
   font-size: 40px;
 }
@@ -152,13 +152,13 @@ a:hover {
   list-style: none;
   margin: 0;
   letter-spacing: 3px;
-  padding: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
 }
 .menu li {                                      /*Menu option style*/
   background-color: none;
   padding-bottom: 3px;
   padding-left: 20px;
-  padding-top: 15px;
+  padding-top: 25px;
 }
 .menu a {                                       /*Menu listing style*/
   font-family: "Raleway"; 
@@ -208,10 +208,133 @@ a:hover {
   }
 #share-buttons {
     margin-top: 100px;
-    margin-left: 30px;
+    margin-left: 7px;
 }
 #share-buttons img {
   width: 20px;
   height: 20px;
   padding: 10px;
 }
+
+
+.photo-grid { /*around the photos*/
+  background-color: green; 
+}
+.photo-grid li {
+  display: block;
+  background-color: yellow;
+  vertical-align: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.photo-grid img {
+  display: block;
+  max-width: 100%;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+.photo-grid figure {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.photo-grid figcaption {
+  display: table;
+  opacity: 1;
+  position: absolute;
+  left: 45px;
+  top: 100px;
+  z-index: 10;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+ 
+.photo-grid figcaption p { /*slide down caption*/
+  font-size: 15px;
+  position: absolute;
+  top: -163px;
+  width: 289px;
+  opacity: .7;
+  letter-spacing: 2px;
+  background-color: #ef962c;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.photo-grid li:hover figcaption p {
+  -moz-transform: translateY(163px);
+  -webkit-transform: translateY(163px);
+  transform: translateY(163px);
+}
+
+
+.grid-block-container{
+  float: center;
+}
+.grid-block {
+  position: relative;
+  float: center;
+  background-color: green;
+  text-align: center;
+  padding: 30px 30px 30px 30px;
+}
+.caption {
+  display: none;
+  text-align: center;
+  vertical-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  float: center;
+  width: 300px;
+  height: 200px;
+  opacity: .7;
+}
+.caption h6, .caption p {
+  color: blue;
+  text-align: center;
+  background-color: red;
+}
+.caption h6 {
+  font-family: "Raleway";
+  font-size: 15px;
+  font-style: bold;
+  color: black;
+
+}
+.grid-block-container img{
+  text-align: center;
+  vertical-align: center;
+  background-color: yellow;
+}
+#long-header {
+  background-color: #66da59;
+  color: white;
+  text-align: center;
+}
+
+#long-header h3{
+  margin-top: -80px;
+  padding: 100px 20px 0px 20px;
+  font-size: 25px;
+}
+#long-header p{
+  font-size: 17px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  /*padding: 0px 150px 0 150px;*/
+
+
+
+
+
+
