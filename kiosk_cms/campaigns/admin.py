@@ -6,7 +6,7 @@ from images.models import Image
 
 class ImageInline(admin.TabularInline):
     model = Image
-    fields = ('thumb', 'user_id', 'score', 'flagged')
+    fields = ('thumb', 'user_id', 'score', 'active', 'flagged')
     readonly_fields = ('thumb', )
 
     def thumb(self, obj):
