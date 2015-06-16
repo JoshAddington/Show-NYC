@@ -84,6 +84,9 @@ a:hover {
 #show-nyc-about{
   display: none;
 }
+#filter{
+  display: none;
+}
 /*Buttons*/
 .tabs {                                           /*Buttons class (.tabs)*/
     font-family: "Raleway";
@@ -112,6 +115,14 @@ a:hover {
     font-size: 20px;
     color: white;
   }
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 /*Menu*/
 .menu {                                          /*Slide out menu*/
   background-color: #ef962c;
@@ -123,8 +134,7 @@ a:hover {
   width: 300px; /*width of the menu*/
   z-index: 15;
 }
-.icon-close {    
-                                  /*Menu slide out icon*/
+.icon-close {                                  /*Menu slide out icon*/
   cursor: pointer;
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
@@ -140,6 +150,7 @@ a:hover {
 .icon-menu {                                    /*Menu banner*/
   margin-top: 25px;
   margin-left: 60px;
+  cursor: pointer;
 }
 .wrap {
     position: relative;
@@ -169,23 +180,27 @@ a:hover {
   font-size: 18px;
   text-decoration: none;
 }
-.image-zoom-container{
+
+
+/*###########################################################################################*/
+
+.image-zoom-container-gallery{                          /*Photo grid layout*/
   list-style: none;
   font-size: 0px;
   background-color: white;
 }
-.zoom-container{
+.zoom-container-gallery{                               /*Photo grid layout*/
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 33.33%; /*two */
-  border: 25px solid white; /*border around the images*/
+  width: 33.33%;
+  border: 2px solid lightgreen; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
-.zoom-container img{
+.zoom-container-gallery img{
   display: block;
   width: 100%;
   height: auto;
@@ -195,20 +210,56 @@ a:hover {
   -o-transition: all .7s ease;
   transition: all .7s ease;
 }
-.zoom-container:hover img { /*image hover animation*/
+.zoom-container-gallery:hover img { /*image hover animation*/
   -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
   -o-transform: scale(1.25);
   transform:scale(1.25);
 }
-.zoom-container:hover .zoom-caption{
-  background: none;/*What you see when you hover over an image*/
-} 
 @media (max-width: :767px) {
   .zoom-container{
     width: 100%;}
   }
+
+
+/*###########################################################################################*/
+
+.image-zoom-container-vote{                          /*Photo grid layout*/
+  list-style: none;
+  font-size: 0px;
+}
+.zoom-container-vote{                               /*Photo grid layout*/
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 33.33%;
+  border: 2px solid lightgreen; /*border around the images*/
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.zoom-container-vote img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 2.5s ease; /*ease into image zoom*/
+  -moz-transition: all 2.5s ease;
+  -ms-transition: all 2.5s ease;
+  -o-transition: all 2.5s ease;
+  transition: all 2.5s ease;
+}
+.zoom-container-vote:hover img { /*image hover animation*/
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform:scale(1.15);
+}
+
+/*###########################################################################################*/
+
 #share-buttons {
     margin-top: 100px;
     margin-left: 7px;
@@ -221,65 +272,35 @@ a:hover {
 
 
 .photo-grid { /*around the photos*/
-  background-color: white; 
-}
-.photo-grid li {
-  display: block;
-  background-color: white;
-  vertical-align: center;
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
+  background-color: lightgreen;
+  padding-top: 50px;
 }
 .photo-grid img {
-  display: block;
-  max-width: 100%;
-  float: center;
-  vertical-align: center;
-  text-align: center;
-  padding-top: 20px;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
-}
-.photo-grid figure {
-  height: 100%;
+  display: block; /*block = ocapity does not change on hover /// hidden = ocapicty decreases with hover*/
   overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.photo-grid figcaption {
-  display: table;
-  opacity: 1;
-  position: absolute;
-  left: 45px;
-  top: 100px;
-  z-index: 10;
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
-  -webkit-transition-delay: 100ms;
-  -moz-transition-delay: 100ms;
-  transition-delay: 100ms;
 }
  
-.photo-grid figcaption p { /*slide down caption*/
+.photo-grid p{ /*slide down caption*/
   font-size: 15px;
-  position: absolute;
-  top: -163px;
-  width: 289px;
-  opacity: .7;
+  background-color: purple;
+  position: relative;
+  top: -300px; /*location of caption*/
+  width: 300px; /*width of caption*/
+  opacity: .8;
   letter-spacing: 2px;
-  background-color: #ef962c;
-  -webkit-transition: all 300ms ease-out;
-  -moz-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
+  -webkit-transition: all 800ms ease-out;
+  -moz-transition: all 800ms ease-out;
+  transition: all 800ms ease-out;
 }
-.photo-grid li:hover figcaption p {
-  -moz-transform: translateY(163px);
-  -webkit-transform: translateY(163px);
-  transform: translateY(163px);
+.photo-grid p:hover{
+  -moz-transform: translateY(200px);
+  -webkit-transform: translateY(200px);
+  transform: translateY(200px);
 }
+
+
+
+
 
 
 .grid-block-container{
@@ -349,7 +370,17 @@ a:hover {
   margin-left: -5px
 }
 
-
+#filter {
+  background-color: #66da59;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  padding-left: 20px;
+  letter-spacing: 2px;
+  word-spacing: 30px;
+  text-align: right;
+  vertical-align: top;
+}
 
 
 
