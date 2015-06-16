@@ -2,9 +2,10 @@
 
 Initial deployment is at http://intern-cms-dev.elasticbeanstalk.com/
 
-### Project Setup
-These install instructions are based on running Postgres.app version 9.4 on Mac OSX Yosemite. 
+These install instructions are based on running [Postgres.app](http://postgresapp.com/) version 9.4 on Mac OSX Yosemite, so make sure you have it installed 
 
+#### Python Setup
+First, get Python's package installer called pip by downloading [get-pip.py](https://bootstrap.pypa.io/get-pip.py) and running with `python get-pip.py`.
 
 Python has a utility called virtualenv that is intended to keep python packages installed for projects separate from other projects and from python packages installed on your system. To set up python's virtualenv, run
 
@@ -25,16 +26,26 @@ Once virtualenv is installed, create a virtualenv called intern-cms by running
 ```
 mkvirtualenv intern-cms
 ```
+We will be installing all our packages in this virtualenv because it keeps these packages from interfering with the rest of our system. Since we're installing our packages in the virtualenv, we'll also need to interact with Django from this virtualenv every time as well.
+
+To deactivate the virtualenv, run 
+```
+deactivate
+```
+
+to enable the virtualenv, run 
+```
+workon intern-cms
+```
+
+
 then install the project packages by running
 
 ```
 pip install -r requirements.txt
 ```
 
-
-To deactivate the virtualenv, run the command ```deactivate ``` from the terminal. To activate the virtualenv run ``` workon {virtualenv name} ```. In this case the virtualenv name is intern-cms, so you'll run ```workon intern-cms ```.
-
-
+#### Postgres setup
 
 To create the kiosk_cms database in PostGres, from the repo root run
 
@@ -42,10 +53,26 @@ To create the kiosk_cms database in PostGres, from the repo root run
 bash postgres.sh
 ```
 
-Then cd into Kiosk_cms and run a DB migration with
+Then run a DB migration with
 
 ```
+cd kiosk_cms
 python manage.py migrate
 ```
  
-Run the local django server with ``` python manage.py runserver``` and create your admin user with ``` python manage.py createsuperuser```.
+Create your admin user with 
+``` 
+python manage.py createsuperuser
+```
+
+#### Running the local server
+
+First, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder that Django will be serving them from. To do this, run 
+```
+python manage.py collectstatic --no-input
+```
+
+To start the deveelopment server run 
+```
+python manage.py runserver
+```
