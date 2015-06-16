@@ -8,6 +8,7 @@ $(document).ready(function() {
       $('#about').hide();
       $('#show-nyc-always').show();
       $('#show-nyc-about').hide();
+      $('#filter').hide();
     }
    }); 
 
@@ -20,6 +21,7 @@ $(document).ready(function() {
       $('#about').hide();
       $('#show-nyc-always').show();
       $('#show-nyc-about').hide();
+      $('#filter').show();
       }
    }); 
 
@@ -32,6 +34,7 @@ $(document).ready(function() {
       $('#about').hide();
       $('#show-nyc-always').show();
       $('#show-nyc-about').hide();
+      $('#filter').hide();      
       }
    }); 
 
@@ -44,16 +47,9 @@ $(document).ready(function() {
       $('#about').show();
       $('#show-nyc-always').hide();
       $('#show-nyc-about').show();
+      $('#filter').hide();      
       }
    }); 
-  $('.slide').hover(
-    function(){
-      $(this).find('.caption').slideDown(250);
-    },
-    function(){
-      $(this).find('.caption').slideUp(250);
-    }
-  );
 
   
     $('.icon-menu').click(function() {
