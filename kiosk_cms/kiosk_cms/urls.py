@@ -17,9 +17,10 @@ from django.conf import settings
 from django.conf.urls import include, url, patterns
 from django.conf.urls.static import static
 from django.contrib import admin
+from kiosk_cms import views
 
 urlpatterns = patterns('',
-    url(r'^$', 'campaigns.views.index', name='index'),
+    url(r'^$', views.index),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('apis.urls')),
     url(r'^images/', include('images.urls')),

@@ -14,6 +14,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEMPLATE_DEBUG = True
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -66,7 +68,7 @@ ROOT_URLCONF = 'kiosk_cms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,10 +131,11 @@ USE_TZ = True
 
 if 'RDS_DB_NAME' in os.environ:
     DEBUG = (os.environ['DJ_DEBUG'] is "False")
-    STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
