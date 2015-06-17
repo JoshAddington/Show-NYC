@@ -51,6 +51,7 @@ INSTALLED_APPS += (
     'debug_toolbar',
     'restless',
     'storages',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (

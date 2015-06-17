@@ -23,8 +23,6 @@ urlpatterns = patterns('',
     url(r'^$', views.index),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('apis.urls')),
-    url(r'^images/', include('images.urls')),
-    url(r'^campaigns/', include('campaigns.urls')),
 )
 
 if settings.DEBUG:

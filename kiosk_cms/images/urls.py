@@ -1,3 +1,6 @@
-from django.conf.urls import include, url
+from django.conf.urls import patterns, url
 
-urlpatterns = []
+urlpatterns = patterns('images.views',
+	url(r'^$', 'image_collection'),
+	url(r'^(?P<pk>[0-9]+)$', 'image_element'),
+	)

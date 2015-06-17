@@ -13,7 +13,16 @@ class Image(models.Model):
 
 
     def __str__(self):
-    	return self.image.name
+    	return self.image
+
+    def name(self):
+        return self.image.name
+
+    def user(self):
+        return self.user_id.username
+
+    def campaign(self):
+        return self.campaign_id.name
 
     def activate(self):
         if self.active:
