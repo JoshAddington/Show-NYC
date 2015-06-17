@@ -138,7 +138,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Amazon Web Services settings     
+
+# Name of AWS S3 bucket to be used for media storage
 AWS_STORAGE_BUCKET_NAME = os.environ['BUCKET_NAME']
+
+# Access Key ID and Secret Access Key are AWS User credentials
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
