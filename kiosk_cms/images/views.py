@@ -47,3 +47,10 @@ def image_element(request, pk):
 	elif request.method == 'DELETE':
 		image.delete()
 		return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET'])
+def image_winners_collection(request):
+	if request.method == 'GET':
+		images = Image.objects.filter(campaign_winner=True)
+		serializer = ImageSerializer(images, many=True)
+		return Response(serializer.data)
