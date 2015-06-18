@@ -65,6 +65,18 @@ Create your admin user with
 python manage.py createsuperuser
 ```
 
+#### AWS S3 Media setup
+
+This project is set up to use an AWS S3 bucket for serving media files.
+If you need help setting up your S3 bucketand an IAM user, reference [this file](docs/AWS.md)
+
+With your bucket set up, add the following environment variables to your system, replacing the italics with the respective info. The IAM info will be in the credentials file that you downloaded when you created the IAM User.
+
+BUCKET_NAME=*S3 Bucket Name*
+AWS_SECRET_ACCESS_KEY=*IAM User Secret Access Key*
+AWS_ACCESS_KEY=*IAM User Access Key ID*
+
+
 #### Running the local server
 
 First, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder that Django will be serving them from. To do this, run 

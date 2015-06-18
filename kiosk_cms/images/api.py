@@ -33,7 +33,7 @@ class ImageResource(DjangoResource):
 
 	# GET /api/images/
 	def list(self):
-		return Image.objects.filter(flagged=False)
+		return Image.objects.filter(flagged=False).filter(active=True)
 
 	# GET /api/images/<pk>/
 	def detail(self, pk):

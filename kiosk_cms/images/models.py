@@ -7,12 +7,25 @@ class Image(models.Model):
     score = models.IntegerField(default=0)
     user_id = models.ForeignKey('auth.User', related_name='user')
     flagged = models.BooleanField(default=False)
+    active = models.BooleanField(default=False)
     campaign_id = models.ForeignKey(Campaign, related_name='images')
     campaign_winner = models.BooleanField(default=False)
 
 
     def __str__(self):
     	return self.image.name
+
+    def activate(self):
+        if self.active:
+            return "Image is already activated."
+        else:
+            self.active = True
+
+    def deactivate(self):
+        if self.active:
+            self.active = False
+        else:
+            return "Image is already deactivated."
 
     def upvote(self):
         if self.campaigns.is_active:
