@@ -6,28 +6,27 @@
     <link href="{% static 'css/CSSpracticeWebsite.css' %}" rel="stylesheet">
     <link href="{% static 'css/hover.css' %}" rel="stylesheet" media="all">
     <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
-    <!--Header-->
 </head>
   <body>
-    <header class = "noselect">    <!--Header-->
+    <header class = "noselect"> <!--Header-->
         <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}"> 
-        <h1 id = "show-nyc-always">SHOW NYC</h1>
-        <h1 id = "show-nyc-about">SHOW NYC</h1>
-        <p id = "filter">Trending Newest Oldest Random</p>
+        <h1 id = "show-nyc-vg">SHOW NYC</h1> <!--header for vote and gallery sections-->
+        <h1 id = "show-nyc-sa">SHOW NYC</h1> <!--header for submit and about sections-->
+        <p id = "filter">Trending Newest Oldest Random</p> <!--placeholder filters for gallery section-->
     </header>
     <div class = "noselect">
         <div class="menu">
             <div class="icon-close"> <!--Slide out navagation menu-->
                 <h1>SHOW NYC</h1>
                 <nav>
-                    <ul>                <!--Navagation options-->
+                    <ul> <!--Navagation options-->
                         <li><a href="#" id ="voteButton" >Vote</a></li>
                         <li><a href="#" id ="galleryButton">Gallery</a></li>
                         <li><a href="#" id ="submitButton">Submit</a></li>
                         <li><a href="#" id ="aboutButton">About</a></li>
                     </ul>
                 </nav>
-                <div id="share-buttons">   <!--Share via social media-->
+                <div id="share-buttons"> <!--Share via social media-->
                     <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
                         <img src="{% static 'icons/social-network2.png' %}" alt="Facebook" />
                     </a>
@@ -42,206 +41,234 @@
         </div>
     </div>
 
-<!--###################################################################################################################################################################################-->
-
-    <!--Vote page-->   <!--There is not voting functionality as of right now-->
+<!--##########    V O T E    S E C T I  O N      #########-->
+<!--There is not voting functionality yet-->
+    
     <div id="vote" class="wrap">
-        <div id = "campaign-description">
-            <img src="http://ecx.images-amazon.com/images/I/51BS7jLndbL._SS40_.jpg">
-            <h2>Put your most creative design on Starbuck's iconic white cup</h2>
-            <p>Taking a cue from customers who have been doodling designs on cups for years, Starbucks is launching a White Cup Contest.</p>
-            <a href="http://blogs.starbucks.com/blogs/customer/archive/2014/04/22/cups-contest.aspx">Learn More</a>
+        <div id = "campaign" class = "noselect"> <!--Information about this week's campaign-->
+            <h2>Campaigns Can Put Their Campaign Slogan Here</h2> <!--Campaign Slogan-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed gravida libero. Cras a accumsan tellus. Quisque sit amet ex id lectus sodales ultricies. Sed pharetra enim eget augue tempus, nec gravida massa aliquam.</p> <!--Current Campaign Description-->
         </div>
         <div class = "image-zoom-container-vote"> <!--Grid of vote photos-->
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-                </a>
+                <img src="http://s.hswstatic.com/gif/holiday-dessert-pictures-2.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-                </a>
+                <img src="http://dessert.betterrecipes.com/uploads/photo/400x300/d/c/dc858f10ed9b14a7e2df1c409370fb9e.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-                </a>
+                <img src="http://cook.sndimg.com/content/dam/images/cook/fullset/2012/12/11/0/CCBKN309_Frozen-Yoghurt-Coconut-Pops-recipe_s4x3.jpg/jcr:content/renditions/cq5dam.web.400.300.jpeg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-                </a>
+                <img src="https://www.itsuxtobefat.com/wp-content/uploads/raspberry-cheesecake.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-                </a>
+                <img src="http://admin.clickcapecod.com/admin/modules/recipes/images/31/416/berry-shot-1.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-                </a>
+                <img src="http://www.gallaspizza.com/upload/Menu/canoli.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-                </a>
+                <img src="http://cdn.designcorral.com/wp-content/uploads/2013/10/wedding-dessert-table-ideas.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-                </a>
+                <img src="http://img.foodnetwork.com/FOOD/2010/07/21/FNM_090110-Lighten-Up-009_s4x3_lead.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-                </a>
+                <img src="http://blog.foodnetwork.com/fn-dish/files/2011/03/cheesecake-pops.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-                </a>
+                <img src="http://img.allw.mn/health/thumbs/102/715.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-                </a>
+                <img src="http://heydoyou.com/wp-content/uploads/2012/08/lemon.jpg">
             </div>
             <div class = "zoom-container-vote">
-                <a href="#">
-                    <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-                </a>
+                <img src="http://cms.cb.asmsrv.co/cnvyr/2013-09-10_chughtai_creative-cute-bridal-shower-desserts-parfait.jpg">
             </div>            
         </div>
     </div>
 
+<!--##########    G A L L E R Y    S E C T I  O N      #########-->
+<!--No functional filter capabilities yet-->
 
-<!--###################################################################################################################################################################################-->
-
-
-    <!--Gallery page-->
-    <div id ="gallery">     <!--Still need to add filter capabilites-->      
+    <div id ="gallery">    
         <div class = "image-zoom-container-gallery">  <!--Grid of gallery photos-->
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://photography.naturestocklibrary.com/orca-stock-photo.jpg">
-                </a>
+                <img src="http://photography.naturestocklibrary.com/orca-stock-photo.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://www.photographypros.com/landscape/wisconsin_dells/wisconsin_dells.jpg">
-                </a>
+                <img src="http://www.photographypros.com/landscape/wisconsin_dells/wisconsin_dells.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://www.muralsbyles.com/wp-content/uploads/Autum-Garden-Wall-Mural-400x300.jpg">
-                </a>
+                <img src="http://www.muralsbyles.com/wp-content/uploads/Autum-Garden-Wall-Mural-400x300.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://experienceolympic.com/sites/default/files/pictures/Olympic-Guided-Hike.JPG">
-                </a>
+                <img src="http://experienceolympic.com/sites/default/files/pictures/Olympic-Guided-Hike.JPG">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://imagecache6.allposters.com/LRG/27/2707/DS1ND00Z.jpg">
-                </a>
+                <img src="http://imagecache6.allposters.com/LRG/27/2707/DS1ND00Z.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://4.bp.blogspot.com/_JVXqJ8QkmJA/Sk5bkDETDbI/AAAAAAAANy4/MEYtdJkXBtQ/s400/12_albena-markova.jpg">
-                </a>
+                <img src="http://4.bp.blogspot.com/_JVXqJ8QkmJA/Sk5bkDETDbI/AAAAAAAANy4/MEYtdJkXBtQ/s400/12_albena-markova.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="https://photogrist.com/wp-content/uploads/2014/10/Will-Burrard-Lucas-400x300.jpg">
-                </a>
+                <img src="https://photogrist.com/wp-content/uploads/2014/10/Will-Burrard-Lucas-400x300.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/s10AAOxydgZTHwbL/$_1.JPG?set_id=2">
-                </a>
+                <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/s10AAOxydgZTHwbL/$_1.JPG?set_id=2">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://4photos.net/blog/wp-content/uploads/Different-Types-of-Photography.jpg">
-                </a>
+                <img src="http://4photos.net/blog/wp-content/uploads/Different-Types-of-Photography.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://designm.ag/images/arch/nature/194828_4216.jpg">
-                </a>
+                <img src="http://designm.ag/images/arch/nature/194828_4216.jpg">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://www.photographypros.com/landscape/halifax/photography.gif">
-                </a>
+                <img src="http://www.photographypros.com/landscape/halifax/photography.gif">
             </div>
             <div class = "zoom-container-gallery">
-                <a href="#">
-                    <img src="http://4.bp.blogspot.com/_D-LZxhXlNXY/SbIpnWrK_rI/AAAAAAAAJpY/EnJbphAkskQ/s400/beautiful-nature-photographs.jpeg">
-                </a>
+                <img src="http://4.bp.blogspot.com/_D-LZxhXlNXY/SbIpnWrK_rI/AAAAAAAAJpY/EnJbphAkskQ/s400/beautiful-nature-photographs.jpeg">
             </div>            
         </div>
     </div>
 
+<!--##########    S U B M I T   S E C T I  O N      #########-->
+<!--No option to submit photos yet-->
 
-<!--###################################################################################################################################################################################-->
-
-
-    <!--Submit page-->
-    <div id="submit">
-        <h2 align = "center">Submit page</h2>
-        <h3>Show NYC What You've Got</h3> 
-        <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
-        <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here——it's that simple!</p>
-        <h3>What's Your Name?</h3>
-        <p>Why do you need my name? Wait..what? Don't worry, we won't user your name for anything other than personalized emails to you!</p>
-        <h3>What's Your Email?</h3>
-        <p>Ugh...I'm going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
+    <div id="submit" class = "noselect">
+        <div id = "submit-title">
+            <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
+            <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
+            <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here—it's that simple!</p>
+        </div>
+        <div id = "submit-step1">
+            <h3>What's Your Name?</h3> <!--Name submission-->
+            <form>
+                <input type = "text" name = "name"> <!--User text input-->
+            </form>
+            <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
+        </div>
+        <div id = "submit-step2">
+            <h3>What's Your Email?</h3>
+            <form>
+                <input type = "text" name = "email-address"> <!--User text input-->
+            </form>
+            <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
+        </div>
+        <div id = "submit-photo">
+            <h3>What's Your Photo?</h3> <!--User photo input-->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
     </div>
 
+<!--##########    A B O U T   S E C T I  O N      #########-->
 
-<!--###################################################################################################################################################################################-->
-
-    <!--About page-->
     <div id="about">
         <div id = "long-header">           
-            <h3 id = "long-header">Get your photo on the MTA Kiosks</h3>
-            <p id = "long-header">Each week a contest will be lauched by a different sponsoring company, and those companies are looking for <em>your</em>  photos!  Be sure to submit photos http://127.0.0.1:8000/#relevant to that week's specified company. You can submit photos on both our website and mobile app in hopes that your best shot will make it onto all 140 kiosk screens to be seen by millions of New York City subway riders. Remember to vote for your favorite photo and see if it makes it onto the big screen in the big apple!</p>
+            <h3 id = "long-header">Get your photo on the MTA Kiosks</h3> <!--Example first paragraph for about section-->
+            <p id = "long-header">Each week a contest will be lauched by a different sponsoring company, and those companies are looking for <em>your</em>  photos!  Be sure to submit photos relevant to that week's specified campaign. You can submit photos on both our website and mobile app in hopes that your best shot will make it onto all 140 kiosk screens to be seen by millions of New York City subway riders. Remember to vote for your favorite photo and see if it makes it onto the big screen in the big apple!</p>
             <br>
             <br>
-            <h3>What to Expect</h3>
-            <p></p>
+            <h3 id = "long-header">What to Expect</h3> <!--Example second paragraph for about section-->
+            <p id = "long-header">The voting for any given campaign opens on Monday at 3:00pm and closes later that same week on at 3:00pm on Friday. The winning photo will be announced the day after voting closes, so remember to stay tuned! The following week's campaign details will be announced 24 hours before the voting period for that campaign beings. Go out there and Show NYC what you've got!</p>
             <br>
             <br>         
             <h3 id = "long-header">Check Out Past Campaign Winners</h3>
-            <br>
+            <br>    
         </div>
-        <div class="photo-grid" align = "center">
-            <a href="http://www.controlgroup.com/">
-                <img src="https://s-media-cache-ak0.pinimg.com/736x/3f/f4/72/3ff472e6fcc493d3305c96d7a2dd3475.jpg">
-                <p>Caption about campaign 1</p>
-            </a>
-            <a href="http://www.controlgroup.com/">
-                <img src="https://s-media-cache-ak0.pinimg.com/736x/3f/f4/72/3ff472e6fcc493d3305c96d7a2dd3475.jpg">
-                <p>Caption about campaign 2</p>
-            </a>
-            <a href="http://www.controlgroup.com/">
-                <img src="https://s-media-cache-ak0.pinimg.com/736x/3f/f4/72/3ff472e6fcc493d3305c96d7a2dd3475.jpg">
-                <p>Caption about campaign 3</p>
-            </a>
-            <a href="http://www.controlgroup.com/">
-                <img src="https://s-media-cache-ak0.pinimg.com/736x/3f/f4/72/3ff472e6fcc493d3305c96d7a2dd3475.jpg">
-                <p>Caption about campaign 4</p>
-            </a>
-        </div>  
+        <div class = "image-zoom-container-about">  <!--Grid of past campaign winning photos-->
+            <div class = "zoom-container-about">
+                <img src="http://photography.naturestocklibrary.com/orca-stock-photo.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://www.photographypros.com/landscape/wisconsin_dells/wisconsin_dells.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://www.muralsbyles.com/wp-content/uploads/Autum-Garden-Wall-Mural-400x300.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://experienceolympic.com/sites/default/files/pictures/Olympic-Guided-Hike.JPG">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://imagecache6.allposters.com/LRG/27/2707/DS1ND00Z.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://4.bp.blogspot.com/_JVXqJ8QkmJA/Sk5bkDETDbI/AAAAAAAANy4/MEYtdJkXBtQ/s400/12_albena-markova.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="https://photogrist.com/wp-content/uploads/2014/10/Will-Burrard-Lucas-400x300.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/s10AAOxydgZTHwbL/$_1.JPG?set_id=2">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://4photos.net/blog/wp-content/uploads/Different-Types-of-Photography.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://designm.ag/images/arch/nature/194828_4216.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://www.photographypros.com/landscape/halifax/photography.gif">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class = "zoom-container-about">
+                <img src="http://4.bp.blogspot.com/_D-LZxhXlNXY/SbIpnWrK_rI/AAAAAAAAJpY/EnJbphAkskQ/s400/beautiful-nature-photographs.jpeg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>            
+        </div>
     </div>
 
-<!--###################################################################################################################################################################################-->
-
-
+<!--scripts-->
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "3d484258-68cb-4e80-b286-ef191078786b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
