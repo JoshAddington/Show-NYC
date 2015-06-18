@@ -1,10 +1,11 @@
-# API Endpoints
+# API Endpoints - Implemented
 
 ## Images
 
 #### Image Collection 
 
 Displays a collection of active and unflagged images
+
 `/api/images/`
 
 ```json
@@ -26,6 +27,7 @@ Displays a collection of active and unflagged images
 #### Image Element
 
 Displays a single image
+
 `/api/images/<image_id>/`
 
 ```json
@@ -45,16 +47,19 @@ Displays a single image
 #### Winning Images
 
 Displays a collection of images that have won a campaign
+
 `/api/images/winners/`
 
 #### Upvote Image
 
 Adds a vote to an image's score and displays image JSON
+
 `/api/images/<image_id>/upvote/`
 
 #### Downvote Image
 
 Removes a vote from an image's score and displays image JSON
+
 `/api/images/<image_id>/downvote/`
 
 
@@ -64,6 +69,7 @@ Removes a vote from an image's score and displays image JSON
 #### Campaign Collection
 
 Displays a collection of all campaigns
+
 `/api/campaigns/`
 
 ```json
@@ -82,6 +88,7 @@ Displays a collection of all campaigns
 #### Campaign Element
 
 Displays a single campaign
+
 `/api/campaigns/<campaign_id>/`
 
 ```json
@@ -94,3 +101,6 @@ Displays a single campaign
     "end_date": "2002-10-03T11:58:51Z"
 }
 ```
+
+
+## API Endpoints - To Do
