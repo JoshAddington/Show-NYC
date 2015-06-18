@@ -37,15 +37,19 @@ class Image(models.Model):
             return "Image is already deactivated."
 
     def upvote(self):
-        if self.campaigns.is_active:
-            score += 1
+        if self.campaign_id.is_active:
+            self.score += 1
+            self.save()
+            return self
         else:
             return "Campaign %s is no longer active" % self.campaigns.name
 
     def downvote(self):
         if self.score > 0:
-            if self.campaigns.is_active:
-                score -= 1
+            if self.campaign_id.is_active:
+                self.score -= 1
+                self.save()
+                return self
             else:
                 return "Campaign %s is no longer active" % self.campaigns.name
 

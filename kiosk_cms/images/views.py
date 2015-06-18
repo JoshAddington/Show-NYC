@@ -54,3 +54,24 @@ def image_winners_collection(request):
 		images = Image.objects.filter(campaign_winner=True)
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
+
+@api_view(['GET'])
+def image_upvote(request, pk):
+	image = get_object_or_404(Image, pk=pk)
+
+	if request.method == 'GET':
+		vote = image.upvote()
+		serializer = ImageSerializer(vote)
+		return Response(serializer.data, status=status.HTTP_200_OK)
+	return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def image_downvote(request, pk):
+	image = get_object_or_404(Image, pk=pk)
+
+	if request.method == 'GET':
+		vote = image.downvote()
+		serializer = ImageSerializer(vote)
+		return Response(serializer.data, status=status.HTTP_200_OK)
+	return Response(status=status.HTTP_400_BAD_REQUEST)
