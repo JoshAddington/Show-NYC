@@ -1,3 +1,4 @@
+body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
   color: black; 
@@ -467,4 +468,27 @@ input[type = "text"]{                              /*Text input*/
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 40px;
+}
+label.filebutton {
+    width:120px;
+    height:40px;
+    overflow:hidden;
+    position:relative;
+    background-color: #66da59;
+    color: non
+}
+label span input {
+    z-index: 999;
+    line-height: 0;
+    font-size: 50px;
+    position: absolute;
+    top: -2px;
+    left: -700px;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+    _cursor: hand;
+    margin: 0;
+    padding:0;
 }
