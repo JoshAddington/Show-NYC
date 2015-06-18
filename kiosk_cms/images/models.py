@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework.exceptions import MethodNotAllowed
 from campaigns.models import Campaign
 
 # Create your models here.
@@ -45,14 +46,13 @@ class Image(models.Model):
             return "Campaign %s is no longer active" % self.campaigns.name
 
     def downvote(self):
-        if self.score > 0:
-            if self.campaign_id.is_active:
-                self.score -= 1
-                self.save()
-                return self
-            else:
-                return "Campaign %s is no longer active" % self.campaigns.name
-
+        if self.campaign_id.is_active:
+            self.score -= 1
+            self.save()
+            return self
+        else:
+            return "Campaign %s is no longer active" % self.campaigns.name
+        
     def thumb(self):
         if self.image:
             return u'<img src="%s" width=80 height=80 />' % (self.image.url)
