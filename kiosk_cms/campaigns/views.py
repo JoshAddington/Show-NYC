@@ -11,7 +11,7 @@ def index(request):
 @api_view(['GET'])
 def campaign_collection(request):
 	if request.method == 'GET':
-		campaigns = Campaign.objects.all()
+		campaigns = Campaign.objects.all().select_related()
 		serializer = CampaignSerializer(campaigns, many=True)
 		return Response(serializer.data)
 	

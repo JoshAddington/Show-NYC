@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -14,7 +14,11 @@ def image_collection(request):
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
 	elif request.method == 'POST':
-		data = {'image': request.data.get('image'), 'user_id': request.data.get('user_id'), 'campaign_id': request.data.get('campaign_id')}
+		data = {
+			'image': request.data.get('image'), 
+			'user_id': request.data.get('user_id'), 
+			'campaign_id': request.data.get('campaign_id')
+		}
 		serializer = ImageSerializer(data=data)
 		if serializer.is_valid():
 			serializer.save()
@@ -22,13 +26,24 @@ def image_collection(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def image_element(request, pk):
-	try:
-		image = Image.objects.get(pk=pk)
-	except Image.DoesNotExist:
-		return HttpResponse(status=404)
-
+	image = get_object_or_404(Image, pk=pk)
+	
 	if request.method == 'GET':
 		serializer = ImageSerializer(image)
 		return Response(serializer.data)
+	elif request.method == 'PUT':
+		data = {
+			'image': request.data.get('image'), 
+			'user_id': request.data.get('user_id'), 
+			'campaign_id': request.data.get('campaign_id'),
+		}
+		serializer = ImageSerializer(data=data)
+		if serializer.is_valid():
+			serializer.save()
+			return Response(serializer.data, status=status.HTTP_200_OK)
+		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+	elif request.method == 'DELETE':
+		image.delete()
+		return Response(status=status.HTTP_204_NO_CONTENT)

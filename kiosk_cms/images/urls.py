@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, url
+from images import views
 
-urlpatterns = patterns('images.views',
-	url(r'^$', 'image_collection'),
-	url(r'^(?P<pk>[0-9]+)$', 'image_element'),
+urlpatterns = patterns('',
+	url(r'^$', views.image_collection),
+	url(r'^(?P<pk>[0-9]+)/$', views.image_element),
 	)
