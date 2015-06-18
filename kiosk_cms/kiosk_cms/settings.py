@@ -42,10 +42,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangular',
 )
 
 INSTALLED_APPS += (
-    'images', 
+    'images',
     'campaigns',
     'apis',
     'debug_toolbar',
