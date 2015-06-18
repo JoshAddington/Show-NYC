@@ -13,9 +13,9 @@ class Image(models.Model):
 
 
     def __str__(self):
-    	return self.image
+    	return self.image.name
 
-    def name(self):
+    def image_name(self):
         return self.image.name
 
     def user(self):

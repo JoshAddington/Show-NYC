@@ -10,11 +10,11 @@ from .serializers import ImageSerializer
 @api_view(['GET', 'POST'])
 def image_collection(request):
 	if request.method == 'GET':
-		images = Image.objects.filter(active=True).filter(flagged=False)
+		images = Image.objects.filter(active=True).filter(flagged=False).select_related()
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
 	elif request.method == 'POST':
-		data = {'image': request.DATA.get('image'), 'user_id': request.DATA.get('user_id'), 'campaign_id': request.DATA.get('campaign_id')}
+		data = {'image': request.data.get('image'), 'user_id': request.data.get('user_id'), 'campaign_id': request.data.get('campaign_id')}
 		serializer = ImageSerializer(data=data)
 		if serializer.is_valid():
 			serializer.save()
