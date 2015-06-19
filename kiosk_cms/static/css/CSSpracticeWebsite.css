@@ -1,3 +1,4 @@
+/*    Green: #66da59    Blue: #57dbf9     Orange: #ef962c     */
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
@@ -37,7 +38,7 @@ h3 {                                                  /*Heading 3*/
   text-align: center;
 }
 header {                                              /*Header*/
-  background: #66da59;
+  background: #57dbf9;
   height: 100px;
 }
 header > h1 {
@@ -65,7 +66,7 @@ input[type = "text"]{                              /*Text input*/
   width: 50%;
   height: 40px;
   font-size: 20px;
-  color: #ef962c;
+  color: #57dbf9;
   letter-spacing: 4px;
   vertical-align: center;
   float: center;
@@ -89,6 +90,7 @@ input[type = "text"]{                              /*Text input*/
   display: none;
   height: 100%;
   width: 100%;
+  text-align: center;
 }
 #show-nyc-sa{
   display: none;
@@ -159,7 +161,7 @@ input[type = "text"]{                              /*Text input*/
 }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #ef962c;
+  background-color: #66da59;
   height: 100%;
   cursor: default;
   position: fixed;
@@ -215,7 +217,7 @@ input[type = "text"]{                              /*Text input*/
   text-decoration: none;
 }
 #long-header {                                  /*About section extended header*/
-  background-color: #66da59;
+  background-color: #57dbf9;
   color: white;
   text-align: center;
 }
@@ -251,7 +253,7 @@ input[type = "text"]{                              /*Text input*/
   padding-top: 20px;
 }
 #filter {                                      /*Placeholder filters for Gallery Section*/
-  background-color: #66da59;
+  background-color: #57dbf9;
   cursor: pointer;
   color: white;
   font-size: 15px;
@@ -271,7 +273,7 @@ input[type = "text"]{                              /*Text input*/
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 4px solid #ef962c;                   /*border around the images*/
+  border: 5px solid #ef962c;                   /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -299,13 +301,15 @@ input[type = "text"]{                              /*Text input*/
   list-style: none;
   font-size: 0px;
   background-color: white;
+  position: relative;
+  overflow: hidden;
 }
 .zoom-container-gallery{                       /*Photo grid layout*/
   position: relative;
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 4px solid #ef962c; /*border around the images*/
+  border: 5px solid #ef962c; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -320,6 +324,31 @@ input[type = "text"]{                              /*Text input*/
   -ms-transition: all .7s ease;
   -o-transition: all .7s ease;
   transition: all .7s ease;
+}
+.zoom-container-gallery > div {
+    background-color: #66da59;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 75%;
+    left: 0;
+    -webkit-transition: opacity 0.3s linear; 
+}
+.zoom-container-gallery:hover > div {
+  display: block;
+  opacity: .75;
+}
+.zoom-container-gallery p {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    top: 10%;
+    vertical-align: top;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    opacity: 1.0;
 }
 .zoom-container-gallery:hover img {             /*image hover animation*/
   -webkit-transform: scale(1.25);
@@ -345,7 +374,7 @@ input[type = "text"]{                              /*Text input*/
   overflow: hidden;
   display: inline-block;
   width: 50%;
-  border: 4px solid #ef962c; /*border around the images*/
+  border: 5px solid #ef962c; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -362,7 +391,7 @@ input[type = "text"]{                              /*Text input*/
     position: absolute;
     width: 100%;
     height: 25%;
-    top: 300px;
+    top: 75%;
     left: 0;
     -webkit-transition: opacity 0.3s linear; 
 }
@@ -381,7 +410,7 @@ input[type = "text"]{                              /*Text input*/
 }
 /* S U B M I T    S E C T I O N */
 #submit-title {                                   /*Submit section campaign information*/
-  background-color: #66da59;
+  background-color: #57dbf9;
   height: 100%;
   margin-top: -10px;
   padding-top: 10px;
@@ -401,7 +430,7 @@ input[type = "text"]{                              /*Text input*/
   padding-bottom: 20px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
-  background-color: #66da59;
+  background-color: #ef962c;
   height: 100%;
   padding-top: 20px;
   opacity: .75;
@@ -424,7 +453,7 @@ input[type = "text"]{                              /*Text input*/
   padding-bottom: 40px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
-  background-color: #66da59;
+  background-color: #ef962c;
   height: 100%;
   padding-top: 20px;
   opacity: .75;
@@ -447,7 +476,7 @@ input[type = "text"]{                              /*Text input*/
   padding-bottom: 40px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
-  background-color: #66da59;
+  background-color: #ef962c;
   height: 100%;
   padding-top: 20px;
   opacity: .75;
@@ -470,25 +499,27 @@ input[type = "text"]{                              /*Text input*/
   padding-bottom: 40px;
 }
 label.filebutton {
-    width:120px;
-    height:40px;
-    overflow:hidden;
-    position:relative;
-    background-color: #66da59;
-    color: non
+  overflow:hidden;
+  position:relative;
+  cursor: pointer;
+  text-align: center;
+  padding: 90px 100px 90px 100px;
+  background-color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #ef962c;
+  font-weight: 900;
 }
-label span input {
-    z-index: 999;
-    line-height: 0;
-    font-size: 50px;
-    position: absolute;
-    top: -2px;
-    left: -700px;
-    opacity: 0;
-    filter: alpha(opacity = 0);
-    -ms-filter: "alpha(opacity=0)";
-    cursor: pointer;
-    _cursor: hand;
-    margin: 0;
-    padding:0;
+label span input { /*When hovering over the choose file button (which is hidden) the cursor is no longer a pointer*/
+  font-size: 1px;
+  background-color: red;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+}
+input [type="submit"] { /*Why does none of this css work??*/
+  cursor: pointer;
+  color: red;
+  padding: 10px 10px 10px 10px;
 }
