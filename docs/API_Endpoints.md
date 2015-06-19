@@ -1,5 +1,7 @@
 # API Endpoints - Implemented
 
+# GET
+
 ## Images
 
 #### Image Collection 
