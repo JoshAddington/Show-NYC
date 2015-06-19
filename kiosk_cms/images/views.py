@@ -1,3 +1,4 @@
+import datetime
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from rest_framework import status
@@ -7,6 +8,7 @@ from .models import Image
 from .serializers import ImageSerializer
 
 # Create your views here.
+# /api/images/
 @api_view(['GET', 'POST'])
 def image_collection(request):
 	if request.method == 'GET':
@@ -25,7 +27,7 @@ def image_collection(request):
 			return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+# /api/images/<image_id>/
 @api_view(['GET', 'PUT', 'DELETE'])
 def image_element(request, pk):
 	image = get_object_or_404(Image, pk=pk)
@@ -48,13 +50,36 @@ def image_element(request, pk):
 		image.delete()
 		return Response(status=status.HTTP_204_NO_CONTENT)
 
+# /api/images/active_campaigns/
 @api_view(['GET'])
-def image_winners_collection(request):
+def active_campaign_images(request):
 	if request.method == 'GET':
-		images = Image.objects.filter(campaign_winner=True)
+		current_time = datetime.datetime.now()
+		images = Image.objects.filter(campaign_id__start_date__lte=current_time).filter(campaign_id__end_date__gte=current_time)
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
 
+
+# /api/images/inactive_campaigns/
+@api_view(['GET'])
+def inactive_campaign_images(request):
+	if request.method == 'GET':
+		current_time = datetime.datetime.now()
+		images = Image.objects.filter(campaign_id__start_date__gte=current_time).filter(campaign_id__end_date__lte=current_time)
+		serializer = ImageSerializer(images, many=True)
+		return Response(serializer.data)
+
+
+
+# /api/images/winners/
+@api_view(['GET'])
+def image_winners_collection(request):
+	if request.method == 'GET':
+		images = Image.objects.filter(campaign_winner=True).select_related()
+		serializer = ImageSerializer(images, many=True)
+		return Response(serializer.data)
+
+# /api/images/<image_id>/upvote/
 @api_view(['GET'])
 def image_upvote(request, pk):
 	image = get_object_or_404(Image, pk=pk)
@@ -65,7 +90,7 @@ def image_upvote(request, pk):
 		return Response(serializer.data, status=status.HTTP_200_OK)
 	return Response(status=status.HTTP_400_BAD_REQUEST)
 
-
+# /api/images/<image_id>/downvote/
 @api_view(['GET'])
 def image_downvote(request, pk):
 	image = get_object_or_404(Image, pk=pk)
