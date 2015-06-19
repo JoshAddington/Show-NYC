@@ -1,66 +1,20 @@
 <div id ="gallery">     <!--Still need to add filter capabilites-->
-      <h2 align = "center">Gallery Page</h2>
+      <h2 align = "center">Gallery Page=</h2>
+      <a href="#/gallery" ng-click="sortType = 'id'">
+        Newest
+        <span ng-show="sortType == 'id'"></span>
+      </a>
+      <a href="#/gallery" ng-click="sortType = 'points'">
+        Trending
+        <span ng-show="sortType == 'points'"></span>
+      </a>
       <div class = "image-zoom-container">  <!--Grid of gallery photos-->
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="https://www.bisnow.com/archives/nycre/2012/Q3/images/woolworth.jpg">
-              </a>
-          </div>
-          <div class = "zoom-container">
-              <a href="#">
-                  <img src="http://3.bp.blogspot.com/_-akx-RFExkg/TB41TLVu-zI/AAAAAAAARqc/err0XKcLWbs/s400/5.JPG">
-              </a>
-          </div>
+        <div class="zoom-container" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
+          <img src='{{photo.image}}'>
+          <p>Id: {{photo.id}}</p>
+          <p>Votes: {{photo.points}}</p>
+        </div>
+
           <p align = center>Loading more images...</p>
           <br>
       </div>

@@ -1,14 +1,24 @@
 angular.module('myApp.controllers', [])
 
-.controller('VoteCtrl', function($scope, ActivePhotos) {
+.controller('VoteCtrl', function($scope, activePhotos) {
 
-  $scope.photos = ActivePhotos.all();
+  $scope.sortType     = 'id'; // set the default sort type
+  $scope.sortReverse  = true;  // set the default sort order
+
+  activePhotos.async().then(function(d) {
+    $scope.photos = d;
+  });
 
 })
 
-.controller('GalleryCtrl', function($scope, InactivePhotos) {
+.controller('GalleryCtrl', function($scope, inactivePhotos) {
 
-  $scope.photos = InactivePhotos.all();
+  $scope.sortType     = 'id'; // set the default sort type
+  $scope.sortReverse  = true;  // set the default sort order
+
+  inactivePhotos.async().then(function(d) {
+    $scope.photos = d;
+  });
 
 })
 
