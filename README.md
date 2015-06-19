@@ -2,6 +2,8 @@
 
 Initial deployment is at http://intern-cms-dev.elasticbeanstalk.com/
 
+[REST API Endpoints](docs/API_Endpoints.md)
+
 These install instructions are based on running [Postgres.app](http://postgresapp.com/) version 9.4 on Mac OSX Yosemite, so make sure you have it installed 
 
 #### Python Setup

@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,16 +43,23 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
+# Django Apps
 INSTALLED_APPS += (
     'images', 
     'campaigns',
     'apis',
+)
+
+# Third Party Packages
+INSTALLED_APPS += (
     'debug_toolbar',
-    'restless',
     'storages',
+    'rest_framework',
+    'corsheaders',
 )
 
 MIDDLEWARE_CLASSES = (
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -153,3 +159,8 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'kiosk_cms.custom_storages.MediaStorage' 
+
+
+# Django CORS Headers Settings
+
+CORS_ORIGIN_ALLOW_ALL = True

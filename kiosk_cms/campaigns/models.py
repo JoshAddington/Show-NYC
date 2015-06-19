@@ -12,5 +12,8 @@ class Campaign(models.Model):
     def __str__(self):
     	return self.name
 
+    def sponsor_name(self):
+    	return self.sponsor.username
+
     def is_active(self):
     	return datetime.now() > start_date and datetime.now() < end_date
