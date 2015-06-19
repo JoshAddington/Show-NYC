@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Campaign
@@ -17,11 +18,8 @@ def campaign_collection(request):
 	
 @api_view(['GET'])
 def campaign_element(request, pk):	
-	try:
-		campaign = Campaign.objects.get(pk=pk)
-	except Campaign.DoesNotExist:
-		return HttpResponse(status=404)
-
+	campaign = get_object_or_404(Campaign, pk=pk)
+	
 	if request.method == 'GET':
 		serializer = CampaignSerializer(campaign)
 		return Response(serializer.data)
