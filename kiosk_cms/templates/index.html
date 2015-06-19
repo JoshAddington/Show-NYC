@@ -167,15 +167,11 @@
                 Browse For File!
                 <span><input type="file" id="myfile" name="myfile"></span>
             </label>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <form method="POST" class='post-form'>{% csrf_token %}
+                {{ form.as_p }}
+                <button type='button' id='submit_photo' class='submit_button'>Submit Photo</button>
+            </form>
+            
         </div>
     </div>
 
