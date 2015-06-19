@@ -17,6 +17,8 @@ angular.module('myApp.services', [])
   }
   return myService;
 
+  // active_campaigns
+
 })
 
 .factory('inactivePhotos', function($http) {
@@ -35,5 +37,7 @@ angular.module('myApp.services', [])
       }
     }
     return myService;
+
+    // inactive_campaigns
 
 });
