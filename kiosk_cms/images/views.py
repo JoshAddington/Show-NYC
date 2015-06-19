@@ -65,11 +65,9 @@ def active_campaign_images(request):
 def inactive_campaign_images(request):
 	if request.method == 'GET':
 		current_time = datetime.datetime.now()
-		images = Image.objects.filter(campaign_id__start_date__gte=current_time).filter(campaign_id__end_date__lte=current_time)
+		images = Image.objects.filter(campaign_id__end_date__lte=current_time)
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
-
-
 
 # /api/images/winners/
 @api_view(['GET'])
