@@ -3,7 +3,7 @@ from .models import Image
 
 class ImageAdmin(admin.ModelAdmin):
 	list_display = ('thumb','score', 'flagged_col', 'active', 'campaign_id', 'user_id')
-	
+	exclude = ('campaign_winner',)
 	# Make the active column editable from the list display
 	list_editable = ('active', )
 
