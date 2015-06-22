@@ -20,7 +20,7 @@
                 <h1>SHOW NYC</h1>
                 <nav>
                     <ul> <!--Navagation options-->
-                        <li><a href="#" id ="voteButton" >Vote</a></li>
+                        <li><a href="#" id ="voteButton">Vote</a></li>
                         <li><a href="#" id ="galleryButton">Gallery</a></li>
                         <li><a href="#" id ="submitButton">Submit</a></li>
                         <li><a href="#" id ="aboutButton">About</a></li>
@@ -45,7 +45,7 @@
 <!--There is not voting functionality yet-->
     
     <div id="vote" class="wrap">
-        <div id = "campaign" class = "noselect"> <!--Information about this week's campaign-->
+        <div id = "campaign"> <!--Information about this week's campaign-->
             <h2>Campaigns Can Put Their Campaign Slogan Here</h2> <!--Campaign Slogan-->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed gravida libero. Cras a accumsan tellus. Quisque sit amet ex id lectus sodales ultricies. Sed pharetra enim eget augue tempus, nec gravida massa aliquam.</p> <!--Current Campaign Description-->
         </div>
@@ -200,8 +200,8 @@
             <br>
             <br>
             <label class="filebutton">
-                UPLOAD
-                <span><input type="file" id="myfile" name="myfile"></span>
+                UPLOAD <!--I want to limit the types of files that can be uploaded-->
+                <span><input type="file" id="myfile" name="myfile" accept =".jpg, .png"></span>
             </label>
             <br>
             <br>
@@ -212,7 +212,7 @@
             <br>
             <br>
             <label class = "submission">
-                <input type="submit" id = "mySubmit" value="SUBMIT">
+                <input type="submit" id = "mySubmit" value="SUBMIT" class = "btn-style">
             </label>
             <br>
             <br>

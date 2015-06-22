@@ -10,7 +10,11 @@ $(document).ready(function() {
       $('#about').hide();
       $('#show-nyc-vg').show();
       $('#show-nyc-sa').hide();
-      $('#filter').hide();}
+      $('#filter').hide();
+      $('#voteButton').addClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').removeClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
   }); 
 
   //Gallery Button Display
@@ -23,7 +27,11 @@ $(document).ready(function() {
       $('#about').hide();
       $('#show-nyc-vg').show();
       $('#show-nyc-sa').hide();
-      $('#filter').show();}
+      $('#filter').show();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').addClass("highlight")
+      $('#submitButton').removeClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
   }); 
 
   //Submit Button Display
@@ -36,7 +44,11 @@ $(document).ready(function() {
       $('#about').hide();
       $('#show-nyc-vg').hide();
       $('#show-nyc-sa').show();
-      $('#filter').hide();}
+      $('#filter').hide();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').addClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
   }); 
 
    //About Button Display
@@ -49,7 +61,11 @@ $(document).ready(function() {
       $('#about').show();
       $('#show-nyc-vg').hide();
       $('#show-nyc-sa').show();
-      $('#filter').hide();}
+      $('#filter').hide();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').removeClass("highlight")
+      $('#aboutButton').addClass("highlight")}
   }); 
 
   //Slide Out Navagation Menu Animation
@@ -67,5 +83,5 @@ $(document).ready(function() {
       left: "-350px"
     }, 200);
   });
-
+  
 });

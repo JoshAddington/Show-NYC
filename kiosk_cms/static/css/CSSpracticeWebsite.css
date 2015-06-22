@@ -159,6 +159,28 @@ input[type = "text"]{                              /*Text input*/
   letter-spacing: 2px;
   font-size: 20px;
 }
+.btn-style{                                       /*Submit Button*/
+  font-family: "Raleway";
+  border : solid 1px white;
+  font-size : 18px;
+  color : white;
+  letter-spacing: 3px;
+  font-weight: 400;
+  padding : 10px 30px;
+  background-color : #ef962c;
+  cursor: pointer;
+}
+.btn-style:hover {                                /*Submit Button Hover*/
+  font-family: "Raleway";
+  border : solid 3px white;
+  font-size : 18px;
+  color : white;
+  letter-spacing: 3px;
+  font-weight: 600;
+  padding : 10px 30px;
+  background-color : #ef962c;
+  cursor: pointer;
+}
 /*Menu*/
 .menu {                                          /*Slide out menu*/
   background-color: #66da59;
@@ -401,12 +423,12 @@ input[type = "text"]{                              /*Text input*/
 }
 .zoom-container-about p {
     text-transform: uppercase;
-    font-size: 20px;
     color: white;
     text-align: center;
     font-weight: 900;
     letter-spacing: 2px;
     opacity: 1.0;
+    z-index: 3;
 }
 /* S U B M I T    S E C T I O N */
 #submit-title {                                   /*Submit section campaign information*/
@@ -518,8 +540,6 @@ label span input { /*When hovering over the choose file button (which is hidden)
   position: absolute;
   top: 0px;
 }
-input [type="submit"] { /*Why does none of this css work??*/
-  cursor: pointer;
-  color: red;
-  padding: 10px 10px 10px 10px;
+.highlight {
+  opacity: .5;
 }
