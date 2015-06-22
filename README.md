@@ -82,6 +82,9 @@ AWS_ACCESS_KEY=*IAM User Access Key ID*
 
 
 #### Running the local server
+Every time you run the local server, make sure that you have the virtualenv running. Your terminal wiil show the currently running virtualenv at the beginning of each command prompt line. In our case, the command prompt will read `(intern-cms)<username>:<current folder> <user>$`.
+
+If the command prompt does not have the virtualenv name at the front, then activate it by running `workon intern-cms`.
 
 First, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder that Django will be serving them from. To do this, run 
 ```
