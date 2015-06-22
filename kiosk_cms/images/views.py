@@ -1,6 +1,6 @@
-import datetime
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.utils import timezone
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -54,8 +54,8 @@ def image_element(request, pk):
 @api_view(['GET'])
 def active_campaign_images(request):
 	if request.method == 'GET':
-		current_time = datetime.datetime.now()
-		images = Image.objects.filter(campaign_id__start_date__lte=current_time).filter(campaign_id__end_date__gte=current_time)
+		now = timezone.now()
+		images = Image.objects.filter(campaign_id__start_date__lte=now).filter(campaign_id__end_date__gte=now)
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
 
@@ -64,8 +64,8 @@ def active_campaign_images(request):
 @api_view(['GET'])
 def inactive_campaign_images(request):
 	if request.method == 'GET':
-		current_time = datetime.datetime.now()
-		images = Image.objects.filter(campaign_id__end_date__lte=current_time)
+		now = timezone.now()
+		images = Image.objects.filter(campaign_id__end_date__lte=now)
 		serializer = ImageSerializer(images, many=True)
 		return Response(serializer.data)
 

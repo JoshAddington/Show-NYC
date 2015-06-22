@@ -1,7 +1,6 @@
-import datetime
-
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from django.utils import timezone
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -19,8 +18,8 @@ def campaign_collection(request):
 @api_view(['GET'])
 def active_campaign_collection(request):
 	if request.method == 'GET':
-		current_time = datetime.datetime.now()
-		campaigns = Campaign.objects.filter(start_date__lte=current_time).filter(end_date__gte=current_time)
+		now = timezone.now()
+		campaigns = Campaign.objects.filter(start_date__lte=now).filter(end_date__gte=now)
 		serializer = CampaignSerializer(campaigns, many=True)
 		return Response(serializer.data)
 	

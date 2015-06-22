@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Create your models here.
 class Campaign(models.Model):
@@ -16,4 +17,5 @@ class Campaign(models.Model):
     	return self.sponsor.username
 
     def is_active(self):
-    	return datetime.now() > start_date and datetime.now() < end_date
+        now = timezone.now()
+    	return (now > self.start_date and now < self.end_date)
