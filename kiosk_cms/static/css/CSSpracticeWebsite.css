@@ -73,6 +73,15 @@ input[type = "text"]{                              /*Text input*/
   opacity: 1.0;
   padding-left: 10px;
 }
+footer {
+  background-color: #57dbf9;
+  color: white;
+  font-family: "Raleway";
+  font-size: 14px;
+  height: 100%;
+  margin-top: -15px;
+
+}
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
   display: none;
@@ -543,3 +552,50 @@ label span input { /*When hovering over the choose file button (which is hidden)
 .highlight {
   opacity: .5;
 }
+
+
+
+
+.scroll-top-wrapper {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 10;
+  background-color: #ef962c;
+  color: white;
+  width: 50px; 
+  height: 50px;
+  line-height: 48px;
+  right: 30px;
+  bottom: 30px;
+  padding-top: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+  background-color: #57dbf9;
+}
+.scroll-top-wrapper.show {
+  visibility:visible;
+  cursor:pointer;
+  opacity: .80;
+}
+.scroll-top-wrapper i.fa {
+  line-height: inherit;
+}
+
+
+
+
+
+
+
