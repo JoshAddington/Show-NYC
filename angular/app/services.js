@@ -1,100 +1,43 @@
 angular.module('myApp.services', [])
 
-.factory('ActivePhotos', function($http) {
+.factory('activePhotos', function($http) {
 
-    // var photos = [
-    //   {
-    //   url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    // },
-    // {
-    //   url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    // },
-    // {
-    //   url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    // },
-    // {
-    //   url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    // }];
-
-
-
-    var photos = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/').
-      success(function(data, status, headers, config) {
-        console.log('success')
-        console.log(data)
-        return data['objects']
-
-
-      }).
-      error(function(data, status, headers, config) {
-        console.log('error')
-        return status
+  var myService = {
+    async: function() {
+      // $http returns a promise, which has a then function, which also returns a promise
+      var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/').then(function (response) {
+        // The then function here is an opportunity to modify the response
+        console.log(response.data);
+        // The return value gets picked up by the then in the controller.
+        return response.data;
       });
+      // Return the promise to the controller
+      return promise;
+    }
+  }
+  return myService;
 
-
-    return {
-      all: function() {
-          return photos;
-      }
-    };
+  // active_campaigns
 
 })
 
-.factory('InactivePhotos', function($http) {
+.factory('inactivePhotos', function($http) {
 
-    var photos = [
-      {
-      url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    },
-      {
-      url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    },
-      {
-      url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    },
-      {
-      url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    },
-      {
-      url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    },
-      {
-      url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    },
-      {
-      url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    },
-      {
-      url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    },
-      {
-      url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    },
-      {
-      url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    },
-      {
-      url: 'http://merchantsmarthouston.com/wp-content/uploads/2013/01/hot_dog.jpg'
-    },
-      {
-      url: 'http://vignette4.wikia.nocookie.net/chroniclesofillusion/images/6/6a/Catdog.png/revision/latest?cb=20130709001316'
-    }
-    ];
-
-  //   $http.get('/someUrl').
-  //     success(function(data, status, headers, config) {
-  //
-  //       photos.push(data)
-  //
-  //     }).
-  //     error(function(data, status, headers, config) {
-  //
-  //     });
-
-    return {
-      all: function() {
-          return photos;
+    var myService = {
+      async: function() {
+        // $http returns a promise, which has a then function, which also returns a promise
+        var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/').then(function (response) {
+          // The then function here is an opportunity to modify the response
+          console.log(response);
+          // The return value gets picked up by the then in the controller.
+          return response.data;
+        });
+        // Return the promise to the controller
+        return promise;
       }
-    };
+    }
+    return myService;
+
+    // inactive_campaigns
 
 });
