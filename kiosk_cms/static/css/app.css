@@ -1,0 +1,352 @@
+/* app css stylesheet */
+
+body {                                             /*Body*/
+  font-family: "Raleway";
+  font-size: 16px;
+  color: black;
+  padding: 0px;
+  left: 0;
+  margin: 0;
+}
+h1 {                                               /*Heading 1*/
+  font-family: "Changa One";
+  color: white;
+  letter-spacing: 4px;
+  font-size: 30px;
+  background-color: none;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom:0px;
+  padding-left: 20px;
+}
+h2 {                                               /*Heading 2*/
+  font-family: "Raleway";
+  margin-top: -30px;
+  color: black;
+  font-size: 30px;
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: center;
+}
+h3 {                                               /*Heading 3*/
+  font-family: "Raleway";
+  font-size: 20px;
+  font-style: normal;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+h4 {                                               /*Heading 4*/
+  font-family: "Raleway";
+  font-size: 15px;
+  font-style: bold;
+  color: black;
+  text-align: center;}
+
+header {                                           /*Header*/
+  background: #66da59;
+  height: 100px;
+}
+header > h1 {
+  margin-left: 95px;
+  margin-top: -32px;
+}
+p{                                                 /*Paragraphs*/
+  color: black;
+  padding: 10px 10px 10px 10px;
+  background: white;
+  font-size: 15px;
+}
+a:hover {
+  opacity: 0.5;
+}
+#centerCenter {                                    /*Center images*/
+  vertical-align: center;
+  background-color: white; /*this is used on the about page*/
+  text-align: center;
+}
+/*Four page displays*/                            /*Initial page display*/
+#about {
+  display: block;
+  background-color: white;
+}
+#vote {
+  display: block;
+  background-color: white;
+}
+#gallery{
+  display: block;
+  background-color: white;
+}
+#submit{
+  display: block;
+  background-color: white;
+}
+#show-nyc-about{
+  display: none;
+}
+/*Buttons*/
+.tabs {                                           /*Buttons class (.tabs)*/
+    font-family: "Raleway";
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+  }
+/*Four buttons*/                                  /*Buttons*/
+#voteButton{
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-family: "Raleway";
+  }
+#submitButton{
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+  }
+#galleryButton{
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+  }
+#aboutButton{
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+  }
+/*Menu*/
+.menu {                                          /*Slide out menu*/
+  background-color: #ef962c;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  left: -300px;
+  width: 300px; /*width of the menu*/
+  z-index: 15;
+}
+.icon-close {
+                                  /*Menu slide out icon*/
+  cursor: pointer;
+  position: relative;
+  font-size: 30px; /*size of the "Menu" text*/
+  color: white;
+  left: 15px;
+  padding-left: 0px; /*"Menu" spacing*/
+  padding-bottom: 0px; /*"Menu" to options spacing*/
+  padding-top: -100px;
+  }
+.icon-close > h1 {
+  font-size: 40px;
+}
+.icon-menu {                                    /*Menu banner*/
+  margin-top: 25px;
+  margin-left: 60px;
+}
+.wrap {
+    position: relative;
+}
+.slide-menu {
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+.menu ul {                                      /*Menu option layout*/
+  list-style: none;
+  margin: 0;
+  letter-spacing: 3px;
+  padding: 20px 0px 0px 0px;
+}
+.menu li {                                      /*Menu option style*/
+  background-color: none;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 25px;
+}
+.menu a {                                       /*Menu listing style*/
+  font-family: "Raleway";
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-decoration: none;
+}
+.image-zoom-container{
+  list-style: none;
+  font-size: 0px;
+  background-color: white;
+}
+.zoom-container{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 33.33%; /*two */
+  border: 25px solid white; /*border around the images*/
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.zoom-container img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all .7s ease; /*ease into image zoom*/
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+.zoom-container:hover img { /*image hover animation*/
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform:scale(1.25);
+}
+.zoom-container:hover .zoom-caption{
+  background: none;/*What you see when you hover over an image*/
+}
+@media (max-width: :767px) {
+  .zoom-container{
+    width: 100%;}
+  }
+#share-buttons {
+    margin-top: 100px;
+    margin-left: 7px;
+}
+#share-buttons img {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+}
+
+
+.photo-grid { /*around the photos*/
+  background-color: white;
+}
+.photo-grid li {
+  display: block;
+  background-color: white;
+  vertical-align: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.photo-grid img {
+  display: block;
+  max-width: 100%;
+  float: center;
+  vertical-align: center;
+  text-align: center;
+  padding-top: 20px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+.photo-grid figure {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.photo-grid figcaption {
+  display: table;
+  opacity: 1;
+  position: absolute;
+  left: 45px;
+  top: 100px;
+  z-index: 10;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+
+.photo-grid figcaption p { /*slide down caption*/
+  font-size: 15px;
+  position: absolute;
+  top: -163px;
+  width: 289px;
+  opacity: .7;
+  letter-spacing: 2px;
+  background-color: #ef962c;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+.photo-grid li:hover figcaption p {
+  -moz-transform: translateY(163px);
+  -webkit-transform: translateY(163px);
+  transform: translateY(163px);
+}
+
+
+.grid-block-container{
+  float: center;
+}
+.grid-block {
+  position: relative;
+  float: center;
+  background-color: green;
+  text-align: center;
+  padding: 30px 30px 30px 30px;
+}
+.caption {
+  display: none;
+  text-align: center;
+  vertical-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  float: center;
+  width: 300px;
+  height: 200px;
+  opacity: .7;
+}
+.caption h6, .caption p {
+  color: blue;
+  text-align: center;
+  background-color: red;
+}
+.caption h6 {
+  font-family: "Raleway";
+  font-size: 15px;
+  font-style: bold;
+  color: black;
+
+}
+.grid-block-container img{
+  text-align: center;
+  vertical-align: center;
+  background-color: yellow;
+}
+#long-header {
+  background-color: #66da59;
+  color: white;
+  text-align: center;
+}
+
+#long-header h3{
+  margin-top: -80px;
+  padding: 100px 20px 0px 20px;
+  font-size: 25px;
+}
+#long-header p{
+  font-size: 17px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#show-nyc-about {                                               /*Heading 1*/
+  font-family: "Changa One";
+  color: white;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 50px;
+  background-color: none;
+  margin-left: -5px
+}
