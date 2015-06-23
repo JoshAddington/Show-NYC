@@ -83,7 +83,7 @@ AWS_ACCESS_KEY=*IAM User Access Key ID*
 
 First, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder that Django will be serving them from. To do this, run 
 ```
-python manage.py collectstatic --no-input
+python manage.py collectstatic --noinput
 ```
 
 To start the deveelopment server run 

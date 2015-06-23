@@ -6,9 +6,6 @@ from rest_framework.response import Response
 from .models import Campaign
 from .serializers import CampaignSerializer
 
-def index(request):
-    return render(request, 'index.html')
-
 @api_view(['GET'])
 def campaign_collection(request):
 	if request.method == 'GET':
