@@ -197,13 +197,13 @@ a:hover {
   -o-transition: all .7s ease;
   transition: all .7s ease;
 }
-.zoom-container:hover img { /*image hover animation*/
-  -webkit-transform: scale(1.25);
+/*.zoom-container:hover img { /*image hover animation*/*/
+  /*-webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
   -o-transform: scale(1.25);
   transform:scale(1.25);
-}
+}*/
 .zoom-container:hover .zoom-caption{
   background: none;/*What you see when you hover over an image*/
 }

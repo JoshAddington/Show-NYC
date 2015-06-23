@@ -288,13 +288,13 @@ input[type = "text"]{                              /*Text input*/
   -o-transition: all 2.5s ease;
   transition: all 2.5s ease;
 }
-.zoom-container-vote:hover img {               /*image hover animation*/
-  -webkit-transform: scale(1.15);
+/*.zoom-container-vote:hover img {               /*image hover animation*/*/
+  /*-webkit-transform: scale(1.15);
   -moz-transform: scale(1.15);
   -ms-transform: scale(1.15);
   -o-transform: scale(1.15);
   transform:scale(1.15);
-}
+}*/
 /* G A L L E R Y   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-gallery{                 /*Photo grid layout*/
   list-style: none;
@@ -349,13 +349,13 @@ input[type = "text"]{                              /*Text input*/
     letter-spacing: 2px;
     opacity: 1.0;
 }
-.zoom-container-gallery:hover img {             /*image hover animation*/
-  -webkit-transform: scale(1.25);
+/*.zoom-container-gallery:hover img {             /*image hover animation*/*/
+  /*-webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
   -o-transform: scale(1.25);
   transform:scale(1.25);
-}
+}*/
 @media (max-width: :767px) {
   .zoom-container{
     width: 100%;}
