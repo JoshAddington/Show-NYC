@@ -7,20 +7,32 @@ angular.module('myApp.controllers', [])
 
   activePhotos.async().then(function(d) {
     $scope.photos = d;
+
+    angular.forEach($scope.photos, function(item) {
+      item.rank = 0.5 - Math.random()
+    });
   });
 
 })
 
-.controller('GalleryCtrl', function($scope, inactivePhotos) {
+.controller('GalleryCtrl', ['$scope', 'inactivePhotos', '$route', function($scope, inactivePhotos, $route) {
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
+  $scope.reloadRoute = function($scope) {
+   $route.reload() 
+  }
 
   inactivePhotos.async().then(function(d) {
     $scope.photos = d;
-  });
+    // return $scope.photos
+    console.log('ctrl')
 
-})
+    angular.forEach($scope.photos, function(item) {
+      item.rank = 0.5 - Math.random()
+    });
+  });
+}])
 
 .controller('SubmitCtrl', function($scope) {
   $scope.settings = {
