@@ -2,13 +2,13 @@
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
-  color: black;
+  color: black; 
   padding: 0px;
   left: 0;
   margin: 0;
   background-color: white;
 }
-h1 {                                                  /*Heading 1*/
+h1 {                                                  /*Heading 1*/ 
   font-family: "Changa One";
   color: white;
   letter-spacing: 4px;
@@ -74,8 +74,7 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 10px;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
-/*#about {
-  display: none;
+#about {
   background-color: white;
 }
 #vote {
@@ -83,20 +82,19 @@ input[type = "text"]{                              /*Text input*/
   background-color: white;
 }
 #gallery{
-  display: none;
   background-color: white;
 }
 #submit{
-  display: none;
   height: 100%;
   width: 100%;
-}*/
+  text-align: center;
+}
 #show-nyc-sa{
   display: none;
 }
 #filter{
   display: none;
-}
+} 
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
     font-family: "Raleway";
@@ -111,7 +109,7 @@ input[type = "text"]{                              /*Text input*/
     font-family: "Raleway";
     display: block;
     height: 30px;
-    width: 75px;
+    width: 75px; 
   }
 #submitButton{
     cursor: pointer;
@@ -119,7 +117,7 @@ input[type = "text"]{                              /*Text input*/
     color: white;
     display: block;
     height: 30px;
-    width: 100px;
+    width: 100px; 
   }
 #galleryButton{
     cursor: pointer;
@@ -127,7 +125,7 @@ input[type = "text"]{                              /*Text input*/
     color: white;
     display: block;
     height: 30px;
-    width: 100px;
+    width: 100px; 
   }
 #aboutButton{
     cursor: pointer;
@@ -135,7 +133,7 @@ input[type = "text"]{                              /*Text input*/
     color: white;
     display: block;
     height: 30px;
-    width: 90px;
+    width: 90px; 
   }
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
@@ -178,7 +176,7 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 0px; /*"Menu" spacing*/
   padding-bottom: 0px; /*"Menu" to options spacing*/
   padding-top: -100px;
-  }
+  } 
 .icon-close > h1 {
   font-size: 40px;
 }
@@ -210,7 +208,7 @@ input[type = "text"]{                              /*Text input*/
   padding-top: 25px;
 }
 .menu a {                                       /*Menu listing style*/
-  font-family: "Raleway";
+  font-family: "Raleway"; 
   letter-spacing: 2px;
   font-size: 18px;
   text-decoration: none;
@@ -233,7 +231,7 @@ input[type = "text"]{                              /*Text input*/
   max-width: 800px;
   margin: 0 auto;
 }
-#show-nyc-sa {                                 /*Header for Submit and About sections*/
+#show-nyc-sa {                                 /*Header for Submit and About sections*/ 
   font-family: "Changa One";
   color: white;
   text-align: center;
@@ -289,7 +287,7 @@ input[type = "text"]{                              /*Text input*/
   transition: all 2.5s ease;
 }
 /*.zoom-container-vote:hover img {               /*image hover animation*/*/
-  /*-webkit-transform: scale(1.15);
+/*  -webkit-transform: scale(1.15);
   -moz-transform: scale(1.15);
   -ms-transform: scale(1.15);
   -o-transform: scale(1.15);
@@ -332,7 +330,7 @@ input[type = "text"]{                              /*Text input*/
     height: 25%;
     top: 75%;
     left: 0;
-    -webkit-transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear; 
 }
 .zoom-container-gallery:hover > div {
   display: block;
@@ -350,7 +348,7 @@ input[type = "text"]{                              /*Text input*/
     opacity: 1.0;
 }
 /*.zoom-container-gallery:hover img {             /*image hover animation*/*/
-  /*-webkit-transform: scale(1.25);
+/*  -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
   -o-transform: scale(1.25);
@@ -392,7 +390,7 @@ input[type = "text"]{                              /*Text input*/
     height: 25%;
     top: 75%;
     left: 0;
-    -webkit-transition: opacity 0.3s linear;
+    -webkit-transition: opacity 0.3s linear; 
 }
 .zoom-container-about:hover > div {
   display: block;
