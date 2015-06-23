@@ -4,7 +4,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/submit', {
-    templateUrl: 'submit/submit.html',
+    templateUrl: 'static/templates/submit.html',
     controller: 'SubmitCtrl'
   });
 }])

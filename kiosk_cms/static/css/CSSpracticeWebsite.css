@@ -73,7 +73,7 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 10px;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
-#about {
+/*#about {
   display: none;
   background-color: white;
 }
@@ -89,7 +89,7 @@ input[type = "text"]{                              /*Text input*/
   display: none;
   height: 100%;
   width: 100%;
-}
+}*/
 #show-nyc-sa{
   display: none;
 }
