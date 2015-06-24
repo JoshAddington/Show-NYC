@@ -20,7 +20,7 @@ angular.module('myApp.controllers', [])
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
   $scope.reloadRoute = function($scope) {
-   $route.reload() 
+   $route.reload()
   }
 
   inactivePhotos.async().then(function(d) {
