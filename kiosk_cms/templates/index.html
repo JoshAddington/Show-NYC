@@ -13,7 +13,21 @@
         <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}"> 
         <h1 id = "show-nyc-vg">SHOW NYC</h1> <!--header for vote and gallery sections-->
         <h1 id = "show-nyc-sa">SHOW NYC</h1> <!--header for submit and about sections-->
-        <p id = "filter">Trending Newest Oldest Random</p> <!--placeholder filters for gallery section-->
+        <div id="filter-buttons"> <!--Share via social media-->
+            <a href= # target="_blank">
+                <img src="{% static 'icons/trendingbig.png' %}" alt="Trending" />
+            </a>
+            <a href= # target="_blank">
+                <img src="{% static 'icons/newbig.png' %}" alt="Newest" />
+            </a>
+            <a href=# target="_blank">
+                <img src="{% static 'icons/oldbig.png' %}" alt="Oldest" />
+            </a>
+            <a href=# target="_blank">
+                <img src="{% static 'icons/campaignbig.png' %}" alt="Campaigns" />
+            </a>
+        </div>
+
     </header>
     <div class = "noselect">
         <div class="menu">
@@ -32,7 +46,7 @@
                         <img src="{% static 'icons/social-network2.png' %}" alt="Facebook" />
                     </a>
                     <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
-                        <img src="{% static 'icons/twitter1.png' %}" alt="Tumblr" />
+                        <img src="{% static 'icons/twitter1.png' %}" alt="Twitter" />
                     </a>
                     <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
                         <img src="{% static 'icons/google1.png' %}" alt="Google" />
@@ -47,6 +61,7 @@
     
     <div id="vote" class="wrap">
         <div id = "campaign"> <!--Information about this week's campaign-->
+            <img src="http://static3.depositphotos.com/1001102/124/i/950/depositphotos_1242697-Tall-grass-banner.jpg">
         </div>
         <div class = "image-zoom-container-vote"> <!--Grid of vote photos-->
             <div class = "zoom-container-vote">
@@ -198,7 +213,7 @@
             <br>
             <br>
             <br>
-<<<<<<< HEAD
+
             <label class="filebutton">
                 UPLOAD <!--I want to limit the types of files that can be uploaded-->
                 <span><input type="file" id="myfile" name="myfile" accept =".jpg, .png"></span>
@@ -219,14 +234,13 @@
             <br>
             <br>
             <br>
-=======
->>>>>>> master
 
+            <!--
             <form method="POST" class='post-form'>{% csrf_token %}
                 {{ form.as_p }}
                 <button type='button' id='submit_photo' class='submit_button'>Submit Photo</button>
             </form>
-
+            -->
          
         </div>
     </div>
@@ -322,14 +336,24 @@
         </div>
     </div>
     <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--
         <p>Created by: Control Group Interns 2015</p>
         <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+        -->
     </footer>
+    <!--
     <div class="scroll-top-wrapper ">
         <span class="scroll-top-inner">
             <i class="fa fa-2x fa-arrow-circle-up"></i>
         </span>
     </div>
+    -->
 
 <!--scripts-->
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
