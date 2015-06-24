@@ -46,6 +46,18 @@ Displays a single image
 }
 ```
 
+#### Active Campaign Images
+
+Displays a collection of images from the currently active campaign
+
+`/api/images/active_campaign/`
+
+#### Inactive Campaign Images
+
+Displays a collection of images from past campaigns
+
+`/api/images/inactive_campaigns/`
+
 #### Winning Images
 
 Displays a collection of images that have won a campaign
@@ -103,6 +115,12 @@ Displays a single campaign
     "end_date": "2002-10-03T11:58:51Z"
 }
 ```
+
+#### Active Campaign
+
+Displays the currently active campaign
+
+`/api/campaigns/active/`
 
 
 ## API Endpoints - To Do

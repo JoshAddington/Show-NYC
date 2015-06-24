@@ -25,36 +25,22 @@ class Image(models.Model):
     def campaign(self):
         return self.campaign_id.name
 
-    def activate(self):
-        if self.active:
-            return "Image is already activated."
-        else:
-            self.active = True
-
-    def deactivate(self):
-        if self.active:
-            self.active = False
-        else:
-            return "Image is already deactivated."
-
     def upvote(self):
-        if self.campaign_id.is_active:
+        if self.campaign_id.is_active():
             self.score += 1
             self.save()
             return self
         else:
-            return "Campaign %s is no longer active" % self.campaigns.name
+            return self
+            
 
     def downvote(self):
-        if score > 0:
-            if self.campaign_id.is_active:
+        if self.score > 0:
+            if self.campaign_id.is_active():
                 self.score -= 1
                 self.save()
-                return self
-            else:
-                return "Campaign %s is no longer active" % self.campaigns.name
-        else:
-            return self
+                return self    
+        return self
             
     def thumb(self):
         if self.image:
