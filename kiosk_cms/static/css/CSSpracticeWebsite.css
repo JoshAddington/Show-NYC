@@ -1,4 +1,5 @@
 /*    Green: #66da59    Blue: #57dbf9     Orange: #ef962c     */
+/*    New blue: #32b7d6   New orange: #ef962c   new green:#36c147          */
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
@@ -38,7 +39,7 @@ h3 {                                                  /*Heading 3*/
   text-align: center;
 }
 header {                                              /*Header*/
-  background: #57dbf9;
+  background: #32b7d6;
   height: 100px;
 }
 header > h1 {
@@ -66,7 +67,7 @@ input[type = "text"]{                              /*Text input*/
   width: 50%;
   height: 40px;
   font-size: 20px;
-  color: #57dbf9;
+  color: #32b7d6;
   letter-spacing: 4px;
   vertical-align: center;
   float: center;
@@ -74,13 +75,21 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 10px;
 }
 footer {
-  background-color: #57dbf9;
+  background-color: #32b7d6;
   color: white;
   font-family: "Raleway";
   font-size: 14px;
   height: 100%;
   margin-top: -15px;
-
+}
+footer p {
+  color: white;
+  font-family: "Raleway";
+  font-size: 14px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
@@ -192,7 +201,7 @@ footer {
 }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #66da59;
+  background-color: #36c147;
   height: 100%;
   cursor: default;
   position: fixed;
@@ -248,7 +257,7 @@ footer {
   text-decoration: none;
 }
 #long-header {                                  /*About section extended header*/
-  background-color: #57dbf9;
+  background-color: #32b7d6;
   color: white;
   text-align: center;
 }
@@ -274,17 +283,15 @@ footer {
   background-color: none;
   margin-left: -5px
 }
+
 #campaign {                                    /*Vote Section Campaign Information*/
-  font-size: 17px;
+  max-height: 300px;
+  width: 100%;
+  overflow: none;
   text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-#campaign h2 {
-  padding-top: 20px;
 }
 #filter {                                      /*Placeholder filters for Gallery Section*/
-  background-color: #57dbf9;
+  background-color: #32b7d6;
   cursor: pointer;
   color: white;
   font-size: 15px;
@@ -304,7 +311,7 @@ footer {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 5px solid #ef962c;                   /*border around the images*/
+  border: 5px solid #ffffff;                   /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -340,7 +347,7 @@ footer {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 5px solid #ef962c; /*border around the images*/
+  border: 5px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -357,7 +364,7 @@ footer {
   transition: all .7s ease;
 }
 .zoom-container-gallery > div {
-    background-color: #66da59;
+    background-color: #36c147;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -405,7 +412,7 @@ footer {
   overflow: hidden;
   display: inline-block;
   width: 50%;
-  border: 5px solid #ef962c; /*border around the images*/
+  border: 5px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -417,7 +424,7 @@ footer {
   height: auto;
 }
 .zoom-container-about > div {
-    background-color: #66da59;
+    background-color: #36c147;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -441,7 +448,7 @@ footer {
 }
 /* S U B M I T    S E C T I O N */
 #submit-title {                                   /*Submit section campaign information*/
-  background-color: #57dbf9;
+  background-color: #32b7d6;
   height: 100%;
   margin-top: -10px;
   padding-top: 10px;
@@ -555,8 +562,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
 
 
 
-
-.scroll-top-wrapper {
+.scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
   visibility: hidden;
@@ -565,12 +571,12 @@ label span input { /*When hovering over the choose file button (which is hidden)
   z-index: 10;
   background-color: #ef962c;
   color: white;
-  width: 50px; 
-  height: 50px;
-  line-height: 48px;
-  right: 30px;
-  bottom: 30px;
-  padding-top: 2px;
+  width: 40px; 
+  height: 40px;
+  line-height: 40px;
+  right: 20px; /*space between button and right side of the page*/
+  bottom: 25px; /*space between button and bottom of the page*/
+  padding-top: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -582,11 +588,11 @@ label span input { /*When hovering over the choose file button (which is hidden)
   transition: all 0.5s ease-in-out;
 }
 .scroll-top-wrapper:hover {
-  background-color: #57dbf9;
+  background-color: none;
 }
 .scroll-top-wrapper.show {
-  visibility:visible;
-  cursor:pointer;
+  visibility: visible;
+  cursor: pointer;
   opacity: .80;
 }
 .scroll-top-wrapper i.fa {
