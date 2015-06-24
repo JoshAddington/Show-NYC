@@ -4,6 +4,9 @@ angular.module('myApp.controllers', [])
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
+  $scope.upvote = function(id) {
+   console.log(id)
+  }
 
   activePhotos.async().then(function(d) {
     $scope.photos = d;
