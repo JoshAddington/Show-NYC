@@ -93,7 +93,6 @@ footer a {
 }
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
-  display: none;
   background-color: white;
 }
 #vote {
@@ -101,11 +100,9 @@ footer a {
   background-color: white;
 }
 #gallery{
-  display: none;
   background-color: white;
 }
 #submit{
-  display: none;
   height: 100%;
   width: 100%;
   text-align: center;

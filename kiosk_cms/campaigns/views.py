@@ -7,7 +7,6 @@ from rest_framework.response import Response
 from .models import Campaign
 from .serializers import CampaignSerializer
 
-
 @api_view(['GET'])
 def campaign_collection(request):
 	if request.method == 'GET':
@@ -22,11 +21,11 @@ def active_campaign_collection(request):
 		campaigns = Campaign.objects.filter(start_date__lte=now).filter(end_date__gte=now)
 		serializer = CampaignSerializer(campaigns, many=True)
 		return Response(serializer.data)
-	
+
 @api_view(['GET'])
-def campaign_element(request, pk):	
+def campaign_element(request, pk):
 	campaign = get_object_or_404(Campaign, pk=pk)
-	
+
 	if request.method == 'GET':
 		serializer = CampaignSerializer(campaign)
 		return Response(serializer.data)

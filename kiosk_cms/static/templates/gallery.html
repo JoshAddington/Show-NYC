@@ -1,0 +1,32 @@
+<div id ="gallery">     <!--Still need to add filter capabilites-->
+      <h2 align = "center">Gallery Page</h2>
+      <a href="#/gallery" ng-click="sortType = 'id';sortReverse=true">
+        Newest
+        <span ng-show="sortType == 'id'"></span>
+      </a>
+      <a href="#/gallery" ng-click="sortType='id';sortReverse=false">
+        Oldest
+        <span ng-show="sortReverse == 'false'"></span>
+      </a>
+
+      <a href="#/gallery" ng-click="sortType='score';sortReverse=true">
+        Trending
+        <span ng-show="sortType == 'score'"></span>
+      </a>
+      <a href="#/gallery" ng-click="sortType='rank'">
+        Random
+        <span ng-show="sortType == 'rank'"></span>
+      </a>
+      <div class = "image-zoom-container-gallery">  <!--Grid of gallery photos-->
+        <div class="zoom-container-gallery" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
+          <img src='{{photo.image}}'>
+          <p>Id: {{photo.id}}</p>
+          <p>Votes: {{photo.score}}</p>
+          <p>Votes: {{photo.rank}}</p>
+          <p>{{sortType}}</p>
+        </div>
+
+          <p align = center>Loading more images...</p>
+          <br>
+      </div>
+  </div>

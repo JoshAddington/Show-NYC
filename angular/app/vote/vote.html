@@ -1,0 +1,10 @@
+<div id="vote" class="wrap">
+      <h2 align="center">Vote Page</h2>
+      <div class = "image-zoom-container" > <!--Grid of vote photos-->
+          <div class="zoom-container" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
+            <img src='{{photo.image}}'>
+          </div>
+          <p align = center>Loading more images...</p>
+          <br>
+      </div>
+  </div>

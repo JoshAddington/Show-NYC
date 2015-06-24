@@ -83,9 +83,25 @@ AWS_ACCESS_KEY=*IAM User Access Key ID*
 
 #### Running the local server
 
-First, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder that Django will be serving them from. To do this, run 
+To get Angular running for the server, Node.js and npm will need to be installed. You can get them from [http://nodejs.org/](http://nodejs.org/).
+
+Once Node and npm are installed, install Angular and it's dependencies by first getting into to angular folder with 
 ```
-python manage.py collectstatic --no-input
+cd static/js/angular
+```
+and then install the dependencies listed in bower.json and package.json with
+```
+npm install
+```
+
+Now Angular is where we need it to be. That only needs to be done for the initial project set up.
+
+
+Now, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder to serve them from( This is set up in the kiosk/settings.py file. STATICFILES_DIRS is a list of folders that Django collects files from, and STATIC_ROOT is the folder where Django puts that collection of files to serve them from. 
+
+To do this, run 
+```
+python manage.py collectstatic --noinput
 ```
 
 To start the deveelopment server run 

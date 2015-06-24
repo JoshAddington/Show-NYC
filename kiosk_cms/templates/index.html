@@ -1,344 +1,90 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-    <!--Links-->
-    <link href="{% static 'css/CSSpracticeWebsite.css' %}" rel="stylesheet">
-    <link href="{% static 'css/hover.css' %}" rel="stylesheet" media="all">
-    <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Show NYC</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'js/angular/app/bower_components/html5-boilerplate/dist/css/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'js/angular/app/bower_components/html5-boilerplate/dist/css/main.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/app.css' %}"> -->
+  <link rel="stylesheet" href="{% static 'css/CSSpracticeWebsite.css' %}">
+  <link rel="stylesheet" href="{% static 'css/hover.css' %}">
+
+  <script src="{% static 'js/angular/app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 </head>
-  <body>
-    <header class = "noselect"> <!--Header-->
-        <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}"> 
+<body>
+  <header class = "noselect"> <!--Header-->
+        <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}">
         <h1 id = "show-nyc-vg">SHOW NYC</h1> <!--header for vote and gallery sections-->
         <h1 id = "show-nyc-sa">SHOW NYC</h1> <!--header for submit and about sections-->
-        <p id = "filter">Trending Newest Oldest Random</p> <!--placeholder filters for gallery section-->
-    </header>
-    <div class = "noselect">
-        <div class="menu">
-            <div class="icon-close"> <!--Slide out navagation menu-->
-                <h1>SHOW NYC</h1>
-                <nav>
-                    <ul> <!--Navagation options-->
-                        <li><a href="#" id ="voteButton">Vote</a></li>
-                        <li><a href="#" id ="galleryButton">Gallery</a></li>
-                        <li><a href="#" id ="submitButton">Submit</a></li>
-                        <li><a href="#" id ="aboutButton">About</a></li>
-                    </ul>
-                </nav>
-                <div id="share-buttons"> <!--Share via social media-->
-                    <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
-                        <img src="{% static 'icons/social-network2.png' %}" alt="Facebook" />
-                    </a>
-                    <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
-                        <img src="{% static 'icons/twitter1.png' %}" alt="Tumblr" />
-                    </a>
-                    <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
-                        <img src="{% static 'icons/google1.png' %}" alt="Google" />
-                    </a>
-                </div>
+        <!-- filter transferred to gallery page -->
+  </header>
+
+  <div class="menu">
+        <div class="icon-close"> <!--Slide out navagation menu-->
+            <h1>SHOW NYC</h1>
+            <nav>
+                <ul>                <!--Navagation options-->
+                    <li><a href="#/vote" id ="voteButton" >Vote</a></li>
+                    <li><a href="#/gallery" id ="galleryButton">Gallery</a></li>
+                    <li><a href="#/submit" id ="submitButton">Submit</a></li>
+                    <li><a href="#/about" id ="aboutButton">About</a></li>
+                </ul>
+            </nav>
+            <div id="share-buttons">   <!--Share via social media-->
+                <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
+                    <img src="{% static 'icons/social-network2.png' %} " alt="Facebook" />
+                </a>
+                <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
+                    <img src="{% static 'icons/twitter1.png' %} " alt="Tumblr" />
+                </a>
+                <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
+                    <img src="{% static 'icons/google1.png' %} " alt="Google" />
+                </a>
             </div>
         </div>
     </div>
 
-<!--##########    V O T E    S E C T I  O N      #########-->
-<!--There is not voting functionality yet-->
-    
-    <div id="vote" class="wrap">
-        <div id = "campaign"> <!--Information about this week's campaign-->
-        </div>
-        <div class = "image-zoom-container-vote"> <!--Grid of vote photos-->
-            <div class = "zoom-container-vote">
-                <img src="http://s.hswstatic.com/gif/holiday-dessert-pictures-2.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://dessert.betterrecipes.com/uploads/photo/400x300/d/c/dc858f10ed9b14a7e2df1c409370fb9e.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://cook.sndimg.com/content/dam/images/cook/fullset/2012/12/11/0/CCBKN309_Frozen-Yoghurt-Coconut-Pops-recipe_s4x3.jpg/jcr:content/renditions/cq5dam.web.400.300.jpeg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="https://www.itsuxtobefat.com/wp-content/uploads/raspberry-cheesecake.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://admin.clickcapecod.com/admin/modules/recipes/images/31/416/berry-shot-1.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://www.gallaspizza.com/upload/Menu/canoli.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://cdn.designcorral.com/wp-content/uploads/2013/10/wedding-dessert-table-ideas.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://img.foodnetwork.com/FOOD/2010/07/21/FNM_090110-Lighten-Up-009_s4x3_lead.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://blog.foodnetwork.com/fn-dish/files/2011/03/cheesecake-pops.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://img.allw.mn/health/thumbs/102/715.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://heydoyou.com/wp-content/uploads/2012/08/lemon.jpg">
-            </div>
-            <div class = "zoom-container-vote">
-                <img src="http://cms.cb.asmsrv.co/cnvyr/2013-09-10_chughtai_creative-cute-bridal-shower-desserts-parfait.jpg">
-            </div>            
-        </div>
-    </div>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<!--##########    G A L L E R Y    S E C T I  O N      #########-->
-<!--No functional filter capabilities yet-->
+  <div ng-view></div>
 
-    <div id ="gallery">    
-        <div class = "image-zoom-container-gallery">  <!--Grid of gallery photos-->
-            <div class = "zoom-container-gallery">
-                <img src="http://photography.naturestocklibrary.com/orca-stock-photo.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://www.photographypros.com/landscape/wisconsin_dells/wisconsin_dells.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://www.muralsbyles.com/wp-content/uploads/Autum-Garden-Wall-Mural-400x300.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://experienceolympic.com/sites/default/files/pictures/Olympic-Guided-Hike.JPG">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://imagecache6.allposters.com/LRG/27/2707/DS1ND00Z.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://4.bp.blogspot.com/_JVXqJ8QkmJA/Sk5bkDETDbI/AAAAAAAANy4/MEYtdJkXBtQ/s400/12_albena-markova.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="https://photogrist.com/wp-content/uploads/2014/10/Will-Burrard-Lucas-400x300.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/s10AAOxydgZTHwbL/$_1.JPG?set_id=2">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://4photos.net/blog/wp-content/uploads/Different-Types-of-Photography.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://designm.ag/images/arch/nature/194828_4216.jpg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://www.photographypros.com/landscape/halifax/photography.gif">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>
-            <div class = "zoom-container-gallery">
-                <img src="http://4.bp.blogspot.com/_D-LZxhXlNXY/SbIpnWrK_rI/AAAAAAAAJpY/EnJbphAkskQ/s400/beautiful-nature-photographs.jpeg">
-                <div>
-                    <p>Campaign Name</p>
-                </div>
-            </div>            
-        </div>
-    </div>
+  <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
-<!--##########    S U B M I T   S E C T I  O N      #########-->
-<!--No option to submit photos yet-->
+  <!-- In production use:
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  -->
+  <script src="{% static 'js/angular/app/bower_components/angular/angular.js' %}"></script>
+  <script src="{% static 'js/angular/app/bower_components/angular-route/angular-route.js' %}"></script>
+  <script src="{% static 'js/angular/app/app.js' %} "></script>
+  <script src="{% static 'js/angular/app/vote/vote.js' %} "></script>
+  <script src="{% static 'js/angular/app/gallery/gallery.js' %} "></script>
+  <script src="{% static 'js/angular/app/submit/submit.js' %} "></script>
+  <script src="{% static 'js/angular/app/about/about.js' %} "></script>
+  <script src="{% static 'js/angular/app/components/version/version.js' %} "></script>
+  <script src="{% static 'js/angular/app/components/version/version-directive.js' %} "></script>
+  <script src="{% static 'js/angular/app/components/version/interpolate-filter.js' %} "></script>
+  <script src="{% static 'js/angular/app/controllers.js' %} "></script>
+  <script src="{% static 'js/angular/app/services.js' %} "></script>
+  <script src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "3d484258-68cb-4e80-b286-ef191078786b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src= "{% static 'js/angular/app/ui_js/ui.js' %} "></script>
+  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+  <script src="{% static 'js/JQpracticeWebsite.js' %}"></script>
 
-    <div id="submit" class = "noselect">
-        <div id = "submit-title">
-            <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
-            <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
-            <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here—it's that simple!</p>
-        </div>
-        <div id = "submit-step1">
-            <h3>What's Your Name?</h3> <!--Name submission-->
-            <form>
-                <input type = "text" name = "name"> <!--User text input-->
-            </form>
-            <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
-        </div>
-        <div id = "submit-step2">
-            <h3>What's Your Email?</h3>
-            <form>
-                <input type = "text" name = "email-address"> <!--User text input-->
-            </form>
-            <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
-        </div>
-        <div id = "submit-photo">
-            <h3>What's Your Photo?</h3> <!--User photo input-->
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-<<<<<<< HEAD
-            <label class="filebutton">
-                UPLOAD <!--I want to limit the types of files that can be uploaded-->
-                <span><input type="file" id="myfile" name="myfile" accept =".jpg, .png"></span>
-            </label>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <label class = "submission">
-                <input type="submit" id = "mySubmit" value="SUBMIT" class = "btn-style">
-            </label>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-=======
->>>>>>> master
-
-            <form method="POST" class='post-form'>{% csrf_token %}
-                {{ form.as_p }}
-                <button type='button' id='submit_photo' class='submit_button'>Submit Photo</button>
-            </form>
-
-         
-        </div>
-    </div>
-
-<!--##########    A B O U T   S E C T I  O N      #########-->
-
-    <div id="about">
-        <div id = "long-header">           
-            <h3 id = "long-header">Get your photo on the MTA Kiosks</h3> <!--Example first paragraph for about section-->
-            <p id = "long-header">Each week a contest will be lauched by a different sponsoring company, and those companies are looking for <em>your</em>  photos!  Be sure to submit photos relevant to that week's specified campaign. You can submit photos on both our website and mobile app in hopes that your best shot will make it onto all 140 kiosk screens to be seen by millions of New York City subway riders. Remember to vote for your favorite photo and see if it makes it onto the big screen in the big apple!</p>
-            <br>
-            <br>
-            <h3 id = "long-header">What to Expect</h3> <!--Example second paragraph for about section-->
-            <p id = "long-header">The voting for any given campaign opens on Monday at 3:00pm and closes later that same week on at 3:00pm on Friday. The winning photo will be announced the day after voting closes, so remember to stay tuned! The following week's campaign details will be announced 24 hours before the voting period for that campaign beings. Go out there and Show NYC what you've got!</p>
-            <br>
-            <br>         
-            <h3 id = "long-header">Check Out Past Campaign Winners</h3>
-            <br>    
-        </div>
-        <div class = "image-zoom-container-about">  <!--Grid of past campaign winning photos-->
-            <div class = "zoom-container-about">
-                <img src="http://photography.naturestocklibrary.com/orca-stock-photo.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://www.photographypros.com/landscape/wisconsin_dells/wisconsin_dells.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://www.muralsbyles.com/wp-content/uploads/Autum-Garden-Wall-Mural-400x300.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://experienceolympic.com/sites/default/files/pictures/Olympic-Guided-Hike.JPG">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://imagecache6.allposters.com/LRG/27/2707/DS1ND00Z.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://4.bp.blogspot.com/_JVXqJ8QkmJA/Sk5bkDETDbI/AAAAAAAANy4/MEYtdJkXBtQ/s400/12_albena-markova.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="https://photogrist.com/wp-content/uploads/2014/10/Will-Burrard-Lucas-400x300.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/s10AAOxydgZTHwbL/$_1.JPG?set_id=2">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://4photos.net/blog/wp-content/uploads/Different-Types-of-Photography.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://designm.ag/images/arch/nature/194828_4216.jpg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://www.photographypros.com/landscape/halifax/photography.gif">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class = "zoom-container-about">
-                <img src="http://4.bp.blogspot.com/_D-LZxhXlNXY/SbIpnWrK_rI/AAAAAAAAJpY/EnJbphAkskQ/s400/beautiful-nature-photographs.jpeg">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>            
-        </div>
-    </div>
-    <footer>
-        <p>Created by: Control Group Interns 2015</p>
-        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-    </footer>
-    <div class="scroll-top-wrapper ">
-        <span class="scroll-top-inner">
-            <i class="fa fa-2x fa-arrow-circle-up"></i>
-        </span>
-    </div>
-
-<!--scripts-->
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "3d484258-68cb-4e80-b286-ef191078786b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src= " {% static 'js/JQpracticeWebsite.js' %}"></script>
-    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
-    <!--<script src="path/to/jquery.min.js"></script>-->
-    <!--<script src="path/to/jquery.row-grid.min.js"></script>-->
 </body>
 </html>

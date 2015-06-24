@@ -41,11 +41,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangular',
 )
 
 # Django Apps
 INSTALLED_APPS += (
-    'images', 
+    'images',
     'campaigns',
     'apis',
 )
@@ -140,9 +141,12 @@ if 'RDS_DB_NAME' in os.environ:
 
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, '..', 'app')
+)
 
-# Amazon Web Services settings     
+# Amazon Web Services settings
 
 # Name of AWS S3 bucket to be used for media storage
 AWS_STORAGE_BUCKET_NAME = os.environ['BUCKET_NAME']
@@ -157,7 +161,7 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 # Media Files settings
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-DEFAULT_FILE_STORAGE = 'kiosk_cms.custom_storages.MediaStorage' 
+DEFAULT_FILE_STORAGE = 'kiosk_cms.custom_storages.MediaStorage'
 
 
 # Django CORS Headers Settings
