@@ -1,57 +1,5 @@
 $(document).ready(function() {
 
-  //Vote Button display
-  $('#voteButton').click(function() {
-    var condition = true;
-    if (condition === true){
-      $('#vote').show();
-      $('#gallery').hide();
-      $('#submit').hide();
-      $('#about').hide();
-      $('#show-nyc-vg').show();
-      $('#show-nyc-sa').hide();
-      $('#filter').hide();}
-  }); 
-
-  //Gallery Button Display
-  $('#galleryButton').click(function() {
-    var condition = true;
-    if (condition === true){
-      $('#vote').hide();
-      $('#gallery').show();
-      $('#submit').hide();
-      $('#about').hide();
-      $('#show-nyc-vg').show();
-      $('#show-nyc-sa').hide();
-      $('#filter').show();}
-  }); 
-
-  //Submit Button Display
-  $('#submitButton').click(function() {
-    var condition = true;
-    if (condition === true){
-      $('#vote').hide();
-      $('#gallery').hide();
-      $('#submit').show();
-      $('#about').hide();
-      $('#show-nyc-vg').hide();
-      $('#show-nyc-sa').show();
-      $('#filter').hide();}
-  }); 
-
-   //About Button Display
-  $('#aboutButton').click(function() {
-    var condition = true;
-    if (condition === true){
-      $('#vote').hide();
-      $('#gallery').hide();
-      $('#submit').hide();
-      $('#about').show();
-      $('#show-nyc-vg').hide();
-      $('#show-nyc-sa').show();
-      $('#filter').hide();}
-  }); 
-
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
     $('.menu').animate({
@@ -67,5 +15,23 @@ $(document).ready(function() {
       left: "-350px"
     }, 200);
   });
+  
+  $(document).on( 'scroll', function(){
+ 
+    if ($(window).scrollTop() > 1000) {
+      $('.scroll-top-wrapper').addClass('show');
+    } else {
+      $('.scroll-top-wrapper').removeClass('show');
+    }
+  });
+  $('.scroll-top-wrapper').on('click', scrollToTop);
+
+  function scrollToTop() {
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $('body');
+    offset = element.offset();
+    offsetTop = offset.top;
+    $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+  }
 
 });
