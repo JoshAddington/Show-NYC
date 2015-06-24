@@ -27,33 +27,49 @@
         <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}">
         <h1 id = "show-nyc-vg">SHOW NYC</h1> <!--header for vote and gallery sections-->
         <h1 id = "show-nyc-sa">SHOW NYC</h1> <!--header for submit and about sections-->
-        <!-- filter transferred to gallery page -->
-  </header>
+        <div id="filter-buttons"> <!--Share via social media-->
+            <a href= # target="_blank">
+                <img src="{% static 'icons/trendingbig.png' %}" alt="Trending" />
+            </a>
+            <a href= # target="_blank">
+                <img src="{% static 'icons/newbig.png' %}" alt="Newest" />
+            </a>
+            <a href=# target="_blank">
+                <img src="{% static 'icons/oldbig.png' %}" alt="Oldest" />
+            </a>
+            <a href=# target="_blank">
+                <img src="{% static 'icons/campaignbig.png' %}" alt="Campaigns" />
+            </a>
+        </div>
 
-  <div class="menu">
-        <div class="icon-close"> <!--Slide out navagation menu-->
-            <h1>SHOW NYC</h1>
-            <nav>
-                <ul>                <!--Navagation options-->
-                    <li><a href="#/vote" id ="voteButton" >Vote</a></li>
-                    <li><a href="#/gallery" id ="galleryButton">Gallery</a></li>
-                    <li><a href="#/submit" id ="submitButton">Submit</a></li>
-                    <li><a href="#/about" id ="aboutButton">About</a></li>
-                </ul>
-            </nav>
-            <div id="share-buttons">   <!--Share via social media-->
-                <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
-                    <img src="{% static 'icons/social-network2.png' %} " alt="Facebook" />
-                </a>
-                <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
-                    <img src="{% static 'icons/twitter1.png' %} " alt="Tumblr" />
-                </a>
-                <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
-                    <img src="{% static 'icons/google1.png' %} " alt="Google" />
-                </a>
+    </header>
+    <div class = "noselect">
+        <div class="menu">
+            <div class="icon-close"> <!--Slide out navagation menu-->
+                <h1>SHOW NYC</h1>
+                <nav>
+                    <ul> <!--Navagation options-->
+                        <li><a href="#" id ="voteButton">Vote</a></li>
+                        <li><a href="#" id ="galleryButton">Gallery</a></li>
+                        <li><a href="#" id ="submitButton">Submit</a></li>
+                        <li><a href="#" id ="aboutButton">About</a></li>
+                    </ul>
+                </nav>
+                <div id="share-buttons"> <!--Share via social media-->
+                    <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
+                        <img src="{% static 'icons/social-network2.png' %}" alt="Facebook" />
+                    </a>
+                    <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
+                        <img src="{% static 'icons/twitter1.png' %}" alt="Twitter" />
+                    </a>
+                    <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
+                        <img src="{% static 'icons/google1.png' %}" alt="Google" />
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -85,6 +101,26 @@
   <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
   <script src="{% static 'js/JQpracticeWebsite.js' %}"></script>
+
+    <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!--
+        <p>Created by: Control Group Interns 2015</p>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+        -->
+    </footer>
+    <!--
+    <div class="scroll-top-wrapper ">
+        <span class="scroll-top-inner">
+            <i class="fa fa-2x fa-arrow-circle-up"></i>
+        </span>
+    </div>
+    -->
 
 </body>
 </html>

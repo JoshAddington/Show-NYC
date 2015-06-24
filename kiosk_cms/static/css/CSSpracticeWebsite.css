@@ -1,5 +1,5 @@
 /*    Green: #66da59    Blue: #57dbf9     Orange: #ef962c     */
-/*    New blue: #32b7d6   New orange: #ef962c   new green:#36c147          */
+/*    New blue: #3d70d4   New orange: #f87b06   new green:#28a626          */
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
@@ -39,8 +39,8 @@ h3 {                                                  /*Heading 3*/
   text-align: center;
 }
 header {                                              /*Header*/
-  background: #32b7d6;
-  height: 100px;
+  background: #3d70d4;
+  padding-bottom: 6px;
 }
 header > h1 {
   margin-left: 95px;
@@ -67,7 +67,7 @@ input[type = "text"]{                              /*Text input*/
   width: 50%;
   height: 40px;
   font-size: 20px;
-  color: #32b7d6;
+  color: #3d70d4;
   letter-spacing: 4px;
   vertical-align: center;
   float: center;
@@ -75,7 +75,7 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 10px;
 }
 footer {
-  background-color: #32b7d6;
+  background-color: #3d70d4;
   color: white;
   font-family: "Raleway";
   font-size: 14px;
@@ -110,7 +110,7 @@ footer a {
 #show-nyc-sa{
   display: none;
 }
-#filter{
+#filter-buttons{
   display: none;
 }
 /*Buttons*/
@@ -182,7 +182,7 @@ footer a {
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
-  background-color : #ef962c;
+  background-color : #f87b06;
   cursor: pointer;
 }
 .btn-style:hover {                                /*Submit Button Hover*/
@@ -193,12 +193,12 @@ footer a {
   letter-spacing: 3px;
   font-weight: 600;
   padding : 10px 30px;
-  background-color : #ef962c;
+  background-color : #f87b06;
   cursor: pointer;
 }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #36c147;
+  background-color: #28a626;
   height: 100%;
   cursor: default;
   position: fixed;
@@ -254,7 +254,7 @@ footer a {
   text-decoration: none;
 }
 #long-header {                                  /*About section extended header*/
-  background-color: #32b7d6;
+  background-color: #3d70d4;
   color: white;
   text-align: center;
 }
@@ -288,7 +288,7 @@ footer a {
   text-align: center;
 }
 #filter {                                      /*Placeholder filters for Gallery Section*/
-  background-color: #32b7d6;
+  background-color: #3d70d4;
   cursor: pointer;
   color: white;
   font-size: 15px;
@@ -308,7 +308,8 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 5px solid #ffffff;                   /*border around the images*/
+  padding-right: 6%;
+  border-bottom: 8px solid white;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -318,18 +319,6 @@ footer a {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-transition: all 2.5s ease;/*ease into image zoom*/
-  -moz-transition: all 2.5s ease;
-  -ms-transition: all 2.5s ease;
-  -o-transition: all 2.5s ease;
-  transition: all 2.5s ease;
-}
-.zoom-container-vote:hover img {               /*image hover animation*/
-  -webkit-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -o-transform: scale(1.15);
-  transform:scale(1.15);
 }
 /* G A L L E R Y   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-gallery{                 /*Photo grid layout*/
@@ -361,7 +350,7 @@ footer a {
   transition: all .7s ease;
 }
 .zoom-container-gallery > div {
-    background-color: #36c147;
+    background-color: #28a626;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -386,11 +375,11 @@ footer a {
     opacity: 1.0;
 }
 .zoom-container-gallery:hover img {             /*image hover animation*/
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  -o-transform: scale(1.25);
-  transform:scale(1.25);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform:scale(1.1);
 }
 @media (max-width: :767px) {
   .zoom-container{
@@ -421,7 +410,7 @@ footer a {
   height: auto;
 }
 .zoom-container-about > div {
-    background-color: #36c147;
+    background-color: #28a626;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -445,7 +434,7 @@ footer a {
 }
 /* S U B M I T    S E C T I O N */
 #submit-title {                                   /*Submit section campaign information*/
-  background-color: #32b7d6;
+  background-color: #3d70d4;
   height: 100%;
   margin-top: -10px;
   padding-top: 10px;
@@ -459,13 +448,13 @@ footer a {
 #submit-title p {
   color: white;
   text-align: center;
-  font-size: 17px;
+  font-size: 20px;
   max-width: 800px;
   margin: 0 auto;
   padding-bottom: 20px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
-  background-color: #ef962c;
+  background-color: #f87b06;
   height: 100%;
   padding-top: 20px;
   opacity: .75;
@@ -482,13 +471,13 @@ footer a {
 #submit-step1 p {
   color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
-  background-color: #ef962c;
+  background-color: #f87b06;
   height: 100%;
   padding-top: 20px;
   opacity: .75;
@@ -505,13 +494,13 @@ footer a {
 #submit-step2 p {
   color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
-  background-color: #ef962c;
+  background-color: #f87b06;
   height: 100%;
   padding-top: 20px;
   opacity: .75;
@@ -528,7 +517,7 @@ footer a {
 #submit-step2 p {
   color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 40px;
@@ -542,7 +531,7 @@ label.filebutton {
   background-color: white;
   font-size: 30px;
   letter-spacing: 2px;
-  color: #ef962c;
+  color: #f87b06;
   font-weight: 900;
 }
 label span input { /*When hovering over the choose file button (which is hidden) the cursor is no longer a pointer*/
@@ -566,7 +555,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
   overflow: hidden;
   text-align: center;
   z-index: 10;
-  background-color: #ef962c;
+  background-color: #f87b06;
   color: white;
   width: 40px; 
   height: 40px;
@@ -595,7 +584,16 @@ label span input { /*When hovering over the choose file button (which is hidden)
 .scroll-top-wrapper i.fa {
   line-height: inherit;
 }
-
+#filter-buttons {                                 /*Share icon positioning*/
+    position: relative;
+    text-align: right;
+    margin-top: -30px;
+}
+#filter-buttons img {                             /*Share icon sizing*/
+  width: 40px;
+  height: 40px;
+  padding-right: 20px;
+}
 
 
 

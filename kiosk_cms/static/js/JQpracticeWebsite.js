@@ -1,5 +1,57 @@
 $(document).ready(function() {
 
+  //Vote Button display
+  $('#voteButton').click(function() {
+    var condition = true;
+    if (condition === true){
+      $('#show-nyc-vg').show();
+      $('#show-nyc-sa').hide();
+      $('#filter-buttons').hide();
+      $('#voteButton').addClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').removeClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
+  }); 
+
+  //Gallery Button Display
+  $('#galleryButton').click(function() {
+    var condition = true;
+    if (condition === true){
+      $('#show-nyc-vg').show();
+      $('#show-nyc-sa').hide();
+      $('#filter-buttons').show();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').addClass("highlight")
+      $('#submitButton').removeClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
+  }); 
+
+  //Submit Button Display
+  $('#submitButton').click(function() {
+    var condition = true;
+    if (condition === true){
+      $('#show-nyc-vg').hide();
+      $('#show-nyc-sa').show();
+      $('#filter-buttons').hide();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').addClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
+  }); 
+
+   //About Button Display
+  $('#aboutButton').click(function() {
+    var condition = true;
+    if (condition === true){
+      $('#show-nyc-vg').hide();
+      $('#show-nyc-sa').show();
+      $('#filter-buttons').hide();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').removeClass("highlight")
+      $('#aboutButton').addClass("highlight")}
+  }); 
+
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
     $('.menu').animate({
