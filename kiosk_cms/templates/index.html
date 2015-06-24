@@ -6,6 +6,7 @@
     <link href="{% static 'css/CSSpracticeWebsite.css' %}" rel="stylesheet">
     <link href="{% static 'css/hover.css' %}" rel="stylesheet" media="all">
     <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 </head>
   <body>
     <header class = "noselect"> <!--Header-->
@@ -20,7 +21,7 @@
                 <h1>SHOW NYC</h1>
                 <nav>
                     <ul> <!--Navagation options-->
-                        <li><a href="#" id ="voteButton" >Vote</a></li>
+                        <li><a href="#" id ="voteButton">Vote</a></li>
                         <li><a href="#" id ="galleryButton">Gallery</a></li>
                         <li><a href="#" id ="submitButton">Submit</a></li>
                         <li><a href="#" id ="aboutButton">About</a></li>
@@ -45,9 +46,7 @@
 <!--There is not voting functionality yet-->
     
     <div id="vote" class="wrap">
-        <div id = "campaign" class = "noselect"> <!--Information about this week's campaign-->
-            <h2>Campaigns Can Put Their Campaign Slogan Here</h2> <!--Campaign Slogan-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed gravida libero. Cras a accumsan tellus. Quisque sit amet ex id lectus sodales ultricies. Sed pharetra enim eget augue tempus, nec gravida massa aliquam.</p> <!--Current Campaign Description-->
+        <div id = "campaign"> <!--Information about this week's campaign-->
         </div>
         <div class = "image-zoom-container-vote"> <!--Grid of vote photos-->
             <div class = "zoom-container-vote">
@@ -199,6 +198,29 @@
             <br>
             <br>
             <br>
+<<<<<<< HEAD
+            <label class="filebutton">
+                UPLOAD <!--I want to limit the types of files that can be uploaded-->
+                <span><input type="file" id="myfile" name="myfile" accept =".jpg, .png"></span>
+            </label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <label class = "submission">
+                <input type="submit" id = "mySubmit" value="SUBMIT" class = "btn-style">
+            </label>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+=======
+>>>>>>> master
 
             <form method="POST" class='post-form'>{% csrf_token %}
                 {{ form.as_p }}
@@ -298,6 +320,15 @@
                 </div>
             </div>            
         </div>
+    </div>
+    <footer>
+        <p>Created by: Control Group Interns 2015</p>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+    </footer>
+    <div class="scroll-top-wrapper ">
+        <span class="scroll-top-inner">
+            <i class="fa fa-2x fa-arrow-circle-up"></i>
+        </span>
     </div>
 
 <!--scripts-->
