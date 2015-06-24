@@ -415,7 +415,7 @@ footer a {
 .zoom-container-about > div {
     background-color: #28a626;
     opacity: 0;
-    position: absolute;
+    position: absolute; /*must be relative*/
     width: 100%;
     height: 25%;
     top: 75%;
@@ -431,6 +431,7 @@ footer a {
     color: white;
     text-align: center;
     font-weight: 900;
+    font-size: 20%;
     letter-spacing: 2px;
     opacity: 1.0;
     z-index: 3;
@@ -548,9 +549,6 @@ label span input { /*When hovering over the choose file button (which is hidden)
 .highlight {
   opacity: .5;
 }
-
-
-
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -593,8 +591,8 @@ label span input { /*When hovering over the choose file button (which is hidden)
     margin-top: -30px;
 }
 #filter-buttons img {                             /*Share icon sizing*/
-  width: 40px;
-  height: 40px;
+  max-height: 40px;
+  max-height: 40px;
   padding-right: 20px;
 }
 
