@@ -587,12 +587,14 @@ label span input { /*When hovering over the choose file button (which is hidden)
 #filter-buttons {                                 /*Share icon positioning*/
     position: relative;
     text-align: right;
-    margin-top: -30px;
+    margin-top: 0px;
 }
 #filter-buttons img {                             /*Share icon sizing*/
   width: 40px;
   height: 40px;
   padding-right: 20px;
+  margin-top: -50px;
+  padding-bottom: 50px;
 }
 
 
