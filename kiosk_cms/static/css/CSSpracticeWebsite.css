@@ -54,7 +54,7 @@ p{                                                  /*Paragraphs*/
 a:hover {                                           /*Link hover*/
   opacity: 0.5;
 }
-form {                                              /*Form*/
+input {                                              /*Form*/
   text-align: center;
   vertical-align: center;
   float: center;
@@ -502,9 +502,10 @@ footer a {
 #submit-photo {                                        /*Submit Section choose your photo*/
   background-color: #f87b06;
   height: 100%;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   opacity: .75;
   cursor: default;
+  padding: 50px 0;
 }
 #submit-photo:hover {
   opacity: 1.0;
@@ -513,6 +514,7 @@ footer a {
   letter-spacing: 2px;
   font-size: 30px;
   color: white;
+  margin: -10px 0 110px;
 }
 #submit-step2 p {
   color: white;
@@ -528,11 +530,15 @@ label.filebutton {
   cursor: pointer;
   text-align: center;
   padding: 90px 100px 90px 100px;
+  margin: 100px 0;
   background-color: white;
   font-size: 30px;
   letter-spacing: 2px;
   color: #f87b06;
   font-weight: 900;
+}
+label.submission button{
+  margin-top: 120px;
 }
 label span input { /*When hovering over the choose file button (which is hidden) the cursor is no longer a pointer*/
   font-size: 1px;
