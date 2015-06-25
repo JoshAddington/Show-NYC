@@ -13,7 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{% static 'js/angular/app/bower_components/html5-boilerplate/dist/css/normalize.css' %}">
   <link rel="stylesheet" href="{% static 'js/angular/app/bower_components/html5-boilerplate/dist/css/main.css' %}">
-  <!-- <link rel="stylesheet" href="{% static 'css/app.css' %}"> -->
   <link rel="stylesheet" href="{% static 'css/CSSpracticeWebsite.css' %}">
   <link rel="stylesheet" href="{% static 'css/hover.css' %}">
 
@@ -27,21 +26,7 @@
         <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}">
         <h1 id = "show-nyc-vg">SHOW NYC</h1> <!--header for vote and gallery sections-->
         <h1 id = "show-nyc-sa">SHOW NYC</h1> <!--header for submit and about sections-->
-        <div id="filter-buttons"> <!--Share via social media-->
-            <a href= # target="_blank">
-                <img src="{% static 'icons/trendingbig.png' %}" alt="Trending" />
-            </a>
-            <a href= # target="_blank">
-                <img src="{% static 'icons/newbig.png' %}" alt="Newest" />
-            </a>
-            <a href=# target="_blank">
-                <img src="{% static 'icons/oldbig.png' %}" alt="Oldest" />
-            </a>
-            <a href=# target="_blank">
-                <img src="{% static 'icons/campaignbig.png' %}" alt="Campaigns" />
-            </a>
-        </div>
-
+        
     </header>
     <div class = "noselect">
         <div class="menu">
@@ -74,9 +59,9 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
+  {% verbatim %}
   <div ng-view></div>
-
+  {% endverbatim %}
   <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
   <!-- In production use:

@@ -1,13 +1,27 @@
 <div id ="gallery">     <!--Still need to add filter capabilites-->
-      <h2 align = "center">Gallery Page</h2>
-      <a href="#/gallery" ng-click="sortType = 'id';sortReverse=true">
-        Newest
-        <span ng-show="sortType == 'id'"></span>
-      </a>
-      <a href="#/gallery" ng-click="sortType='id';sortReverse=false">
-        Oldest
-        <span ng-show="sortReverse == 'false'"></span>
-      </a>
+    <div id="filter-buttons"> <!--Share via social media-->
+          <a href= #>
+              <img src='static/icons/trendingbig.png' alt="Trending" />
+          </a>
+          <a href= #>
+              <img src="static/icons/newbig.png" alt="Newest" />
+          </a>
+          <a href=#>
+              <img src="static/icons/oldbig.png" alt="Oldest" />
+          </a>
+          <a href=#>
+              <img src="static/icons/campaignbig.png" alt="Campaigns" />
+          </a>
+    </div>
+    <h2 align = "center">Gallery Page</h2>
+    <a href="#/gallery" ng-click="sortType = 'id';sortReverse=true">
+      Newest
+      <span ng-show="sortType == 'id'"></span>
+    </a>
+    <a href="#/gallery" ng-click="sortType='id';sortReverse=false">
+      Oldest
+      <span ng-show="sortReverse == 'false'"></span>
+    </a>
 
       <a href="#/gallery" ng-click="sortType='score';sortReverse=true">
         Trending
@@ -29,4 +43,8 @@
           <p align = center>Loading more images...</p>
           <br>
       </div>
+
+        <p align = center>Loading more images...</p>
+        <br>
+    </div>
   </div>
