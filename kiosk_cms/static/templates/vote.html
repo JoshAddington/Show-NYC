@@ -5,9 +5,9 @@
         </div>
       <div class="image-zoom-container-vote"> <!--Grid of vote photos-->
           <div class="zoom-container-vote" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
-            <img src='{{photo.image}}'>
-            <p>Id: {{photo.id}}</p>
-            <p>Votes: {{photo.score}}</p>
+            <img ng-click='upvote(photo.id)' src='{{photo.image}}'>
+            <!-- <p>Id: {{photo.id}}</p> -->
+            <p ng-click='downvote(photo.id)'>Votes: {{photo.score}}</p>
             <!-- <p>{{photo}}</p> -->
           </div>
           <!-- <p align = center>Loading more images...</p> -->
