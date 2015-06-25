@@ -310,9 +310,9 @@ footer a {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 33.33%;
-  padding-right: 6%;
-  border-bottom: 8px solid white;
+  width: 20%;
+  padding-left: 4px;
+  border-bottom: 4px solid white;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -346,11 +346,6 @@ footer a {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-transition: all .7s ease; /*ease into image zoom*/
-  -moz-transition: all .7s ease;
-  -ms-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  transition: all .7s ease;
 }
 .zoom-container-gallery > div {
     background-color: #28a626;
@@ -376,13 +371,6 @@ footer a {
     font-weight: 500;
     letter-spacing: 2px;
     opacity: 1.0;
-}
-.zoom-container-gallery:hover img {             /*image hover animation*/
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform:scale(1.1);
 }
 @media (max-width: :767px) {
   .zoom-container{
@@ -431,7 +419,7 @@ footer a {
     color: white;
     text-align: center;
     font-weight: 900;
-    font-size: 20%;
+    font-size: 20px;
     letter-spacing: 2px;
     opacity: 1.0;
     z-index: 3;
@@ -461,7 +449,7 @@ footer a {
   background-color: #f87b06;
   height: 100%;
   padding-top: 20px;
-  opacity: .75;
+  opacity: .85;
   cursor: default;
 }
 #submit-step1:hover {
@@ -484,7 +472,7 @@ footer a {
   background-color: #f87b06;
   height: 100%;
   padding-top: 20px;
-  opacity: .75;
+  opacity: .85;
   cursor: default;
 }
 #submit-step2:hover {
@@ -507,7 +495,7 @@ footer a {
   background-color: #f87b06;
   height: 100%;
   padding-top: 20px;
-  opacity: .75;
+  opacity: .85;
   cursor: default;
 }
 #submit-photo:hover {
@@ -562,7 +550,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
   height: 40px;
   line-height: 40px;
   right: 20px; /*space between button and right side of the page*/
-  bottom: 25px; /*space between button and bottom of the page*/
+  bottom: 300px; /*space between button and bottom of the page*/
   padding-top: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -591,13 +579,20 @@ label span input { /*When hovering over the choose file button (which is hidden)
     margin-top: -30px;
 }
 #filter-buttons img {                             /*Share icon sizing*/
-  max-height: 40px;
-  max-height: 40px;
+  max-height: 50px;
+  max-height: 50px;
   padding-right: 20px;
 }
-
-
-
+#campaign-slogan {
+  font-size: 40px;
+}
+#campaign-information {
+  margin-top: -30px;
+  font-size: 20px;
+}
+#vote-count {
+  padding-top: 60px;
+}
 
 
 

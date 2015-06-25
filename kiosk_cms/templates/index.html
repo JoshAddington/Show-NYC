@@ -15,16 +15,16 @@
         <h1 id = "show-nyc-sa">SHOW NYC</h1> <!--header for submit and about sections-->
         <div id="filter-buttons"> <!--Share via social media-->
             <a href= #>
-                <img src="{% static 'icons/trendingbig.png' %}" alt="Trending" />
+                <img src="{% static 'icons/trendingbig64.png' %}" alt="Trending" />
             </a>
             <a href= #>
-                <img src="{% static 'icons/newbig.png' %}" alt="Newest" />
+                <img src="{% static 'icons/newbig64.png' %}" alt="Newest" />
             </a>
             <a href=#>
-                <img src="{% static 'icons/oldbig.png' %}" alt="Oldest" />
+                <img src="{% static 'icons/oldbig64.png' %}" alt="Oldest" />
             </a>
             <a href=#>
-                <img src="{% static 'icons/campaignbig.png' %}" alt="Campaigns" />
+                <img src="{% static 'icons/campaignbig64.png' %}" alt="Campaigns" />
             </a>
         </div>
 
@@ -36,7 +36,7 @@
                 <nav>
                     <ul> <!--Navagation options-->
                         <li><a href="#" id ="voteButton">Vote</a></li>
-                        <li><a href="#" id ="galleryButton">Gallery</a></li>
+                        <li><a href="#" id ="galleryButton">Archive</a></li>
                         <li><a href="#" id ="submitButton">Submit</a></li>
                         <li><a href="#" id ="aboutButton">About</a></li>
                     </ul>
@@ -61,45 +61,58 @@
     
     <div id="vote" class="wrap">
         <div id = "campaign"> <!--Information about this week's campaign-->
-            <img src="http://static3.depositphotos.com/1001102/124/i/950/depositphotos_1242697-Tall-grass-banner.jpg">
+            <p id = "campaign-slogan">Campaign Solgan Goes Here</p>
+            <p id = "campaign-information">Information about the campaign and voting criteria goes here<br>Font style, font color, and background color are customizable for each company</p>
         </div>
         <div class = "image-zoom-container-vote"> <!--Grid of vote photos-->
             <div class = "zoom-container-vote">
                 <img src="http://s.hswstatic.com/gif/holiday-dessert-pictures-2.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://dessert.betterrecipes.com/uploads/photo/400x300/d/c/dc858f10ed9b14a7e2df1c409370fb9e.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://cook.sndimg.com/content/dam/images/cook/fullset/2012/12/11/0/CCBKN309_Frozen-Yoghurt-Coconut-Pops-recipe_s4x3.jpg/jcr:content/renditions/cq5dam.web.400.300.jpeg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="https://www.itsuxtobefat.com/wp-content/uploads/raspberry-cheesecake.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://admin.clickcapecod.com/admin/modules/recipes/images/31/416/berry-shot-1.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://www.gallaspizza.com/upload/Menu/canoli.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://cdn.designcorral.com/wp-content/uploads/2013/10/wedding-dessert-table-ideas.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://img.foodnetwork.com/FOOD/2010/07/21/FNM_090110-Lighten-Up-009_s4x3_lead.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://blog.foodnetwork.com/fn-dish/files/2011/03/cheesecake-pops.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://img.allw.mn/health/thumbs/102/715.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://heydoyou.com/wp-content/uploads/2012/08/lemon.jpg">
             </div>
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">
             <div class = "zoom-container-vote">
                 <img src="http://cms.cb.asmsrv.co/cnvyr/2013-09-10_chughtai_creative-cute-bridal-shower-desserts-parfait.jpg">
-            </div>            
+            </div>  
+            <img src="http://i.stack.imgur.com/seWK5.png" id = "vote-count">          
         </div>
     </div>
 
@@ -191,29 +204,42 @@
             <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
             <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
             <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here—it's that simple!</p>
+            <br>
         </div>
         <div id = "submit-step1">
+            <br>
             <h3>What's Your Name?</h3> <!--Name submission-->
+            <br>
             <form>
                 <input type = "text" name = "name"> <!--User text input-->
             </form>
+            <br>
             <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
+            <br>
+            <br>
         </div>
         <div id = "submit-step2">
+            <br>
             <h3>What's Your Email?</h3>
+            <br>
             <form>
                 <input type = "text" name = "email-address"> <!--User text input-->
             </form>
+            <br>
             <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
+            <br>
+            <br>
         </div>
         <div id = "submit-photo">
+            <br>
             <h3>What's Your Photo?</h3> <!--User photo input-->
             <br>
             <br>
             <br>
             <br>
             <br>
-
+            <br>
+            <br>
             <label class="filebutton">
                 UPLOAD <!--I want to limit the types of files that can be uploaded-->
                 <span><input type="file" id="myfile" name="myfile" accept =".jpg, .png"></span>
@@ -226,8 +252,10 @@
             <br>
             <br>
             <br>
+            <br>
+            <br>
             <label class = "submission">
-                <input type="submit" id = "mySubmit" value="SUBMIT" class = "btn-style">
+                <input type="submit" id = "mySubmit" value="SUBMIT" class = "btn-style" onClick = "alert('Your photo has been submitted!')">
             </label>
             <br>
             <br>
@@ -337,23 +365,14 @@
     </div>
     <footer>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!--
         <p>Created by: Control Group Interns 2015</p>
         <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-        -->
     </footer>
-    <!--
     <div class="scroll-top-wrapper ">
         <span class="scroll-top-inner">
             <i class="fa fa-2x fa-arrow-circle-up"></i>
         </span>
     </div>
-    -->
 
 <!--scripts-->
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
