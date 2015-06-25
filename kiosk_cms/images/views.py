@@ -21,10 +21,10 @@ def image_collection(request):
         return Response(serializer.data)
     elif request.method == 'POST':
         raw_data = request.data
-        user = User.objects.get_or_create(email=raw_data.get('email'))
+        user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name'), 'username': raw_data.get('email')})
         data = {
           'image': raw_data.get('image'),
-          'user_id': user.user_id,
+          'user_id': user.id,
           'campaign_id': raw_data.get('campaign_id')
         }
         serializer = ImageSerializer(data=data)
@@ -43,10 +43,10 @@ def image_element(request, pk):
         return Response(serializer.data)
     elif request.method == 'PUT':
         raw_data = request.data
-        user = User.objects.get_or_create(email=raw_data.get('email'))
+        user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name')})
         data = {
           'image': raw_data.get('image'),
-          'user_id': user.user_id,
+          'user_id': user.id,
           'campaign_id': raw_data.get('campaign_id')
         }
         serializer = ImageSerializer(data=data)
