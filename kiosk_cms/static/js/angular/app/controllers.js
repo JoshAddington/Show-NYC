@@ -76,8 +76,7 @@ angular.module('myApp.controllers', [])
         form.append('campaign_id', 2);
         form.append('email', data.email);
         form.append('image', $scope.myFile);
-        console.log(form.image);
-        console.log(form.email);
+        console.log($scope.myFile);
 
 
 				$http.post('http://localhost:8000/api/images/',
@@ -88,16 +87,7 @@ angular.module('myApp.controllers', [])
 
 			        .success(function(data) {
 			            console.log(data);
-			            if (!data.success) {
-			            	// if not successful, bind errors to error variables
-			                $scope.errorName = data.errors.name;
-			                $scope.errorSuperhero = data.errors.superheroAlias;
-			            } else {
-			            	// if successful, bind success message to message
-			                $scope.message = data.message;
-                                        $scope.errorName = '';
-			                $scope.errorSuperhero = '';
-			            }
+			            
 			        })
               .error(function(data){
                 console.log(data);
