@@ -4,8 +4,6 @@ $(document).ready(function() {
   $('#voteButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#show-nyc-vg').show();
-      $('#show-nyc-sa').hide();
       $('#filter-buttons').hide();
       $('#voteButton').addClass("highlight")
       $('#galleryButton').removeClass("highlight")
@@ -17,8 +15,6 @@ $(document).ready(function() {
   $('#galleryButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#show-nyc-vg').show();
-      $('#show-nyc-sa').hide();
       $('#filter-buttons').show();
       $('#voteButton').removeClass("highlight")
       $('#galleryButton').addClass("highlight")
@@ -30,8 +26,6 @@ $(document).ready(function() {
   $('#submitButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#show-nyc-vg').hide();
-      $('#show-nyc-sa').show();
       $('#filter-buttons').hide();
       $('#voteButton').removeClass("highlight")
       $('#galleryButton').removeClass("highlight")
@@ -43,8 +37,6 @@ $(document).ready(function() {
   $('#aboutButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#show-nyc-vg').hide();
-      $('#show-nyc-sa').show();
       $('#filter-buttons').hide();
       $('#voteButton').removeClass("highlight")
       $('#galleryButton').removeClass("highlight")
