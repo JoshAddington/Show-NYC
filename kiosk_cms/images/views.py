@@ -21,7 +21,9 @@ def image_collection(request):
         return Response(serializer.data)
     elif request.method == 'POST':
         raw_data = request.data
+        print(raw_data)
         user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name'), 'username': raw_data.get('email')})
+        print(user.id)
         data = {
           'image': raw_data.get('image'),
           'user_id': user.id,

@@ -68,15 +68,24 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
-  $scope.imgData = {};
 
   $scope.submit = function() {
-				$http({
-			        method  : 'POST',
-			        url     : 'http://intern-cms-dev.elasticbeanstalk.com/api/images/',
-			        data    : $.param($scope.imgData),  // pass in data as strings
-			        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
-			    })
+        var form = new FormData();
+        var data = $scope.imgData;
+        form.append('name', data.first_name);
+        form.append('campaign_id', 2);
+        form.append('email', data.email);
+        form.append('image', $scope.myFile);
+        console.log(form.image);
+        console.log(form.email);
+
+
+				$http.post('http://localhost:8000/api/images/',
+                form, {
+                    headers: {'Content-Type': undefined},
+                    transformRequest: function(data){ return data;} 
+              })
+
 			        .success(function(data) {
 			            console.log(data);
 			            if (!data.success) {
@@ -89,7 +98,10 @@ angular.module('myApp.controllers', [])
                                         $scope.errorName = '';
 			                $scope.errorSuperhero = '';
 			            }
-			        });
+			        })
+              .error(function(data){
+                console.log(data);
+              });
 			};
 }])
 

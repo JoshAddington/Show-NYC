@@ -5,9 +5,10 @@
             <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here—it's that simple!</p>
     </div>
     <form ng-submit="submit()">
+        <input type="hidden" ng-model='imgData.campaign_id' value='2'>
         <div id = "submit-step1">
                 <h3>What's Your Name?</h3> <!--Name submission-->
-                    <input type = "text" name="name" ng-model='imgData.name'> <!--User text input-->
+                    <input type = "text" name="name" ng-model='imgData.first_name'> <!--User text input-->
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
         </div>
         <div id = "submit-step2">
@@ -20,11 +21,12 @@
                 <h3>What's Your Photo?</h3> <!--User photo input-->
                 <br>
 
+
                 <label class="filebutton">
                     UPLOAD <!--I want to limit the types of files that can be uploaded-->
                     <span>
                     <!-- <input type="file" file-model="myFile"/> -->
-                    <input type="file" id="myfile" name="myfile" accept =".jpg, .png" ng-model="imgData.file"></span>
+                    <input type="file" id="myfile" name="myfile" accept =".jpg, .png" file-model="myFile"></span>
                 </label>
                 <br>
                 <br>
