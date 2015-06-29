@@ -40,11 +40,11 @@ h3 {                                                  /*Heading 3*/
 }
 header {                                              /*Header*/
   background: #3d70d4;
-  padding-bottom: 6px;
+  padding-bottom: 0px
 }
 header > h1 {
   margin-left: 95px;
-  margin-top: -32px;
+  margin-top: -35px;
 }
 p{                                                  /*Paragraphs*/
   color: black;
@@ -101,17 +101,15 @@ footer a {
 }
 #gallery{
   background-color: white;
+  display: block;
 }
 #submit{
   height: 100%;
   width: 100%;
   text-align: center;
 }
-#show-nyc-sa{
-  display: none;
-}
-#filter-buttons{
-  display: none;
+#show-nyc{
+  display: block;
 }
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
@@ -271,14 +269,14 @@ footer a {
   max-width: 800px;
   margin: 0 auto;
 }
-#show-nyc-sa {                                 /*Header for Submit and About sections*/ 
+#show-nyc {                                 /*Header for Submit and About sections*/ 
   font-family: "Changa One";
   color: white;
   text-align: center;
   letter-spacing: 4px;
-  font-size: 50px;
+  font-size: 40px;
   background-color: none;
-  margin-left: -5px
+  margin-left: -5px;
 }
 
 #campaign {                                    /*Vote Section Campaign Information*/
@@ -287,16 +285,16 @@ footer a {
   overflow: none;
   text-align: center;
 }
-#filter {                                      /*Placeholder filters for Gallery Section*/
+#filter a{                                      /*Filters for Gallery Section*/
   background-color: #3d70d4;
   cursor: pointer;
   color: white;
-  font-size: 15px;
-  padding-left: 20px;
+  float: right;
+  text-decoration: none;
+  padding-right: 20px;
   letter-spacing: 2px;
   word-spacing: 30px;
-  text-align: right;
-  vertical-align: top;
+  margin-top: -20px;
 }
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
@@ -308,8 +306,8 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  padding-right: 6%;
-  border-bottom: 8px solid white;
+  padding-right: 0%; 
+  border-bottom: 0px solid white;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -333,7 +331,7 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 5px solid #ffffff; /*border around the images*/
+  border: 0px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -398,7 +396,7 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 50%;
-  border: 5px solid #ffffff; /*border around the images*/
+  border: 0px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -436,7 +434,7 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: #3d70d4;
   height: 100%;
-  margin-top: -10px;
+  margin-top: -30px;
   padding-top: 10px;
   opacity: 1.0;
 }
@@ -567,7 +565,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
   height: 40px;
   line-height: 40px;
   right: 20px; /*space between button and right side of the page*/
-  bottom: 25px; /*space between button and bottom of the page*/
+  bottom: 275px; /*space between button and bottom of the page*/
   padding-top: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -590,21 +588,14 @@ label span input { /*When hovering over the choose file button (which is hidden)
 .scroll-top-wrapper i.fa {
   line-height: inherit;
 }
-#filter-buttons {                                 /*Share icon positioning*/
-    position: relative;
-    text-align: right;
-    margin-top: 0px;
+
+#campaign-slogan {
+  font-size: 30px;
+  font-family: "Raleway";
 }
-#filter-buttons img {                             /*Share icon sizing*/
-  width: 40px;
-  height: 40px;
-  padding-right: 20px;
-  margin-top: -50px;
-  padding-bottom: 50px;
+#campaign-information {
+  font-size: 20px;
+  font-family: "Raleway";
 }
-
-
-
-
 
 
