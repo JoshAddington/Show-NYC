@@ -1,6 +1,10 @@
 $(document).ready(function() {
-
+  console.log("ready!");
   //Vote Button display
+  function printThing() {
+
+  }
+
   $('#voteButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -44,6 +48,11 @@ $(document).ready(function() {
       $('#aboutButton').addClass("highlight")}
   }); 
 
+
+  $('#mySubmit').click(function() {
+    console.log("x");
+  });
+
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
     $('.menu').animate({
@@ -51,6 +60,7 @@ $(document).ready(function() {
     }, 200);
     $('.menu').css('left', '-300px');
   });
+
   $('.icon-close').click(function() {
     $('.menu').animate({
       left: "-350px"
@@ -68,6 +78,7 @@ $(document).ready(function() {
       $('.scroll-top-wrapper').removeClass('show');
     }
   });
+
   $('.scroll-top-wrapper').on('click', scrollToTop);
 
   function scrollToTop() {
@@ -76,6 +87,9 @@ $(document).ready(function() {
     offset = element.offset();
     offsetTop = offset.top;
     $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
-  }
+  };
 
 });
+
+
+

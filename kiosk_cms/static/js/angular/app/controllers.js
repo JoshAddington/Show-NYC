@@ -47,6 +47,7 @@ angular.module('myApp.controllers', [])
   $scope.sortReverse  = true;  // set the default sort order
 
   $scope.random = function() {
+    console.log("random");
    $scope.load()
    $scope.sortType = 'rank'
   }
@@ -68,8 +69,16 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
+  $scope.uploadPhoto = function(element) {
+    console.log("uploaded!");
+    var reader = new FileReader();
+    reader.onload = $scope.imageIsLoaded;
+    reader.readAsDataURL(element.files[0]);
+  }
+  $scope.imageIsLoaded = function(e) {
+      $scope.$apply(function() {  
+          $scope.yourImage = e.target.result;
+      });
   }
 })
 
