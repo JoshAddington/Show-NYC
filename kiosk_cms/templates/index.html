@@ -23,36 +23,39 @@
 </head>
 <body>
   <header class = "noselect"> <!--Header-->
-        <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}">
-        <h1 id = "show-nyc">SHOW NYC</h1> <!--header for submit and about sections-->
-        
-    </header>
-    <div class = "noselect">
-        <div class="menu">
-            <div class="icon-close"> <!--Slide out navagation menu-->
-                <h1>SHOW NYC</h1>
-                <nav>
-                    <ul> <!--Navagation options-->
-                        <li><a href="#/vote" id ="voteButton">Vote</a></li>
-                        <li><a href="#/gallery" id ="galleryButton">Archive</a></li>
-                        <li><a href="#/submit" id ="submitButton">Submit</a></li>
-                        <li><a href="#/about" id ="aboutButton">About</a></li>
-                    </ul>
-                </nav>
-                <div id="share-buttons"> <!--Share via social media-->
-                    <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
-                        <img src="{% static 'icons/social-network2.png' %}" alt="Facebook" />
-                    </a>
-                    <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
-                        <img src="{% static 'icons/twitter1.png' %}" alt="Twitter" />
-                    </a>
-                    <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
-                        <img src="{% static 'icons/google1.png' %}" alt="Google" />
-                    </a>
-                </div>
+    <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}">
+    <h1 id = "show-nyc">SHOW NYC</h1> <!--header for all sections-->
+  </header>
+  <!-- Submit ribbon call to action -->
+  <div class="ribbon">
+    <a href="#/submit">Submit your photo</a>
+  </div>
+  <div class = "noselect">
+    <div class="menu">
+        <div class="icon-close"> <!--Slide out navagation menu-->
+            <h1>SHOW NYC</h1>
+            <nav>
+                <ul> <!--Navagation options-->
+                    <li><a href="#/vote" id ="voteButton">Vote</a></li>
+                    <li><a href="#/gallery" id ="galleryButton">Archive</a></li>
+                    <li><a href="#/submit" id ="submitButton">Submit</a></li>
+                    <li><a href="#/about" id ="aboutButton">About</a></li>
+                </ul>
+            </nav>
+            <div id="share-buttons"> <!--Share via social media-->
+                <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
+                    <img src="{% static 'icons/social-network2.png' %}" alt="Facebook" />
+                </a>
+                <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
+                    <img src="{% static 'icons/twitter1.png' %}" alt="Twitter" />
+                </a>
+                <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
+                    <img src="{% static 'icons/google1.png' %}" alt="Google" />
+                </a>
             </div>
         </div>
     </div>
+  </div>
 
 
   <!--[if lt IE 7]>
@@ -87,16 +90,8 @@
   <script src="{% static 'js/JQpracticeWebsite.js' %}"></script>
 
     <footer>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!--
         <p>Created by: Control Group Interns 2015</p>
         <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-        -->
     </footer>
 
     <div class="scroll-top-wrapper ">
