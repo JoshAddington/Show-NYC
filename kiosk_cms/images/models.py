@@ -32,16 +32,15 @@ class Image(models.Model):
             return self
         else:
             return self
-            
 
     def downvote(self):
         if self.score > 0:
             if self.campaign_id.is_active():
                 self.score -= 1
                 self.save()
-                return self    
+                return self
         return self
-            
+
     def thumb(self):
         if self.image:
             return u'<img src="%s" width=80 height=80 />' % (self.image.url)
