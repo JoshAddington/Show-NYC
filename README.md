@@ -94,7 +94,7 @@ and then install the dependencies listed in bower.json and package.json with
 npm install
 ```
 
-Now Angular is where we need it to be. That only needs to be done for the initial project set up.
+Now Angular is where we need it to be. That only needs to be done for the initial project set up. Once this is finished, cd back into the django project folder.
 
 
 Now, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder to serve them from( This is set up in the kiosk/settings.py file. STATICFILES_DIRS is a list of folders that Django collects files from, and STATIC_ROOT is the folder where Django puts that collection of files to serve them from. 

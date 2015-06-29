@@ -40,7 +40,11 @@ h3 {                                                  /*Heading 3*/
 }
 header {                                              /*Header*/
   background: #3d70d4;
+<<<<<<< HEAD
   padding-bottom: 0px;
+=======
+  padding-bottom: 0px
+>>>>>>> 8ec99fb0126818512cae376bdcaebca591c73f6b
 }
 header > h1 {
   margin-left: 95px;
@@ -591,7 +595,6 @@ label span input { /*When hovering over the choose file button (which is hidden)
   font-size: 20px;
   font-family: "Raleway";
 }
-
 .ribbon {
   background-color: navy;
   overflow: hidden;

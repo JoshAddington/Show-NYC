@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djangular',
 )
 
 # Django Apps
@@ -141,10 +140,7 @@ if 'RDS_DB_NAME' in os.environ:
 
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, '..', 'app')
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Amazon Web Services settings
 

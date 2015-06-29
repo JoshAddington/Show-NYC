@@ -33,17 +33,6 @@ $(document).ready(function() {
       $('#aboutButton').removeClass("highlight")}
   }); 
 
-  //Submit 
-  $('#submit-ribbon').click(function(){
-    var condition = true;
-    if (condition === true){
-      $('#filter-buttons').hide();
-      $('#voteButton').removeClass("highlight")
-      $('#galleryButton').removeClass("highlight")
-      $('#submitButton').addClass("highlight")
-      $('#aboutButton').removeClass("highlight")}
-  });
-
    //About Button Display
   $('#aboutButton').click(function() {
     var condition = true;
