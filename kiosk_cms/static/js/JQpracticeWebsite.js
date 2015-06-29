@@ -4,13 +4,7 @@ $(document).ready(function() {
   $('#voteButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#vote').show();
-      $('#gallery').hide();
-      $('#submit').hide();
-      $('#about').hide();
-      $('#show-nyc-vg').show();
-      $('#show-nyc-sa').hide();
-      $('#filter').hide();
+      $('#filter-buttons').hide();
       $('#voteButton').addClass("highlight")
       $('#galleryButton').removeClass("highlight")
       $('#submitButton').removeClass("highlight")
@@ -21,13 +15,7 @@ $(document).ready(function() {
   $('#galleryButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#vote').hide();
-      $('#gallery').show();
-      $('#submit').hide();
-      $('#about').hide();
-      $('#show-nyc-vg').show();
-      $('#show-nyc-sa').hide();
-      $('#filter').show();
+      $('#filter-buttons').show();
       $('#voteButton').removeClass("highlight")
       $('#galleryButton').addClass("highlight")
       $('#submitButton').removeClass("highlight")
@@ -38,13 +26,7 @@ $(document).ready(function() {
   $('#submitButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#vote').hide();
-      $('#gallery').hide();
-      $('#submit').show();
-      $('#about').hide();
-      $('#show-nyc-vg').hide();
-      $('#show-nyc-sa').show();
-      $('#filter').hide();
+      $('#filter-buttons').hide();
       $('#voteButton').removeClass("highlight")
       $('#galleryButton').removeClass("highlight")
       $('#submitButton').addClass("highlight")
@@ -55,13 +37,7 @@ $(document).ready(function() {
   $('#aboutButton').click(function() {
     var condition = true;
     if (condition === true){
-      $('#vote').hide();
-      $('#gallery').hide();
-      $('#submit').hide();
-      $('#about').show();
-      $('#show-nyc-vg').hide();
-      $('#show-nyc-sa').show();
-      $('#filter').hide();
+      $('#filter-buttons').hide();
       $('#voteButton').removeClass("highlight")
       $('#galleryButton').removeClass("highlight")
       $('#submitButton').removeClass("highlight")
