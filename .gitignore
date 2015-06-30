@@ -8,3 +8,7 @@
 
 # collectstatic files
 www/*
+
+# npm install files
+node_modules/
+bower_components/
