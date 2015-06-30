@@ -8,6 +8,10 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
     controller: 'SubmitCtrl'
   });
 }])
+.config(function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+})
 
 // directive for accessing the file to be uploaded.
 .directive('fileModel', ['$parse', function ($parse) {
