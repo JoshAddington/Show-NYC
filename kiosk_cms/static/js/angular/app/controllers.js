@@ -68,8 +68,9 @@ angular.module('myApp.controllers', [])
 
 }])
 
-.controller('SubmitCtrl', function($scope) {
-    $scope.image = null;
+.controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
+
+  $scope.image = null;
     $scope.imageFileName = '';
     $scope.uploadPhoto = function(element) {
       console.log("uploaded!");
@@ -87,6 +88,31 @@ angular.module('myApp.controllers', [])
       $scope.display = false;
       
     }
- })
+
+  $scope.submit = function() {
+        var form = new FormData();
+        var data = $scope.imgData;
+        form.append('name', data.first_name);
+        form.append('campaign_id', 2);
+        form.append('email', data.email);
+        form.append('image', $scope.myFile);
+        console.log($scope.myFile);
+
+
+				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
+                form, {
+                    headers: {'Content-Type': undefined},
+                    transformRequest: function(data){ return data;} 
+              })
+
+			        .success(function(data) {
+			            console.log(data);
+			            
+			        })
+              .error(function(data){
+                console.log(data);
+              });
+			};
+}])
 
 .controller('AboutCtrl', function($scope) {});

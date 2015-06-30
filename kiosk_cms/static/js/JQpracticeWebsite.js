@@ -1,9 +1,6 @@
 $(document).ready(function() {
   console.log("ready!");
-  //Vote Button display
-  function printThing() {
 
-  }
 
   $('#voteButton').click(function() {
     var condition = true;
@@ -48,10 +45,20 @@ $(document).ready(function() {
       $('#aboutButton').addClass("highlight")}
   }); 
 
+  // Fixing the highlight on the navigation section
+  if(window.location.href.indexOf("vote") > -1) {
+    $('#voteButton').trigger("click");
+  };
+  if(window.location.href.indexOf("gallery") > -1) {
+    $('#galleryButton').trigger("click");
+  };
+  if(window.location.href.indexOf("submit") > -1) {
+    $('#submitButton').trigger("click");
+  };
 
-  $('#mySubmit').click(function() {
-    console.log("x");
-  });
+  if(window.location.href.indexOf("about") > -1) {
+    $('#aboutButton').trigger("click");
+  };
 
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
@@ -70,8 +77,8 @@ $(document).ready(function() {
     }, 200);
   });
   
+  //Scroll to the top button
   $(document).on( 'scroll', function(){
- 
     if ($(window).scrollTop() > 1000) {
       $('.scroll-top-wrapper').addClass('show');
     } else {
@@ -80,7 +87,6 @@ $(document).ready(function() {
   });
 
   $('.scroll-top-wrapper').on('click', scrollToTop);
-
   function scrollToTop() {
     verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
     element = $('body');
