@@ -2,6 +2,7 @@ from django.db import models
 from rest_framework.exceptions import MethodNotAllowed
 from campaigns.models import Campaign
 
+
 # Create your models here.
 class Image(models.Model):
     image = models.ImageField()
@@ -11,7 +12,6 @@ class Image(models.Model):
     active = models.BooleanField(default=False)
     campaign_id = models.ForeignKey(Campaign, related_name='images')
     campaign_winner = models.BooleanField(default=False)
-
 
     def __str__(self):
     	return self.image.name
