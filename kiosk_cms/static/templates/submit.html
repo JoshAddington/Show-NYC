@@ -20,13 +20,10 @@
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </div>
        <div ng-app="MyApp" ng-controller="SubmitCtrl" id="submit-photo">
-            <br>
             <h3>What's Your Photo?</h3> <!--User photo input-->
-            <br>
-            <br>
-            <br>
             <div class="upload-container">
                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png">
+
                 <div class="dropzone" file-dropzone="[image/png, image/jpeg]"file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"><p id="">UPLOAD/DROP</p></div>
                 <img ng-show="display" ng-src={{image}} id="myImg" width="400" height="300"/>
             </div>

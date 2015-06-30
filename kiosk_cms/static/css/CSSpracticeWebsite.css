@@ -537,7 +537,7 @@ footer a {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-<<<<<<< HEAD
+
 
 .upload-container {
   margin: 0 auto;
@@ -548,15 +548,6 @@ footer a {
 #filebutton {
   width: 400px;
   height: 300px;
-=======
-label.filebutton {                                   /*Upload button*/
-  overflow:hidden;
-  position:relative;
-  cursor: pointer;
-  text-align: center;
-  padding: 90px 100px 90px 100px;
-  margin: 100px 0;
->>>>>>> angular-upload
   background-color: white;
   margin: 0 auto;
 }
@@ -573,12 +564,10 @@ label.filebutton {                                   /*Upload button*/
 
 #myfile {
   top: 150px;
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
 }
-
-label.submission button{
-  margin-top: 120px;
-}
-
 #myImg {
   background-color: green;
   float: left;
@@ -594,7 +583,6 @@ label.submission button{
   background: red;
   margin: 20px;
 }
-
 
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
