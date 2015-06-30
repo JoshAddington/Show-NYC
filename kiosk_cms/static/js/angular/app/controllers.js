@@ -70,8 +70,7 @@ angular.module('myApp.controllers', [])
 
 .controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
 
-  $scope.image = null;
-    $scope.imageFileName = '';
+
     $scope.uploadPhoto = function(element) {
       console.log("uploaded!");
       var reader = new FileReader();
@@ -86,10 +85,9 @@ angular.module('myApp.controllers', [])
     }
     $scope.reset = function() {
       $scope.display = false;
-      $scope.imgData.first_name = '';
-      $scope.imgData.first_name = '';
-      $scope.imgData.email = '';
-      $scope.imgData.myFile = '';
+      $scope.imgData.first_name = null;
+      $scope.imgData.email = null;
+      alert("thank you!");
     }
 
   $scope.submit = function() {

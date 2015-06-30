@@ -20,13 +20,14 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
       link: function(scope, element, attrs) {
         var checkSize, isTypeValid, processDragOverOrEnter, validMimeTypes;
         processDragOverOrEnter = function(event) {
-        console.log("dragover");
+        console.log("1");
           if (event != null) {
             event.preventDefault();
           }
-          event.dataTransfer.effectAllowed = 'copy';
+          event.originalEvent.dataTransfer.effectAllowed = 'copy';
           return false;
         };
+        console.log("2");
         validMimeTypes = attrs.fileDropzone;
         checkSize = function(size) {
           var _ref;
@@ -37,6 +38,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
             return false;
           }
         };
+        console.log("3");
         isTypeValid = function(type) {
           if ((validMimeTypes === (void 0) || validMimeTypes === '') || validMimeTypes.indexOf(type) > -1) {
             return true;
@@ -45,6 +47,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
             return false;
           }
         };
+        console.log("4");
         element.bind('dragover', processDragOverOrEnter);
         element.bind('dragenter', processDragOverOrEnter);
         return element.bind('drop', function(event) {
@@ -54,17 +57,19 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
           }
           reader = new FileReader();
           reader.onload = function(evt) {
+            console.log("5");
             if (checkSize(size) && isTypeValid(type)) {
               return scope.$apply(function() {
                 scope.file = evt.target.result;
+                //scope.display = false;
                 if (angular.isString(scope.fileName)) {
                   return scope.fileName = name;
                 }
               });
             }
           };
-          file = event.dataTransfer.files[0];
-          name = file.name;
+          file = event.originalEvent.dataTransfer.files[0];
+          name = file.name; 
           type = file.type;
           size = file.size;
           reader.readAsDataURL(file);
