@@ -1,5 +1,7 @@
 /*    Green: #66da59    Blue: #57dbf9     Orange: #ef962c     */
 /*    New blue: #3d70d4   New orange: #f87b06   new green:#28a626          */
+/*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
+
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
@@ -11,7 +13,7 @@ body {                                                  /*Body*/
 }
 h1 {                                                  /*Heading 1*/ 
   font-family: "Changa One";
-  color: white;
+  color: white; 
   letter-spacing: 4px;
   font-size: 30px;
   background-color: none;
@@ -39,8 +41,8 @@ h3 {                                                  /*Heading 3*/
   text-align: center;
 }
 header {                                              /*Header*/
-  background: #3d70d4;
-  padding-bottom: 0px
+  background: #004459;
+  padding-bottom: 0px;
 }
 header > h1 {
   margin-left: 95px;
@@ -67,7 +69,7 @@ input[type = "text"]{                              /*Text input*/
   width: 50%;
   height: 40px;
   font-size: 20px;
-  color: #3d70d4;
+  color: #DE4831;
   letter-spacing: 4px;
   vertical-align: center;
   float: center;
@@ -75,7 +77,7 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 10px;
 }
 footer {
-  background-color: #3d70d4;
+  background-color: #004459;
   color: white;
   font-family: "Raleway";
   font-size: 14px;
@@ -121,7 +123,7 @@ footer a {
 #voteButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;
+    color: white; 
     font-family: "Raleway";
     display: block;
     height: 30px;
@@ -130,7 +132,7 @@ footer a {
 #submitButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;
+    color: white;  
     display: block;
     height: 30px;
     width: 100px; 
@@ -138,7 +140,7 @@ footer a {
 #galleryButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;
+    color: white;  
     display: block;
     height: 30px;
     width: 100px; 
@@ -146,7 +148,7 @@ footer a {
 #aboutButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;
+    color: white; 
     display: block;
     height: 30px;
     width: 90px; 
@@ -174,13 +176,13 @@ footer a {
 }
 .btn-style{                                       /*Submit Button*/
   font-family: "Raleway";
-  border : solid 1px white;
+  border : dashed 3px white;
   font-size : 18px;
   color : white;
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
-  background-color : #f87b06;
+  background-color : #DE4831;
   cursor: pointer;
 }
 .btn-style:hover {                                /*Submit Button Hover*/
@@ -189,14 +191,14 @@ footer a {
   font-size : 18px;
   color : white;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: 400;
   padding : 10px 30px;
-  background-color : #f87b06;
+  background-color : #DE4831;
   cursor: pointer;
 }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #28a626;
+  background-color: #1E8A6F; 
   height: 100%;
   cursor: default;
   position: fixed;
@@ -252,7 +254,7 @@ footer a {
   text-decoration: none;
 }
 #long-header {                                  /*About section extended header*/
-  background-color: #3d70d4;
+  background-color: #004459;
   color: white;
   text-align: center;
 }
@@ -284,22 +286,35 @@ footer a {
   width: 100%;
   overflow: none;
   text-align: center;
+  background-color: lavender;
+  margin-top: -30px;
+}
+#filter {
+  background-color: #004459;
+  width: 100%;
+  height: 30px;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 30px;
 }
 #filter a{                                      /*Filters for Gallery Section*/
-  background-color: #3d70d4;
+  background-color: #004459;
   cursor: pointer;
   color: white;
-  float: right;
+  float: center;
+  text-align: center;
+  vertical-align: bottom;
   text-decoration: none;
-  padding-right: 20px;
   letter-spacing: 2px;
   word-spacing: 30px;
-  margin-top: -20px;
+  padding-bottom: 5px;
 }
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;
   font-size: 0px;
+  margin-top: -30px;
+  height: 20%;
 }
 .zoom-container-vote{                          /*Photo grid layout*/
   position: relative;
@@ -348,7 +363,7 @@ footer a {
   transition: all .7s ease;
 }
 .zoom-container-gallery > div {
-    background-color: #28a626;
+    background-color: #DE4831;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -408,7 +423,7 @@ footer a {
   height: auto;
 }
 .zoom-container-about > div {
-    background-color: #28a626;
+    background-color: #DE4831;
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -432,7 +447,7 @@ footer a {
 }
 /* S U B M I T    S E C T I O N */
 #submit-title {                                   /*Submit section campaign information*/
-  background-color: #3d70d4;
+  background-color: white;
   height: 100%;
   margin-top: -30px;
   padding-top: 10px;
@@ -441,10 +456,10 @@ footer a {
 #submit-title h3{
   letter-spacing: 2px;
   font-size: 30px;
-  color: white;
+  color: #DE4831;
 }
 #submit-title p {
-  color: white;
+  color: #DE4831;
   text-align: center;
   font-size: 20px;
   max-width: 800px;
@@ -452,10 +467,10 @@ footer a {
   padding-bottom: 20px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
-  background-color: #f87b06;
+  background-color: #DE4831;
   height: 100%;
   padding-top: 20px;
-  opacity: .75;
+  opacity: 0.9;
   cursor: default;
 }
 #submit-step1:hover {
@@ -469,16 +484,16 @@ footer a {
 #submit-step1 p {
   color: white;
   text-align: center;
-  font-size: 15px;
+  font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
-  background-color: #f87b06;
+  background-color: #DE4831;
   height: 100%;
   padding-top: 20px;
-  opacity: .75;
+  opacity: 0.9;
   cursor: default;
 }
 #submit-step2:hover {
@@ -498,10 +513,10 @@ footer a {
   padding-bottom: 40px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
-  background-color: #f87b06;
+  background-color: #DE4831;
   height: 100%;
-  /*padding-top: 20px;*/
-  opacity: .75;
+  padding-top: 20px;
+  opacity: 0.9;
   cursor: default;
   padding: 50px 0;
 }
@@ -522,7 +537,7 @@ footer a {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-label.filebutton {
+label.filebutton {                                   /*Upload button*/
   overflow:hidden;
   position:relative;
   cursor: pointer;
@@ -532,7 +547,7 @@ label.filebutton {
   background-color: white;
   font-size: 30px;
   letter-spacing: 2px;
-  color: #f87b06;
+  color: #DE4831;
   font-weight: 900;
 }
 label.submission button{
@@ -549,9 +564,6 @@ label span input { /*When hovering over the choose file button (which is hidden)
 .highlight {
   opacity: .5;
 }
-
-
-
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -559,7 +571,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
   overflow: hidden;
   text-align: center;
   z-index: 10;
-  background-color: #f87b06;
+  background-color: #DE4831;
   color: white;
   width: 40px; 
   height: 40px;
@@ -592,10 +604,40 @@ label span input { /*When hovering over the choose file button (which is hidden)
 #campaign-slogan {
   font-size: 30px;
   font-family: "Raleway";
+  padding-top: 2%;
 }
 #campaign-information {
   font-size: 20px;
   font-family: "Raleway";
+  padding-bottom: 2%;
 }
-
-
+.ribbon {
+  background-color: #DE4831;
+  overflow-x: hidden;
+  z-index: 4;
+  /* top right corner */
+  position: absolute;
+  right: -50px;
+  top: 40px;
+  /* 45 deg cw rotation */
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* shadow */
+  -webkit-box-shadow: 0 0 2px #DE4831;
+     -moz-box-shadow: 0 0 2px #DE4831;
+          box-shadow: 0 0 2px #DE4831;
+}
+.ribbon a {
+  border: 0px solid white;
+  color: white;
+  display: block;
+  font: bold 80%;
+  margin: 1px 0;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+}
