@@ -41,7 +41,7 @@ h3 {                                                  /*Heading 3*/
   text-align: center;
 }
 header {                                              /*Header*/
-  background: #1E8A6F;
+  background: #004459;
   padding-bottom: 0px;
 }
 header > h1 {
@@ -77,7 +77,7 @@ input[type = "text"]{                              /*Text input*/
   padding-left: 10px;
 }
 footer {
-  background-color: #1E8A6F;
+  background-color: #004459;
   color: white;
   font-family: "Raleway";
   font-size: 14px;
@@ -198,7 +198,7 @@ footer a {
 }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #004459; 
+  background-color: #1E8A6F; 
   height: 100%;
   cursor: default;
   position: fixed;
@@ -254,7 +254,7 @@ footer a {
   text-decoration: none;
 }
 #long-header {                                  /*About section extended header*/
-  background-color: #1E8A6F;
+  background-color: #004459;
   color: white;
   text-align: center;
 }
@@ -290,7 +290,7 @@ footer a {
   margin-top: -30px;
 }
 #filter {
-  background-color: #1E8A6F;
+  background-color: #004459;
   width: 100%;
   height: 30px;
   margin-top: -30px;
@@ -298,7 +298,7 @@ footer a {
   padding-top: 30px;
 }
 #filter a{                                      /*Filters for Gallery Section*/
-  background-color: #1E8A6F;
+  background-color: #004459;
   cursor: pointer;
   color: white;
   float: center;
@@ -484,7 +484,7 @@ footer a {
 #submit-step1 p {
   color: white;
   text-align: center;
-  font-size: 15px #1E8A6F;
+  font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 40px;
