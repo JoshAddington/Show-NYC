@@ -86,7 +86,10 @@ angular.module('myApp.controllers', [])
     }
     $scope.reset = function() {
       $scope.display = false;
-      
+      $scope.imgData.first_name = '';
+      $scope.imgData.first_name = '';
+      $scope.imgData.email = '';
+      $scope.imgData.myFile = '';
     }
 
   $scope.submit = function() {
