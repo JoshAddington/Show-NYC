@@ -79,7 +79,7 @@ angular.module('myApp.controllers', [])
         console.log($scope.myFile);
 
 
-				$http.post( window.location.protocol + '/api/images/',
+				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
                 form, {
                     headers: {'Content-Type': undefined},
                     transformRequest: function(data){ return data;} 
