@@ -6,57 +6,38 @@
         <br>
         <br>
     </div>
-    <div id = "submit-step1">
-        <br>
-        <h3>What's Your Name?</h3> <!--Name submission-->
-        <br>
-        <form>
-            <input type = "text" name = "name"> <!--User text input-->
-        </form>
-        <br>
-        <br>
-        <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
-        <br>
-    </div>
-    <div id = "submit-step2">
-        <br>
-        <h3>What's Your Email?</h3>
-        <br>
-        <form>
-            <input type = "text" name = "email-address"> <!--User text input-->
-        </form>
-        <br>
-        <br>
-        <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
-        <br>
-    </div>
-    <div id = "submit-photo">
-        <br>
-        <h3>What's Your Photo?</h3> <!--User photo input-->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <label class="filebutton">
-            UPLOAD <!--I want to limit the types of files that can be uploaded-->
-            <span><input type="file" id="myfile" name="myfile" accept =".jpg, .png"></span>
-        </label>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <label class = "submission">
-            <input type="submit" id = "mySubmit" value="SUBMIT" class = "btn-style">
-        </label>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
+    <form ng-submit="submit()">
+        <input type="hidden" ng-model='imgData.campaign_id' value='2'>
+        <div id = "submit-step1">
+                <h3>What's Your Name?</h3> <!--Name submission-->
+                    <input type = "text" name="name" ng-model='imgData.first_name'> <!--User text input-->
+                <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
+        </div>
+        <div id = "submit-step2">
+                <h3>What's Your Email?</h3>
+
+                    <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
+                <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
+        </div>
+        <div id = "submit-photo">
+        <!-- <file-uploader></file-uploader> -->
+                <h3>What's Your Photo?</h3> <!--User photo input-->
+                <br>
+
+
+                <label class="filebutton">
+                    UPLOAD <!--I want to limit the types of files that can be uploaded-->
+                    <span>
+                    <!-- <input type="file" file-model="myFile"/> -->
+                    <input type="file" id="myfile" name="myfile" accept =".jpg, .png" file-model="myFile"></span>
+                </label>
+                <br>
+                <br>
+                <label class = "submission">
+                            <button class="btn-style" type='submit'>upload me</button>
+
+                </label>
+
+        </div>
+    </form>
 </div>

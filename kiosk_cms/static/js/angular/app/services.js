@@ -40,4 +40,4 @@ angular.module('myApp.services', [])
 
     // inactive_campaigns
 
-});
+})

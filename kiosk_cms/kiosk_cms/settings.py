@@ -140,12 +140,15 @@ if 'RDS_DB_NAME' in os.environ:
 
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, '..', 'bower')
+)
 
 # Amazon Web Services settings
 
 # Name of AWS S3 bucket to be used for media storage
-AWS_STORAGE_BUCKET_NAME = os.environ['BUCKET_NAME']
+AWS_STORAGE_BUCKET_NAME = 'cg-intern'
 
 # Access Key ID and Secret Access Key are AWS User credentials
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY']
