@@ -92,4 +92,11 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
   }
 
+
+  // function changeImage(){
+  //   document.getElementById("emptyHeart").src ="static/icons/FullHeartRed.png";
+  // };
+
+
+
 });

@@ -286,7 +286,7 @@ footer a {
   width: 100%;
   overflow: none;
   text-align: center;
-  background-color: lavender;
+  background-color: lightgrey;
   margin-top: -30px;
 }
 #filter {
@@ -634,4 +634,18 @@ label span input { /*When hovering over the choose file button (which is hidden)
   text-align: center;
   text-decoration: none;
   overflow: hidden;
+}
+#emptyHeart {
+  height: 25px;
+  width: 25px;
+  margin-top: -50px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+#photoScore {
+  color: #DE4831;
+  font-size: 16px;
+  font-style: "Raleway";
+  margin-top: -35px;
+  padding-left: 40px;
 }

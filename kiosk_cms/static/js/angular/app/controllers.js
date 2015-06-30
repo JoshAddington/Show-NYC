@@ -23,6 +23,12 @@ angular.module('myApp.controllers', [])
       });
   }
 
+  // $scope.changeImage = function(){
+  //   document.getElementById("emptyHeart").hide;
+  //   document.getElementById("fullHeart").show;
+  // };
+
+
   $scope.reloadRoute = function($scope) {
    $route.reload()
   }
