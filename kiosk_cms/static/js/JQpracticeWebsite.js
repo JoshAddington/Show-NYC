@@ -60,8 +60,8 @@ $(document).ready(function() {
     }, 200);
   });
   
+  //Scroll to the top button
   $(document).on( 'scroll', function(){
- 
     if ($(window).scrollTop() > 1000) {
       $('.scroll-top-wrapper').addClass('show');
     } else {
@@ -69,7 +69,6 @@ $(document).ready(function() {
     }
   });
   $('.scroll-top-wrapper').on('click', scrollToTop);
-
   function scrollToTop() {
     verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
     element = $('body');
