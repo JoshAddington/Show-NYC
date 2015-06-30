@@ -520,34 +520,51 @@ footer a {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-label.filebutton {
-  overflow:hidden;
-  position:absolute;
-  cursor: pointer;
-  text-align: center;
-  padding: 100px 150px 150px 100px;
-  font-size: 30px;
+
+.upload-container {
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#filebutton {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  margin: 0 auto;
+}
+#filebutton > p {
+  position: relative;
+  font-size: 22px;
   letter-spacing: 2px;
   color: #f87b06;
   font-weight: 900; 
-  margin: 0 auto;
+  cursor: pointer;
+  text-align: center;
+  top: 120px;
 }
-label span input { /*When hovering over the choose file button (which is hidden) the cursor is no longer a pointer*/
-  font-size: 1px;
-  background-color: red;
+
+#myfile {
+  top: 150px;
   opacity: 0;
   cursor: pointer;
-  position: absolute;
-  top: 0px;
+  position: relative;
 }
 #myImg {
-  background-color: white;
-  display: inline-block;
+  background-color: green;
+  float: left;
+  display: block;
 }
 .highlight {
   opacity: .5;
 }
-
+.dropzone {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background: red;
+  margin: 20px;
+}
 
 
 .scroll-top-wrapper {                                   /*Scroll to the top button*/

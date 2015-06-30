@@ -69,17 +69,24 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', function($scope) {
-  $scope.uploadPhoto = function(element) {
-    console.log("uploaded!");
-    var reader = new FileReader();
-    reader.onload = $scope.imageIsLoaded;
-    reader.readAsDataURL(element.files[0]);
-  }
-  $scope.imageIsLoaded = function(e) {
-      $scope.$apply(function() {  
-          $scope.yourImage = e.target.result;
-      });
-  }
-})
+    $scope.image = null;
+    $scope.imageFileName = '';
+    $scope.uploadPhoto = function(element) {
+      console.log("uploaded!");
+      var reader = new FileReader();
+      reader.onload = $scope.imageIsLoaded;
+      reader.readAsDataURL(element.files[0]);
+    }
+    $scope.imageIsLoaded = function(e) {
+        $scope.$apply(function() {  
+            $scope.image = e.target.result;
+            $scope.display = true;
+        });
+    }
+    $scope.reset = function() {
+      $scope.display = false;
+      
+    }
+ })
 
 .controller('AboutCtrl', function($scope) {});
