@@ -44,6 +44,21 @@ $(document).ready(function() {
       $('#aboutButton').addClass("highlight")}
   }); 
 
+  // Fixing the highlight on the navigation section
+  if(window.location.href.indexOf("vote") > -1) {
+    $('#voteButton').trigger("click");
+  };
+  if(window.location.href.indexOf("gallery") > -1) {
+    $('#galleryButton').trigger("click");
+  };
+  if(window.location.href.indexOf("submit") > -1) {
+    $('#submitButton').trigger("click");
+  };
+
+  if(window.location.href.indexOf("about") > -1) {
+    $('#aboutButton').trigger("click");
+  };
+
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
     $('.menu').animate({
