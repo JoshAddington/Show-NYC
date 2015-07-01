@@ -186,8 +186,10 @@ footer a {
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
-  background-color : #DE4831;
+  background-color : #004459;
   cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 0px;
 }
 .btn-style:hover {                                /*Submit Button Hover*/
   font-family: "Raleway";
@@ -260,14 +262,15 @@ footer a {
 }
 
 .description {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: 800px;
   margin-left:auto;
   margin-right: auto;
+  background-color: white;
 }
 #about-section {                                  /*About section extended header*/
-  background-color: #004459;
+  background-color: white;
   color: white;
   text-align: left;
   overflow: hidden;
@@ -275,13 +278,14 @@ footer a {
 .about-heading {
   padding: 100px 20px 0px 10px;
   letter-spacing: 2px;
-  font-size: 20px;
-  color: white;
-  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Raleway";
+  color: #DE4831;
+  /*text-transform: uppercase;*/
 }
 .about-par{
-  color: white;
-  font-size: 17px;
+  color: #DE4831;
+  font-size: 20px;
   max-width: 800px;
 }
 #grid-head {
@@ -458,8 +462,8 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
-  margin-top: -30px;
-  padding-top: 10px;
+  margin-top: 0px;
+  padding-top: 30px;
   opacity: 1.0;
 }
 #submit-title h3{
@@ -476,19 +480,19 @@ footer a {
   padding-bottom: 20px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
-  background-color: #DE4831;
+  background-color: #004459;
   height: 100%;
-  padding-top: 20px;
-  opacity: 0.9;
-  cursor: default;
-}
-#submit-step1:hover {
+  padding-top: 30px;
+  padding-bottom: 20px;
   opacity: 1.0;
+  cursor: default;
+  border-bottom: solid 20px white;
 }
 #submit-step1 h3 {
   letter-spacing: 2px;
   font-size: 30px;
   color: white;
+  padding-bottom: 40px;
 }
 #submit-step1 p {
   color: white;
@@ -496,47 +500,47 @@ footer a {
   font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
+  padding-top: 70px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
-  background-color: #DE4831;
+  background-color: #004459;
   height: 100%;
-  padding-top: 20px;
-  opacity: 0.9;
-  cursor: default;
-}
-#submit-step2:hover {
+  padding-top: 30px;
+  padding-bottom: 20px;
   opacity: 1.0;
+  cursor: default;
+  border-bottom: solid 20px white;
 }
 #submit-step2 h3 {
   letter-spacing: 2px;
   font-size: 30px;
   color: white;
+  padding-bottom: 40px;
 }
 #submit-step2 p {
   color: white;
   text-align: center;
-  font-size: 15px;
+  font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
+  padding-top: 70px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
-  background-color: #DE4831;
+  background-color: #004459;
   height: 100%;
-  padding-top: 20px;
-  opacity: 0.9;
-  cursor: default;
-  padding: 50px 0;
-}
-#submit-photo:hover {
+  padding-top: 30px;
   opacity: 1.0;
+  cursor: default;
+  padding-bottom: 80px;
+  border-bottom: solid 20px white;
 }
 #submit-photo h3 {
   letter-spacing: 2px;
   font-size: 30px;
   color: white;
-  margin: -10px 0 110px;
+  padding-bottom: 0px;
 }
 #submit-step2 p {
   color: white;
@@ -544,10 +548,7 @@ footer a {
   font-size: 15px;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 40px;
 }
-
-
 .upload-container {
   margin: 0 auto;
   position: relative;
@@ -556,10 +557,56 @@ footer a {
 #myfile {
   opacity: 0;
 }
-
-#button {
+#select {                                             /*Choose me button*/
+  font-family: "Raleway";
+  border : dashed 0px white;
+  font-size : 18px;
+  color : white;
+  letter-spacing: 3px;
+  font-weight: 400;
+/*  padding : 10px 0px;*/
+  background-color : #004459;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  height: 20px;
   margin: 0 auto;
+  display: inline;
 }
+strong {
+  padding-right: 4px;
+}
+/*#button:hover {                               
+  font-family: "Raleway";
+  border : solid 0px white;
+  font-size : 18px;
+  color : white;
+  letter-spacing: 3px;
+  font-weight: 400;
+  padding : 10px 30px;
+  background-color : #DE4831;
+  cursor: pointer;
+  padding-right: 300px;
+}*/
+
+#draganddrop {
+  font-family: "Raleway";
+  font-size: 18px;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 400;
+/*  padding-right: 10px 20px;*/
+  background-color : #004459;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  margin: 0 auto;
+  display: inline;
+}
+
+
+
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -657,4 +704,9 @@ footer a {
   font-style: "Raleway";
   margin-top: -35px;
   padding-left: 40px;
+}
+#myImg {
+  border: solid white 10px;
+  cursor: pointer;
+  margin-top: 40px;
 }

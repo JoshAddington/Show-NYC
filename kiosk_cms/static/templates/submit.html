@@ -14,24 +14,31 @@
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
         </section>
         <section id = "submit-step2">
-                <h3>What's Your Email?</h3>
+            <h3>What's Your Email?</h3>
 
-                    <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
-                <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
+                <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
+            <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
+
        <section ng-app="MyApp" ng-controller="SubmitCtrl" id="submit-photo">
             <h3>What's Your Photo?</h3> <!--User photo input-->
+
+            <div class="submit-container">
+                <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png"> 
+                <div>
+                    <div onclick="$('input[type=file]').click()" id='select'>Choose your photo here</div>
+                    <p id = "draganddrop"><strong>or </strong> drag and drop below</p>
+                </div>
+            </div>
+
             <div class="upload-container">
                 <div class="dropzone" file-dropzone="[image/png, image/jpeg]"file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
                      <img  ng-src={{image}} id="myImg" width="400" height="300"/>
                 </div>
             </div>
-            <div class="submit-container">
-                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png">
-                  <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
-            </div>
+            
             <label class = "submission">
-                <button ng-click="" class="btn-style" type='submit'>upload me</button>
+                <button ng-click="" class="btn-style" type='submit'>submit</button>
             </label>
 
         </section>
