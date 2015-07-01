@@ -24,22 +24,17 @@ def image_collection(request):
         return Response(serializer.data)
     elif request.method == 'POST':
         raw_data = request.data
-        user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name'), 'username': raw_data.get('email')})
-        
-        if request.POST.get('file') and request.POST.get('name'):
-            file = cStringIO.StringIO(base64.b64decode(request.POST['file']))
-            image = InMemoryUploadedFile(file,
-               field_name='file',
-               name=request.POST['name'],
-               content_type="image/jpeg",
-               size=sys.getsizeof(file),
-               charset=None)
-        request.FILES[u'file'] = image
+        user, created = User.objects.get_or_create(
+            email=raw_data.get('email'),
+            defaults={
+                'first_name': raw_data.get('name'),
+                'username': raw_data.get('email')}
+        )
 
         data = {
-          'image': raw_data.get('image'),
-          'user_id': user.id,
-          'campaign_id': raw_data.get('campaign_id')
+            'image': raw_data.get('image'),
+            'user_id': user.id,
+            'campaign_id': raw_data.get('campaign_id')
         }
         serializer = ImageSerializer(data=data)
         if serializer.is_valid():
