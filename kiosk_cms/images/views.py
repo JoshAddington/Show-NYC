@@ -1,17 +1,17 @@
 import base64
 import cStringIO
 from django.contrib.auth.models import User
-from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.core.exceptions import MultipleObjectsReturned
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.utils import timezone
 from rest_framework import status
-from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Image
 from .serializers import ImageSerializer
+from campaigns.models import Campaign
 
 
 # Create your views here.
@@ -23,23 +23,30 @@ def image_collection(request):
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
+        try:
+            campaign = Campaign.objects.get(active=True)
+        except Campaign.DoesNotExist:
+            raise Http404("No campaign is currently active.")
+        except MultipleObjectsReturned:
+            campaigns = Campaign.objects.filter(active=True)
+            campaign = campaigns[0]
+
         raw_data = request.data
         user, created = User.objects.get_or_create(
             email=raw_data.get('email'),
-            defaults={
-                'first_name': raw_data.get('name'),
-                'username': raw_data.get('email')}
+            defaults={'first_name': raw_data.get('name'),
+                      'username': raw_data.get('email')}
         )
-
         data = {
-            'image': raw_data.get('image'),
-            'user_id': user.id,
-            'campaign_id': raw_data.get('campaign_id')
+          'image': raw_data.get('image'),
+          'user_id': user.id,
+          'campaign_id': campaign.id
         }
         serializer = ImageSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.data,
+                            status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # /api/images/<image_id>/
@@ -52,7 +59,10 @@ def image_element(request, pk):
         return Response(serializer.data)
     elif request.method == 'PUT':
         raw_data = request.data
-        user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name')})
+        user, created = User.objects.get_or_create(
+            email=raw_data.get('email'),
+            defaults={'first_name': raw_data.get('name')}
+        )
         data = {
           'image': raw_data.get('image'),
           'user_id': user.id,
@@ -82,7 +92,7 @@ def active_campaign_images(request):
 def inactive_campaign_images(request):
     if request.method == 'GET':
         now = timezone.now()
-        images = Image.objects.filter(campaign_id__end_date__lte=now)
+        images = Image.objects.filter(campaign_id__active=False)
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
