@@ -616,7 +616,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
   overflow-x: hidden;
   z-index: 4;
   /* top right corner */
-  position: absolute;
+  position: fixed;
   right: -50px;
   top: 40px;
   /* 45 deg cw rotation */
@@ -647,6 +647,13 @@ label span input { /*When hovering over the choose file button (which is hidden)
   margin-top: -50px;
   padding-left: 10px;
   cursor: pointer;
+}
+#fullHeart{
+  height: 25px;
+  width: 25px;
+  margin-top: -50px;
+  padding-left: 10px;
+  cursor: auto;
 }
 #photoScore {
   color: #DE4831;
