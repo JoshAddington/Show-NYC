@@ -63,7 +63,7 @@ def image_element(request, pk):
 def active_campaign_images(request):
     if request.method == 'GET':
         now = timezone.now()
-        images = Image.objects.filter(campaign_id__start_date__lte=now).filter(campaign_id__end_date__gte=now)
+        images = Image.objects.filter(campaign_id__active=True)
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
