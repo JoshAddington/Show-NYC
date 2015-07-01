@@ -544,46 +544,13 @@ footer a {
   position: relative;
   margin-bottom: 50px;
 }
+#myfile {
+  opacity: 0;
+}
 
-#filebutton {
-  width: 400px;
-  height: 300px;
-  background-color: white;
+#button {
   margin: 0 auto;
 }
-#filebutton > p {
-  position: relative;
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: #f87b06;
-  font-weight: 900; 
-  cursor: pointer;
-  text-align: center;
-  top: 120px;
-}
-
-#myfile {
-  top: 150px;
-  opacity: 0;
-  cursor: pointer;
-  position: relative;
-}
-#myImg {
-  background-color: green;
-  float: left;
-  display: block;
-}
-.highlight {
-  opacity: .5;
-}
-.dropzone {
-  position: relative;
-  width: 400px;
-  height: 300px;
-  background: red;
-  margin: 20px;
-}
-
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
