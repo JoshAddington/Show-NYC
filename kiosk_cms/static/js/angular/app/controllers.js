@@ -4,11 +4,12 @@ angular.module('myApp.controllers', [])
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
+  $scope.isClicked = false
 
   $scope.upvote = function(id) {
     $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
-        $scope.load()
+        // $scope.load()
       }).
       error(function(data, status, headers, config) {
       });
@@ -23,6 +24,17 @@ angular.module('myApp.controllers', [])
       });
   }
 
+  $scope.changeImage = function(id){
+    // console.log($sco.isClicked)
+    console.log(document.getElementById("emptyHeart"+id))
+    document.getElementById("emptyHeart"+id).src = 'static/icons/FullHeartRed.png'
+    document.getElementById("emptyHeart"+id).id = 'fullHeart'
+    // $scope.isClicked= true
+    // return false
+
+  };
+
+
   $scope.reloadRoute = function($scope) {
    $route.reload()
   }
@@ -35,6 +47,7 @@ angular.module('myApp.controllers', [])
         item.rank = 0.5 - Math.random()
       });
     });
+      // document.getElementById("fullHeart").hide;
   }
 
   $scope.load()

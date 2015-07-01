@@ -3,11 +3,28 @@
     <h3 id = "campaign-slogan">Campaign Solgan Goes Here</p>
     <p id = "campaign-information">Information about the campaign and voting criteria goes here<br>Font style, font color, and background color are customizable for each company</p>
   </div>
+
   <div class="image-zoom-container-vote"> <!--Grid of vote photos-->
     <div class="zoom-container-vote" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
-      <img ng-click='upvote(photo.id)' src='{{photo.image}}'>
+      <img src='{{photo.image}}'>
+      <div>
+        <style>
+          #emptyHeart{{photo.id}}{
+          height: 25px;
+          width: 25px;
+          margin-top: -50px;
+          padding-left: 10px;
+          cursor: pointer;
+          }
+        </style>
+          <!-- <button ng-click='upvote(photo.id);photo.score = photo.score + 1;changeImage(photo.id);clicked=true' ng-disabled='clicked'> -->
+            <img id = 'emptyHeart{{photo.id}}' ng-click='isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true' ng-disabled='isClicked' src="static/icons/EmptyHeartRed.png">
+          <!-- </button> -->
+      </div>
+      <!-- <img id = "fullHeart" src="static/icons/FullHeartRed.png"> -->
       <!-- <p>Id: {{photo.id}}</p> -->
-      <p ng-click='downvote(photo.id)'>Votes: {{photo.score}}</p>
+      <p id = "photoScore">{{photo.score}}</p>
+      <!-- ng-click='downvote(photo.id) -->
       <!-- <p>{{photo}}</p> -->
     </div>
     <!-- <p align = center>Loading more images...</p> -->
