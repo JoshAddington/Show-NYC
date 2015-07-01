@@ -11,7 +11,7 @@
           <input type="hidden" ng-model='imgData.campaign_id' value='2'>
         <section class="submit-sec"  id="submit-step1">
                 <h3>What's Your Name?</h3> <!--Name submission-->
-                <input ng-pattern="a-zA-Z" type="text" name="name" ng-model='imgData.first_name' ng-minlength="3"  required/> 
+                <input ng-pattern="a-zA-Z" type="text" name="name" ng-model='imgData.first_name' ng-minlength="2"  required/> 
                 <div class="error-container" ng-show="submit_info.name.$invalid && submit_info.submitted">
                     <small class="error" 
                         ng-show="submit_info.name.$error.required">
@@ -31,7 +31,7 @@
 
         <section class="submit-sec" id="submit-step2">
                 <h3>What's Your Email?</h3>
-                <input  ng-minlength="5" type="email" name="email" ng-model='imgData.email' required> 
+                <input  ng-minlength="3" type="email" name="email" ng-model='imgData.email' required> 
                 <div class="error-container" ng-show="submit_info.email.$invalid && submit_info.submitted">
                   <small class="error" 
                          ng-show="submit_info.email.$error.required">
