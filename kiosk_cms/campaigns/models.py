@@ -10,8 +10,8 @@ class Campaign(models.Model):
     slug = models.SlugField(blank=True)
     description = models.TextField(default="Campaign")
     active = models.BooleanField(default=False)
-    start_date = models.DateTimeField(blank=True)
-    end_date = models.DateTimeField(blank=True)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
 
     def __str__(self):
         return self.name
