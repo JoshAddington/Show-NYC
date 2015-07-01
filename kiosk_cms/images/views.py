@@ -1,4 +1,7 @@
+import base64
+import cStringIO
 from django.contrib.auth.models import User
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.utils import timezone
@@ -22,6 +25,17 @@ def image_collection(request):
     elif request.method == 'POST':
         raw_data = request.data
         user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name'), 'username': raw_data.get('email')})
+        
+        if request.POST.get('file') and request.POST.get('name'):
+            file = cStringIO.StringIO(base64.b64decode(request.POST['file']))
+            image = InMemoryUploadedFile(file,
+               field_name='file',
+               name=request.POST['name'],
+               content_type="image/jpeg",
+               size=sys.getsizeof(file),
+               charset=None)
+        request.FILES[u'file'] = image
+
         data = {
           'image': raw_data.get('image'),
           'user_id': user.id,
