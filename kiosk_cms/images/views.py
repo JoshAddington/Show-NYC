@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
+from django.core.exceptions import MultipleObjectsReturned
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.utils import timezone
 from rest_framework import status
 from rest_framework.viewsets import ModelViewSet
@@ -20,9 +21,20 @@ def image_collection(request):
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
+        try:
+            campaign = Campaign.objects.get(active=True)
+        except Campaign.DoesNotExist:
+            raise Http404("No campaign is currently active.")
+        except MultipleObjectsReturned:
+            campaigns = Campaign.objects.filter(active=True)
+            campaign = campaigns[0]
+
         raw_data = request.data
-        campaign = Campaign.objects.get(active=True)
-        user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name'), 'username': raw_data.get('email')})
+        user, created = User.objects.get_or_create(
+            email=raw_data.get('email'),
+            defaults={'first_name': raw_data.get('name'),
+                      'username': raw_data.get('email')}
+        )
         data = {
           'image': raw_data.get('image'),
           'user_id': user.id,
@@ -31,7 +43,8 @@ def image_collection(request):
         serializer = ImageSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.data,
+                            status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # /api/images/<image_id>/
