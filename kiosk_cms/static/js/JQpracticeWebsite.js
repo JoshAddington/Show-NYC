@@ -1,6 +1,7 @@
 $(document).ready(function() {
+  console.log("ready!");
 
-  //Vote Button display
+
   $('#voteButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -66,6 +67,7 @@ $(document).ready(function() {
     }, 200);
     $('.menu').css('left', '-300px');
   });
+
   $('.icon-close').click(function() {
     $('.menu').animate({
       left: "-350px"
@@ -83,6 +85,7 @@ $(document).ready(function() {
       $('.scroll-top-wrapper').removeClass('show');
     }
   });
+
   $('.scroll-top-wrapper').on('click', scrollToTop);
   function scrollToTop() {
     verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
@@ -90,6 +93,9 @@ $(document).ready(function() {
     offset = element.offset();
     offsetTop = offset.top;
     $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
-  }
+  };
 
 });
+
+
+
