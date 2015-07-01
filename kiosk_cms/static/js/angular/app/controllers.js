@@ -82,26 +82,8 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.submitIntro = true;
-    $scope.stepOne = function() {
-        console.log("1");
-        $scope.submitIntro = false;
-        $scope.step1 = true;
-    }
-     $scope.stepTwo = function() {
-        console.log("2");
-        $scope.step1 = false;
-        $scope.step2 = true;
-    }
-     $scope.stepThree = function() {
-        $scope.submitIntro = false;
-        console.log("3");
-        $scope.step2 = false;
-        $scope.step3 = true;
-    }
-     $scope.finish =  $scope.reset;
+    $scope.submitted = false;
     $scope.uploadPhoto = function(element) {
-      console.log("uploaded!");
       var reader = new FileReader();
       reader.onload = $scope.imageIsLoaded;
       reader.readAsDataURL(element.files[0]);
@@ -112,19 +94,21 @@ angular.module('myApp.controllers', [])
             $scope.display = true;
         });
     }
-    $scope.reset = function() {
-      $scope.display = false;
-      $scope.imgData.first_name = null;
-      $scope.imgData.email = null;
-      alert("thank you!");
-      $scope.submitIntro = true;
-      $scope.step1 = false;
-      $scope.step2 = false;
-      $scope.step3 = false;
-
+    $scope.finish = function() {
+      if ($scope.submit_info.$valid) {
+          console.log("here");
+          $scope.display = false;
+          $scope.imgData.first_name = null;
+          $scope.imgData.email = null;
+          alert("thank you!");
+      } 
+      else {
+        $scope.submit_info.submitted = true;
+      }
+      /*** checking to see if form can be valid can be moved to the submit function before storing data and uploading **/
     }
-
   $scope.submit = function() {
+
         var form = new FormData();
         var data = $scope.imgData;
         form.append('name', data.first_name);

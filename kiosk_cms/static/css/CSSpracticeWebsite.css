@@ -106,10 +106,9 @@ footer a {
   display: block;
 }
 #submit{
-  height: 550px;
+  height: 100%;
   width: 100%;
   text-align: center;
-  background-color: red;
 }
 #show-nyc{
   display: block;
@@ -450,6 +449,7 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
+  margin-top: -30px;
   padding-top: 10px;
   opacity: 1.0;
 }
@@ -466,7 +466,52 @@ footer a {
   margin: 0 auto;
   padding-bottom: 20px;
 }
-
+#submit-step1 {                                   /*Submit Section enter your name*/
+  background-color: #DE4831;
+  height: 100%;
+  padding-top: 20px;
+  opacity: 0.9;
+  cursor: default;
+}
+#submit-step1:hover {
+  opacity: 1.0;
+}
+#submit-step1 h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: white;
+}
+#submit-step1 p {
+  color: white;
+  text-align: center;
+  font-size: 15px #004459;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+#submit-step2 {                                    /*Submit Section enter your email*/
+  background-color: #DE4831;
+  height: 100%;
+  padding-top: 20px;
+  opacity: 0.9;
+  cursor: default;
+}
+#submit-step2:hover {
+  opacity: 1.0;
+}
+#submit-step2 h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: white;
+}
+#submit-step2 p {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
 #submit-photo {                                        /*Submit Section choose your photo*/
   background-color: #DE4831;
   height: 100%;
@@ -484,7 +529,18 @@ footer a {
   color: white;
   margin: -10px 0 110px;
 }
-
+#submit-step2 p {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.dropzone {
+  width: 400px;
+  margin: 0 auto;
+}
 
 .upload-container {
   margin: 0 auto;
