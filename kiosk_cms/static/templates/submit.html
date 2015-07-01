@@ -1,43 +1,40 @@
-<div id="submit" class="noselect">
-    <div id = "submit-title">
-        <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
-        <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
-        <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here—it's that simple!</p>
-        <br>
-        <br>
-    </div>
+    <div ng-controller="SubmitCtrl" id="submit" class="noselect">
+        <div id="submit-title">
+            <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
+            <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
+            <p>Starbucks is inviting you to put your most creative doodle on it's iconic white cup. Decorate your cup, take a photo of it, and submit your design here—it's that simple!</p>
+            <br>
+            <br>
+        </div>
     <form ng-submit="submit()">
         <input type="hidden" ng-model='imgData.campaign_id' value='2'>
-        <div id = "submit-step1">
+        <section id = "submit-step1">
                 <h3>What's Your Name?</h3> <!--Name submission-->
                     <input type = "text" name="name" ng-model='imgData.first_name'> <!--User text input-->
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
-        </div>
-        <div id = "submit-step2">
+        </section>
+        <section id = "submit-step2">
                 <h3>What's Your Email?</h3>
 
                     <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
-        </div>
-        <div id = "submit-photo">
-        <!-- <file-uploader></file-uploader> -->
-                <h3>What's Your Photo?</h3> <!--User photo input-->
-                <br>
+        </section>
+       <section ng-app="MyApp" ng-controller="SubmitCtrl" id="submit-photo">
+            <h3>What's Your Photo?</h3> <!--User photo input-->
+            <div class="upload-container">
+                <div class="dropzone" file-dropzone="[image/png, image/jpeg]"file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
+                     <img  ng-src={{image}} id="myImg" width="400" height="300"/>
+                </div>
+            </div>
+            <div class="submit-container">
+                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png">
+                  <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
+            </div>
+            <label class = "submission">
+                <button ng-click="" class="btn-style" type='submit'>upload me</button>
+            </label>
 
-
-                <label class="filebutton">
-                    UPLOAD <!--I want to limit the types of files that can be uploaded-->
-                    <span>
-                    <!-- <input type="file" file-model="myFile"/> -->
-                    <input type="file" id="myfile" name="myfile" accept =".jpg, .png" file-model="myFile"></span>
-                </label>
-                <br>
-                <br>
-                <label class = "submission">
-                            <button class="btn-style" type='submit'>upload me</button>
-
-                </label>
-
-        </div>
+        </section>
     </form>
 </div>
+
