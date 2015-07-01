@@ -1,4 +1,4 @@
-    <div ng-app="myApp" ng-controller="SubmitCtrl" id="submit" class="noselect">
+    <div ng-controller="SubmitCtrl" id="submit" class="noselect">
         <div ng-show="submitIntro" id="submit-title">
             <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
             <p>This week's campaign: <strong>Starbuck's White Cup Contest</strong></p>
@@ -49,7 +49,7 @@
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
 
-        <section ng-controller="SubmitCtrl" class="submit-sec" id="submit-photo">
+        <section class="submit-sec" id="submit-photo">
             <div class="upload-container">
                 <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
                      <img  ng-src={{image}} id="myImg" width="400" height="300"/>
