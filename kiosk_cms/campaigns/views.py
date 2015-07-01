@@ -18,7 +18,7 @@ def campaign_collection(request):
 def active_campaign_collection(request):
 	if request.method == 'GET':
 		now = timezone.now()
-		campaigns = Campaign.objects.filter(start_date__lte=now).filter(end_date__gte=now)
+		campaigns = Campaign.objects.filter(active=True)
 		serializer = CampaignSerializer(campaigns, many=True)
 		return Response(serializer.data)
 
