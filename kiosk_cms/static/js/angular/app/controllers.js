@@ -89,11 +89,13 @@ angular.module('myApp.controllers', [])
       var reader = new FileReader();
       reader.onload = $scope.imageIsLoaded;
       reader.readAsDataURL(element.files[0]);
+      // console.log(element.files[0]);
     }
     $scope.imageIsLoaded = function(e) {
         $scope.$apply(function() {  
             $scope.image = e.target.result;
             $scope.display = true;
+            console.log(e.target.result);
         });
     }
     $scope.reset = function() {
@@ -103,15 +105,14 @@ angular.module('myApp.controllers', [])
       alert("thank you!");
     }
 
-  $scope.submit = function() {
+    $scope.submit = function() {
         var form = new FormData();
         var data = $scope.imgData;
         form.append('name', data.first_name);
         form.append('campaign_id', 2);
         form.append('email', data.email);
-        form.append('image', $scope.myFile);
-        console.log($scope.myFile);
-
+        form.append('image', $scope.image);
+        console.log($scope.image);
 
 				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
                 form, {

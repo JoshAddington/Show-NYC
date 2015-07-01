@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from drf_extra_fields.fields import Base64ImageField
+from .fields import Base64ImageField
 from .models import Image
 
 
