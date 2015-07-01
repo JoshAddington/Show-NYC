@@ -3,7 +3,6 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.utils import timezone
 from rest_framework import status
-from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -73,7 +72,7 @@ def active_campaign_images(request):
 def inactive_campaign_images(request):
     if request.method == 'GET':
         now = timezone.now()
-        images = Image.objects.filter(campaign_id__end_date__lte=now)
+        images = Image.objects.filter(campaign_id__active=False)
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
