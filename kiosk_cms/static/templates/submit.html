@@ -27,14 +27,14 @@
 
         <section class="submit-sec" ng-show="step2" id="submit-step1">
                 <h3>What's Your Name?</h3> <!--Name submission-->
-                <input type = "text" name="name" ng-model='imgData.first_name'> <!--User text input-->
+                <input ng-pattern="[a-zA-Z]" type="text" name="name" ng-model='imgData.first_name' required> <!--User text input-->
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
                 <button class="button" ng-click="stepThree()">Next</button>
         </section>
 
         <section class="submit-sec" ng-show="step3" id="submit-step2">
                 <h3>What's Your Email?</h3>
-                <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
+                <input ng-minlength=5 type="email" name="email" ng-model='imgData.email' required> <!--User text input-->
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
                  <label class="submission">
                     <button ng-click="finish()" class="btn-style" type='submit'>upload me</button>
