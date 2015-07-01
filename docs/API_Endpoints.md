@@ -1,14 +1,12 @@
 # API Endpoints - Implemented
 
-# GET
-
 ## Images
 
-#### Image Collection 
+#### `/api/images/`
 
+#####GET
 Displays a collection of active and unflagged images
 
-`/api/images/`
 
 ```json
 [
@@ -25,12 +23,25 @@ Displays a collection of active and unflagged images
     }
 ]
 ```
+#####POST
+Creates an image and returns JSON representation
 
-#### Image Element
+Data should be sent as multipart/form-data
 
-Displays a single image
+- User's e-mail
+- User's name
+- Image
+- Campaign id
 
-`/api/images/<image_id>/`
+Response:
+
+- Image created: status 201, data: image element JSON
+- Error: status 400, data: error JSON
+
+
+#### `/api/images/<image_id>/`
+
+##### GET
 
 ```json
 {
@@ -45,6 +56,26 @@ Displays a single image
     "flagged": false
 }
 ```
+
+##### PUT
+Modifies an image element and returns JSON representation
+
+Data should be sent as multipart/form-data
+
+- User's e-mail
+- User's name
+- Image
+- Campaign id
+
+Response:
+
+- Image updated: status 200, data: image element JSON
+- Error: status 400, data: error JSON
+
+##### DELETE
+
+Deletes an image element and returns status 204 on successful deletion
+
 
 #### Active Campaign Images
 
