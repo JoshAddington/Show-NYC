@@ -82,8 +82,24 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
-
-
+    $scope.submitIntro = true;
+    $scope.stepOne = function() {
+        console.log("1");
+        $scope.submitIntro = false;
+        $scope.step1 = true;
+    }
+     $scope.stepTwo = function() {
+        console.log("2");
+        $scope.step1 = false;
+        $scope.step2 = true;
+    }
+     $scope.stepThree = function() {
+        $scope.submitIntro = false;
+        console.log("3");
+        $scope.step2 = false;
+        $scope.step3 = true;
+    }
+     $scope.finish =  $scope.reset;
     $scope.uploadPhoto = function(element) {
       console.log("uploaded!");
       var reader = new FileReader();
@@ -101,6 +117,11 @@ angular.module('myApp.controllers', [])
       $scope.imgData.first_name = null;
       $scope.imgData.email = null;
       alert("thank you!");
+      $scope.submitIntro = true;
+      $scope.step1 = false;
+      $scope.step2 = false;
+      $scope.step3 = false;
+
     }
 
   $scope.submit = function() {
