@@ -28,7 +28,7 @@ angular.module('myApp.controllers', [])
     // console.log($sco.isClicked)
     console.log(document.getElementById("emptyHeart"+id))
     document.getElementById("emptyHeart"+id).src = 'static/icons/FullHeartRed.png'
-    // document.getElementById("emptyHeart"+id).id = 'fullHeart'
+    document.getElementById("emptyHeart"+id).id = 'fullHeart'
     // $scope.isClicked= true
     // return false
 
@@ -60,6 +60,7 @@ angular.module('myApp.controllers', [])
   $scope.sortReverse  = true;  // set the default sort order
 
   $scope.random = function() {
+    console.log("random");
    $scope.load()
    $scope.sortType = 'rank'
   }
@@ -80,10 +81,52 @@ angular.module('myApp.controllers', [])
 
 }])
 
-.controller('SubmitCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  }
-})
+.controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
+
+
+    $scope.uploadPhoto = function(element) {
+      console.log("uploaded!");
+      var reader = new FileReader();
+      reader.onload = $scope.imageIsLoaded;
+      reader.readAsDataURL(element.files[0]);
+    }
+    $scope.imageIsLoaded = function(e) {
+        $scope.$apply(function() {
+            $scope.image = e.target.result;
+            $scope.display = true;
+        });
+    }
+    $scope.reset = function() {
+      $scope.display = false;
+      $scope.imgData.first_name = null;
+      $scope.imgData.email = null;
+      alert("thank you!");
+    }
+
+  $scope.submit = function() {
+        var form = new FormData();
+        var data = $scope.imgData;
+        form.append('name', data.first_name);
+        form.append('campaign_id', 2);
+        form.append('email', data.email);
+        form.append('image', $scope.myFile);
+        console.log($scope.myFile);
+
+
+				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
+                form, {
+                    headers: {'Content-Type': undefined},
+                    transformRequest: function(data){ return data;}
+              })
+
+			        .success(function(data) {
+			            console.log(data);
+
+			        })
+              .error(function(data){
+                console.log(data);
+              });
+			};
+}])
 
 .controller('AboutCtrl', function($scope) {});

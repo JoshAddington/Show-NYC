@@ -19,13 +19,13 @@ class ImageInline(admin.TabularInline):
 
 
 class CampaignAdmin(admin.ModelAdmin):
-    list_display = ('name', 'start_date', 'end_date')
+    list_display = ('name', 'active', 'start_date', 'end_date')
 
-    fields = ('sponsor', 'name', 'slug', 'start_date', 'end_date')
+    fields = ('sponsor', 'active', 'name',
+              'slug', 'description', 'start_date', 'end_date')
     inlines = [ImageInline, ]
-    prepopulated_fields = {'slug' : ('name',), }
-    
-    
+    prepopulated_fields = {'slug': ('name',), }
+
 
 # Register your models here.
 admin.site.register(Campaign, CampaignAdmin)

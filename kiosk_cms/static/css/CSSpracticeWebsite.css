@@ -17,10 +17,6 @@ h1 {                                                  /*Heading 1*/
   letter-spacing: 4px;
   font-size: 30px;
   background-color: none;
-  padding-top: 0px;
-  padding-right: 10px;
-  padding-bottom:0px;
-  padding-left: 20px;
 }
 h2 {                                                  /*Heading 2*/
   font-family: "Raleway";
@@ -37,16 +33,15 @@ h3 {                                                  /*Heading 3*/
   font-size: 20px;
   font-style: normal;
   color: black;
-  font-weight: bold;
-  text-align: center;
 }
 header {                                              /*Header*/
   background: #004459;
-  padding-bottom: 0px;
+  height: 80px;
+  overflow: none;
+  width: 100%;
 }
 header > h1 {
-  margin-left: 95px;
-  margin-top: -35px;
+  display: inline-block;
 }
 p{                                                  /*Paragraphs*/
   color: black;
@@ -56,7 +51,7 @@ p{                                                  /*Paragraphs*/
 a:hover {                                           /*Link hover*/
   opacity: 0.5;
 }
-form {                                              /*Form*/
+input {                                              /*Form*/
   text-align: center;
   vertical-align: center;
   float: center;
@@ -93,9 +88,20 @@ footer a {
   text-decoration: none;
   color: white;
 }
+#show-nyc {
+  font-family: "Changa One";
+  color: white;
+  letter-spacing: 4px;
+  font-size: 35px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
   background-color: white;
+  overflow: hidden;
 }
 #vote {
   display: block;
@@ -110,9 +116,7 @@ footer a {
   width: 100%;
   text-align: center;
 }
-#show-nyc{
-  display: block;
-}
+
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
     font-family: "Raleway";
@@ -220,9 +224,10 @@ footer a {
 .icon-close > h1 {
   font-size: 40px;
 }
-.icon-menu {                                    /*Menu banner*/
-  margin-top: 25px;
+.icon-menu {
+  position: absolute;                              /*Menu banner*/
   margin-left: 60px;
+  margin-top: 25px;
   cursor: pointer;
 }
 .wrap {
@@ -253,33 +258,37 @@ footer a {
   font-size: 18px;
   text-decoration: none;
 }
-#long-header {                                  /*About section extended header*/
+
+.description {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 800px;
+  margin-left:auto;
+  margin-right: auto;
+}
+#about-section {                                  /*About section extended header*/
   background-color: #004459;
   color: white;
-  text-align: center;
+  text-align: left;
+  overflow: hidden;
 }
-#long-header h3{
-  margin-top: -80px;
-  padding: 100px 20px 0px 20px;
+.about-heading {
+  padding: 100px 20px 0px 10px;
   letter-spacing: 2px;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
+  text-transform: uppercase;
 }
-#long-header p{
+.about-par{
+  color: white;
   font-size: 17px;
-  text-align: center;
   max-width: 800px;
-  margin: 0 auto;
 }
-#show-nyc {                                 /*Header for Submit and About sections*/
-  font-family: "Changa One";
-  color: white;
+#grid-head {
   text-align: center;
-  letter-spacing: 4px;
-  font-size: 40px;
-  background-color: none;
-  margin-left: -5px;
 }
+/*Header for Submit and About sections*/
+
 
 #campaign {                                    /*Vote Section Campaign Information*/
   max-height: 300px;
@@ -315,6 +324,7 @@ footer a {
   font-size: 0px;
   margin-top: -30px;
   height: 20%;
+  background-color: #004459;
 }
 .zoom-container-vote{                          /*Photo grid layout*/
   position: relative;
@@ -340,6 +350,7 @@ footer a {
   background-color: white;
   position: relative;
   overflow: hidden;
+  background-color: #004459;
 }
 .zoom-container-gallery{                       /*Photo grid layout*/
   position: relative;
@@ -405,6 +416,7 @@ footer a {
   background-color: white;
   position: relative;
   overflow: hidden;
+  background-color: #004459;
 }
 .zoom-container-about{                          /*Photo grid layout*/
   position: relative;
@@ -518,6 +530,7 @@ footer a {
   padding-top: 20px;
   opacity: 0.9;
   cursor: default;
+  padding: 50px 0;
 }
 #submit-photo:hover {
   opacity: 1.0;
@@ -526,6 +539,7 @@ footer a {
   letter-spacing: 2px;
   font-size: 30px;
   color: white;
+  margin: -10px 0 110px;
 }
 #submit-step2 p {
   color: white;
@@ -535,28 +549,19 @@ footer a {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-label.filebutton {                                   /*Upload button*/
-  overflow:hidden;
-  position:relative;
-  cursor: pointer;
-  text-align: center;
-  padding: 90px 100px 90px 100px;
-  background-color: white;
-  font-size: 30px;
-  letter-spacing: 2px;
-  color: #DE4831;
-  font-weight: 900;
+
+
+.upload-container {
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
 }
-label span input { /*When hovering over the choose file button (which is hidden) the cursor is no longer a pointer*/
-  font-size: 1px;
-  background-color: red;
+#myfile {
   opacity: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 0px;
 }
-.highlight {
-  opacity: .5;
+
+#button {
+  margin: 0 auto;
 }
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
@@ -610,7 +615,7 @@ label span input { /*When hovering over the choose file button (which is hidden)
   overflow-x: hidden;
   z-index: 4;
   /* top right corner */
-  position: absolute;
+  position: fixed;
   right: -50px;
   top: 40px;
   /* 45 deg cw rotation */
@@ -642,12 +647,12 @@ label span input { /*When hovering over the choose file button (which is hidden)
   padding-left: 10px;
   cursor: pointer;
 }
-#fullHeart {
+#fullHeart{
   height: 25px;
   width: 25px;
   margin-top: -50px;
   padding-left: 10px;
-  cursor: pointer;
+  cursor: auto;
 }
 #photoScore {
   color: #DE4831;
