@@ -120,7 +120,7 @@ angular.module('myApp.controllers', [])
                 .error(function(data){
                   console.log(data);
                 });
-            $scope.finish;
+            $scope.finish();
          }
         else {
             $scope.submit_info.submitted = true;
