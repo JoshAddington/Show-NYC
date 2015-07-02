@@ -180,9 +180,9 @@ footer a {
 }
 .btn-style{                                       /*Submit Button*/
   font-family: "Raleway";
-  border : dashed 3px #333333;
+  border : dashed 2px #333333;
   font-size : 18px;
-  color : white;
+  color : #333333;
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
@@ -193,9 +193,9 @@ footer a {
 }
 .btn-style:hover {                                /*Submit Button Hover*/
   font-family: "Raleway";
-  border : solid 3px white;
+  border : solid 2px #333333;
   font-size : 18px;
-  color : white;
+  color : #333333;
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
@@ -310,18 +310,20 @@ footer a {
   height: 30px;
   padding-top: 30px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 #filter a{                                      /*Filters for Gallery Section*/
   background-color: white;
   cursor: pointer;
   color: #333333;
   float: center;
+  font-size: 15px;
+  text-transform: uppercase;
   text-align: center;
   vertical-align: bottom;
   text-decoration: none;
   letter-spacing: 2px;
-  word-spacing: 50px;
+  word-spacing: 70px;
   padding-bottom: 5px;
 }
 /* V O T E   S E C T I O N   P H O T O   G R I D */
@@ -464,7 +466,7 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
   opacity: 1.0;
 }
 #submit-title h3{
@@ -478,13 +480,13 @@ footer a {
   font-size: 20px;
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
   background-color: white;
   height: 100%;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   opacity: 1.0;
   cursor: default;
 }
@@ -492,7 +494,7 @@ footer a {
   letter-spacing: 2px;
   font-size: 30px;
   color: #333333;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
 }
 #submit-step1 p {
   color: #333333;
@@ -500,14 +502,14 @@ footer a {
   font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 50px;
-  padding-top: 70px;
+  padding-bottom: 0px;
+  padding-top: 10px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
   background-color: white;
   height: 100%;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 50px;
   opacity: 1.0;
   cursor: default;
 }
@@ -515,7 +517,7 @@ footer a {
   letter-spacing: 2px;
   font-size: 30px;
   color: #333333;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
 }
 #submit-step2 p {
   color: #333333;
@@ -524,7 +526,7 @@ footer a {
   max-width: 600px;
   margin: 0 auto;
   padding-bottom: 50px;
-  padding-top: 70px;
+  padding-top: 10px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
   background-color: white;
@@ -532,7 +534,7 @@ footer a {
   padding-top: 30px;
   opacity: 1.0;
   cursor: default;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
   border-bottom: solid 20px white;
 }
 #submit-photo h3 {
@@ -559,12 +561,12 @@ footer a {
 }
 #myfile {
   opacity: 0;
+  border: solid 30px #333333;
 }
 #select {                                             /*Choose me button*/
   font-family: "Raleway";
-  border : dashed 0px #333333;
   font-size : 18px;
-  color : white;
+  color : #333333;
   letter-spacing: 3px;
   font-weight: 400;
 /*  padding : 10px 0px;*/
@@ -596,11 +598,11 @@ strong {
 #draganddrop {
   font-family: "Raleway";
   font-size: 18px;
-  color: white;
+  color: #333333;
   letter-spacing: 3px;
   font-weight: 400;
 /*  padding-right: 10px 20px;*/
-  background-color : #004459;
+  background-color : white;
   text-transform: uppercase;
   text-align: center;
   vertical-align: center;
@@ -715,7 +717,7 @@ strong {
   padding-left: 40px;
 }
 #myImg {
-  border: solid white 10px;
+  border: solid #333333 10px;
   cursor: pointer;
   margin-top: 40px;
 }
