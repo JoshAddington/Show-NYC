@@ -1,16 +1,15 @@
 # API Endpoints - Implemented
 
-# GET
-
 ## Images
 
-#### Image Collection 
+#### `/api/images/`
 
+#####GET
 Displays a collection of active and unflagged images
 
-`/api/images/`
 
 ```json
+GET /api/images/
 [
     {
         "id": 19,
@@ -25,14 +24,32 @@ Displays a collection of active and unflagged images
     }
 ]
 ```
+#####POST
+Creates an image and returns JSON representation
 
-#### Image Element
-
-Displays a single image
-
-`/api/images/<image_id>/`
+Data sent as JSON:
 
 ```json
+POST /api/images/
+{
+"email": "<user email>",
+"name": "<user preferred name>",
+"image": "<base64 encoded image>"
+}
+```
+
+Response:
+
+- Image created: status 201, data: image element JSON
+- Error: status 400, data: error JSON
+
+
+#### `/api/images/<image_id>/`
+
+##### GET
+
+```json
+GET /api/images/<image_id>/
 {
     "id": 19,
     "image_name": "Ocean-waves.jpg",
@@ -44,6 +61,33 @@ Displays a single image
     "score": 5,
     "flagged": false
 }
+```
+
+##### PUT
+Modifies an image element and returns JSON representation
+
+Data sent as JSON:
+
+```json
+PUT /api/images/<image_id>/
+{
+"email": "<user email>",
+"name": "<user preferred name>",
+"image": "<base64 encoded image>"
+}
+```
+
+Response:
+
+- Image updated: status 200, data: image element JSON
+- Error: status 400, data: error JSON
+
+##### DELETE
+
+Deletes an image element and returns status 204 on successful deletion
+
+```
+DELETE /api/images/<image_id>/
 ```
 
 #### Active Campaign Images
