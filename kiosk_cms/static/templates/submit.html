@@ -52,7 +52,7 @@
         <section class="submit-sec" id="submit-photo">
             <div class="upload-container">
                 <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
-                     <img  ng-src={{image}} id="myImg" width="400" height="300"/>
+                     <img ng-src={{image}} id="myImg" width="400" height="300"/>
                 </div>
             </div>
             <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
@@ -61,7 +61,7 @@
                 </small>
             </div>
             <div class="submit-container">
-                 <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
                   <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
             </div>
             <label class="submission">
