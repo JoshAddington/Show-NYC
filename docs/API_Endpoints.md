@@ -9,6 +9,7 @@ Displays a collection of active and unflagged images
 
 
 ```json
+GET /api/images/
 [
     {
         "id": 19,
@@ -29,6 +30,7 @@ Creates an image and returns JSON representation
 Data sent as JSON:
 
 ```json
+POST /api/images/
 {
 "email": "<user email>",
 "name": "<user preferred name>",
@@ -47,6 +49,7 @@ Response:
 ##### GET
 
 ```json
+GET /api/images/<image_id>/
 {
     "id": 19,
     "image_name": "Ocean-waves.jpg",
@@ -66,6 +69,7 @@ Modifies an image element and returns JSON representation
 Data sent as JSON:
 
 ```json
+PUT /api/images/<image_id>/
 {
 "email": "<user email>",
 "name": "<user preferred name>",
@@ -82,6 +86,9 @@ Response:
 
 Deletes an image element and returns status 204 on successful deletion
 
+```
+DELETE /api/images/<image_id>/
+```
 
 #### Active Campaign Images
 
