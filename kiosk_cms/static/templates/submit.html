@@ -6,67 +6,34 @@
             <br>
             <br>
         </div>
-
-    <form name="submit_info" novalidate ng-submit="submit()">
-          <input type="hidden" ng-model='imgData.campaign_id' value='2'>
-        <section class="submit-sec"  id="submit-step1">
+    <form ng-submit="submit()">
+        <input type="hidden" ng-model='imgData.campaign_id' value='2'>
+        <section id = "submit-step1">
                 <h3>What's Your Name?</h3> <!--Name submission-->
-                <input ng-pattern="a-zA-Z" type="text" name="name" ng-model='imgData.first_name' ng-minlength="2"  required/> 
-                <div class="error-container" ng-show="submit_info.name.$invalid && submit_info.submitted">
-                    <small class="error" 
-                        ng-show="submit_info.name.$error.required">
-                        Your name is required.
-                    </small>
-                    <small class="error" 
-                        ng-show="myForm.input.$error.name">
-                        Really?
-                    </small>
-                    <small class="error" 
-                            ng-show="submit_info.name.$error.minlength">
-                            Your name is required to be at least 3 characters.
-                    </small>
-                </div>
+                    <input type = "text" name="name" ng-model='imgData.first_name'> <!--User text input-->
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
         </section>
-
-        <section class="submit-sec" id="submit-step2">
+        <section id = "submit-step2">
                 <h3>What's Your Email?</h3>
-                <input  ng-minlength="3" type="email" name="email" ng-model='imgData.email' required> 
-                <div class="error-container" ng-show="submit_info.email.$invalid && submit_info.submitted">
-                  <small class="error" 
-                         ng-show="submit_info.email.$error.required">
-                         Your email is required.
-                  </small>
-                  <small class="error"
-                        ng-show="submit_info.email.$error.email">
-                        Not a valid email.
-                  </small>
-                  <small class="error" 
-                         ng-show="submit_info.email.$error.minlength">
-                          Your email is required to be at least 3 characters.
-                  </small>
-                </div>
+
+                    <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
-       <section class="submit-sec" id="submit-photo">
+       <section ng-app="MyApp" ng-controller="SubmitCtrl" id="submit-photo">
             <h3>What's Your Photo?</h3> <!--User photo input-->
             <div class="upload-container">
-                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 
-                     <img ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
+                <div class="dropzone" file-dropzone="[image/png, image/jpeg]"file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
+                     <img  ng-src={{image}} id="myImg" width="400" height="300"/>
                 </div>
             </div>
-            <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
-                <small class="error">
-                    Please upload a photo.
-                </small>
-            </div>
             <div class="submit-container">
-                <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
-                <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
+                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png">
+                  <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
             </div>
             <label class = "submission">
-                <button class="btn-style" type='submit'>SUBMIT</button>
+                <button ng-click="" class="btn-style" type='submit'>upload me</button>
             </label>
+
         </section>
     </form>
 </div>

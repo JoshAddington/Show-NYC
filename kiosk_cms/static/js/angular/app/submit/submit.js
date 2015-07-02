@@ -9,10 +9,6 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
   });
 }])
 
-.config(function($httpProvider) {
-    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-})
 
 .directive('fileDropzone', function() {
     return {
@@ -52,7 +48,6 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
           }
         };
         console.log("4");
-        console.log("dragover");
         element.bind('dragover', processDragOverOrEnter);
         element.bind('dragenter', processDragOverOrEnter);
         return element.bind('drop', function(event) {
@@ -66,6 +61,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
             if (checkSize(size) && isTypeValid(type)) {
               return scope.$apply(function() {
                 scope.file = evt.target.result;
+                //scope.display = false;
                 if (angular.isString(scope.fileName)) {
                   return scope.fileName = name;
                 }
@@ -82,25 +78,6 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
       }
     };
 })
-
-
-.directive('validFile', function () {
-    return {
-        require: 'ngModel',
-        link: function (scope, el, attrs, ngModel) {
-            ngModel.$render = function () {
-                ngModel.$setViewValue(el.val());
-            };
-
-            el.bind('change', function () {
-                scope.$apply(function () {
-                    ngModel.$render();
-                });
-            });
-        }
-    };
-})
-
 
 .config(function($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';

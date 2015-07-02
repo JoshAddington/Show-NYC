@@ -458,6 +458,7 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
+  margin-top: -30px;
   padding-top: 10px;
   opacity: 1.0;
 }
@@ -545,10 +546,7 @@ footer a {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-.dropzone {
-  width: 400px;
-  margin: 0 auto;
-}
+
 
 .upload-container {
   margin: 0 auto;
