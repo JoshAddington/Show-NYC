@@ -97,6 +97,7 @@ angular.module('myApp.controllers', [])
     }
     $scope.finish = function() {
         console.log("finished");
+        alert("thank you!");
         $scope.submit_info.submitted = false;
         $scope.imgData.first_name = null;
         $scope.imgData.email = null;
