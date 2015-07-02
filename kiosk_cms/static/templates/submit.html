@@ -19,19 +19,27 @@
                     <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
-       <section ng-app="MyApp" ng-controller="SubmitCtrl" id="submit-photo">
+       <section id="submit-photo">
             <h3>What's Your Photo?</h3> <!--User photo input-->
+
             <div class="upload-container">
-                <div class="dropzone" file-dropzone="[image/png, image/jpeg]"file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
-                     <img  ng-src={{image}} id="myImg" width="400" height="300"/>
+                
+                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
+                     
+                     <img  ng-src={{image}} id="myImg" width="400" height="300" ng-model='image.data'/>
+                
                 </div>
-            </div>
-            <div class="submit-container">
+                <div class="submit-container">
+                 
                  <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png">
-                  <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
+                  
+                </div>
+            
             </div>
+            
+            
             <label class = "submission">
-                <button ng-click="" class="btn-style" type='submit'>upload me</button>
+                <button class="btn-style" type='submit'>upload me</button>
             </label>
 
         </section>
