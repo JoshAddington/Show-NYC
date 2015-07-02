@@ -83,6 +83,30 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
     };
 })
 
+
+.directive('validFile', function () {
+    return {
+        require: 'ngModel',
+        link: function (scope, el, attrs, ngModel) {
+            ngModel.$render = function () {
+                ngModel.$setViewValue(el.val());
+            };
+
+            el.bind('change', function () {
+                scope.$apply(function () {
+                    ngModel.$render();
+                });
+            });
+        }
+    };
+})
+
+
+.config(function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+})
+
 // directive for accessing the file to be uploaded.
 .directive('fileModel', ['$parse', function ($parse) {
     return {
