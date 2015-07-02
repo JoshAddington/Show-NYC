@@ -1,5 +1,5 @@
+from django import forms
 from django.contrib import admin
-from django.contrib.admin import SimpleListFilter
 from .models import Campaign
 from images.models import Image
 
@@ -19,8 +19,7 @@ class ImageInline(admin.TabularInline):
 
 
 class CampaignAdmin(admin.ModelAdmin):
-    list_display = ('name', 'active', 'start_date', 'end_date')
-
+    list_display = ('name', 'active', 'default', 'start_date', 'end_date')
     fields = ('sponsor', 'active', 'name',
               'slug', 'description', 'start_date', 'end_date')
     inlines = [ImageInline, ]
