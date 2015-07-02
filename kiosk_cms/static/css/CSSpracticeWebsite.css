@@ -458,7 +458,6 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
-  margin-top: -30px;
   padding-top: 10px;
   opacity: 1.0;
 }
