@@ -26,12 +26,15 @@ Displays a collection of active and unflagged images
 #####POST
 Creates an image and returns JSON representation
 
-Data should be sent as multipart/form-data
+Data sent as JSON:
 
-- User's e-mail
-- User's name
-- Image
-- Campaign id
+```json
+{
+"email": "<user email>",
+"name": "<user preferred name>",
+"image": "<base64 encoded image>"
+}
+```
 
 Response:
 
@@ -60,12 +63,15 @@ Response:
 ##### PUT
 Modifies an image element and returns JSON representation
 
-Data should be sent as multipart/form-data
+Data sent as JSON:
 
-- User's e-mail
-- User's name
-- Image
-- Campaign id
+```json
+{
+"email": "<user email>",
+"name": "<user preferred name>",
+"image": "<base64 encoded image>"
+}
+```
 
 Response:
 
