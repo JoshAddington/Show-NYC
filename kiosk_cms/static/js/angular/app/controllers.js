@@ -87,50 +87,45 @@ angular.module('myApp.controllers', [])
       var reader = new FileReader();
       reader.onload = $scope.imageIsLoaded;
       reader.readAsDataURL(element.files[0]);
+      // console.log(element.files[0]);
     }
     $scope.imageIsLoaded = function(e) {
         $scope.$apply(function() {  
             $scope.imageUrl = e.target.result;
             $scope.display = true;
+            console.log(e.target.result);
         });
     }
     $scope.finish = function() {
-      if ($scope.submit_info.$valid) {
-          console.log("finished");
-          $scope.imgData.first_name = null;
-          $scope.imgData.email = null;
-          $scope.imageUrl = " ";
-      } 
-      else {
-        $scope.submit_info.submitted = true;
-      }
+        console.log("finished");
+        $scope.imgData.first_name = null;
+        $scope.imgData.email = null;
+        $scope.imageUrl = " ";
       /*** checking to see if form can be valid can be moved to the submit function before storing data and uploading **/
     }
-  $scope.submit = function() {
 
-        var form = new FormData();
-        var data = $scope.imgData;
-        form.append('name', data.first_name);
-        form.append('campaign_id', 2);
-        form.append('email', data.email);
-        form.append('image', $scope.myFile);
-        console.log($scope.myFile);
+    $scope.submit = function() {
+        if ($scope.submit_info.$valid) {
+          var data = $scope.imgData;
+          var params = {'name': data.first_name, 'email': data.email, 'image': $scope.imageUrl};
+          console.log(params);
+  				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
+                  params
+                  )
 
-
-				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
-                form, {
-                    headers: {'Content-Type': undefined},
-                    transformRequest: function(data){ return data;} 
-              })
-
-			        .success(function(data) {
-			            console.log(data);
-			            
-			        })
-              .error(function(data){
-                console.log(data);
-              });
-			};
+  			        .success(function(data) {
+  			            console.log(data);
+  			            
+  			        })
+                .error(function(data){
+                  console.log(data);
+                });
+            $scope.finish;
+         }
+        else {
+            $scope.submit_info.submitted = true;
+        }
+    }
 }])
 
 .controller('AboutCtrl', function($scope) {});

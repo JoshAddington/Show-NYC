@@ -1,3 +1,5 @@
+import base64
+import cStringIO
 from django.contrib.auth.models import User
 from django.core.exceptions import MultipleObjectsReturned
 from django.shortcuts import get_object_or_404
@@ -57,7 +59,10 @@ def image_element(request, pk):
         return Response(serializer.data)
     elif request.method == 'PUT':
         raw_data = request.data
-        user, created = User.objects.get_or_create(email=raw_data.get('email'), defaults={'first_name': raw_data.get('name')})
+        user, created = User.objects.get_or_create(
+            email=raw_data.get('email'),
+            defaults={'first_name': raw_data.get('name')}
+        )
         data = {
           'image': raw_data.get('image'),
           'user_id': user.id,

@@ -9,6 +9,10 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
   });
 }])
 
+.config(function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+})
 
 .directive('fileDropzone', function() {
     return {
@@ -78,6 +82,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
       }
     };
 })
+
 
 .directive('validFile', function () {
     return {

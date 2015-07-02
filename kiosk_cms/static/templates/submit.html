@@ -48,11 +48,11 @@
                 </div>
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
-
-        <section class="submit-sec" id="submit-photo">
+       <section class="submit-sec" id="submit-photo">
+            <h3>What's Your Photo?</h3> <!--User photo input-->
             <div class="upload-container">
-                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton">
-                     <img ng-src={{imageUrl}} id="myImg" width="400" height="300"/>
+                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 
+                     <img  ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
                 </div>
             </div>
             <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
@@ -61,13 +61,13 @@
                 </small>
             </div>
             <div class="submit-container">
-                 <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
-                  <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
+                <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+                <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
             </div>
-            <label class="submission">
-                <button ng-click="finish()"class="btn-style" type='submit'>SUBMIT</button>
+            <label class = "submission">
+                <button class="btn-style" type='submit'>SUBMIT</button>
+            </label>
         </section>
-
     </form>
 </div>
 
