@@ -558,6 +558,9 @@ footer a {
 #myfile {
   opacity: 0;
 }
+.highlight {
+  opacity: .5;
+}
 
 #button {
   margin: 0 auto;
