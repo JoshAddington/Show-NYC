@@ -34,7 +34,7 @@ class Campaign(models.Model):
             else:
                 self.default = True
                 active = Campaign.objects.get(active=True)
-                if !active:
+                if not active:
                     self.active = True
         except Exception, e:
             raise e
@@ -42,12 +42,12 @@ class Campaign(models.Model):
     def activate(self):
         campaigns = Campaign.objects.filter(default=False).filter(active=True)
         if campaigns:
-            return "Campaign %s is currently active. This campaign will end on %s." % (campaigns.name, campaigns.end_date)
+            return False
         else:
             campaign = Campaign.objects.get(default=True)
             campaign.active = False
             self.active = True
-            return "Campaign %s is now active." % (self.name)
+            return True
 
     def deactivate(self):
         if self.active:

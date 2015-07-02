@@ -18,12 +18,29 @@ class ImageInline(admin.TabularInline):
     thumb.allow_tags = True
 
 
+class CampaignAdminForm(forms.ModelForm):
+    def clean_active(self):
+        if self.active.has_changed():
+            active = self.cleaned_data["active"]
+            if active:
+                if self.activate():
+                    return True
+                else:
+                    return False
+            else:
+                if self.deactivate():
+                    return True
+                else:
+                    return False
+
+
 class CampaignAdmin(admin.ModelAdmin):
-    list_display = ('name', 'active', 'default', 'start_date', 'end_date')
-    fields = ('sponsor', 'active', 'name',
+    list_display = ('name', 'active', 'default_campaign', 'start_date', 'end_date')
+    fields = ('sponsor', 'active', 'default_campaign', 'name',
               'slug', 'description', 'start_date', 'end_date')
     inlines = [ImageInline, ]
     prepopulated_fields = {'slug': ('name',), }
+    form = CampaignAdminForm
 
 
 # Register your models here.
