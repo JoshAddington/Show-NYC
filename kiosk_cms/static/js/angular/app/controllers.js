@@ -90,17 +90,15 @@ angular.module('myApp.controllers', [])
     }
     $scope.imageIsLoaded = function(e) {
         $scope.$apply(function() {  
-            $scope.image = e.target.result;
+            $scope.imageUrl = e.target.result;
             $scope.display = true;
         });
     }
     $scope.finish = function() {
       if ($scope.submit_info.$valid) {
-          console.log("here");
-          $scope.display = false;
           $scope.imgData.first_name = null;
           $scope.imgData.email = null;
-          alert("thank you!");
+          $scope.imageUrl = "";
       } 
       else {
         $scope.submit_info.submitted = true;
