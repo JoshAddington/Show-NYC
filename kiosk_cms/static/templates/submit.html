@@ -61,7 +61,7 @@
                 </small>
             </div>
             <div class="submit-container">
-                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+                 <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
                   <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
             </div>
             <label class="submission">
