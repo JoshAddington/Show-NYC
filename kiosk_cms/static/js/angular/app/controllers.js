@@ -106,19 +106,11 @@ angular.module('myApp.controllers', [])
     }
 
     $scope.submit = function() {
-        var form = new FormData();
         var data = $scope.imgData;
-        form.append('name', data.first_name);
-        form.append('campaign_id', 2);
-        form.append('email', data.email);
-        form.append('image', $scope.image);
-        console.log($scope.image);
 
 				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
-                form, {
-                    headers: {'Content-Type': undefined},
-                    transformRequest: function(data){ return data;} 
-              })
+                {'name': data.first_name, 'email': data.email, 'image': $scope.image}
+                )
 
 			        .success(function(data) {
 			            console.log(data);
