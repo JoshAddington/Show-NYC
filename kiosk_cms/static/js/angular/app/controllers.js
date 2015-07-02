@@ -82,7 +82,6 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.submitted = false;
     $scope.uploadPhoto = function(element) {
       var reader = new FileReader();
       reader.onload = $scope.imageIsLoaded;
@@ -98,6 +97,7 @@ angular.module('myApp.controllers', [])
     }
     $scope.finish = function() {
         console.log("finished");
+        $scope.submit_info.submitted = false;
         $scope.imgData.first_name = null;
         $scope.imgData.email = null;
         $scope.imageUrl = " ";
