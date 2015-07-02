@@ -1,6 +1,5 @@
-/*    Green: #66da59    Blue: #57dbf9     Orange: #ef962c     */
-/*    New blue: #3d70d4   New orange: #f87b06   new green:#28a626          */
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
+/*    Toms Shoes Hex Color Code #A4D7F4   */
 
 body {                                                  /*Body*/
   font-family: "Raleway";
@@ -268,10 +267,11 @@ footer a {
   margin-left:auto;
   margin-right: auto;
   background-color: white;
+
 }
 #about-section {                                  /*About section extended header*/
   background-color: white;
-  color: white;
+  color: #DE4831;
   text-align: left;
   overflow: hidden;
 }
@@ -281,6 +281,7 @@ footer a {
   font-size: 30px;
   font-family: "Raleway";
   color: #DE4831;
+  border-bottom: solid 2px #DE4831;
   /*text-transform: uppercase;*/
 }
 .about-par{
@@ -290,23 +291,25 @@ footer a {
 }
 #grid-head {
   text-align: center;
+  margin-bottom: 0px;
 }
 /*Header for Submit and About sections*/ 
 
 
 #campaign {                                    /*Vote Section Campaign Information*/
   max-height: 300px;
-  width: 100%;
   overflow: none;
-  text-align: center;
-  background-color: lightgrey;
-  margin-top: -30px;
+  text-align: left;
+  padding-left: 60px;
+  overflow: auto;
+  background-color: #A4D7F4;
+
 }
 #filter {
   background-color: #004459;
   width: 100%;
   height: 30px;
-  margin-top: -30px;
+  padding-top: 30px;
   text-align: center;
   padding-top: 30px;
 }
@@ -326,7 +329,7 @@ footer a {
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;
   font-size: 0px;
-  margin-top: -30px;
+  margin-top: 0px;
   height: 20%;
 }
 .zoom-container-vote{                          /*Photo grid layout*/
@@ -645,14 +648,23 @@ strong {
 }
 
 #campaign-slogan {
-  font-size: 30px;
-  font-family: "Raleway";
+  font-size: 40px;
+  font-family:'Trebuchet MS';
   padding-top: 2%;
+  /*text-transform: uppercase;*/
+  padding-right: 100px;
+  float: left;
+  margin-top: 10px;
+  display: inline-block;
 }
 #campaign-information {
   font-size: 20px;
-  font-family: "Raleway";
+  font-family:'Trebuchet MS';
   padding-bottom: 2%;
+  text-transform: uppercase;
+  float: right;
+  display: inline;
+  margin-top: -50px;
 }
 .ribbon {
   background-color: #DE4831;
@@ -709,4 +721,7 @@ strong {
   border: solid white 10px;
   cursor: pointer;
   margin-top: 40px;
+}
+.highlight {
+  opacity: .5;
 }

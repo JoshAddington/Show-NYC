@@ -9,19 +9,19 @@
     <form ng-submit="submit()">
         <input type="hidden" ng-model='imgData.campaign_id' value='2'>
         <section id = "submit-step1">
-                <h3>What's Your Name?</h3> <!--Name submission-->
+                <h3>Enter Your Name</h3> <!--Name submission-->
                     <input type = "text" name="name" ng-model='imgData.first_name'> <!--User text input-->
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
         </section>
         <section id = "submit-step2">
-            <h3>What's Your Email?</h3>
+            <h3>Enter Your Email</h3>
 
                 <input type = "text" name="email" ng-model='imgData.email'> <!--User text input-->
             <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
 
        <section ng-app="MyApp" ng-controller="SubmitCtrl" id="submit-photo">
-            <h3>What's Your Photo?</h3> <!--User photo input-->
+            <h3>Enter Your Photo</h3> <!--User photo input-->
 
             <div class="submit-container">
                 <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png"> 
