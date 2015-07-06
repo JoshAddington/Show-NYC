@@ -228,8 +228,8 @@ footer a {
 }
 .icon-menu {      
   position: absolute;                              /*Menu banner*/
-  margin-left: 60px;
-  margin-top: 25px;
+  margin-left: 40px;
+  top: 4.5%;
   cursor: pointer;
 }
 .wrap {
