@@ -110,6 +110,7 @@ footer a {
 #gallery{
   background-color: white;
   display: block;
+  overflow: hidden;
 }
 #submit{
   height: 100%;
@@ -293,30 +294,91 @@ footer a {
 #campaign {                                    /*Vote Section Campaign Information*/
   max-height: 300px;
   width: 100%;
-  overflow: none;
   text-align: center;
   background-color: lightgrey;
-  margin-top: -30px;
+  overflow: hidden;
 }
-#filter {
-  background-color: #004459;
+.filter {
+  background: #004459;
   width: 100%;
-  height: 30px;
-  margin-top: -30px;
-  text-align: center;
-  padding-top: 30px;
+  height: 55px;
+  border-top: 1px solid white;
+  margin-left: -15px;
 }
-#filter a{                                      /*Filters for Gallery Section*/
-  background-color: #004459;
-  cursor: pointer;
+.filter-list {
+  height: inherit;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+.filter-list li {
+  float: left;
+  font-size: 14px;
+  display: inline-block;
+  height: inherit;
+  font-weight: 500;
   color: white;
-  float: center;
-  text-align: center;
-  vertical-align: bottom;
-  text-decoration: none;
-  letter-spacing: 2px;
-  word-spacing: 30px;
-  padding-bottom: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-right: 2px solid black;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+#campaignFilter {
+  width: 120px;
+}
+#campaignFilter > img {
+  margin-left: 20px;
+  display: inline-block;
+}
+ul ul {
+  position: absolute;
+  padding: 0;
+  margin:0;
+  float: left;
+  display: none;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul ul li {
+  display: block;
+  width: inherit;
+  margin:0;
+  border: none;
+}
+
+ul > li:hover ul {
+  display: block;
+}
+#campaign-list {
+  border-top: 2px solid white;
+  margin-top: 15px;
+  padding: 0;
+  width: inherit;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: -25px;
+  z-index: 10;
+  background: #004459;
+  overflow: hidden;
+}
+#campaign-list li {
+  text-transform: none;
+  margin-left: -25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  width: 100%;
+}
+#campaign-list li:hover {
+  border: none;
+  background-color: white;
+  color:#004459;
 }
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
