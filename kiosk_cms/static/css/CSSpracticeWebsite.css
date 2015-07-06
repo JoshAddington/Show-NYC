@@ -52,7 +52,7 @@ a:hover {                                           /*Link hover*/
   opacity: 0.5;
 }
 input {                                              /*Form*/
-  text-align: center;
+  text-align: left;
   vertical-align: center;
   float: center;
   margin: 0 auto;
@@ -60,6 +60,18 @@ input {                                              /*Form*/
   padding-bottom: 10px;
 }
 input[type = "text"]{                              /*Text input*/
+  display: block;
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+  color: #DE4831;
+  letter-spacing: 4px;
+  vertical-align: center;
+  float: center;
+  opacity: 1.0;
+  padding-left: 10px;
+}
+input[type = "email"]{                              /*Text input*/
   display: block;
   width: 50%;
   height: 40px;
@@ -573,44 +585,27 @@ footer a {
 }
 #select {                                             /*Choose me button*/
   font-family: "Raleway";
-  font-size : 18px;
+  font-size : 15px;
   color : #333333;
   letter-spacing: 3px;
   font-weight: 400;
-/*  padding : 10px 0px;*/
   background-color : white;
-  cursor: pointer;
+  cursor: crosshair;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: center;
-  height: 20px;
   text-align: center;
   margin: 0 auto;
   display: inline;
 }
 strong {
-  padding-right: 4px;
+  padding-right: 3px;
 }
-/*#button:hover {                               
-  font-family: "Raleway";
-  border : solid 0px white;
-  font-size : 18px;
-  color : white;
-  letter-spacing: 3px;
-  font-weight: 400;
-  padding : 10px 30px;
-  background-color : #DE4831;
-  cursor: pointer;
-  padding-right: 300px;
-}*/
-
 #draganddrop {
   font-family: "Raleway";
-  font-size: 18px;
+  font-size: 15px;
   color: #333333;
   letter-spacing: 3px;
   font-weight: 400;
-/*  padding-right: 10px 20px;*/
   background-color : white;
   text-transform: uppercase;
   text-align: center;
@@ -618,7 +613,6 @@ strong {
   margin: 0 auto;
   display: inline;
 }
-
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -737,9 +731,6 @@ strong {
   opacity: .5;
 }
 .submit-container {
-  text-align: center;
   margin: 0 auto;
-  float: center;
-  position: relative;
   width: 100%;
 }
