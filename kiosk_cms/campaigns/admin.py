@@ -1,6 +1,6 @@
-from django import forms
 from django.contrib import admin
 from .models import Campaign
+from .forms import CampaignAdminForm
 from images.models import Image
 
 
@@ -16,22 +16,6 @@ class ImageInline(admin.TabularInline):
             return u'No image file found'
     thumb.short_description = 'Image'
     thumb.allow_tags = True
-
-
-class CampaignAdminForm(forms.ModelForm):
-    def clean_active(self):
-        if self.active.has_changed():
-            active = self.cleaned_data["active"]
-            if active:
-                if self.activate():
-                    return True
-                else:
-                    return False
-            else:
-                if self.deactivate():
-                    return True
-                else:
-                    return False
 
 
 class CampaignAdmin(admin.ModelAdmin):
