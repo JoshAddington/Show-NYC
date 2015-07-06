@@ -336,9 +336,14 @@ footer a {
   text-transform: uppercase;
   padding-top: 20px;
 }
+.filter-list li:hover {
+  opacity: 0.5;
+} 
 #campaignFilter {
   width: 120px;
+  opacity: 1;
 }
+
 #campaignFilter > img {
   margin-left: 15%;
   display: inline-block;
@@ -387,11 +392,12 @@ ul > li:hover ul {
   border: none;
   width: 100%;
 }
+
 #campaign-list li:hover {
   border: none;
-  background-color: white;
-  color:#004459;
+  opacity: 0.5;
 }
+
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;

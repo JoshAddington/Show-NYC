@@ -1,19 +1,19 @@
 <div id="gallery">     <!--Still need to add filter capabilites-->
   <div class="filter">
     <ul class="filter-list">
-        <li><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true">
+        <li><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
           Newest
           </a>
           <span ng-show="sortType == 'id'"></span>
         </li>
         
-        <li><a href="#/gallery" ng-click="sortType='id';sortReverse=false">
+        <li><a href="#/gallery" ng-click="sortType='id';sortReverse=false; setSelectedFilter('oldest');" ng-class="{highlight : 'oldest'=== selectedFilter}">
           Oldest
           </a>
           <span ng-show="sortReverse == 'false'"></span>
         </li>
 
-        <li><a href="#/gallery" ng-click="sortType='score';sortReverse=true">
+        <li><a href="#/gallery" ng-click="sortType='score';sortReverse=true; setSelectedFilter('trending');" ng-class="{highlight : 'trending'=== selectedFilter}">
           Trending
           </a>
           <span ng-show="sortType == 'score'"></span>
