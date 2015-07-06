@@ -1,22 +1,26 @@
 <div id="gallery">     <!--Still need to add filter capabilites-->
   <div class="filter">
     <ul class="filter-list">
-        <li href="#/gallery" ng-click="sortType = 'id';sortReverse=true">
+        <li><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true">
           Newest
+          </a>
           <span ng-show="sortType == 'id'"></span>
         </li>
         
-        <li href="#/gallery" ng-click="sortType='id';sortReverse=false">
+        <li><a href="#/gallery" ng-click="sortType='id';sortReverse=false">
           Oldest
+          </a>
           <span ng-show="sortReverse == 'false'"></span>
         </li>
 
-        <li href="#/gallery" ng-click="sortType='score';sortReverse=true">
+        <li><a href="#/gallery" ng-click="sortType='score';sortReverse=true">
           Trending
+          </a>
           <span ng-show="sortType == 'score'"></span>
         </li>
-        <li id="campaignFilter" href="#/gallery">
+        <li id="campaignFilter"><a href="#/gallery">
           Campaign
+          </a>
           <img width="10" class="dropdown-img" height="10" src="static/icons/arrowdown.png"/>
             <ul id="campaign-list">
                 <li ng-click=""><a href="">Campaign 1</a></li>
