@@ -52,6 +52,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
           }
         };
         console.log("4");
+        console.log("dragover");
         element.bind('dragover', processDragOverOrEnter);
         element.bind('dragenter', processDragOverOrEnter);
         return element.bind('drop', function(event) {
@@ -65,7 +66,6 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
             if (checkSize(size) && isTypeValid(type)) {
               return scope.$apply(function() {
                 scope.file = evt.target.result;
-                //scope.display = false;
                 if (angular.isString(scope.fileName)) {
                   return scope.fileName = name;
                 }

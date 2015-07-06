@@ -51,8 +51,8 @@
        <section class="submit-sec" id="submit-photo">
             <h3>What's Your Photo?</h3> <!--User photo input-->
             <div class="upload-container">
-                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="image" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 
-                     <img  ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
+                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 
+                     <img ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
                 </div>
             </div>
             <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
