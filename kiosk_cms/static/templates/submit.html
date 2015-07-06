@@ -23,7 +23,7 @@
                     </small>
                     <small class="error" 
                             ng-show="submit_info.name.$error.minlength">
-                            Your name is required to be at least 3 characters.
+                            Your name is required to be at least 2 characters.
                     </small>
                 </div>
                 <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
@@ -31,7 +31,7 @@
 
         <section class="submit-sec" id="submit-step2">
                 <h3>What's Your Email?</h3>
-                <input  ng-minlength="3" type="email" name="email" ng-model='imgData.email' required> 
+                <input  ng-minlength="6" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" type="email" name="email" ng-model='imgData.email' required> 
                 <div class="error-container" ng-show="submit_info.email.$invalid && submit_info.submitted">
                   <small class="error" 
                          ng-show="submit_info.email.$error.required">
@@ -43,7 +43,7 @@
                   </small>
                   <small class="error" 
                          ng-show="submit_info.email.$error.minlength">
-                          Your email is required to be at least 3 characters.
+                          Your email is required to be at least 6 characters.
                   </small>
                 </div>
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
