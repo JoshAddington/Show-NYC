@@ -328,7 +328,7 @@ footer a {
   width: 120px;
 }
 #campaignFilter > img {
-  margin-left: 20px;
+  margin-left: 15%;
   display: inline-block;
 }
 ul ul {
@@ -358,9 +358,9 @@ ul > li:hover ul {
   margin-top: 15px;
   padding: 0;
   width: inherit;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: -25px;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: -2%;
   z-index: 10;
   background: #004459;
   overflow: hidden;
@@ -465,10 +465,15 @@ ul > li:hover ul {
   -o-transform: scale(1.1);
   transform:scale(1.1);
 }
-@media (max-width: :767px) {
-  .zoom-container{
-    width: 100%;}
+@media only screen and (max-width:620px) {
+  .zoom-container {
+    width: 100%; 
   }
+  .filter-list li {
+    font-size: 12px;
+  }
+}
+
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
