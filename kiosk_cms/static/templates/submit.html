@@ -12,8 +12,10 @@
             <h3>What's Your Photo?</h3> <!--User photo input-->
             <div class="submit-container">
                 <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
-                <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
-                <p id = "draganddrop"><strong>or </strong> drag and drop below</p>
+                <div id = "submit-info">
+                    <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
+                    <p id = "draganddrop"><strong>or </strong> drag and drop below</p>
+                </div>
             </div>
             <div class="upload-container">
                 <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 

@@ -199,7 +199,7 @@ footer a {
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
-  background-color : #DE4831;
+  background-color : white;
   cursor: pointer;
 }
 /*Menu*/
@@ -301,7 +301,12 @@ footer a {
   text-align: left;
   padding-left: 60px;
   overflow: auto;
-  background-color: #A4D7F4;
+  background: repeating-linear-gradient(
+  #A4D7F4,
+  #A4D7F4 33.33%,
+  white 33.33%,
+  white 66.67%
+  );
 
 }
 #filter {
@@ -531,24 +536,27 @@ footer a {
 #submit-photo {                                        /*Submit Section choose your photo*/
   background-color: white;
   height: 100%;
-  padding-top: 30px;
+  padding-top: 20px;
   opacity: 1.0;
   cursor: default;
   padding-bottom: 0px;
-  border-bottom: solid 20px white;
 }
 #submit-photo h3 {
   letter-spacing: 2px;
   font-size: 30px;
+  background-color: white;
   color: #333333;
-  padding-bottom: 0px;
 }
-#submit-step2 p {
+#submit-photo p {
   color: #333333;
   text-align: center;
   font-size: 15px;
   max-width: 600px;
   margin: 0 auto;
+  background-color: white;
+}
+#submit-info {
+  margin-top: -80px;
 }
 .dropzone {
   width: 400px;
@@ -576,6 +584,7 @@ footer a {
   text-align: center;
   vertical-align: center;
   height: 20px;
+  text-align: center;
   margin: 0 auto;
   display: inline;
 }
@@ -648,22 +657,25 @@ strong {
 }
 
 #campaign-slogan {
-  font-size: 40px;
+  font-size: 300%;
   font-family:'Trebuchet MS';
   padding-top: 2%;
   padding-right: 100px;
   float: left;
+  color: black;
   margin-top: 10px;
   display: inline-block;
 }
 #campaign-information {
-  font-size: 20px;
+  font-size: 50%;
   font-family:'Trebuchet MS';
   padding-bottom: 2%;
   text-transform: uppercase;
   float: right;
+  color: black;
   display: inline;
   margin-top: -50px;
+  margin-bottom: -20px;
 }
 .ribbon {
   background-color: #DE4831;
@@ -723,4 +735,11 @@ strong {
 }
 .highlight {
   opacity: .5;
+}
+.submit-container {
+  text-align: center;
+  margin: 0 auto;
+  float: center;
+  position: relative;
+  width: 100%;
 }
