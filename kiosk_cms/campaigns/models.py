@@ -41,16 +41,12 @@ class Campaign(models.Model):
             raise e
 
     def activate(self):
-        print('hello')
-        if Campaign.objects.filter(default_campaign=False).filter(active=True).exists():
-            raise ValidationError("A non-default campaign is already active")
-        else:
-            campaign = Campaign.objects.get(default_campaign=True)
-            campaign.active = False
-            campaign.save()
-            self.active = True
-            self.save()
-            return self
+        old_campaign = Campaign.objects.get(active=True)
+        old_campaign.active = False
+        old_campaign.save()
+        self.active = True
+        self.save()
+        return self
 
     def deactivate(self):
         default_campaign = Campaign.objects.get(default_campaign=True)
