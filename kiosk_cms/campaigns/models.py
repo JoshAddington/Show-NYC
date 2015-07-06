@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.utils import timezone
 
 
@@ -21,14 +22,14 @@ class Campaign(models.Model):
         return self.sponsor.username
 
     def is_active(self):
-        return self.active.obj
+        return self.active
 
     # sets a campaign as the default campaign if a default campaign has not
     # been set. If successful, sets campaign to active if an active
     # campaign does not exist.
     def make_default(self):
         try:
-            default_campaign = Campaign.objects.get(default=True)
+            default_campaign = Campaign.objects.get(default_campaign=True)
             if default_campaign:
                 return "Default campaign already set to %s" % default_campaign.name
             else:
@@ -40,20 +41,21 @@ class Campaign(models.Model):
             raise e
 
     def activate(self):
-        campaigns = Campaign.objects.filter(default=False).filter(active=True)
-        if campaigns:
-            return False
+        print('hello')
+        if Campaign.objects.filter(default_campaign=False).filter(active=True).exists():
+            raise ValidationError("A non-default campaign is already active")
         else:
-            campaign = Campaign.objects.get(default=True)
+            campaign = Campaign.objects.get(default_campaign=True)
             campaign.active = False
+            campaign.save()
             self.active = True
-            return True
+            self.save()
+            return self
 
     def deactivate(self):
-        if self.active:
-            default_campaign = Campaign.objects.get(default=True)
-            self.active = False
-            default_campaign.active = True
-            return "Campaign %s has been deactivated. Default campaign %s is now active." % (self.name, default_campaign.name)
-        else:
-            return "Campaign %s is not active." % self.name
+        default_campaign = Campaign.objects.get(default_campaign=True)
+        self.active = False
+        default_campaign.active = True
+        default_campaign.save()
+        self.save()
+        return self

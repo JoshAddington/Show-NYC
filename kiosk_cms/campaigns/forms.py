@@ -9,16 +9,19 @@ class CampaignAdminForm(forms.ModelForm):
         fields = ('sponsor', 'active', 'default_campaign', 'name',
                   'slug', 'description', 'start_date', 'end_date')
 
-    def save(self):
-        if self.active.has_changed():
-            active = self.cleaned_data["active"]
-            if active:
-                if self.activate():
-                    return True
+    def save(self, commit=True):
+        instance = super(CampaignAdminForm, self).save(commit=False)
+
+        if self.is_valid():
+
+            # tests if 'active' field has changed
+            if 'active' in self.changed_data:
+                # activate campaign
+                if instance.is_active():
+                    instance.activate()
+                # deactivate campaign
                 else:
-                    return False
-            else:
-                if self.deactivate():
-                    return True
-                else:
-                    return False
+                    instance.deactivate()
+
+            instance.save()
+        return instance
