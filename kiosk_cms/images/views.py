@@ -12,9 +12,9 @@ from rest_framework.response import Response
 from .models import Image
 from .serializers import ImageSerializer
 from campaigns.models import Campaign
+from ip.views import get_ip
 
 
-# Create your views here.
 # /api/images/
 @api_view(['GET', 'POST'])
 def image_collection(request):
@@ -107,11 +107,18 @@ def image_winners_collection(request):
 # /api/images/<image_id>/upvote/
 @api_view(['GET'])
 def image_upvote(request, pk):
-    image = get_object_or_404(Image, pk=pk)
-
     if request.method == 'GET':
-        vote = image.upvote()
-        serializer = ImageSerializer(vote)
+        image = get_object_or_404(Image, pk=pk)
+        ip_addr = get_ip(request)
+        # checks to see if a relation has been created between the ip address
+        # and the image, which indicates a vote.
+        if image.ip_set.filter(ip_address=ip_addr.ip_address).exists():
+            serializer = ImageSerializer(image)
+        else:
+            vote = image.upvote()
+            ip_addr.images.add(image)
+            ip_addr.save()
+            serializer = ImageSerializer(vote)
         return Response(serializer.data, status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
 

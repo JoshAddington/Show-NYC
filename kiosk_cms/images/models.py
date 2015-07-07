@@ -26,12 +26,9 @@ class Image(models.Model):
         return self.campaign_id.name
 
     def upvote(self):
-        if self.campaign_id.is_active():
-            self.score += 1
-            self.save()
-            return self
-        else:
-            return self
+        self.score += 1
+        self.save()
+        return self
 
     def downvote(self):
         if self.score > 0:
