@@ -734,16 +734,25 @@ strong {
 #fullHeart{
   height: 25px;
   width: 25px;
-  margin-top: -50px;
-  padding-left: 10px;
   cursor: auto;
+  position: relative;
+  display: inline-block;
+}
+.vote-space {
+  font-size: 0;
+  overflow: none;
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 15px;
 }
 #photoScore {
+  display: inline-block;
   color: #DE4831;
   font-size: 18px;
   font-style: "Raleway";
-  margin-top: -35px;
-  margin-left: 42px;
+  position: absolute;
+  padding-left: 10px;
+  margin-bottom: 6px;
 }
 #myImg {
   cursor: pointer;

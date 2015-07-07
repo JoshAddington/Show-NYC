@@ -11,15 +11,17 @@
           #emptyHeart{{photo.id}}{
             height: 25px;
             width: 25px;
-            margin-top: -40px;
-            margin-left: 20px;
+            position: relative;
             cursor: pointer;
+            display: inline-block;
           }
         </style>
           <!-- <button ng-click='upvote(photo.id);photo.score = photo.score + 1;changeImage(photo.id);clicked=true' ng-disabled='clicked'> -->
-            <img id = 'emptyHeart{{photo.id}}' ng-click='isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true' ng-disabled='isClicked' src="static/icons/EmptyHeartRed.png">
+          <div class="vote-space">
+            <img id = 'emptyHeart{{photo.id}}' ng-click='isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true' ng-disabled='isClicked' src="static/icons/EmptyHeartRed.png"/>
 
-            <p id="photoScore">{{photo.score}}</p>
+            <span id="photoScore">{{photo.score}}</span>
+          </div>
           <!-- </button> -->
       </div>
       <!-- <img id = "fullHeart" src="static/icons/FullHeartRed.png"> -->
