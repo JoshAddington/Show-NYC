@@ -58,12 +58,42 @@ angular.module('myApp.controllers', [])
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
+  $scope.filterOptions = {
+    opts: [
+      {id : 2, name : 'Show All', campaign_id: true }
+			// {id : 3, name : 'Campaign 5', campaign_id: 5 },
+      // {id : 4, name : 'Campaign 4', campaign_id: 4 },
+      // {id : 5, name : 'Campaign 3', campaign_id: 3 },
+      // {id : 6, name : 'Campaign 2', campaign_id: 2 },
+      // {id : 7, name : 'Campaign 1', campaign_id: 1 }
+    ]
+  };
+
+
+  $scope.filterItem = {
+   opt: $scope.filterOptions.opts[0]
+ }
+
+
+
+
+  $scope.customFilter = function (data) {
+  if (data.campaign_id === $scope.filterItem.opt.campaign_id) {
+    return true;
+  } else if ($scope.filterItem.opt.campaign_id === true) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
   $scope.random = function() {
     console.log("random");
    $scope.load()
    $scope.sortType = 'rank'
   }
+
+
 
   $scope.load = function() {
     inactivePhotos.async().then(function(d) {
@@ -73,7 +103,20 @@ angular.module('myApp.controllers', [])
 
       angular.forEach($scope.photos, function(item) {
         item.rank = 0.5 - Math.random()
+        if ($scope.filterOptions.opts.indexOf(item.campaign_id) == -1) {
+          $scope.filterOptions.opts.push({name: 'Campaign '+item.campaign_id, campaign_id: item.campaign_id}, item.campaign_id)
+        }
       });
+      angular.forEach($scope.filterOptions.opts, function(item, key){
+        if (item.name == undefined) {
+          $scope.filterOptions.opts.splice(key,1)
+        }
+        else {
+          // console.log(item)
+        }
+
+      })
+      console.log($scope.filterOptions.opts)
     });
   }
 
@@ -89,7 +132,7 @@ angular.module('myApp.controllers', [])
       // console.log(element.files[0]);
     }
     $scope.imageIsLoaded = function(e) {
-        $scope.$apply(function() {  
+        $scope.$apply(function() {
             $scope.imageUrl = e.target.result;
             $scope.display = true;
             console.log(e.target.result);
@@ -115,7 +158,7 @@ angular.module('myApp.controllers', [])
 
   			        .success(function(data) {
   			            console.log(data);
-  			            
+
   			        })
                 .error(function(data){
                   console.log(data);
