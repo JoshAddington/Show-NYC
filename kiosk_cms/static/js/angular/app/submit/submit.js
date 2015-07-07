@@ -83,7 +83,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'angular-img-croppe
     };
 })
 
-
+*/
 .directive('validFile', function () {
     return {
         require: 'ngModel',
@@ -100,7 +100,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'angular-img-croppe
         }
     };
 })
-*/
+
 
 .config(function($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';

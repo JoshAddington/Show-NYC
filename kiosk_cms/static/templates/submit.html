@@ -50,34 +50,27 @@
         </section>
        <section class="submit-sec" id="submit-photo">
             <h3>What's Your Photo?</h3><!-- User photo input-->
-        
+            <div class="submit-container">
+                <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+                <span onclick="$('input[type=file]').click()" id='button'>Choose your photo here.</span>
+            </div>
+
             <div class="upload-container">
-                <div class="dropzone" img-cropper-fileread image="cropper.sourceImage" onclick="$('input[type=file]').click()" id="filebutton"> 
-               <!-- <div class="dropzone" img-cropper-fileread image="cropper.sourceImage" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> -->
-                     <img ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
+                <div class="dropzone" img-cropper-fileread image="cropper.sourceImage" file="cropper.croppedImage"onclick="$('input[type=file]').click()" id="filebutton"> 
+                    <div ng-show="cropper.croppedImage!=null"><img ng-model='image.data' id="myImg" ng-src="{{cropper.croppedImage}}" /></div>
+                </div>
+                <div>
+                     <canvas ng-show="cropper.sourceImage!=null" class="cropArea" width="400" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
                 </div>
             </div>
-        
-
-            <div>
-                 <canvas width="400" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
-             </div>
-
-            <div>Cropped Image (Left: {{bounds.left}} Right: {{bounds.right}} Top: {{bounds.top}} Bottom: {{bounds.bottom}})</div>
-            <div ng-show="cropper.croppedImage!=null"><img ng-src="{{cropper.croppedImage}}" /></div>
-            <!--
             <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
                 <small class="error">
                     Please upload a photo.
                 </small>
-            </div> -->
-            <div class="submit-container">
-                <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
-                <span onclick="$('input[type=file]').click()" id='button'>Choose File</span>
             </div>
-            <!--<label class = "submission">
+            <label class="submission">
                 <button class="btn-style" type='submit'>SUBMIT</button>
-            </label> -->
+            </label>
         </section>
     </form>
 </div>

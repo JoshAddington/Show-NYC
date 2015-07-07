@@ -553,7 +553,9 @@ footer a {
 }
 .dropzone {
   width: 400px;
+  height: 300px;
   margin: 0 auto;
+  border: 10px solid black;
 }
 .upload-container {
   margin: 0 auto;
@@ -721,9 +723,11 @@ strong {
   padding-left: 40px;
 }
 #myImg {
-  border: solid white 10px;
   cursor: pointer;
-  margin-top: 40px;
+}
+.cropArea {
+  padding: 15px;
+  background-color: transparent;
 }
 .highlight {
   opacity: .5;
