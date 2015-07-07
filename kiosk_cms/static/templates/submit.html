@@ -49,17 +49,18 @@
                 <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
         </section>
        <section class="submit-sec" id="submit-photo">
-           <!-- <h3>What's Your Photo?</h3> User photo input-->
-            <!--
+            <h3>What's Your Photo?</h3><!-- User photo input-->
+        
             <div class="upload-container">
-                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 
+                <div class="dropzone" img-cropper-fileread image="cropper.sourceImage" onclick="$('input[type=file]').click()" id="filebutton"> 
+               <!-- <div class="dropzone" img-cropper-fileread image="cropper.sourceImage" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> -->
                      <img ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
                 </div>
             </div>
-            -->
+        
 
             <div>
-                 <canvas width="500" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="200" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
+                 <canvas width="400" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
              </div>
 
             <div>Cropped Image (Left: {{bounds.left}} Right: {{bounds.right}} Top: {{bounds.top}} Bottom: {{bounds.bottom}})</div>
