@@ -334,7 +334,7 @@ footer a {
   color: white;
   padding-left: 2%;
   padding-right: 2%;
-  border-right: 2px solid black;
+  border-right: 2px solid white;
   text-transform: uppercase;
   padding-top: 20px;
 }
@@ -613,9 +613,11 @@ ul > li:hover ul {
 #submit-info {
   margin-top: -80px;
 }
-.dropzone {
+.uploadzone {
   width: 400px;
+  height: 300px;
   margin: 0 auto;
+  border: solid #333333 10px;
 }
 .upload-container {
   margin: 0 auto;
@@ -747,9 +749,11 @@ strong {
   padding-left: 40px;
 }
 #myImg {
-  border: solid #333333 10px;
   cursor: pointer;
-  margin-top: 40px;
+}
+.cropArea {
+  padding: 15px;
+  background-color: transparent;
 }
 .highlight {
   opacity: .5;

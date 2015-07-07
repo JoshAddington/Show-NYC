@@ -8,18 +8,20 @@
     <form name="submit_info" novalidate ng-submit="submit()">
         <input type="hidden" ng-model='imgData.campaign_id' value='2'>
 
-        <section class="submit-sec" id="submit-photo">
-            <h3>What's Your Photo?</h3> <!--User photo input-->
+       <section class="submit-sec" id="submit-photo">
+            <h3>What's Your Photo?</h3><!-- User photo input-->
             <div class="submit-container">
-                <input ng-model="image" type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+                <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
                 <div id = "submit-info">
-                    <div onclick="$('input[type=file]').click()" id ='select'>Choose Your Photo Here</div>
-                    <p id = "draganddrop"><strong>or </strong> drag and drop below</p>
+                    <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
                 </div>
             </div>
             <div class="upload-container">
-                <div class="dropzone" file-dropzone="[image/png, image/jpeg]" file="imageUrl" file-name="imageFileName" data-max-file-size="3" onclick="$('input[type=file]').click()" id="filebutton"> 
-                     <img ng-src={{imageUrl}} id="myImg" width="400" height="300" ng-model='image.data'/>
+                <div class="uploadzone" img-cropper-fileread image="cropper.sourceImage" onclick="$('input[type=file]').click()" id="filebutton"> 
+                    <div ng-show="cropper.croppedImage!=null"><img ng-model='image.data' id="myImg" ng-src="{{cropper.croppedImage}}" /></div>
+                </div>
+                <div>
+                     <canvas ng-show="cropper.sourceImage!=null" class="cropArea" width="400" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
                 </div>
             </div>
             <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
@@ -40,7 +42,7 @@
                     Really?
                 </small>
                 <small class="error" ng-show="submit_info.name.$error.minlength">
-                    Your name is required to be at least 3 characters.
+                    Your name is required to be at least 2 characters.
                 </small>
             </div>
             <p>Wait...Why do you need my name?  Don't worry, we won't use your name for anything other than to personalize the emails that we send to you!</p>
@@ -48,7 +50,7 @@
 
         <section class="submit-sec" id="submit-step2">
             <h3>What's Your Email?</h3>
-            <input  ng-minlength="3" type="email" name="email" ng-model='imgData.email' required> 
+            <input  ng-minlength="6" type="email" name="email" ng-model='imgData.email' required> 
             <div class="error-container" ng-show="submit_info.email.$invalid && submit_info.submitted">
                 <small class="error" ng-show="submit_info.email.$error.required">
                     Your email is required.
@@ -57,11 +59,11 @@
                     Not a valid email.
                 </small>
                 <small class="error" ng-show="submit_info.email.$error.minlength">
-                    Your email is required to be at least 3 characters.
+                    Your email is required to be at least 6 characters.
                 </small>
             </div>
             <p>Ugh...Am I going to get bombarded with emails? No, of course not! We will only email you to notify you if your photo won this weeks contest, so keep an eye on that inbox!</p>
-            <label class = "submission">
+            <label class="submission">
                 <button class="btn-style" type='submit'>SUBMIT</button>
             </label>
         </section>
