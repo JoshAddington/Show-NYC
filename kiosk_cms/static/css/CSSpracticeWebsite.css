@@ -527,9 +527,6 @@ footer a {
   margin: 0 auto;
   background-color: white;
 }
-#submit-info {
-  margin-top: -80px;
-}
 .dropzone {
   width: 400px;
   margin: 0 auto;
@@ -548,26 +545,18 @@ footer a {
   font-size : 15px;
   color : #333333;
   letter-spacing: 3px;
-  font-weight: 400;
+  font-weight: 500;
   background-color : white;
-  cursor: crosshair;
+  cursor: pointer;
   text-transform: uppercase;
-  text-align: center;
   margin: 0 auto;
-  display: inline;
+  width: 300px;
+  margin-top: -100px;
+  margin-bottom: -10px;
+  height: 25px;
 }
 strong {
   padding-right: 3px;
-}
-#draganddrop {
-  font-family: "Raleway";
-  font-size: 15px;
-  color: #333333;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 400;
-  background-color : white;
-  display: inline;
 }
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
@@ -674,4 +663,24 @@ strong {
 .submit-container {
   margin: 0 auto;
   width: 100%;
+}
+
+
+
+#photo{
+  text-align: center;
+  cursor: pointer;
+}
+.expand-me {
+  width: 400px;
+  height: 300px;
+}
+.enlarged {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
 }
