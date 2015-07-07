@@ -19,6 +19,7 @@ from ip.views import get_ip
 @api_view(['GET', 'POST'])
 def image_collection(request):
     if request.method == 'GET':
+        ip_addr = get_ip(request)
         images = Image.objects.filter(active=True).filter(flagged=False).select_related()
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
