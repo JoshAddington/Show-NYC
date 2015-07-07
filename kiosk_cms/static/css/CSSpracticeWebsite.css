@@ -1,7 +1,6 @@
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
 /*    Toms Shoes Hex Color Code #A4D7F4   */
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
-
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
@@ -197,6 +196,7 @@ footer a {
   padding : 10px 30px;
   background-color : white;
   cursor: pointer;
+  margin-top: 30px;
   text-transform: uppercase;
 }
 .btn-style:hover {                                /*Submit Button Hover*/
@@ -292,11 +292,15 @@ footer a {
 }
 #grid-head {
   text-align: center;
+  margin-bottom: 0px;
 }
 /*Header for Submit and About sections*/ 
 #campaign {                                    /*Vote Section Campaign Information*/
   overflow: auto;
   background-color: white;
+  max-height: 300px;
+  overflow: none;
+  text-align: center;
 }
 #filter {
   background-color: white;
@@ -408,6 +412,7 @@ footer a {
   background-color: white;
   position: relative;
   overflow: hidden;
+  font-size: 0px;
   padding-top: 30px;
 }
 .zoom-container-about{                          /*Photo grid layout*/
@@ -480,10 +485,8 @@ footer a {
 #submit-step1 p {
   color: #333333;
   text-align: center;
-  font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 10px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
   background-color: white;
@@ -500,11 +503,8 @@ footer a {
 #submit-step2 p {
   color: #333333;
   text-align: center;
-  font-size: 15px white;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 50px;
-  padding-top: 10px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
   background-color: white;
@@ -512,7 +512,7 @@ footer a {
   padding-top: 20px;
   opacity: 1.0;
   cursor: default;
-}
+  display: inline}
 #submit-photo h3 {
   letter-spacing: 2px;
   font-size: 30px;
@@ -564,12 +564,9 @@ strong {
   font-size: 15px;
   color: #333333;
   letter-spacing: 3px;
+  text-transform: uppercase;
   font-weight: 400;
   background-color : white;
-  text-transform: uppercase;
-  text-align: center;
-  vertical-align: center;
-  margin: 0 auto;
   display: inline;
 }
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
