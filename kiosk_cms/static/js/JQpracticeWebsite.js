@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  console.log("ready!");
-
+  // console.log("ready!");
 
   $('#voteButton').click(function() {
     var condition = true;
@@ -34,6 +33,16 @@ $(document).ready(function() {
       $('#aboutButton').removeClass("highlight")}
   }); 
 
+  $('.ribbon').click(function() {
+    var condition = true;
+    if (condition === true){
+      $('#filter-buttons').hide();
+      $('#voteButton').removeClass("highlight")
+      $('#galleryButton').removeClass("highlight")
+      $('#submitButton').addClass("highlight")
+      $('#aboutButton').removeClass("highlight")}
+  }); 
+
    //About Button Display
   $('#aboutButton').click(function() {
     var condition = true;
@@ -44,6 +53,7 @@ $(document).ready(function() {
       $('#submitButton').removeClass("highlight")
       $('#aboutButton').addClass("highlight")}
   }); 
+
 
   // Fixing the highlight on the navigation section
   if(window.location.href.indexOf("vote") > -1) {
@@ -94,12 +104,6 @@ $(document).ready(function() {
     offsetTop = offset.top;
     $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
   };
-
-
-  // function changeImage(){
-  //   document.getElementById("emptyHeart").src ="static/icons/FullHeartRed.png";
-  // };
-
 
 
 });

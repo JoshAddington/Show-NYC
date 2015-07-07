@@ -5,10 +5,7 @@
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
-  color: black; 
-  padding: 0px;
-  left: 0;
-  margin: 0;
+  color: black;
   background-color: white;
 }
 h1 {                                                  /*Heading 1*/ 
@@ -95,7 +92,6 @@ footer p {
   color: white;
   font-family: "Raleway";
   font-size: 14px;
-  margin-bottom: 0px;
   text-align: center;
 }
 footer a {
@@ -130,11 +126,10 @@ footer a {
   width: 100%;
   text-align: center;
 }
-
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
     font-family: "Raleway";
-    padding: 10px 0px 0px 0px;
+    padding-top: 10px;
     text-align: center;
   }
 /*Four buttons*/                                  /*Buttons*/
@@ -203,13 +198,12 @@ footer a {
   background-color : white;
   cursor: pointer;
   text-transform: uppercase;
-  margin-top: 0px;
 }
 .btn-style:hover {                                /*Submit Button Hover*/
   font-family: "Raleway";
-  border : solid 2px #333333;
+  border : solid 2px #DE4831;
   font-size : 18px;
-  color : #333333;
+  color : #DE4831;
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
@@ -233,8 +227,6 @@ footer a {
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
   left: 15px;
-  padding-left: 0px; /*"Menu" spacing*/
-  padding-bottom: 0px; /*"Menu" to options spacing*/
   padding-top: -100px;
   } 
 .icon-close > h1 {
@@ -260,7 +252,7 @@ footer a {
   list-style: none;
   margin: 0;
   letter-spacing: 3px;
-  padding: 20px 0px 0px 0px;
+  padding-top: 20px;
 }
 .menu li {                                      /*Menu option style*/
   background-color: none;
@@ -274,15 +266,11 @@ footer a {
   font-size: 18px;
   text-decoration: none;
 }
-
 .description {
-  margin-top: 0px;
-  margin-bottom: 0px;
   width: 800px;
   margin-left:auto;
   margin-right: auto;
   background-color: white;
-
 }
 #about-section {                                  /*About section extended header*/
   background-color: white;
@@ -304,30 +292,16 @@ footer a {
 }
 #grid-head {
   text-align: center;
-  margin-bottom: 0px;
 }
 /*Header for Submit and About sections*/ 
-
-
 #campaign {                                    /*Vote Section Campaign Information*/
-  max-height: 300px;
-  overflow: none;
-  text-align: left;
-  padding-left: 60px;
   overflow: auto;
-  background: repeating-linear-gradient(
-  #A4D7F4,
-  #A4D7F4 33.33%,
-  white 33.33%,
-  white 66.67%
-  );
-
+  background-color: white;
 }
 #filter {
   background-color: white;
   width: 100%;
   height: 30px;
-  padding-top: 30px;
   text-align: center;
   padding-top: 10px;
 }
@@ -338,7 +312,6 @@ footer a {
   float: center;
   font-size: 15px;
   text-transform: uppercase;
-  text-align: center;
   vertical-align: bottom;
   text-decoration: none;
   letter-spacing: 2px;
@@ -348,8 +321,6 @@ footer a {
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;
-  font-size: 0px;
-  margin-top: 0px;
   height: 20%;
 }
 .zoom-container-vote{                          /*Photo grid layout*/
@@ -358,7 +329,6 @@ footer a {
   display: inline-block;
   width: 33.33%;
   padding-right: 0%; 
-  border-bottom: 0px solid white;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -372,7 +342,6 @@ footer a {
 /* G A L L E R Y   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-gallery{                 /*Photo grid layout*/
   list-style: none;
-  font-size: 0px;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -382,7 +351,6 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 0px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -437,7 +405,6 @@ footer a {
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
-  font-size: 0px;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -448,7 +415,6 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 50%;
-  border: 0px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -486,7 +452,6 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
-  padding-top: 0px;
   opacity: 1.0;
 }
 #submit-title h3{
@@ -500,13 +465,10 @@ footer a {
   font-size: 20px;
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 0px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
   background-color: white;
   height: 100%;
-  padding-top: 0px;
-  padding-bottom: 0px;
   opacity: 1.0;
   cursor: default;
 }
@@ -514,7 +476,6 @@ footer a {
   letter-spacing: 2px;
   font-size: 30px;
   color: #333333;
-  padding-bottom: 0px;
 }
 #submit-step1 p {
   color: #333333;
@@ -522,13 +483,11 @@ footer a {
   font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 0px;
   padding-top: 10px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
   background-color: white;
   height: 100%;
-  padding-top: 0px;
   padding-bottom: 50px;
   opacity: 1.0;
   cursor: default;
@@ -537,7 +496,6 @@ footer a {
   letter-spacing: 2px;
   font-size: 30px;
   color: #333333;
-  padding-bottom: 0px;
 }
 #submit-step2 p {
   color: #333333;
@@ -554,7 +512,6 @@ footer a {
   padding-top: 20px;
   opacity: 1.0;
   cursor: default;
-  padding-bottom: 0px;
 }
 #submit-photo h3 {
   letter-spacing: 2px;
@@ -596,7 +553,6 @@ footer a {
   cursor: crosshair;
   text-transform: uppercase;
   text-align: center;
-  text-align: center;
   margin: 0 auto;
   display: inline;
 }
@@ -630,7 +586,6 @@ strong {
   line-height: 40px;
   right: 20px; /*space between button and right side of the page*/
   bottom: 8px; /*space between button and bottom of the page*/
-  padding-top: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -652,27 +607,14 @@ strong {
 .scroll-top-wrapper i.fa {
   line-height: inherit;
 }
-
 #campaign-slogan {
-  font-size: 300%;
-  font-family:'Trebuchet MS';
-  padding-top: 2%;
-  padding-right: 100px;
-  float: left;
+  font-size: 20px;
+  font-family:'Raleway';
+  text-align: center;
+  margin-bottom: -30px;
+  letter-spacing: 3px;
+  width: 100%;
   color: black;
-  margin-top: 10px;
-  display: inline-block;
-}
-#campaign-information {
-  font-size: 50%;
-  font-family:'Trebuchet MS';
-  padding-bottom: 2%;
-  text-transform: uppercase;
-  float: right;
-  color: black;
-  display: inline;
-  margin-top: -50px;
-  margin-bottom: -20px;
 }
 .ribbon {
   background-color: #DE4831;
@@ -694,7 +636,6 @@ strong {
           box-shadow: 0 0 2px #DE4831;
 }
 .ribbon a {
-  border: 0px solid white;
   color: white;
   display: block;
   font-size: 14px;

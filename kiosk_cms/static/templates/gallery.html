@@ -4,17 +4,14 @@
       Newest
       <span ng-show="sortType == 'id'"></span>
     </a>
-    
     <a href="#/gallery" ng-click="sortType='id';sortReverse=false">
       Oldest
       <span ng-show="sortReverse == 'false'"></span>
     </a>
-
     <a href="#/gallery" ng-click="sortType='score';sortReverse=true">
-      Trending
+      Popular
       <span ng-show="sortType == 'score'"></span>
     </a>
-    
     <a href="#/gallery" ng-click="random()">
       Random
       <span ng-show="sortType == 'rank'"></span>
