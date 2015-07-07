@@ -10,6 +10,7 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.services',
   'myApp.controllers'
+  'angular-img-cropper'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/vote'});
