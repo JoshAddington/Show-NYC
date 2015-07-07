@@ -613,11 +613,10 @@ ul > li:hover ul {
 #submit-info {
   margin-top: -80px;
 }
-.dropzone {
+.uploadzone {
   width: 400px;
   height: 300px;
   margin: 0 auto;
-  border: 10px solid black;
 }
 .upload-container {
   margin: 0 auto;
@@ -643,16 +642,6 @@ ul > li:hover ul {
 }
 strong {
   padding-right: 3px;
-}
-#draganddrop {
-  font-family: "Raleway";
-  font-size: 15px;
-  color: #333333;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 400;
-  background-color : white;
-  display: inline;
 }
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
