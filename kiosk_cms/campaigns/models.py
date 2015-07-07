@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.utils import timezone
 
 
@@ -10,6 +11,7 @@ class Campaign(models.Model):
     slug = models.SlugField(blank=True)
     description = models.TextField(default="Campaign")
     active = models.BooleanField(default=False)
+    default_campaign = models.BooleanField(default=False)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
 
@@ -21,3 +23,19 @@ class Campaign(models.Model):
 
     def is_active(self):
         return self.active
+
+    def activate(self):
+        old_campaign = Campaign.objects.get(active=True)
+        old_campaign.active = False
+        old_campaign.save()
+        self.active = True
+        self.save()
+        return self
+
+    def deactivate(self):
+        default_campaign = Campaign.objects.get(default_campaign=True)
+        self.active = False
+        default_campaign.active = True
+        default_campaign.save()
+        self.save()
+        return self

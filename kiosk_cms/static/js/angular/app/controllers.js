@@ -88,33 +88,34 @@ angular.module('myApp.controllers', [])
 }])
 
 .controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.uploadPhoto = function(element) {
-      var reader = new FileReader();
-      reader.onload = $scope.imageIsLoaded;
-      reader.readAsDataURL(element.files[0]);
-      // console.log(element.files[0]);
-    }
-    $scope.imageIsLoaded = function(e) {
-        $scope.$apply(function() {  
-            $scope.imageUrl = e.target.result;
-            $scope.display = true;
-            console.log(e.target.result);
-        });
-    }
+      $scope.cropper = {};
+      $scope.cropper.sourceImage = null;
+      $scope.cropper.croppedImage   = null;
+      $scope.bounds = {};
+      $scope.bounds.left = 0;
+      $scope.bounds.right = 0;
+      $scope.bounds.top = 0;
+      $scope.bounds.bottom = 0;
+
     $scope.finish = function() {
         console.log("finished");
         alert("thank you!");
         $scope.submit_info.submitted = false;
         $scope.imgData.first_name = null;
         $scope.imgData.email = null;
-        $scope.imageUrl = " ";
+        //$scope.cropper.sourceImage = " ";
+        $scope.cropper.sourceImage = null;
+        $scope.cropper.croppedImage = " ";
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, 400, 300);
       /*** checking to see if form can be valid can be moved to the submit function before storing data and uploading **/
     }
 
     $scope.submit = function() {
         if ($scope.submit_info.$valid) {
           var data = $scope.imgData;
-          var params = {'name': data.first_name, 'email': data.email, 'image': $scope.imageUrl};
+          var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
   				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
                   params

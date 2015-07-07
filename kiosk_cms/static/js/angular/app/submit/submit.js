@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'])
+angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'angular-img-cropper', 'myApp.controllers'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/submit', {
@@ -13,7 +13,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 })
-
+/*
 .directive('fileDropzone', function() {
     return {
       restrict: 'A',
@@ -52,7 +52,6 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
           }
         };
         console.log("4");
-        console.log("dragover");
         element.bind('dragover', processDragOverOrEnter);
         element.bind('dragenter', processDragOverOrEnter);
         return element.bind('drop', function(event) {
@@ -66,6 +65,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
             if (checkSize(size) && isTypeValid(type)) {
               return scope.$apply(function() {
                 scope.file = evt.target.result;
+                //scope.display = false;
                 if (angular.isString(scope.fileName)) {
                   return scope.fileName = name;
                 }
@@ -83,7 +83,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'myApp.controllers'
     };
 })
 
-
+*/
 .directive('validFile', function () {
     return {
         require: 'ngModel',
