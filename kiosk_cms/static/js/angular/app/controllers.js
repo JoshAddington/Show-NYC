@@ -77,6 +77,12 @@ angular.module('myApp.controllers', [])
     });
   }
 
+  $scope.selectedFilter = 'newest';
+  $scope.setSelectedFilter = function(selectedFilter) {
+      $scope.selectedFilter = selectedFilter;
+      console.log(selectedFilter);
+   }
+
   $scope.load()
 
 }])

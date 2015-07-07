@@ -1,13 +1,10 @@
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
 /*    Toms Shoes Hex Color Code #A4D7F4   */
-
+/*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
-  color: black; 
-  padding: 0px;
-  left: 0;
-  margin: 0;
+  color: black;
   background-color: white;
 }
 h1 {                                                  /*Heading 1*/ 
@@ -34,7 +31,7 @@ h3 {                                                  /*Heading 3*/
   color: black;
 }
 header {                                              /*Header*/
-  background: #004459;
+  background: #FFAA00;
   height: 80px;
   overflow: none;
   width: 100%;
@@ -47,11 +44,13 @@ p{                                                  /*Paragraphs*/
   padding: 10px 10px 10px 10px;
   font-size: 15px;
 }
-a:hover {                                           /*Link hover*/
-  opacity: 0.5;
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
 input {                                              /*Form*/
-  text-align: center;
+  text-align: left;
   vertical-align: center;
   float: center;
   margin: 0 auto;
@@ -70,11 +69,23 @@ input[type = "text"]{                              /*Text input*/
   opacity: 1.0;
   padding-left: 10px;
 }
+input[type = "email"]{                              /*Text input*/
+  display: block;
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+  color: #DE4831;
+  letter-spacing: 4px;
+  vertical-align: center;
+  float: center;
+  opacity: 1.0;
+  padding-left: 10px;
+}
 footer {
-  background-color: #004459;
+  background-color: #FFAA00;
   color: white;
   font-family: "Raleway";
-  font-size: 14px;
+  font-size: 12px;
   height: 100%;
   margin-top: -15px;
 }
@@ -82,6 +93,7 @@ footer p {
   color: white;
   font-family: "Raleway";
   font-size: 14px;
+  text-align: center;
 }
 footer a {
   text-decoration: none;
@@ -109,17 +121,17 @@ footer a {
 #gallery{
   background-color: white;
   display: block;
+  overflow: hidden;
 }
 #submit{
   height: 100%;
   width: 100%;
   text-align: center;
 }
-
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
     font-family: "Raleway";
-    padding: 10px 0px 0px 0px;
+    padding-top: 10px;
     text-align: center;
   }
 /*Four buttons*/                                  /*Buttons*/
@@ -179,31 +191,31 @@ footer a {
 }
 .btn-style{                                       /*Submit Button*/
   font-family: "Raleway";
-  border : dashed 3px white;
+  border : dashed 2px #333333;
   font-size : 18px;
-  color : white;
+  color : #333333;
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
-  background-color : #004459;
+  background-color : white;
   cursor: pointer;
+  margin-top: 30px;
   text-transform: uppercase;
-  margin-top: 0px;
 }
 .btn-style:hover {                                /*Submit Button Hover*/
   font-family: "Raleway";
-  border : solid 3px white;
+  border : solid 2px #DE4831;
   font-size : 18px;
-  color : white;
+  color : #DE4831;
   letter-spacing: 3px;
   font-weight: 400;
   padding : 10px 30px;
-  background-color : #DE4831;
+  background-color : white;
   cursor: pointer;
 }
 /*Menu*/
 .menu {                                          /*Slide out menu*/
-  background-color: #1E8A6F; 
+  background-color: #19A65C;
   height: 100%;
   cursor: default;
   position: fixed;
@@ -218,8 +230,6 @@ footer a {
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
   left: 15px;
-  padding-left: 0px; /*"Menu" spacing*/
-  padding-bottom: 0px; /*"Menu" to options spacing*/
   padding-top: -100px;
   } 
 .icon-close > h1 {
@@ -227,8 +237,8 @@ footer a {
 }
 .icon-menu {      
   position: absolute;                              /*Menu banner*/
-  margin-left: 60px;
-  margin-top: 25px;
+  margin-left: 40px;
+  top: 4.5%;
   cursor: pointer;
 }
 .wrap {
@@ -245,7 +255,7 @@ footer a {
   list-style: none;
   margin: 0;
   letter-spacing: 3px;
-  padding: 20px 0px 0px 0px;
+  padding-top: 20px;
 }
 .menu li {                                      /*Menu option style*/
   background-color: none;
@@ -259,33 +269,30 @@ footer a {
   font-size: 18px;
   text-decoration: none;
 }
-
+.menu a:hover {
+  opacity: 0.5;
+}
 .description {
-  margin-top: 0px;
-  margin-bottom: 0px;
   width: 800px;
   margin-left:auto;
   margin-right: auto;
   background-color: white;
-
 }
 #about-section {                                  /*About section extended header*/
   background-color: white;
-  color: #DE4831;
+  color: #333333;
   text-align: left;
   overflow: hidden;
 }
 .about-heading {
-  padding: 100px 20px 0px 10px;
+  padding: 20px 20px 0px 0px;
   letter-spacing: 2px;
   font-size: 30px;
   font-family: "Raleway";
-  color: #DE4831;
-  border-bottom: solid 2px #DE4831;
-  /*text-transform: uppercase;*/
+  color: #333333;
 }
 .about-par{
-  color: #DE4831;
+  color: #333333;
   font-size: 20px;
   max-width: 800px;
 }
@@ -294,42 +301,108 @@ footer a {
   margin-bottom: 0px;
 }
 /*Header for Submit and About sections*/ 
-
-
 #campaign {                                    /*Vote Section Campaign Information*/
+  overflow: auto;
+  background-color: white;
   max-height: 300px;
-  overflow: none;
+  width: 100%;
+  background-color: lightgrey;
+  overflow: hidden;
   text-align: left;
   padding-left: 60px;
-  overflow: auto;
   background-color: #A4D7F4;
-
 }
-#filter {
-  background-color: #004459;
+.filter {
+  background: #FFAA00;
   width: 100%;
-  height: 30px;
-  padding-top: 30px;
-  text-align: center;
-  padding-top: 30px;
+  height: 55px;
+  border-top: 1px solid white;
+  margin-left: -15px;
 }
-#filter a{                                      /*Filters for Gallery Section*/
-  background-color: #004459;
-  cursor: pointer;
+.filter-list {
+  height: inherit;
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+.filter-list li {
+  float: left;
+  font-size: 14px;
+  display: inline-block;
+  height: inherit;
+  font-weight: 500;
   color: white;
-  float: center;
-  text-align: center;
-  vertical-align: bottom;
-  text-decoration: none;
-  letter-spacing: 2px;
-  word-spacing: 30px;
-  padding-bottom: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-right: 2px solid black;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
+.filter-list li:hover {
+  opacity: 0.5;
+} 
+#campaignFilter {
+  width: 120px;
+  opacity: 1;
+}
+
+#campaignFilter > img {
+  margin-left: 15%;
+  display: inline-block;
+}
+ul ul {
+  position: absolute;
+  padding: 0;
+  margin:0;
+  float: left;
+  display: none;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul ul li {
+  display: block;
+  width: inherit;
+  margin:0;
+  border: none;
+}
+
+ul > li:hover ul {
+  display: block;
+}
+#campaign-list {
+  border-top: 2px solid white;
+  margin-top: 15px;
+  padding: 0;
+  width: inherit;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: -2%;
+  z-index: 10;
+  background: #FFAA00;
+  overflow: hidden;
+}
+#campaign-list li {
+  text-transform: none;
+  margin-left: -25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  width: 100%;
+}
+
+#campaign-list li:hover {
+  border: none;
+  opacity: 0.5;
+}
+
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;
-  font-size: 0px;
-  margin-top: 0px;
   height: 20%;
 }
 .zoom-container-vote{                          /*Photo grid layout*/
@@ -338,7 +411,6 @@ footer a {
   display: inline-block;
   width: 33.33%;
   padding-right: 0%; 
-  border-bottom: 0px solid white;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -352,7 +424,6 @@ footer a {
 /* G A L L E R Y   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-gallery{                 /*Photo grid layout*/
   list-style: none;
-  font-size: 0px;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -362,7 +433,6 @@ footer a {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  border: 0px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -410,24 +480,29 @@ footer a {
   -o-transform: scale(1.1);
   transform:scale(1.1);
 }
-@media (max-width: :767px) {
-  .zoom-container{
-    width: 100%;}
+@media only screen and (max-width:620px) {
+  .zoom-container {
+    width: 100%; 
   }
+  .filter-list li {
+    font-size: 12px;
+  }
+}
+
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
-  font-size: 0px;
   background-color: white;
   position: relative;
   overflow: hidden;
+  font-size: 0px;
+  padding-top: 30px;
 }
 .zoom-container-about{                          /*Photo grid layout*/
   position: relative;
   overflow: hidden;
   display: inline-block;
   width: 50%;
-  border: 0px solid #ffffff; /*border around the images*/
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -465,91 +540,78 @@ footer a {
 #submit-title {                                   /*Submit section campaign information*/
   background-color: white;
   height: 100%;
-  padding-top: 10px;
   opacity: 1.0;
 }
 #submit-title h3{
   letter-spacing: 2px;
   font-size: 30px;
-  color: #DE4831;
+  color: #333333;
 }
 #submit-title p {
-  color: #DE4831;
+  color: #333333;
   text-align: center;
   font-size: 20px;
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 20px;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
-  background-color: #004459;
+  background-color: white;
   height: 100%;
-  padding-top: 30px;
-  padding-bottom: 20px;
   opacity: 1.0;
   cursor: default;
-  border-bottom: solid 20px white;
 }
 #submit-step1 h3 {
   letter-spacing: 2px;
   font-size: 30px;
-  color: white;
-  padding-bottom: 40px;
+  color: #333333;
 }
 #submit-step1 p {
-  color: white;
+  color: #333333;
   text-align: center;
-  font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 50px;
-  padding-top: 70px;
 }
 #submit-step2 {                                    /*Submit Section enter your email*/
-  background-color: #004459;
+  background-color: white;
   height: 100%;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   opacity: 1.0;
   cursor: default;
-  border-bottom: solid 20px white;
 }
 #submit-step2 h3 {
   letter-spacing: 2px;
   font-size: 30px;
-  color: white;
-  padding-bottom: 40px;
+  color: #333333;
 }
 #submit-step2 p {
-  color: white;
+  color: #333333;
   text-align: center;
-  font-size: 15px #004459;
   max-width: 600px;
   margin: 0 auto;
-  padding-bottom: 50px;
-  padding-top: 70px;
 }
 #submit-photo {                                        /*Submit Section choose your photo*/
-  background-color: #004459;
+  background-color: white;
   height: 100%;
-  padding-top: 30px;
+  padding-top: 20px;
   opacity: 1.0;
   cursor: default;
-  padding-bottom: 80px;
-  border-bottom: solid 20px white;
-}
+  display: inline}
 #submit-photo h3 {
   letter-spacing: 2px;
   font-size: 30px;
-  color: white;
-  padding-bottom: 0px;
+  background-color: white;
+  color: #333333;
 }
-#submit-step2 p {
-  color: white;
+#submit-photo p {
+  color: #333333;
   text-align: center;
   font-size: 15px;
   max-width: 600px;
   margin: 0 auto;
+  background-color: white;
+}
+#submit-info {
+  margin-top: -80px;
 }
 .dropzone {
   width: 400px;
@@ -564,57 +626,34 @@ footer a {
 }
 #myfile {
   opacity: 0;
+  border: solid 30px #333333;
 }
 #select {                                             /*Choose me button*/
   font-family: "Raleway";
-  border : dashed 0px white;
-  font-size : 18px;
-  color : white;
+  font-size : 15px;
+  color : #333333;
   letter-spacing: 3px;
   font-weight: 400;
-/*  padding : 10px 0px;*/
-  background-color : #004459;
-  cursor: pointer;
+  background-color : white;
+  cursor: crosshair;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: center;
-  height: 20px;
   margin: 0 auto;
   display: inline;
 }
 strong {
-  padding-right: 4px;
+  padding-right: 3px;
 }
-/*#button:hover {                               
-  font-family: "Raleway";
-  border : solid 0px white;
-  font-size : 18px;
-  color : white;
-  letter-spacing: 3px;
-  font-weight: 400;
-  padding : 10px 30px;
-  background-color : #DE4831;
-  cursor: pointer;
-  padding-right: 300px;
-}*/
-
 #draganddrop {
   font-family: "Raleway";
-  font-size: 18px;
-  color: white;
+  font-size: 15px;
+  color: #333333;
   letter-spacing: 3px;
-  font-weight: 400;
-/*  padding-right: 10px 20px;*/
-  background-color : #004459;
   text-transform: uppercase;
-  text-align: center;
-  vertical-align: center;
-  margin: 0 auto;
+  font-weight: 400;
+  background-color : white;
   display: inline;
 }
-
-
-
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -628,8 +667,7 @@ strong {
   height: 40px;
   line-height: 40px;
   right: 20px; /*space between button and right side of the page*/
-  bottom: 275px; /*space between button and bottom of the page*/
-  padding-top: 0px;
+  bottom: 8px; /*space between button and bottom of the page*/
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -651,25 +689,14 @@ strong {
 .scroll-top-wrapper i.fa {
   line-height: inherit;
 }
-
 #campaign-slogan {
-  font-size: 40px;
-  font-family:'Trebuchet MS';
-  padding-top: 2%;
-  /*text-transform: uppercase;*/
-  padding-right: 100px;
-  float: left;
-  margin-top: 10px;
-  display: inline-block;
-}
-#campaign-information {
   font-size: 20px;
-  font-family:'Trebuchet MS';
-  padding-bottom: 2%;
-  text-transform: uppercase;
-  float: right;
-  display: inline;
-  margin-top: -50px;
+  font-family:'Raleway';
+  text-align: center;
+  margin-bottom: -30px;
+  letter-spacing: 3px;
+  width: 100%;
+  color: black;
 }
 .ribbon {
   background-color: #DE4831;
@@ -678,7 +705,7 @@ strong {
   /* top right corner */
   position: fixed;
   right: -50px;
-  top: 40px;
+  top: 30px;
   /* 45 deg cw rotation */
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
@@ -691,10 +718,9 @@ strong {
           box-shadow: 0 0 2px #DE4831;
 }
 .ribbon a {
-  border: 0px solid white;
   color: white;
   display: block;
-  font: bold 80%;
+  font-size: 14px;
   margin: 1px 0;
   padding: 10px 40px;
   text-align: center;
@@ -717,12 +743,13 @@ strong {
 }
 #photoScore {
   color: #DE4831;
-  font-size: 16px;
+  font-size: 18px;
   font-style: "Raleway";
   margin-top: -35px;
   padding-left: 40px;
 }
 #myImg {
+  border: solid #333333 10px;
   cursor: pointer;
 }
 .cropArea {
@@ -731,4 +758,8 @@ strong {
 }
 .highlight {
   opacity: .5;
+}
+.submit-container {
+  margin: 0 auto;
+  width: 100%;
 }

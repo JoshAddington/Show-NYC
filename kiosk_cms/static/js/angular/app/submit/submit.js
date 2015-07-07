@@ -52,7 +52,6 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'angular-img-croppe
           }
         };
         console.log("4");
-        console.log("dragover");
         element.bind('dragover', processDragOverOrEnter);
         element.bind('dragenter', processDragOverOrEnter);
         return element.bind('drop', function(event) {
@@ -66,6 +65,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'angular-img-croppe
             if (checkSize(size) && isTypeValid(type)) {
               return scope.$apply(function() {
                 scope.file = evt.target.result;
+                //scope.display = false;
                 if (angular.isString(scope.fileName)) {
                   return scope.fileName = name;
                 }

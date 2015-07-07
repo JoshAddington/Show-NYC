@@ -5,7 +5,6 @@
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Show NYC</title>
@@ -15,12 +14,11 @@
   <link rel="stylesheet" href="{% static 'bower_components/html5-boilerplate/dist/css/main.css' %}">
   <link rel="stylesheet" href="{% static 'css/CSSpracticeWebsite.css' %}">
   <link rel="stylesheet" href="{% static 'css/hover.css' %}">
-
   <script src="{% static 'bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js' %}"></script>
-
   <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 </head>
+
 <body>
   <header class = "noselect"> <!--Header-->
     <img class="icon-menu" width="24" height="24" src="{% static 'icons/menu48.png' %}">
@@ -32,32 +30,30 @@
   </div>
   <div class = "noselect">
     <div class="menu">
-        <div class="icon-close"> <!--Slide out navagation menu-->
-            <h1>SHOW NYC</h1>
-            <nav>
-                <ul> <!--Navagation options-->
-                    <li><a href="#/vote" id ="voteButton">Vote</a></li>
-                    <li><a href="#/gallery" id ="galleryButton">Archive</a></li>
-                    <li><a href="#/submit" id ="submitButton">Submit</a></li>
-                    <li><a href="#/about" id ="aboutButton">About</a></li>
-                </ul>
-            </nav>
-            <div id="share-buttons"> <!--Share via social media-->
-                <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
-                    <img src="{% static 'icons/FacebookWhite.png' %}" alt="Facebook" />
-                </a>
-                <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
-                    <img src="{% static 'icons/TwitterWhite.png' %}" alt="Twitter" />
-                </a>
-                <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
-                    <img src="{% static 'icons/GoogleWhite.png' %}" alt="Google" />
-                </a>
-            </div>
+      <div class="icon-close"> <!--Slide out navagation menu-->
+        <h1>SHOW NYC</h1>
+        <nav>
+            <ul> <!--Navagation options-->
+                <li><a href="#/vote" id ="voteButton">Vote</a></li>
+                <li><a href="#/gallery" id ="galleryButton">Archive</a></li>
+                <li><a href="#/submit" id ="submitButton">Submit</a></li>
+                <li><a href="#/about" id ="aboutButton">About</a></li>
+            </ul>
+        </nav>
+        <div id="share-buttons"> <!--Share via social media-->
+            <a href="http://www.facebook.com/sharer.php?u=https://controlgroup.com" target="_blank">
+                <img src="{% static 'icons/FacebookWhite.png' %}" alt="Facebook" />
+            </a>
+            <a href="http://www.twitter.com/share?url=http://www.controlgroup.com/&amp;name=Control Group Interns&hashtags=IntersAtCG" target="_blank">
+                <img src="{% static 'icons/TwitterWhite.png' %}" alt="Twitter" />
+            </a>
+            <a href="https://plus.google.com/share?url=https://controlgroup.com" target="_blank">
+                <img src="{% static 'icons/GoogleWhite.png' %}" alt="Google" />
+            </a>
         </div>
+      </div>
     </div>
   </div>
-
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -89,17 +85,14 @@
   <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
   <script src="{% static 'js/JQpracticeWebsite.js' %}"></script>
+  <footer>
+    <p>Created by: Control Group Interns 2015<br>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+  </footer>
 
-    <footer>
-        <p>Created by: Control Group Interns 2015</p>
-        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-    </footer>
-
-    <div class="scroll-top-wrapper ">
-        <span class="scroll-top-inner">
-            <i class="fa fa-2x fa-arrow-circle-up"></i>
-        </span>
-    </div>
-
+  <div class="scroll-top-wrapper ">
+    <span class="scroll-top-inner">
+      <i class="fa fa-2x fa-arrow-circle-up"></i>
+    </span>
+  </div>
 </body>
 </html>
