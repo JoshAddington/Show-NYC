@@ -170,7 +170,7 @@ footer a {
   }
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
-    margin-left: 7px;
+    margin-left: 35px;
 }
 #share-buttons img {                             /*Share icon sizing*/
   width: 20px;
@@ -234,6 +234,7 @@ footer a {
   } 
 .icon-close > h1 {
   font-size: 40px;
+  margin-left: 35px;
 }
 .icon-menu {      
   position: absolute;                              /*Menu banner*/
@@ -241,6 +242,7 @@ footer a {
   top: 4.5%;
   cursor: pointer;
 }
+
 .wrap {
     position: relative;
 }
@@ -256,13 +258,15 @@ footer a {
   margin: 0;
   letter-spacing: 3px;
   padding-top: 20px;
+
 }
-.menu li {                                      /*Menu option style*/
+
+.menu li {                                      Menu option style
   background-color: none;
   padding-bottom: 3px;
-  padding-left: 20px;
   padding-top: 25px;
 }
+
 .menu a {                                       /*Menu listing style*/
   font-family: "Raleway"; 
   letter-spacing: 2px;
