@@ -13,11 +13,11 @@
             <div class="submit-container">
                 <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
                 <div id = "submit-info">
-                    <div onclick="$('input[type=file]').click()" id ='select'>Choose Your Photo Here</div>
+                    <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
                 </div>
             </div>
             <div class="upload-container">
-                <div class="uploadzone" img-cropper-fileread image="cropper.sourceImage" file="cropper.croppedImage"onclick="$('input[type=file]').click()" id="filebutton"> 
+                <div class="uploadzone" img-cropper-fileread image="cropper.sourceImage" onclick="$('input[type=file]').click()" id="filebutton"> 
                     <div ng-show="cropper.croppedImage!=null"><img ng-model='image.data' id="myImg" ng-src="{{cropper.croppedImage}}" /></div>
                 </div>
                 <div>
