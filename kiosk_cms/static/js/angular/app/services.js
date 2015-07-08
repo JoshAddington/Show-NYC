@@ -7,7 +7,7 @@ angular.module('myApp.services', [])
       // $http returns a promise, which has a then function, which also returns a promise
       var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/active_campaigns').then(function (response) {
         // The then function here is an opportunity to modify the response
-        console.log(response.data);
+        // console.log(response.data);
         // The return value gets picked up by the then in the controller.
         return response.data;
       });

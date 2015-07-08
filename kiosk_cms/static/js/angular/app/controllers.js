@@ -42,10 +42,6 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     activePhotos.async().then(function(d) {
       $scope.photos = d;
-
-      angular.forEach($scope.photos, function(item) {
-        item.rank = 0.5 - Math.random()
-      });
     });
       // document.getElementById("fullHeart").hide;
   }
@@ -68,12 +64,6 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     inactivePhotos.async().then(function(d) {
       $scope.photos = d;
-      // return $scope.photos
-      console.log('ctrl')
-
-      angular.forEach($scope.photos, function(item) {
-        item.rank = 0.5 - Math.random()
-      });
     });
   }
 
