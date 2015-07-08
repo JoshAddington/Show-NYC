@@ -145,8 +145,8 @@ angular.module('myApp.controllers', [])
     winningPhotos.async().then(function(d) {
       $scope.photos = d;
       photo = $scope.photos[d.length-1]
-      photo.newId = "fullHeart"
-      photo.newSrc = "static/icons/FullHeartRed.png"
+      photo.newId = "winning-icon"
+      photo.newSrc = "static/icons/prize-red.png"
     });
   }
   $scope.load()
