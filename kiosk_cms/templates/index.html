@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="{% static 'css/hover.css' %}">
   <script src="{% static 'bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js' %}"></script>
   <link href='http://fonts.googleapis.com/css?family=Changa+One|Raleway:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+  <link href="{% static 'css/lightbox.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
       <div class="icon-close"> <!--Slide out navagation menu-->
         <h1>SHOW NYC</h1>
         <nav>
-            <ul> <!--Navagation options-->
+            <ul class="nav-list"> <!--Navagation options-->
                 <li><a href="#/vote" id ="voteButton">Vote</a></li>
                 <li><a href="#/gallery" id ="galleryButton">Archive</a></li>
                 <li><a href="#/submit" id ="submitButton">Submit</a></li>
@@ -65,6 +65,7 @@
   <!-- In production use:
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="{% static 'bower_components/angular/angular.js' %}"></script>
   <script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
@@ -79,20 +80,16 @@
   <script src="{% static 'js/angular/app/components/version/interpolate-filter.js' %} "></script>
   <script src="{% static 'js/angular/app/controllers.js' %} "></script>
   <script src="{% static 'js/angular/app/services.js' %} "></script>
-  <script src="http://w.sharethis.com/button/buttons.js"></script>
   <script type="text/javascript">stLight.options({publisher: "3d484258-68cb-4e80-b286-ef191078786b", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   <script src= "{% static 'js/angular/app/ui_js/ui.js' %} "></script>
-  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
   <script src="{% static 'js/JQpracticeWebsite.js' %}"></script>
+  <script src="{% static 'js/lightbox.js' %}"></script>
   <footer>
-    <p>Created by: Control Group Interns 2015<br>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+      <p><a href="mailto:someone@example.com"> someone@example.com </a> <span> | Made by Control Group Interns</span>
+      </p> 
   </footer>
-
-  <div class="scroll-top-wrapper ">
-    <span class="scroll-top-inner">
-      <i class="fa fa-2x fa-arrow-circle-up"></i>
-    </span>
+  <div class="scroll-top-wrapper hvr-bob">
+    <img src="{% static 'icons/up1.png' %}" />
   </div>
 </body>
 </html>
