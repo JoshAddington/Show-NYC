@@ -689,21 +689,55 @@ strong {
   cursor: pointer;
   opacity: .80;
 }
-@-webkit-keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 }
 
-@keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
   }
 }
 
-.hvr-pulse-grow {
+@-webkit-keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob-float {
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+.hvr-bob {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -713,17 +747,21 @@ strong {
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
-.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
-  -webkit-animation-name: hvr-pulse-grow;
-  animation-name: hvr-pulse-grow;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
+.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
 }
 
 #campaign-slogan {
@@ -773,25 +811,46 @@ strong {
 #fullHeart{
   height: 25px;
   width: 25px;
+  margin-left: 8px;
   cursor: auto;
-  position: relative;
   display: inline-block;
+  position: absolute;
 }
-.vote-space {
+.vote-space {            
+  cursor: pointer;
   font-size: 0;
   overflow: none;
   position: absolute;
-  margin-top: -40px;
-  margin-left: 15px;
+  margin-top: -35px;
+  width: 80px;
+  height: 60px;
+  padding-top: 5px;
+  background-color: rgba(255,  255, 255, 0.2);
+
 }
 #photoScore {
   display: inline-block;
   color: #DE4831;
   font-size: 18px;
   font-style: "Raleway";
-  position: absolute;
-  padding-left: 10px;
-  margin-bottom: 6px;
+  margin-left: 45px;
+  margin-top: -2px;
+}
+.hvr-grow {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #myImg {
   cursor: pointer;
