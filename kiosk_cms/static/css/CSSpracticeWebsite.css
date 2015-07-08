@@ -597,7 +597,6 @@ strong {
   font-size: 20px;
   font-family:'Raleway';
   text-align: center;
-  margin-bottom: -30px;
   letter-spacing: 3px;
   width: 100%;
   color: black;
@@ -683,4 +682,11 @@ strong {
   margin: auto;
   overflow: auto;
   position: fixed;
+}
+#load {
+  text-align: center;}
+#loading {
+  margin-bottom: -20px;
+  width: 50px;
+  height: 10px;
 }
