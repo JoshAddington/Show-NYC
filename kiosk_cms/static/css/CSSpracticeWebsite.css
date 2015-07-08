@@ -350,9 +350,12 @@ footer > p span  {
 .filter-list li a:hover, #campaign-list:hover{
   opacity: 0.5;
 } 
+#campaignFilter {
+  width: 120px;
+}
 #campaignFilter > img {
-  position: relative;
-  margin-left: -32px;
+  position: absolute;
+  margin-left: -28px;
   pointer-events: none;
 }
 #firstFilter {

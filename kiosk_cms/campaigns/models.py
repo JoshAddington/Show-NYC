@@ -6,7 +6,11 @@ from django.utils import timezone
 
 # Create your models here.
 class Campaign(models.Model):
-    sponsor = models.ForeignKey(User, related_name='campaigns', limit_choices_to={'is_staff': True})
+    sponsor = models.ForeignKey(
+        User,
+        related_name='campaigns',
+        limit_choices_to={'is_staff': True}
+    )
     name = models.CharField(max_length=100)
     slug = models.SlugField(blank=True)
     description = models.TextField(default="Campaign")
@@ -25,17 +29,19 @@ class Campaign(models.Model):
         return self.active
 
     def activate(self):
-        old_campaign = Campaign.objects.get(active=True)
-        old_campaign.active = False
-        old_campaign.save()
+        old_campaigns = Campaign.objects.filter(active=True)
+        for campaign in old_campaigns:
+            campaign.active = False
+            campaign.save()
         self.active = True
         self.save()
         return self
 
     def deactivate(self):
-        default_campaign = Campaign.objects.get(default_campaign=True)
+        default_campaigns = Campaign.objects.filter(default_campaign=True)
+        for campaign in default_campaigns:
+            campaign.active = True
+            campaign.save()
         self.active = False
-        default_campaign.active = True
-        default_campaign.save()
         self.save()
         return self
