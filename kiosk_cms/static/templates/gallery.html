@@ -30,7 +30,7 @@
         </li>
     </ul>
   </div>
-    <div class="image-zoom-container-gallery">  <!--Grid of gallery photos-->
+    <div class = "image-zoom-container-gallery">  <!--Grid of gallery photos-->
       <div class="zoom-container-gallery" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
         <img src='{{photo.image}}'/>
           <!-- <p>Id: {{photo.id}}</p>
@@ -38,6 +38,11 @@
           <p>Votes: {{photo.rank}}</p>
           <p>{{sortType}}</p> -->
       </div>
-         <p class="loadingImages" align=center>Loading Images...</p>
+    <div id = "load">
+      <img src="static/icons/ajax-loader.gif" id = "loading">
     </div>
+    <br>
 </div>
+
+
+
