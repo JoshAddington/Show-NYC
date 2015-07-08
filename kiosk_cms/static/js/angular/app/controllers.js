@@ -42,10 +42,6 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     activePhotos.async().then(function(d) {
       $scope.photos = d;
-
-      angular.forEach($scope.photos, function(item) {
-        item.rank = 0.5 - Math.random()
-      });
     });
       // document.getElementById("fullHeart").hide;
   }
@@ -187,4 +183,19 @@ angular.module('myApp.controllers', [])
     }
 }])
 
-.controller('AboutCtrl', function($scope) {});
+.controller('AboutCtrl', ['$scope', 'winningPhotos', function($scope, winningPhotos) {
+
+  $scope.sortType     = 'id'; // set the default sort type
+  $scope.sortReverse  = true;  // set the default sort order
+
+  $scope.load = function() {
+    winningPhotos.async().then(function(d) {
+      $scope.photos = d;
+      photo = $scope.photos[d.length-1]
+      photo.newId = "winning-icon"
+      photo.newSrc = "static/icons/prize-red.png"
+    });
+  }
+  $scope.load()
+
+}]);
