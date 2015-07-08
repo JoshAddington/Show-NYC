@@ -1,32 +1,40 @@
 <div id="vote" class="wrap">
-  <div id = "campaign" class = ".stripe-5"> <!--Information about this week's campaign-->
-    <h3 id = "campaign-slogan">ENTER THEME HERE</p>
+  <div id = "campaign">
+    <h3 id = "campaign-slogan">ENTER THEME HERE</h3>
   </div>
 
   <div class="image-zoom-container-vote"> <!--Grid of vote photos-->
     <div class="zoom-container-vote" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
-      <img src='{{photo.image}}'>
+      <!-- <img src='{{photo.image}}'> -->
+      <a href="{{photo.image}}" data-lightbox="example"><img class="example-" src="{{photo.image}}" alt="image"/></a>
       <div>
         <style>
           #emptyHeart{{photo.id}}{
             height: 25px;
             width: 25px;
-            margin-top: -50px;
-            padding-left: 10px;
-            cursor: pointer;
+            position: absolute;
+            display: inline-block;
+            margin-left: 8px;
           }
         </style>
           <!-- <button ng-click='upvote(photo.id);photo.score = photo.score + 1;changeImage(photo.id);clicked=true' ng-disabled='clicked'> -->
-            <img id = 'emptyHeart{{photo.id}}' ng-click='isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true' ng-disabled='isClicked' src="static/icons/EmptyHeartRed.png">
+          <div class="vote-space">
+            <img class="hvr-grow" id = 'emptyHeart{{photo.id}}' ng-click='isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true' ng-disabled='isClicked' src="static/icons/EmptyHeartRed.png"/>
+
+            <span id="photoScore">{{photo.score}}</span>
+          </div>
           <!-- </button> -->
       </div>
       <!-- <img id = "fullHeart" src="static/icons/FullHeartRed.png"> -->
       <!-- <p>Id: {{photo.id}}</p> -->
-      <p id = "photoScore">{{photo.score}}</p>
+
       <!-- ng-click='downvote(photo.id) -->
       <!-- <p>{{photo}}</p> -->
     </div>
-    <!-- <p align = center>Loading more images...</p> -->
-    <br>
   </div>
+  <div id = "load">
+      <img src="static/icons/ajax-loader.gif" id = "loading">
+  </div>
+  <br>
 </div>
+

@@ -18,13 +18,13 @@
             </a>
             <span ng-show="sortType == 'score'"></span>
           </li>
+
           <li id="campaignFilter">
             <select id='campaign-list' ng-model="filterItem.opt" ng-options="item.name for item in filterOptions.opts"></select>
             <img width="10" class="dropdown-img" height="10" src="static/icons/arrowdown.png"/>
           </li>
       </ul>
     </div>
-
 
   </div>
     <div class = "image-zoom-container-gallery">  <!--Grid of gallery photos-->
@@ -35,8 +35,11 @@
           <p>Votes: {{photo.rank}}</p>
           <p>{{sortType}}</p> -->
       </div>
-
-      <p align = center>Loading more images...</p>
-      <br>
+    <div id = "load">
+      <img src="static/icons/ajax-loader.gif" id = "loading">
     </div>
+    <br>
 </div>
+
+
+
