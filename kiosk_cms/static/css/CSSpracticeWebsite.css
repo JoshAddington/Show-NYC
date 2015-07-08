@@ -173,6 +173,9 @@ footer > p span  {
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
     margin-left: 35px;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
 }
 #share-buttons img {                             /*Share icon sizing*/
   width: 20px;
@@ -267,6 +270,7 @@ footer > p span  {
   background-color: none;
   padding-bottom: 3px;
   padding-top: 25px;
+
 }
 
 .menu a {                                       /*Menu listing style*/
@@ -274,6 +278,9 @@ footer > p span  {
   letter-spacing: 2px;
   font-size: 18px;
   text-decoration: none;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
 .menu a:hover {
   opacity: 0.5;
@@ -346,10 +353,15 @@ footer > p span  {
   text-transform: uppercase;
   padding-top: 20px;
 }
-
+#campaignFilter, .filter-list li a {
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
 .filter-list li a:hover, #campaign-list:hover{
   opacity: 0.5;
 } 
+
 #campaignFilter {
   width: 120px;
 }
@@ -362,10 +374,6 @@ footer > p span  {
 #firstFilter {
   border-left: 2px solid white;
 }
-.filter-list li:hover {
-  opacity: 0.5;
-} 
-
 
 #campaign-list {
   text-transform: uppercase;
