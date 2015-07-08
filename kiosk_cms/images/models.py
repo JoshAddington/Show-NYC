@@ -14,7 +14,7 @@ class Image(models.Model):
     campaign_winner = models.BooleanField(default=False)
 
     def __str__(self):
-    	return self.image.name
+        return self.image.name
 
     def image_name(self):
         return self.image.name
@@ -25,21 +25,23 @@ class Image(models.Model):
     def campaign(self):
         return self.campaign_id.name
 
+    def ip(self, ip):
+        return self.ip_set.filter(ip_address=ip).exists()
+
     def upvote(self):
         if self.campaign_id.is_active():
             self.score += 1
             self.save()
-            return self
-        else:
-            return self
+            return (self, True)
+        return (self, False)
 
     def downvote(self):
         if self.score > 0:
             if self.campaign_id.is_active():
                 self.score -= 1
                 self.save()
-                return self
-        return self
+                return (self, True)
+        return (self, False)
 
     def thumb(self):
         if self.image:
