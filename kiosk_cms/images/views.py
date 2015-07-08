@@ -82,7 +82,7 @@ def image_element(request, pk):
 def active_campaign_images(request):
     if request.method == 'GET':
         now = timezone.now()
-        images = Image.objects.filter(campaign_id__active=True)
+        images = Image.objects.filter(campaign_id__active=True).filter(active=True)
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
@@ -92,7 +92,7 @@ def active_campaign_images(request):
 def inactive_campaign_images(request):
     if request.method == 'GET':
         now = timezone.now()
-        images = Image.objects.filter(campaign_id__active=False)
+        images = Image.objects.filter(campaign_id__active=False).filter(active=True)
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
@@ -100,7 +100,7 @@ def inactive_campaign_images(request):
 @api_view(['GET'])
 def image_winners_collection(request):
     if request.method == 'GET':
-        images = Image.objects.filter(campaign_winner=True).select_related()
+        images = Image.objects.filter(campaign_winner=True).select_related().filter(active=True)
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.contrib.admin import SimpleListFilter
 from .models import Campaign
+from .forms import CampaignAdminForm
 from images.models import Image
 
 
@@ -19,12 +19,10 @@ class ImageInline(admin.TabularInline):
 
 
 class CampaignAdmin(admin.ModelAdmin):
-    list_display = ('name', 'active', 'start_date', 'end_date')
-
-    fields = ('sponsor', 'active', 'name',
-              'slug', 'description', 'start_date', 'end_date')
+    list_display = ('name', 'active', 'default_campaign', 'start_date', 'end_date')
     inlines = [ImageInline, ]
     prepopulated_fields = {'slug': ('name',), }
+    form = CampaignAdminForm
 
 
 # Register your models here.
