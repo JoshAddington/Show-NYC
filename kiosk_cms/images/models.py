@@ -29,17 +29,19 @@ class Image(models.Model):
         return self.ip_set.filter(ip_address=ip).exists()
 
     def upvote(self):
-        self.score += 1
-        self.save()
-        return self
+        if self.campaign_id.is_active():
+            self.score += 1
+            self.save()
+            return (self, True)
+        return (self, False)
 
     def downvote(self):
         if self.score > 0:
             if self.campaign_id.is_active():
                 self.score -= 1
                 self.save()
-                return self
-        return self
+                return (self, True)
+        return (self, False)
 
     def thumb(self):
         if self.image:

@@ -111,14 +111,19 @@ def image_upvote(request, pk):
     if request.method == 'GET':
         image = get_object_or_404(Image, pk=pk)
         ip_addr = get_ip(request)
+
         # checks to see if a relation has been created between the ip address
         # and the image, which indicates a vote.
         if image.ip_set.filter(ip_address=ip_addr.ip_address).exists():
             serializer = ImageSerializer(image)
+
+        # otherwise, adds a vote is the campaign is active.
+        # if a vote was added, creates an IP--Image relation
         else:
-            vote = image.upvote()
-            ip_addr.images.add(image)
-            ip_addr.save()
+            vote, voted = image.upvote()
+            if voted:
+                ip_addr.images.add(image)
+                ip_addr.save()
             serializer = ImageSerializer(vote)
         return Response(serializer.data, status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
