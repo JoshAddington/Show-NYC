@@ -664,7 +664,7 @@ strong {
   background-color : white;
   display: inline;
 }
-.scroll-top-wrapper {                                   /*Scroll to the top button*/
+.scroll-top-wrapper {                                /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
   visibility: hidden;
@@ -672,11 +672,11 @@ strong {
   text-align: center;
   z-index: 10;
   color: white;
-  width: 40px; 
-  height: 40px;
   line-height: 40px;
-  right: 20px; /*space between button and right side of the page*/
-  bottom: 8px; /*space between button and bottom of the page*/
+  width: 40px;
+  height: 40px;
+  right: 15px; /*space between button and right side of the page*/
+  bottom: 15px; /*space between button and bottom of the page*/
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -684,17 +684,48 @@ strong {
   transition: all 0.5s ease-in-out;
 }
 
-.scroll-top-wrapper:hover {
-  background-color: none;
-}
 .scroll-top-wrapper.show {
   visibility: visible;
   cursor: pointer;
   opacity: .80;
 }
-.scroll-top-wrapper i.fa {
-  line-height: inherit;
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
+
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 #campaign-slogan {
   font-size: 20px;
   font-family:'Raleway';
