@@ -1,7 +1,7 @@
 <div id="gallery">     <!--Still need to add filter capabilites-->
   <div class="filter">
     <ul class="filter-list">
-        <li><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
+        <li id="firstFilter"><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
           Newest
           </a>
           <span ng-show="sortType == 'id'"></span>
@@ -32,14 +32,12 @@
   </div>
     <div class="image-zoom-container-gallery">  <!--Grid of gallery photos-->
       <div class="zoom-container-gallery" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
-        <img src='{{photo.image}}'>
+        <img src='{{photo.image}}'/>
           <!-- <p>Id: {{photo.id}}</p>
           <p>Votes: {{photo.score}}</p>
           <p>Votes: {{photo.rank}}</p>
           <p>{{sortType}}</p> -->
       </div>
-
-      <p align = center>Loading more images...</p>
-      <br>
+         <p class="loadingImages" align=center>Loading Images...</p>
     </div>
 </div>
