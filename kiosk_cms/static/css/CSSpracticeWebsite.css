@@ -337,68 +337,30 @@ footer a {
   text-transform: uppercase;
   padding-top: 20px;
 }
-.filter-list li:hover {
+
+.filter-list li a:hover, #campaign-list:hover{
   opacity: 0.5;
 } 
-#campaignFilter {
-  width: 120px;
-  opacity: 1;
-}
-
 #campaignFilter > img {
-  margin-left: 15%;
-  display: inline-block;
-}
-ul ul {
-  position: absolute;
-  padding: 0;
-  margin:0;
-  float: left;
-  display: none;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
-}
-ul ul li {
-  display: block;
-  width: inherit;
-  margin:0;
-  border: none;
-}
-
-ul > li:hover ul {
-  display: block;
-}
-#campaign-list {
-  border-top: 2px solid white;
-  margin-top: 15px;
-  padding: 0;
-  width: inherit;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-left: -2%;
-  z-index: 10;
-  background: #FFAA00;
-  overflow: hidden;
-}
-#campaign-list li {
-  text-transform: none;
+  position: relative;
   margin-left: -25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: none;
-  width: 100%;
+  pointer-events: none;
+  padding: 2px;
 }
 
-#campaign-list li:hover {
+#campaign-list {
+  text-transform: uppercase;
+  color: white;
+  z-index: 10;
   border: none;
-  opacity: 0.5;
+  outline:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background: transparent;
+  cursor:pointer;
+  width: 110px;
 }
-
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;

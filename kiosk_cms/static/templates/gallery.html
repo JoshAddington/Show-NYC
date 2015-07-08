@@ -18,10 +18,10 @@
             </a>
             <span ng-show="sortType == 'score'"></span>
           </li>
-          <div id="">
-            <img width="10" class="dropdown-img" height="10" src="static/icons/arrowdown.png"/>
+          <li id="campaignFilter">
             <select id='campaign-list' ng-model="filterItem.opt" ng-options="item.name for item in filterOptions.opts"></select>
-          </div>
+            <img width="10" class="dropdown-img" height="10" src="static/icons/arrowdown.png"/>
+          </li>
       </ul>
     </div>
 
