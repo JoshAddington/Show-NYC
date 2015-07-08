@@ -7,9 +7,9 @@ body {                                                  /*Body*/
   color: black;
   background-color: white;
 }
-h1 {                                                  /*Heading 1*/ 
+h1 {                                                  /*Heading 1*/
   font-family: "Changa One";
-  color: white; 
+  color: white;
   letter-spacing: 4px;
   font-size: 30px;
   background-color: none;
@@ -99,7 +99,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
-#show-nyc {                                 
+#show-nyc {
   font-family: "Changa One";
   color: white;
   letter-spacing: 4px;
@@ -138,35 +138,35 @@ footer a {
 #voteButton{
     cursor: pointer;
     font-size: 20px;
-    color: white; 
+    color: white;
     font-family: "Raleway";
     display: block;
     height: 30px;
-    width: 75px; 
+    width: 75px;
   }
 #submitButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;  
+    color: white;
     display: block;
     height: 30px;
-    width: 100px; 
+    width: 100px;
   }
 #galleryButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;  
+    color: white;
     display: block;
     height: 30px;
-    width: 100px; 
+    width: 100px;
   }
 #aboutButton{
     cursor: pointer;
     font-size: 20px;
-    color: white; 
+    color: white;
     display: block;
     height: 30px;
-    width: 90px; 
+    width: 90px;
   }
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
@@ -231,11 +231,11 @@ footer a {
   color: white;
   left: 15px;
   padding-top: -100px;
-  } 
+  }
 .icon-close > h1 {
   font-size: 40px;
 }
-.icon-menu {      
+.icon-menu {
   position: absolute;                              /*Menu banner*/
   margin-left: 40px;
   top: 4.5%;
@@ -264,7 +264,7 @@ footer a {
   padding-top: 25px;
 }
 .menu a {                                       /*Menu listing style*/
-  font-family: "Raleway"; 
+  font-family: "Raleway";
   letter-spacing: 2px;
   font-size: 18px;
   text-decoration: none;
@@ -300,7 +300,7 @@ footer a {
   text-align: center;
   margin-bottom: 0px;
 }
-/*Header for Submit and About sections*/ 
+/*Header for Submit and About sections*/
 #campaign {                                    /*Vote Section Campaign Information*/
   overflow: auto;
   background-color: white;
@@ -339,7 +339,7 @@ footer a {
 }
 .filter-list li:hover {
   opacity: 0.5;
-} 
+}
 #campaignFilter {
   width: 120px;
   opacity: 1;
@@ -409,7 +409,7 @@ ul > li:hover ul {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  padding-right: 0%; 
+  padding-right: 0%;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -455,7 +455,7 @@ ul > li:hover ul {
     height: 25%;
     top: 75%;
     left: 0;
-    -webkit-transition: opacity 0.3s linear; 
+    -webkit-transition: opacity 0.3s linear;
 }
 .zoom-container-gallery:hover > div {
   display: block;
@@ -481,7 +481,7 @@ ul > li:hover ul {
 }
 @media only screen and (max-width:620px) {
   .zoom-container {
-    width: 100%; 
+    width: 100%;
   }
   .filter-list li {
     font-size: 12px;
@@ -520,7 +520,7 @@ ul > li:hover ul {
     height: 25%;
     top: 75%;
     left: 0;
-    -webkit-transition: opacity 0.3s linear; 
+    -webkit-transition: opacity 0.3s linear;
 }
 .zoom-container-about:hover > div {
   display: block;
@@ -662,7 +662,7 @@ strong {
   z-index: 10;
   background-color: #DE4831;
   color: white;
-  width: 40px; 
+  width: 40px;
   height: 40px;
   line-height: 40px;
   right: 20px; /*space between button and right side of the page*/
@@ -734,6 +734,7 @@ strong {
   cursor: pointer;
 }
 #fullHeart{
+  position: absolute;
   height: 25px;
   width: 25px;
   margin-top: -50px;
