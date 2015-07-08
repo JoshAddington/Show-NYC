@@ -746,9 +746,6 @@ strong {
   margin: 0 auto;
   width: 100%;
 }
-
-
-
 #photo{
   text-align: center;
   cursor: pointer;
@@ -772,12 +769,4 @@ strong {
   margin-bottom: -20px;
   width: 50px;
   height: 10px;
-}
-#winner {
-  margin-top: 5px;
-  width: 60px;
-  height: 60px;
-  right: 0;
-  position: absolute;
-  z-index: 2;
 }
