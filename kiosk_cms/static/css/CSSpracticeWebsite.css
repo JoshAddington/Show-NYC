@@ -773,3 +773,11 @@ strong {
   width: 50px;
   height: 10px;
 }
+#winner {
+  margin-top: 5px;
+  width: 60px;
+  height: 60px;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+}
