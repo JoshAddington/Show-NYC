@@ -17,6 +17,9 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
   display: none;
+  width: 100%;
+  overflow: none;
+  height: 100%;
 }
 
 .lightbox {
