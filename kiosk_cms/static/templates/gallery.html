@@ -1,7 +1,7 @@
 <div id="gallery">     <!--Still need to add filter capabilites-->
   <div class="filter">
     <ul class="filter-list">
-        <li><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
+        <li id="firstFilter"><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
           Newest
           </a>
           <span ng-show="sortType == 'id'"></span>
