@@ -19,9 +19,8 @@ from ip.views import user_ip
 @api_view(['GET', 'POST'])
 def image_collection(request):
     if request.method == 'GET':
-        ip_addr = user_ip(request)
         images = Image.objects.filter(active=True).filter(flagged=False).select_related()
-        serializer = ImageVoteSerializer(images, many=True, context={'request':request})
+        serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
         try:
@@ -84,7 +83,9 @@ def active_campaign_images(request):
     if request.method == 'GET':
         ip_addr = user_ip(request)
         images = Image.objects.filter(campaign_id__active=True).filter(active=True).filter(flagged=False)
-        serializer = ImageVoteSerializer(images, many=True, context={'request':request})
+
+        # sends the request object to the serializer, so it can compared 
+        serializer = ImageVoteSerializer(images, many=True, context={'ip_addr': ip_addr})
         return Response(serializer.data)
 
 

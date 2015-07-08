@@ -23,10 +23,9 @@ class ImageVoteSerializer(serializers.ModelSerializer):
                   'campaign_id', 'score', 'flagged', 'voted')
 
     def VotedByUser(self, obj):
-        request = self.context.get('request', None)
-        if request is not None:
+        vote_ip = self.context.get('ip_addr', None)
+        if vote_ip is not None:
             try:
-                vote_ip = user_ip(request)
                 voted = IP.objects.filter(images=obj, ip_address=vote_ip.ip_address).count()
                 return voted == 1
             except IP.DoesNotExist:
