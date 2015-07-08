@@ -7,7 +7,7 @@ angular.module('myApp.controllers', [])
   $scope.isClicked = false
 
   $scope.upvote = function(id) {
-    $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
+    $http.get( window.location.protocol + '//' + window.location.host + '/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
         // $scope.load()
       }).
@@ -26,6 +26,7 @@ angular.module('myApp.controllers', [])
 
   $scope.changeImage = function(id){
     // console.log($sco.isClicked)
+    console.log(id);
     console.log(document.getElementById("emptyHeart"+id))
     document.getElementById("emptyHeart"+id).src = 'static/icons/FullHeartRed.png'
     document.getElementById("emptyHeart"+id).id = 'fullHeart'
@@ -42,14 +43,28 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     activePhotos.async().then(function(d) {
       $scope.photos = d;
+      }).then(function(d){
+        angular.forEach($scope.photos, function(item) {
+          if (item.voted){
 
-      angular.forEach($scope.photos, function(item) {
-        item.rank = 0.5 - Math.random()
-      });
+            // document.getElementById("emptyHeart"+item.id).src = 'static/icons/FullHeartRed.png'
+            // document.getElementById("emptyHeart"+item.id).id = 'fullHeart'
+    
+          }
+          else {
+          }
+      })
     });
       // document.getElementById("fullHeart").hide;
   }
 
+  $scope.loadEmptyHeart = function(id){
+
+  }
+
+  $scope.loadFullHeart = function(id){
+
+  }
   $scope.load()
 
 }])
