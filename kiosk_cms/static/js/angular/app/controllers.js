@@ -57,13 +57,13 @@ angular.module('myApp.controllers', [])
           if (item.voted){
             item.loadHeart.id = "fullHeart";
             item.loadHeart.src="static/icons/FullHeartRed.png";
-            item.loadHeart.disabled = true;
+            item.isClicked=true;
 
             }
           else {
             item.loadHeart.id = ("emptyHeart" + item.id);
             item.loadHeart.src = "static/icons/EmptyHeartRed.png";
-            item.loadHeart.disabled = false
+            // photo.isClicked=false
           }
       })
     });
@@ -142,7 +142,7 @@ angular.module('myApp.controllers', [])
 
   			        .success(function(data) {
   			            console.log(data);
-  			            
+
   			        })
                 .error(function(data){
                   console.log(data);
