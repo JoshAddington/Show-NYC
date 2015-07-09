@@ -731,11 +731,11 @@ strong {
   right: -52px;
   top: 35px;
   /* 45 deg cw rotation */
-  -webkit-transform: rotate(50deg);
-     -moz-transform: rotate(50deg);
-      -ms-transform: rotate(50deg);
-       -o-transform: rotate(50deg);
-          transform: rotate(50deg);
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
   /* shadow */
   -webkit-box-shadow: 0 0 0px #DE4831;
      -moz-box-shadow: 0 0 0px #DE4831;
