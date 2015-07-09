@@ -197,8 +197,7 @@ footer > p span  {
   }
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
-    margin-left: 8%;
-    background-color: pink;
+    margin-left: 10%;
     max-width: 150px;
 }
 #share-buttons img {                             /*Share icon sizing*/
@@ -263,15 +262,22 @@ footer > p span  {
 }
 .icon-close > h1 {
   font-size: 48px;
-  background-color: red;
-  margin-left: 8%;
-  max-width: 150px;
+  margin-left: 15%;
+  max-width: 200px;
 }
 .icon-menu {
   position: absolute;                              /*Menu banner*/
   margin-left: 8%;
   top: 4.5%;
   cursor: pointer;
+}
+#menu-shownyc {                                                  /*Heading 1*/
+  font-family: "Changa One";
+  color: white;
+  padding-top: 20px;
+  letter-spacing: 4px;
+  font-size: 36px;
+  background-color: none;
 }
 
 .wrap {
@@ -289,7 +295,6 @@ footer > p span  {
   margin: 0;
   letter-spacing: 3px;
   padding-top: 20px;
-  background-color: green;
   max-width: 200px;
 
 }
@@ -887,14 +892,7 @@ strong {
   width: 40px;
   height: 10px;
 }
-#menu-shownyc {                                                  /*Heading 1*/
-  font-family: "Changa One";
-  color: white;
-  padding-top: 20px;
-  letter-spacing: 4px;
-  font-size: 25px;
-  background-color: none;
-}
+
 
 @media only screen and (max-width:1000px) and (min-width:650px) { 
  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
@@ -940,10 +938,13 @@ strong {
     display: block;
   }
   #share-buttons {                                 /*Share icon positioning*/
-    margin-top: 15px;
+    margin-top: 35px;
+    max-width: 50px;
   }
   .menu { 
     width: 50%;
-
+  }
+  #menu-shownyc {
+    font-size: 28px;
   }
 }
