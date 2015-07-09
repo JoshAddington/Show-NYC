@@ -53,13 +53,17 @@ angular.module('myApp.controllers', [])
       console.log($scope.photos)
       }).then(function(d){
         angular.forEach($scope.photos, function(item) {
+          item.loadHeart = {};
           if (item.voted){
-            console.log(item.voted)
-            item.loadHeart = '<img class="hvr-grow" id="fullHeart" ng-click="isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true" ng-disabled="isClicked" src="static/icons/FullHeartRed.png" disabled> <span id="photoScore">' + item.score + '</span>';
+            item.loadHeart.id = "fullHeart";
+            item.loadHeart.src="static/icons/FullHeartRed.png";
+            item.loadHeart.disabled = true;
+
             }
           else {
-            console.log(item.voted)
-            item.loadHeart = '<img class="hvr-grow" id="emptyHeart'+ item.id +'" ng-click="isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true" ng-disabled="isClicked" src="static/icons/EmptyHeartRed.png"/> <span id="photoScore">' + item.score + '</span>';
+            item.loadHeart.id = ("emptyHeart" + item.id);
+            item.loadHeart.src = "static/icons/EmptyHeartRed.png";
+            item.loadHeart.disabled = false
           }
       })
     });
