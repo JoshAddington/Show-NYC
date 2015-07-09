@@ -10,7 +10,11 @@
     "angular-route": "~1.4.0",
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
+    "angular-sanitize": "~1.4.0",
     "angular-img-cropper": "~1.0.0",
     "html5-boilerplate": "~5.2.0"
+  },
+  "resolutions": {
+    "angular": "1.4.2"
   }
 }
