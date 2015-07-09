@@ -770,25 +770,25 @@ strong {
   z-index: 4;
   /* top right corner */
   position: fixed;
-  right: -50px;
-  top: 30px;
+  right: -52px;
+  top: 35px;
   /* 45 deg cw rotation */
-  -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(50deg);
+     -moz-transform: rotate(50deg);
+      -ms-transform: rotate(50deg);
+       -o-transform: rotate(50deg);
+          transform: rotate(50deg);
   /* shadow */
-  -webkit-box-shadow: 0 0 2px #DE4831;
-     -moz-box-shadow: 0 0 2px #DE4831;
-          box-shadow: 0 0 2px #DE4831;
+  -webkit-box-shadow: 0 0 0px #DE4831;
+     -moz-box-shadow: 0 0 0px #DE4831;
+          box-shadow: 0 0 0px #DE4831;
 }
 .ribbon a {
   color: white;
   display: block;
   font-size: 14px;
-  margin: 1px 0;
-  padding: 10px 40px;
+  margin: 0px 0;
+  padding: 8px 35px;
   text-align: center;
   text-decoration: none;
   overflow: hidden;
