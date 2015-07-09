@@ -109,7 +109,7 @@ footer > p span  {
   width: 100%;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
@@ -241,7 +241,7 @@ footer > p span  {
 .icon-menu {      
   position: absolute;                              /*Menu banner*/
   margin-left: 40px;
-  top: 4.5%;
+  top: 22px;
   cursor: pointer;
 }
 
