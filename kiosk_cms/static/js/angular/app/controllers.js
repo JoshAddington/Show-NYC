@@ -14,7 +14,7 @@ angular.module('myApp.controllers', [])
   $scope.isClicked = false
 
   $scope.upvote = function(id) {
-    $http.get( window.location.protocol + '//' + window.location.host + '/api/images/'+id+'/upvote/').
+    $http.get( 'http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
         // $scope.load()
       }).
@@ -136,7 +136,7 @@ angular.module('myApp.controllers', [])
           var data = $scope.imgData;
           var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
-  				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
+  				$http.post('http://intern-cms-dev.elasticbeanstalk.com//api/images/',
                   params
                   )
 
