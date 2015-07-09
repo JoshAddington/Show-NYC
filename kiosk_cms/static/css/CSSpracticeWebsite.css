@@ -248,8 +248,8 @@ footer > p span  {
   position: fixed;
   top: 0;
   padding: 0;
-  left: 200px;
-  width: 200px; /*width of the menu*/
+  left: 300px;
+  width: 300px; /*width of the menu*/
   z-index: 15;
 }
 .icon-close {                                   /*Menu slide out icon*/
@@ -939,5 +939,11 @@ strong {
   }
   #share-buttons {                                 /*Share icon positioning*/
     margin-top: 15px;
+  }
+  #show-nyc {
+    font-size: 20px;
+  }
+  #campaign-slogan {
+    font-size: 14px;
   }
 }

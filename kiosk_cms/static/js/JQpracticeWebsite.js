@@ -80,10 +80,10 @@ $(document).ready(function() {
 
   $('.icon-close').click(function() {
     $('.menu').animate({
-      left: "-250px"
+      left: "-350px"
     }, 200);
     $('body').animate({
-      left: "-250px"
+      left: "-350px"
     }, 200);
   });
   
