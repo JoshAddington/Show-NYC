@@ -132,7 +132,7 @@ footer > p span  {
 }
 #submit{
   text-align: center;
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 .mobile {
   display: none;
@@ -395,7 +395,7 @@ footer > p span  {
 }
 .filter-list li:hover {
   opacity: 0.5;
-} 
+}
 
 
 #campaign-list {
@@ -796,7 +796,7 @@ strong {
 #fullHeart{
   cursor: auto;
 }
-.vote-space {            
+.vote-space {
   cursor: pointer;
   font-size: 0;
   overflow: none;
@@ -890,8 +890,12 @@ strong {
   background-color: none;
 }
 
+#hide {
+  display: none;
+}
+
 @media only screen and (max-width:1000px) and (min-width:650px) { 
- .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
+ .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
       width: 50%;
   }
 }
@@ -919,7 +923,7 @@ strong {
   .filter-list li {
     font-size: 12px;
   }
-  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
+  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
       width: 100%;
   }
   footer > p {
