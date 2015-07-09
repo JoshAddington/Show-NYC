@@ -907,7 +907,16 @@ strong {
   .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
       width: 100%;
   }
-  /*
+  footer > p {
+    width: 70%;
+    text-transform: uppercase;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    margin: auto;
+    padding-top: 5%;
+  }
+    /*
   #submit{
     display: none;
   }
