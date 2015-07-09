@@ -126,6 +126,7 @@ footer > p span  {
 }
 #submit{
   text-align: center;
+  overflow: scroll;
 }
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
