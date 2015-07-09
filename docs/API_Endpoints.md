@@ -92,9 +92,26 @@ DELETE /api/images/<image_id>/
 
 #### Active Campaign Images
 
-Displays a collection of images from the currently active campaign
+Displays a collection of images from the currently active campaign.
+Includes boolean 'voted' that indicates whether the IP address used
+has voted for the image.
 
-`/api/images/active_campaign/`
+
+```json
+GET /api/images/active_campaign/
+{
+    "id": 19,
+    "image_name": "Ocean-waves.jpg",
+    "image": "https://cg-intern.s3.amazonaws.com/media/Ocean-waves.jpg",
+    "user": "Josh",
+    "user_id": 2,
+    "campaign": "Angelhacks Hackathon",
+    "campaign_id": 1,
+    "score": 5,
+    "flagged": false,
+    "voted": false
+}
+```
 
 #### Inactive Campaign Images
 

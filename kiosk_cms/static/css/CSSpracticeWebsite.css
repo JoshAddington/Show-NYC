@@ -7,9 +7,9 @@ body {                                                  /*Body*/
   color: black;
   background-color: white;
 }
-h1 {                                                  /*Heading 1*/ 
+h1 {                                                  /*Heading 1*/
   font-family: "Changa One";
-  color: white; 
+  color: white;
   letter-spacing: 4px;
   font-size: 30px;
   background-color: none;
@@ -100,8 +100,7 @@ footer > p {
 footer > p span  {
   opacity: 0.75;
 }
-
-#show-nyc {                                 
+#show-nyc {
   font-family: "Changa One";
   color: white;
   letter-spacing: 4px;
@@ -140,35 +139,35 @@ footer > p span  {
 #voteButton{
     cursor: pointer;
     font-size: 20px;
-    color: white; 
+    color: white;
     font-family: "Raleway";
     display: block;
     height: 30px;
-    width: 75px; 
+    width: 75px;
   }
 #submitButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;  
+    color: white;
     display: block;
     height: 30px;
-    width: 100px; 
+    width: 100px;
   }
 #galleryButton{
     cursor: pointer;
     font-size: 20px;
-    color: white;  
+    color: white;
     display: block;
     height: 30px;
-    width: 100px; 
+    width: 100px;
   }
 #aboutButton{
     cursor: pointer;
     font-size: 20px;
-    color: white; 
+    color: white;
     display: block;
     height: 30px;
-    width: 90px; 
+    width: 90px;
   }
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
@@ -233,12 +232,12 @@ footer > p span  {
   color: white;
   left: 15px;
   padding-top: -100px;
-  } 
+  }
 .icon-close > h1 {
   font-size: 40px;
   margin-left: 35px;
 }
-.icon-menu {      
+.icon-menu {
   position: absolute;                              /*Menu banner*/
   margin-left: 40px;
   top: 22px;
@@ -270,7 +269,7 @@ footer > p span  {
 }
 
 .menu a {                                       /*Menu listing style*/
-  font-family: "Raleway"; 
+  font-family: "Raleway";
   letter-spacing: 2px;
   font-size: 18px;
   text-decoration: none;
@@ -306,7 +305,7 @@ footer > p span  {
   text-align: center;
   margin-bottom: 0px;
 }
-/*Header for Submit and About sections*/ 
+/*Header for Submit and About sections*/
 #campaign {                                    /*Vote Section Campaign Information*/
   overflow: auto;
   background-color: white;
@@ -344,71 +343,40 @@ footer > p span  {
   text-transform: uppercase;
   padding-top: 20px;
 }
+
+.filter-list li a:hover, #campaign-list:hover{
+  opacity: 0.5;
+}
+#campaignFilter {
+  width: 120px;
+}
+#campaignFilter > img {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -22px;
+  pointer-events: none;
+}
 #firstFilter {
   border-left: 2px solid white;
 }
 .filter-list li:hover {
   opacity: 0.5;
 } 
-#campaignFilter {
-  width: 25%;
-  opacity: 1;
-}
 
-#campaignFilter > img {
-  margin-left: 8%;
-  display: inline-block;
-}
-ul ul {
-  position: absolute;
-  padding: 0;
-  margin:0;
-  float: left;
-  display: none;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
-}
-ul ul li {
-  display: block;
-  width: inherit;
-  margin:0;
-  border: none;
-}
 
-ul > li:hover ul {
-  display: block;
-}
 #campaign-list {
-  border-top: 2px solid white;
-  margin-top: 15px;
-  padding: 0;
-  width: inherit;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-left: -2%;
+  text-transform: uppercase;
+  color: white;
   z-index: 10;
-  background: #FFAA00;
-  overflow: hidden;
-}
-#campaign-list li {
-  text-transform: none;
-  margin-left: -25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   border: none;
-  width: 100%;
+  outline:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background: transparent;
+  cursor:pointer;
+  width: 110px;
 }
-
-#campaign-list li:hover {
-  border: none;
-  opacity: 0.5;
-}
-
 /* V O T E   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-vote{                    /*Photo grid layout*/
   list-style: none;
@@ -419,7 +387,7 @@ ul > li:hover ul {
   overflow: hidden;
   display: inline-block;
   width: 33.33%;
-  padding-right: 0%; 
+  padding-right: 0%;
   vertical-align: top;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -465,7 +433,7 @@ ul > li:hover ul {
     height: 25%;
     top: 75%;
     left: 0;
-    -webkit-transition: opacity 0.3s linear; 
+    -webkit-transition: opacity 0.3s linear;
 }
 .zoom-container-gallery:hover > div {
   display: block;
@@ -488,6 +456,18 @@ ul > li:hover ul {
   margin: 15px auto;
   color: #DE4831;
 }
+<<<<<<< HEAD
+=======
+@media only screen and (max-width:620px) {
+  .zoom-container {
+    width: 100%;
+  }
+  .filter-list li {
+    font-size: 12px;
+  }
+}
+
+>>>>>>> 8f5a7b020ff5e4d5f46fc823eb9a84f6bb24ab12
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
@@ -520,7 +500,7 @@ ul > li:hover ul {
     height: 25%;
     top: 75%;
     left: 0;
-    -webkit-transition: opacity 0.3s linear; 
+    -webkit-transition: opacity 0.3s linear;
 }
 .zoom-container-about:hover > div {
   display: block;
@@ -789,8 +769,13 @@ strong {
   display: inline-block;
   position: absolute;
 }
-#fullHeart {
-    cursor: auto;
+#fullHeart{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  margin-top: -50px;
+  padding-left: 10px;
+  cursor: auto;
 }
 .vote-space {            
   cursor: pointer;
@@ -802,7 +787,18 @@ strong {
   height: 60px;
   padding-top: 5px;
   background-color: rgba(255,  255, 255, 0.5);
-
+}
+#winning-icon {
+  position: absolute;
+  height: 18%;
+  width: 15%;
+  max-width: 60px;
+  max-height: 60px;
+  top: 0px;
+  padding-top: 10px;
+  right: 0;
+  padding-right: 10px;
+  cursor: default;
 }
 #photoScore {
   display: inline-block;
@@ -866,7 +862,6 @@ strong {
   width: 40px;
   height: 10px;
 }
-
 @media only screen and (max-width:620px) {
   .zoom-container {
     width: 100%; 
