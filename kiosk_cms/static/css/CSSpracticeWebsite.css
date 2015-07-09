@@ -248,8 +248,8 @@ footer > p span  {
   position: fixed;
   top: 0;
   padding: 0;
-  left: -300px;
-  width: 300px; /*width of the menu*/
+  left: 200px;
+  width: 200px; /*width of the menu*/
   z-index: 15;
 }
 .icon-close {                                   /*Menu slide out icon*/
@@ -881,6 +881,15 @@ strong {
   width: 40px;
   height: 10px;
 }
+#menu-shownyc {                                                  /*Heading 1*/
+  font-family: "Changa One";
+  color: white;
+  padding-top: 20px;
+  letter-spacing: 4px;
+  font-size: 25px;
+  background-color: none;
+}
+
 @media only screen and (max-width:1000px) and (min-width:650px) { 
  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
       width: 50%;
@@ -923,5 +932,8 @@ strong {
   }
   .mobile {
     display: block;
+  }
+  #share-buttons {                                 /*Share icon positioning*/
+    margin-top: 15px;
   }
 }
