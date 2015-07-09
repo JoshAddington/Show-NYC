@@ -132,7 +132,7 @@ footer > p span  {
 }
 #submit{
   text-align: center;
-  overflow-y: scroll; 
+  overflow-y: scroll;
 }
 .mobile {
   display: none;
@@ -248,11 +248,12 @@ footer > p span  {
   background-color: #19A65C;
   cursor: default;
   position: fixed;
-  width: 300px;
   height: 100%;
   top: 0;
   padding: 0;
-  z-index: 10;
+  left: -300px;
+  width: 300px; /*width of the menu*/
+  z-index: 15;
 }
 .icon-close {                                   /*Menu slide out icon*/
   position: relative;
@@ -267,7 +268,7 @@ footer > p span  {
 }
 .icon-menu {
   position: absolute;                              /*Menu banner*/
-  margin-left: 8%;
+  margin-left: 2%;
   top: 4.5%;
   cursor: pointer;
 }
@@ -355,10 +356,8 @@ footer > p span  {
   background-color: white;
   max-height: 300px;
   width: 100%;
-  background-color: lightgrey;
   overflow: hidden;
   text-align: left;
-  background-color: #A4D7F4;
 }
 .filter {
   background: #FFAA00;
@@ -406,7 +405,7 @@ footer > p span  {
 }
 .filter-list li:hover {
   opacity: 0.5;
-} 
+}
 
 
 #campaign-list {
@@ -765,7 +764,7 @@ strong {
   text-align: center;
   letter-spacing: 3px;
   width: 100%;
-  color: black;
+  color: #333333;
 }
 .ribbon {
   background-color: #DE4831;
@@ -807,7 +806,7 @@ strong {
 #fullHeart{
   cursor: auto;
 }
-.vote-space {            
+.vote-space {
   cursor: pointer;
   font-size: 0;
   overflow: none;
@@ -894,8 +893,12 @@ strong {
 }
 
 
+#hide {
+  display: none;
+}
+
 @media only screen and (max-width:1000px) and (min-width:650px) { 
- .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
+ .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
       width: 50%;
   }
 }
@@ -923,7 +926,7 @@ strong {
   .filter-list li {
     font-size: 12px;
   }
-  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
+  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
       width: 100%;
   }
   footer > p {
@@ -946,5 +949,11 @@ strong {
   }
   #menu-shownyc {
     font-size: 28px;
+  }
+  #show-nyc {
+    font-size: 20px;
+  }
+  #campaign-slogan {
+    font-size: 14px;
   }
 }

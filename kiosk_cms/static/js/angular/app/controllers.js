@@ -9,7 +9,7 @@ angular.module('myApp.controllers', [])
 
 .controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
 
-  $scope.sortType     = 'score'; // set the default sort type
+  $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
   $scope.isClicked = false
 
@@ -195,7 +195,7 @@ angular.module('myApp.controllers', [])
           var data = $scope.imgData;
           var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
-  				$http.post('http://intern-cms-dev.elasticbeanstalk.com/api/images/',
+  				$http.post('http://intern-cms-dev.elasticbeanstalk.com//api/images/',
                   params
                   )
 
