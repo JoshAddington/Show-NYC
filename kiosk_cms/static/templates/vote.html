@@ -1,11 +1,12 @@
 <div id="vote" class="wrap">
-  <div id="campaign" class = ".stripe-5"> <!--Information about this week's campaign-->
-    <p id="campaign-slogan">ENTER THEME HERE</p>
+  <div id = "campaign">
+    <h3 id = "campaign-slogan">ENTER THEME HERE</h3>
   </div>
 
   <div class="image-zoom-container-vote"> <!--Grid of vote photos-->
     <div class="zoom-container-vote" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
-      <img src='{{photo.image}}'>
+      <!-- <img src='{{photo.image}}'> -->
+      <a href="{{photo.image}}" data-lightbox="example"><img class="example-" src="{{photo.image}}" alt="image"/></a>
       <div>
         <style>
           #emptyHeart{{photo.id}}{
@@ -30,7 +31,10 @@
       <!-- ng-click='downvote(photo.id) -->
       <!-- <p>{{photo}}</p> -->
     </div>
-    <!-- <p align = center>Loading more images...</p> -->
-    <br>
   </div>
+  <div id = "load">
+      <img src="static/icons/ajax-loader.gif" id = "loading">
+  </div>
+  <br>
 </div>
+

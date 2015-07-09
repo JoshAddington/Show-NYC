@@ -1,43 +1,45 @@
-<div id="gallery">     <!--Still need to add filter capabilites-->
-  <div class="filter">
-    <ul class="filter-list">
-        <li id="firstFilter"><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
-          Newest
-          </a>
-          <span ng-show="sortType == 'id'"></span>
-        </li>
-        
-        <li><a href="#/gallery" ng-click="sortType='id';sortReverse=false; setSelectedFilter('oldest');" ng-class="{highlight : 'oldest'=== selectedFilter}">
-          Oldest
-          </a>
-          <span ng-show="sortReverse == 'false'"></span>
-        </li>
+<div id ="gallery">     <!--Still need to add filter capabilites-->
+    <div class="filter">
+      <ul class="filter-list">
+          <li><a href="#/gallery" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
+            Newest
+            </a>
+            <span ng-show="sortType == 'id'"></span>
+          </li>
 
-        <li><a href="#/gallery" ng-click="sortType='score';sortReverse=true; setSelectedFilter('trending');" ng-class="{highlight : 'trending'=== selectedFilter}">
-          Trending
-          </a>
-          <span ng-show="sortType == 'score'"></span>
-        </li>
-        <li id="campaignFilter"><a href="#/gallery">
-          Campaign
-          </a>
-          <img width="10" class="dropdown-img" height="10" src="static/icons/arrowdown.png"/>
-            <ul id="campaign-list">
-                <li ng-click=""><a href="">Campaign 1</a></li>
-                <li ng-click=""><a href="">Campaign 2</a></li>
-                <li ng-click=""><a href="">Campaign 3</a></li>
-            </ul>
-        </li>
-    </ul>
+          <li><a href="#/gallery" ng-click="sortType='id';sortReverse=false; setSelectedFilter('oldest');" ng-class="{highlight : 'oldest'=== selectedFilter}">
+            Oldest
+            </a>
+            <span ng-show="sortReverse == 'false'"></span>
+          </li>
+
+          <li><a href="#/gallery" ng-click="sortType='score';sortReverse=true; setSelectedFilter('trending');" ng-class="{highlight : 'trending'=== selectedFilter}">
+            Trending
+            </a>
+            <span ng-show="sortType == 'score'"></span>
+          </li>
+
+          <li id="campaignFilter">
+            <select id='campaign-list' ng-click="setSelectedFilter('campaign')" ng-class="{highlight : 'campaign'=== selectedFilter}"ng-model="filterItem.opt" ng-options="item.name for item in filterOptions.opts"></select>
+            <img width="10" class="dropdown-img" height="10" src="static/icons/arrowdown.png"/>
+          </li>
+      </ul>
+    </div>
+
   </div>
-    <div class="image-zoom-container-gallery">  <!--Grid of gallery photos-->
-      <div class="zoom-container-gallery" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
-        <img src='{{photo.image}}'/>
+    <div class = "image-zoom-container-gallery">  <!--Grid of gallery photos-->
+      <div class="zoom-container-gallery" ng-repeat="photo in photos | orderBy:sortType:sortReverse | filter:customFilter">
+        <img src='{{photo.image}}'>
           <!-- <p>Id: {{photo.id}}</p>
           <p>Votes: {{photo.score}}</p>
           <p>Votes: {{photo.rank}}</p>
           <p>{{sortType}}</p> -->
       </div>
-         <p class="loadingImages" align=center>Loading Images...</p>
+    <div id = "load">
+      <img src="static/icons/ajax-loader.gif" id = "loading">
     </div>
+    <br>
 </div>
+
+
+
