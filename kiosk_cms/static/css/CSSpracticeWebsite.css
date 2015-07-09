@@ -1,6 +1,11 @@
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
 /*    Toms Shoes Hex Color Code #A4D7F4   */
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
