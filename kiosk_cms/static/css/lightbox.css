@@ -3,6 +3,8 @@
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
 
 /* Preload images */
+
+
 body:after {
   content: url(static/icons/close.png) url(static/icons/loading.gif) url(static/icons/prev.png) url(static/icons/next.png);
   display: none;
@@ -210,7 +212,10 @@ body:after {
   opacity: 1;
 }
 @media only screen and (max-width:650px) {
-    .lightbox {
+    .lightbox, .lb-image, .lightboxOverlay  {
       display: none;
+      opacity: 0;
+
     }
-  }
+}
+
