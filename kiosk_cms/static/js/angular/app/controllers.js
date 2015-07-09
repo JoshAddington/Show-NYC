@@ -1,5 +1,12 @@
 angular.module('myApp.controllers', [])
 
+.filter('unsafe', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
+    };
+})
+
+
 .controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
 
   $scope.sortType     = 'id'; // set the default sort type
@@ -43,28 +50,22 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     activePhotos.async().then(function(d) {
       $scope.photos = d;
+      console.log($scope.photos)
       }).then(function(d){
         angular.forEach($scope.photos, function(item) {
           if (item.voted){
-
-            document.getElementById("emptyHeart"+item.id).src = 'static/icons/FullHeartRed.png'
-            document.getElementById("emptyHeart"+item.id).id = 'fullHeart'
-    
-          }
+            console.log(item.voted)
+            item.loadHeart = '<img class="hvr-grow" id="fullHeart" ng-click="isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true" ng-disabled="isClicked" src="static/icons/FullHeartRed.png" disabled> <span id="photoScore">' + item.score + '</span>';
+            }
           else {
+            console.log(item.voted)
+            item.loadHeart = '<img class="hvr-grow" id="emptyHeart'+ item.id +'" ng-click="isClicked || upvote(photo.id);isClicked || (photo.score = photo.score + 1);isClicked || changeImage(photo.id);isClicked=true" ng-disabled="isClicked" src="static/icons/EmptyHeartRed.png"/> <span id="photoScore">' + item.score + '</span>';
           }
       })
     });
       // document.getElementById("fullHeart").hide;
   }
 
-  $scope.loadEmptyHeart = function(id){
-
-  }
-
-  $scope.loadFullHeart = function(id){
-
-  }
   $scope.load()
 
 }])
@@ -75,7 +76,6 @@ angular.module('myApp.controllers', [])
   $scope.sortReverse  = true;  // set the default sort order
 
   $scope.random = function() {
-    console.log("random");
    $scope.load()
    $scope.sortType = 'rank'
   }

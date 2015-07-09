@@ -77,7 +77,7 @@ def image_element(request, pk):
         image.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-# /api/images/active_campaigns/
+# /api/images/active_campaign/
 @api_view(['GET'])
 def active_campaign_images(request):
     if request.method == 'GET':
