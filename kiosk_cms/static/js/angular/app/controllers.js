@@ -195,7 +195,7 @@ angular.module('myApp.controllers', [])
           var data = $scope.imgData;
           var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
-  				$http.post('http://intern-cms-dev.elasticbeanstalk.com//api/images/',
+  				$http.post('http://intern-cms-dev.elasticbeanstalk.com/api/images/',
                   params
                   )
 
