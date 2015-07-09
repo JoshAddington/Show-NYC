@@ -197,7 +197,9 @@ footer > p span  {
   }
 #share-buttons {                                 /*Share icon positioning*/
     margin-top: 100px;
-    margin-left: 35px;
+    margin-left: 8%;
+    background-color: pink;
+    max-width: 150px;
 }
 #share-buttons img {                             /*Share icon sizing*/
   width: 20px;
@@ -240,13 +242,14 @@ footer > p span  {
   background-color : white;
   cursor: pointer;
 }
+
 /*Menu*/
 
 .menu {                                          /*Slide out menu*/
   background-color: #19A65C;
   cursor: default;
   position: fixed;
-  width: 25%;
+  width: 300px;
   height: 100%;
   top: 0;
   padding: 0;
@@ -256,14 +259,17 @@ footer > p span  {
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
-  padding-top: -100px;
+  margin-top: 10%;
 }
 .icon-close > h1 {
-  margin-left: 35px;
+  font-size: 48px;
+  background-color: red;
+  margin-left: 8%;
+  max-width: 150px;
 }
 .icon-menu {
   position: absolute;                              /*Menu banner*/
-  margin-left: 40px;
+  margin-left: 8%;
   top: 4.5%;
   cursor: pointer;
 }
@@ -283,6 +289,8 @@ footer > p span  {
   margin: 0;
   letter-spacing: 3px;
   padding-top: 20px;
+  background-color: green;
+  max-width: 200px;
 
 }
 
@@ -933,5 +941,9 @@ strong {
   }
   #share-buttons {                                 /*Share icon positioning*/
     margin-top: 15px;
+  }
+  .menu { 
+    width: 50%;
+
   }
 }
