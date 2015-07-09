@@ -87,7 +87,7 @@ angular.module('myApp.controllers', [])
   $scope.sortReverse  = true;  // set the default sort order
   $scope.filterOptions = {
     opts: [
-      {id : 2, name : 'Campaign', campaign_id: true }
+      {id : 2, name : 'Campaigns', campaign: 'All' }
     ]
   };
 
@@ -100,9 +100,9 @@ angular.module('myApp.controllers', [])
 
 
   $scope.customFilter = function (data) {
-  if (data.campaign_id === $scope.filterItem.opt.campaign_id) {
+  if (data.campaign === $scope.filterItem.opt.campaign) {
     return true;
-  } else if ($scope.filterItem.opt.campaign_id === true) {
+  } else if ($scope.filterItem.opt.campaign === "All") {
     return true;
   } else {
     return false;
@@ -123,13 +123,14 @@ angular.module('myApp.controllers', [])
       console.log('ctrl')
 
       angular.forEach($scope.photos, function(item) {
-        item.rank = 0.5 - Math.random()
-        if ($scope.filterOptions.opts.indexOf(item.campaign_id) == -1) {
-          $scope.filterOptions.opts.push({name: 'Campaign '+item.campaign_id, campaign_id: item.campaign_id}, item.campaign_id)
+        if ($scope.filterOptions.opts.indexOf(item.campaign) == -1) {
+          console.log(item)
+          $scope.filterOptions.opts.push({name: item.campaign, campaign: item.campaign}, item.campaign)
         }
       });
       angular.forEach($scope.filterOptions.opts, function(item, key){
         if (item.name == undefined) {
+          console.log(item)
           $scope.filterOptions.opts.splice(key,1)
         }
         else {
