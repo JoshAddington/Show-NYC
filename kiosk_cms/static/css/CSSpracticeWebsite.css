@@ -915,11 +915,7 @@ strong {
   }
   footer > p {
     width: 70%;
-    text-transform: uppercase;
-    color: white;
     font-size: 13px;
-    text-align: center;
-    margin: auto;
     padding-top: 5%;
   }
     /*
