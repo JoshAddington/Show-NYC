@@ -113,7 +113,7 @@ footer > p span  {
   width: 100%;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
@@ -266,7 +266,7 @@ footer > p span  {
 .icon-menu {
   position: absolute;                              /*Menu banner*/
   margin-left: 40px;
-  top: 4.5%;
+  top: 22px;
   cursor: pointer;
 }
 
@@ -288,7 +288,7 @@ footer > p span  {
 
 }
 
-.menu li {                                      Menu option style
+.menu li {                                      
   background-color: none;
   padding-bottom: 3px;
   padding-top: 25px;
@@ -344,10 +344,8 @@ footer > p span  {
   background-color: white;
   max-height: 300px;
   width: 100%;
-  background-color: lightgrey;
   overflow: hidden;
   text-align: left;
-  background-color: #A4D7F4;
 }
 .filter {
   background: #FFAA00;
@@ -374,7 +372,6 @@ footer > p span  {
   color: white;
   padding-left: 2%;
   padding-right: 2%;
-  border-right: 2px solid white;
   text-transform: uppercase;
   padding-top: 20px;
 }
@@ -491,7 +488,6 @@ footer > p span  {
   margin: 15px auto;
   color: #DE4831;
 }
-
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
@@ -755,7 +751,7 @@ strong {
   text-align: center;
   letter-spacing: 3px;
   width: 100%;
-  color: black;
+  color: #333333;
 }
 .ribbon {
   background-color: #DE4831;
@@ -763,8 +759,8 @@ strong {
   z-index: 4;
   /* top right corner */
   position: fixed;
-  right: -50px;
-  top: 30px;
+  right: -52px;
+  top: 35px;
   /* 45 deg cw rotation */
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
@@ -772,16 +768,16 @@ strong {
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
   /* shadow */
-  -webkit-box-shadow: 0 0 2px #DE4831;
-     -moz-box-shadow: 0 0 2px #DE4831;
-          box-shadow: 0 0 2px #DE4831;
+  -webkit-box-shadow: 0 0 0px #DE4831;
+     -moz-box-shadow: 0 0 0px #DE4831;
+          box-shadow: 0 0 0px #DE4831;
 }
 .ribbon a {
   color: white;
   display: block;
   font-size: 14px;
-  margin: 1px 0;
-  padding: 10px 40px;
+  margin: 0px 0;
+  padding: 8px 35px;
   text-align: center;
   text-decoration: none;
   overflow: hidden;
@@ -881,6 +877,7 @@ strong {
   width: 40px;
   height: 10px;
 }
+
 @media only screen and (max-width:1000px) and (min-width:650px) { 
  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
       width: 50%;
@@ -906,12 +903,30 @@ strong {
   -o-animation: none !important;
   -ms-animation: none !important;
   animation: none !important;
+
+  }
+  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
+      width: 100%;
   }
   .filter-list li {
     font-size: 12px;
   }
-  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
-      width: 100%;
+  .menu ul {                                      /*Menu option layout*/
+  list-style: none;
+  margin: 0;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  }
+  .ribbon {
+  /* top right corner */
+  right: -48px;
+  top: 30px;
+
+  }
+  .ribbon a {
+    font-size: 12px;
+    margin: 0px 0;
+    padding: 6px 32px;
   }
   footer > p {
     width: 70%;
