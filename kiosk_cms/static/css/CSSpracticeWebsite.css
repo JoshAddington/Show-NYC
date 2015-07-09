@@ -878,7 +878,7 @@ strong {
   .menu li {                                      
   background-color: none;
   padding-bottom: 0px;
-  padding-top: 5px;
+  padding-top: 15px;
   }
   .menu a {                                       /*Menu listing style*/
   font-family: "Raleway"; 
@@ -894,13 +894,6 @@ strong {
     width: 20px;
     height: 20px;
     padding: 10px;
-  }
-  h1 {                                                  /*Heading 1*/ 
-    font-family: "Changa One";
-    color: white; 
-    letter-spacing: 0px;
-    font-size: 15px;
-    background-color: none;
   }
   .menu {                                          /*Slide out menu*/
     background-color: #19A65C;
