@@ -1,6 +1,11 @@
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
 /*    Toms Shoes Hex Color Code #A4D7F4   */
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {                                                  /*Body*/
   font-family: "Raleway";
   font-size: 16px;
@@ -108,7 +113,7 @@ footer > p span  {
   width: 100%;
   text-align: center;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
@@ -121,12 +126,34 @@ footer > p span  {
 }
 #gallery{
   background-color: white;
+  height: 100%;
   display: block;
   overflow: hidden;
 }
 #submit{
   text-align: center;
-  overflow: scroll;
+  overflow-y: scroll; 
+}
+.mobile {
+  display: none;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+.info-text {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.info-text > h3, p{
+  text-align: center;
+}
+.info-text > button {
+  font-weight: 800;
+  background-color: #DE4831;
+  border: none;
+  color: white;
+  padding: 5px;
+
 }
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
@@ -239,7 +266,7 @@ footer > p span  {
 .icon-menu {
   position: absolute;                              /*Menu banner*/
   margin-left: 40px;
-  top: 22px;
+  top: 4.5%;
   cursor: pointer;
 }
 
@@ -261,7 +288,7 @@ footer > p span  {
 
 }
 
-.menu li {                                      
+.menu li {                                      Menu option style
   background-color: none;
   padding-bottom: 3px;
   padding-top: 25px;
@@ -286,6 +313,7 @@ footer > p span  {
   width: 80%;
   margin: 50px auto;
   background-color: white;
+  text-align: left;
 }
 
 .about-heading {
@@ -296,12 +324,15 @@ footer > p span  {
   color: #333333;
   max-width: 800px;
   margin: 0 auto;
+  text-align: left;
 }
 .about-par{
+  text-align: left;
   color: #333333;
-  font-size: 20px;
+  font-size: 17px;
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 25px;
 }
 #grid-head {
   text-align: center;
@@ -313,8 +344,10 @@ footer > p span  {
   background-color: white;
   max-height: 300px;
   width: 100%;
+  background-color: lightgrey;
   overflow: hidden;
   text-align: left;
+  background-color: #A4D7F4;
 }
 .filter {
   background: #FFAA00;
@@ -457,6 +490,7 @@ footer > p span  {
   margin: 15px auto;
   color: #DE4831;
 }
+
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
@@ -720,7 +754,7 @@ strong {
   text-align: center;
   letter-spacing: 3px;
   width: 100%;
-  color: #333333;
+  color: black;
 }
 .ribbon {
   background-color: #DE4831;
@@ -738,16 +772,16 @@ strong {
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
   /* shadow */
-  -webkit-box-shadow: 0 0 0px #DE4831;
-     -moz-box-shadow: 0 0 0px #DE4831;
-          box-shadow: 0 0 0px #DE4831;
+  -webkit-box-shadow: 0 0 2px #DE4831;
+     -moz-box-shadow: 0 0 2px #DE4831;
+          box-shadow: 0 0 2px #DE4831;
 }
 .ribbon a {
   color: white;
   display: block;
   font-size: 14px;
-  margin: 0px 0;
-  padding: 8px 35px;
+  margin: 1px 0;
+  padding: 10px 40px;
   text-align: center;
   text-decoration: none;
   overflow: hidden;
@@ -881,30 +915,23 @@ strong {
   -o-animation: none !important;
   -ms-animation: none !important;
   animation: none !important;
-
-  }
-  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
-      width: 100%;
   }
   .filter-list li {
     font-size: 12px;
   }
-  .menu ul {                                      /*Menu option layout*/
-  list-style: none;
-  margin: 0;
-  letter-spacing: 3px;
-  padding-top: 10px;
+  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
+      width: 100%;
   }
-  .ribbon {
-  /* top right corner */
-  right: -48px;
-  top: 30px;
-
+  footer > p {
+    width: 70%;
+    font-size: 13px;
+    padding-top: 5%;
   }
-  .ribbon a {
-    font-size: 12px;
-    margin: 0px 0;
-    padding: 6px 32px;
+  #submit{
+    display: none;
+  }
+  .mobile {
+    display: block;
   }
   #share-buttons {                                 /*Share icon positioning*/
     margin-top: 15px;
