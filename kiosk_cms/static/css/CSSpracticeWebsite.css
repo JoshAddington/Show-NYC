@@ -248,7 +248,7 @@ footer > p span  {
   position: fixed;
   top: 0;
   padding: 0;
-  left: 300px;
+  left: -300px;
   width: 300px; /*width of the menu*/
   z-index: 15;
 }
