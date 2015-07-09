@@ -1,12 +1,5 @@
 angular.module('myApp.controllers', [])
 
-.filter('unsafe', function($sce) {
-    return function(val) {
-        return $sce.trustAsHtml(val);
-    };
-})
-
-
 .controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
 
   $scope.sortType     = 'id'; // set the default sort type
@@ -14,7 +7,7 @@ angular.module('myApp.controllers', [])
   $scope.isClicked = false
 
   $scope.upvote = function(id) {
-    $http.get( 'http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
+    $http.get( window.location.protocol + '//' + window.location.host + '/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
         // $scope.load()
       }).
@@ -50,22 +43,18 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     activePhotos.async().then(function(d) {
       $scope.photos = d;
-      console.log($scope.photos)
       }).then(function(d){
         angular.forEach($scope.photos, function(item) {
-          item.loadHeart = {};
           if (item.voted){
-            item.loadHeart.id = "fullHeart";
-            item.loadHeart.src="static/icons/FullHeartRed.png";
-            item.isClicked=true;
 
-            }
+            // document.getElementById("emptyHeart"+item.id).src = 'static/icons/FullHeartRed.png'
+            // document.getElementById("emptyHeart"+item.id).id = 'fullHeart'
+    
+          }
           else {
-            item.loadHeart.id = ("emptyHeart" + item.id);
-            item.loadHeart.src = "static/icons/EmptyHeartRed.png";
-            // photo.isClicked=false
           }
       })
+
     });
       // document.getElementById("fullHeart").hide;
   }
@@ -110,6 +99,7 @@ angular.module('myApp.controllers', [])
 };
 
   $scope.random = function() {
+    console.log("random");
    $scope.load()
    $scope.sortType = 'rank'
   }
@@ -194,7 +184,7 @@ angular.module('myApp.controllers', [])
           var data = $scope.imgData;
           var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
-  				$http.post('http://intern-cms-dev.elasticbeanstalk.com//api/images/',
+  				$http.post( window.location.protocol + '//' + window.location.host + '/api/images/',
                   params
                   )
 

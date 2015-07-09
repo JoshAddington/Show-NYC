@@ -98,7 +98,7 @@ has voted for the image.
 
 
 ```json
-GET /api/images/active_campaigns/
+GET /api/images/active_campaign/
 {
     "id": 19,
     "image_name": "Ocean-waves.jpg",
