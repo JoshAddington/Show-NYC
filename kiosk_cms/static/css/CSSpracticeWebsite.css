@@ -121,12 +121,33 @@ footer > p span  {
 }
 #gallery{
   background-color: white;
+  height: 100%;
   display: block;
   overflow: hidden;
 }
 #submit{
   text-align: center;
-  overflow: scroll;
+}
+.mobile {
+  display: none;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+.info-text {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.info-text > h3, p{
+  text-align: center;
+}
+.info-text > button {
+  font-weight: 800;
+  background-color: #DE4831;
+  border: none;
+  color: white;
+  padding: 5px;
+
 }
 /*Buttons*/
 .tabs {                                            /*Buttons class (.tabs)*/
@@ -286,6 +307,7 @@ footer > p span  {
   width: 80%;
   margin: 50px auto;
   background-color: white;
+  text-align: left;
 }
 
 .about-heading {
@@ -296,12 +318,15 @@ footer > p span  {
   color: #333333;
   max-width: 800px;
   margin: 0 auto;
+  text-align: left;
 }
 .about-par{
+  text-align: left;
   color: #333333;
-  font-size: 20px;
+  font-size: 17px;
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 25px;
 }
 #grid-head {
   text-align: center;
@@ -882,4 +907,11 @@ strong {
   .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{  
       width: 100%;
   }
+  /*
+  #submit{
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }*/
 }
