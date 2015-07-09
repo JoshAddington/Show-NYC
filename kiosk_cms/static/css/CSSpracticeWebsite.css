@@ -136,7 +136,7 @@ footer > p span  {
 }
 .mobile {
   display: none;
-  height: 100%;
+  height: 80%;
   width: 80%;
   margin: 0 auto;
 }
@@ -241,26 +241,24 @@ footer > p span  {
   cursor: pointer;
 }
 /*Menu*/
+
 .menu {                                          /*Slide out menu*/
   background-color: #19A65C;
-  height: 100%;
   cursor: default;
   position: fixed;
+  width: 25%;
+  height: 100%;
   top: 0;
   padding: 0;
-  left: 200px;
-  width: 200px; /*width of the menu*/
-  z-index: 15;
+  z-index: 10;
 }
 .icon-close {                                   /*Menu slide out icon*/
   position: relative;
   font-size: 30px; /*size of the "Menu" text*/
   color: white;
-  left: 15px;
   padding-top: -100px;
-  }
+}
 .icon-close > h1 {
-  font-size: 40px;
   margin-left: 35px;
 }
 .icon-menu {
