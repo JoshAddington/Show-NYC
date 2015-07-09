@@ -726,10 +726,11 @@ strong {
   background-color: #DE4831;
   overflow-x: hidden;
   z-index: 4;
+  text-transform: uppercase;
   /* top right corner */
   position: fixed;
-  right: -52px;
-  top: 35px;
+  right: -35px;
+  top: 8px;
   /* 45 deg cw rotation */
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
