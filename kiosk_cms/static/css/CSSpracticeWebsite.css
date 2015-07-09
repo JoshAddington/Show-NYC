@@ -268,7 +268,7 @@ footer > p span  {
 }
 .icon-menu {
   position: absolute;                              /*Menu banner*/
-  margin-left: 2%;
+  margin-left: 5%;
   top: 4.5%;
   cursor: pointer;
 }
