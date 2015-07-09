@@ -891,4 +891,31 @@ strong {
   font-size: 14px;
   text-decoration: none;
   }
+  #share-buttons {                                 /*Share icon positioning*/
+    margin-top: 20px;
+    margin-left: 35px;
+  }
+  #share-buttons img {                             /*Share icon sizing*/
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+  }
+  h1 {                                                  /*Heading 1*/ 
+    font-family: "Changa One";
+    color: white; 
+    letter-spacing: 0px;
+    font-size: 15px;
+    background-color: none;
+  }
+  .menu {                                          /*Slide out menu*/
+    background-color: #19A65C;
+    height: 100%;
+    cursor: default;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    left: -300px;
+    width: 300px; /*width of the menu*/
+    z-index: 15;
+  }
 }
