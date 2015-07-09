@@ -9,7 +9,7 @@ angular.module('myApp.controllers', [])
 
 .controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
 
-  $scope.sortType     = 'id'; // set the default sort type
+  $scope.sortType     = 'score'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
   $scope.isClicked = false
 
