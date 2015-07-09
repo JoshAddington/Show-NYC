@@ -10,11 +10,10 @@
         </section>
         <h3 id="grid-head" class="about-heading">Check Out Past Campaign Winners</h3>
     </div>
-    <div class = "image-zoom-container-about">  <!--Grid of past campaign winning photos-->
-        <div class = "zoom-container-about" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
+    <div class="image-zoom-container-about">  <!--Grid of past campaign winning photos-->
+        <div class="zoom-container-about" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
             <img id="{{photo.newId}}" src='{{photo.newSrc}}'>
             <img src='{{photo.image}}'>
-           
         </div>
     </div>
 </div>
