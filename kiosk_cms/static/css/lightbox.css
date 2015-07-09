@@ -209,3 +209,11 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+@media only screen and (max-width:650px) {
+    .lightbox, .lb-image, .lightboxOverlay  {
+      display: none;
+      opacity: 0;
+
+    }
+}
+
