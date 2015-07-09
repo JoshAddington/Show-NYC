@@ -105,6 +105,10 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
   };
 
+  $('#photo').click(function(){
+    $('#photo').addClass('.enlarged');
+  })
+
 
 });
 

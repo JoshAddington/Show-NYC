@@ -70,6 +70,13 @@ angular.module('myApp.controllers', [])
       // document.getElementById("fullHeart").hide;
   }
 
+  $scope.loadEmptyHeart = function(id){
+
+  }
+
+  $scope.loadFullHeart = function(id){
+
+  }
   $scope.load()
 
 }])
@@ -78,11 +85,36 @@ angular.module('myApp.controllers', [])
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
+  $scope.filterOptions = {
+    opts: [
+      {id : 2, name : 'Campaign', campaign_id: true }
+    ]
+  };
+
+
+  $scope.filterItem = {
+   opt: $scope.filterOptions.opts[0]
+ }
+
+
+
+
+  $scope.customFilter = function (data) {
+  if (data.campaign_id === $scope.filterItem.opt.campaign_id) {
+    return true;
+  } else if ($scope.filterItem.opt.campaign_id === true) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
   $scope.random = function() {
    $scope.load()
    $scope.sortType = 'rank'
   }
+
+
 
   $scope.load = function() {
     inactivePhotos.async().then(function(d) {
@@ -92,7 +124,20 @@ angular.module('myApp.controllers', [])
 
       angular.forEach($scope.photos, function(item) {
         item.rank = 0.5 - Math.random()
+        if ($scope.filterOptions.opts.indexOf(item.campaign_id) == -1) {
+          $scope.filterOptions.opts.push({name: 'Campaign '+item.campaign_id, campaign_id: item.campaign_id}, item.campaign_id)
+        }
       });
+      angular.forEach($scope.filterOptions.opts, function(item, key){
+        if (item.name == undefined) {
+          $scope.filterOptions.opts.splice(key,1)
+        }
+        else {
+          // console.log(item)
+        }
+
+      })
+      console.log($scope.filterOptions.opts)
     });
   }
 
@@ -116,6 +161,19 @@ angular.module('myApp.controllers', [])
       $scope.bounds.top = 0;
       $scope.bounds.bottom = 0;
 
+      $scope.uploadPhoto = function(element) {
+        var reader = new FileReader();
+        reader.onload = $scope.imageIsLoaded;
+        reader.readAsDataURL(element.files[0]);
+        // console.log(element.files[0]);
+      }
+      $scope.imageIsLoaded = function(e) {
+          $scope.$apply(function() {
+              $scope.imageUrl = e.target.result;
+              $scope.display = true;
+              console.log(e.target.result);
+          });
+      }
     $scope.finish = function() {
         console.log("finished");
         alert("thank you!");
@@ -155,4 +213,19 @@ angular.module('myApp.controllers', [])
     }
 }])
 
-.controller('AboutCtrl', function($scope) {});
+.controller('AboutCtrl', ['$scope', 'winningPhotos', function($scope, winningPhotos) {
+
+  $scope.sortType     = 'id'; // set the default sort type
+  $scope.sortReverse  = true;  // set the default sort order
+
+  $scope.load = function() {
+    winningPhotos.async().then(function(d) {
+      $scope.photos = d;
+      photo = $scope.photos[d.length-1]
+      photo.newId = "winning-icon"
+      photo.newSrc = "static/icons/prize-red.png"
+    });
+  }
+  $scope.load()
+
+}]);
