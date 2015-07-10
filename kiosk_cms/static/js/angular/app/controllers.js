@@ -14,7 +14,7 @@ angular.module('myApp.controllers', [])
   $scope.isClicked = false
 
   $scope.upvote = function(id) {
-    $http.get( 'http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
+    $http.get( window.location.protocol + '//' + window.location.host + '/api/images/'+id+'/upvote/', {params: {user_id: 20}}).
       success(function(data, status, headers, config) {
       }).
       error(function(data, status, headers, config) {

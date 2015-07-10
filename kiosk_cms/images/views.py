@@ -109,6 +109,7 @@ def image_winners_collection(request):
 @api_view(['GET'])
 def image_upvote(request, pk):
     if request.method == 'GET':
+        print(request.GET.get('user_id'))
         image = get_object_or_404(Image, pk=pk)
         ip_addr = user_ip(request)
 
