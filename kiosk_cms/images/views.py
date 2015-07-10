@@ -84,7 +84,7 @@ def active_campaign_images(request):
         ip_addr = user_ip(request)
         images = Image.objects.filter(campaign_id__active=True).filter(active=True).filter(flagged=False)
 
-        # sends the request object to the serializer, so it can compared 
+        # sends the request object to the serializer, so it can compared
         serializer = ImageVoteSerializer(images, many=True, context={'ip_addr': ip_addr})
         return Response(serializer.data)
 
@@ -101,7 +101,7 @@ def inactive_campaign_images(request):
 @api_view(['GET'])
 def image_winners_collection(request):
     if request.method == 'GET':
-        images = Image.objects.filter(campaign_winner=True).select_related().filter(active=True)
+        images = Image.objects.filter(campaign_winner=True).select_related().filter(active=True).order_by('id')
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
