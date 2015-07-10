@@ -369,14 +369,15 @@ footer > p span  {
 }
 .filter-list {
   width: 450px;
+  padding-left: 0;
   height: inherit;
   list-style-type: none;
-  margin: auto;
+  margin: 0 auto;
   overflow: hidden;
   float: center;
 }
 .filter-list li {
-  float: left;
+  float: none;
   font-size: 14px;
   display: inline-block;
   height: inherit;
@@ -922,6 +923,9 @@ strong {
   -o-animation: none !important;
   -ms-animation: none !important;
   animation: none !important;
+  }
+  .filter-list{
+    width: 400px;
   }
   .filter-list li {
     font-size: 12px;
