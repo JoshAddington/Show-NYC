@@ -3,7 +3,8 @@ from .models import IP
 
 
 def user_ip(request):
-    if request.GET.get('user_id') is not None:
+    print(request.GET.items())
+    if request.GET.get('device_id') is not None:
         ip, created = IP.objects.get_or_create(ip_address=request.GET.get('device_id'))
         print(ip.ip_address)
     else:
