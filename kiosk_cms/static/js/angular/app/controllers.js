@@ -222,7 +222,7 @@ angular.module('myApp.controllers', [])
   $scope.load = function() {
     winningPhotos.async().then(function(d) {
       $scope.photos = d;
-      photo = $scope.photos[0]
+      photo = $scope.photos[d.length-1]
       photo.newId = "winning-icon"
       photo.newSrc = "static/icons/prize-red.png"
     });
