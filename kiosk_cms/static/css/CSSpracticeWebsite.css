@@ -113,7 +113,7 @@ footer > p span  {
   width: 100%;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /*Four page displays and headers*/                 /*Initial page display*/
 #about {
@@ -366,6 +366,7 @@ footer > p span  {
   text-align: center;
   float: center;
   margin: 0 auto;
+  padding: 0px;
   width: 100%;
 }
 .filter-list {
@@ -377,10 +378,11 @@ footer > p span  {
   float: center;
   margin: 0 auto;
   width: 100%;
+  padding: 0px;
 }
 .filter-list li {
-  float: left;
-  font-size: 14px;
+  float: center;
+  font-size: 12px;
   display: inline-block;
   height: inherit;
   font-weight: 500;
@@ -399,12 +401,13 @@ footer > p span  {
   text-align: center;
   float: center;
   margin: 0 auto;
+  padding: 0px;
 }
 .filter-list li a:hover, #campaign-list:hover{
   opacity: 0.5;
 }
 #campaignFilter {
-  width: 120px;
+  min-width: 115px;
 }
 #campaignFilter > img {
   position: absolute;
@@ -909,6 +912,13 @@ strong {
   display: none;
 }
 
+@media only screen and (min-width:650px) {
+  .filter-list li {
+    width: 115px;
+  }
+}
+
+
 @media only screen and (max-width:1000px) and (min-width:650px) { 
  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
       width: 50%;
@@ -960,7 +970,7 @@ strong {
     font-size: 28px;
   }
   #show-nyc {
-    font-size: 20px;
+    font-size: 200%;
   }
   #campaign-slogan {
     font-size: 14px;
