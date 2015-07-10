@@ -70,13 +70,12 @@ angular.module('myApp.controllers', [])
       // document.getElementById("fullHeart").hide;
   }
 
-  $scope.loadEmptyHeart = function(id){
-
-  }
-
-  $scope.loadFullHeart = function(id){
-
-  }
+  $scope.selectedFilter = 'newest';
+  $scope.setSelectedFilter = function(selectedFilter) {
+      $scope.selectedFilter = selectedFilter;
+      console.log(selectedFilter);
+   }
+   
   $scope.load()
 
 }])
