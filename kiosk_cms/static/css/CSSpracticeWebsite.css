@@ -1,4 +1,4 @@
-/*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
+/*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #fil    ORANGE: #E37814   */
 /*    Toms Shoes Hex Color Code #A4D7F4   */
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
 
@@ -361,19 +361,22 @@ footer > p span  {
 }
 .filter {
   background: #FFAA00;
-  width: 100%;
   height: 55px;
   border-top: 1px solid white;
-  margin: auto;
   text-align: center;
+  float: center;
+  margin: 0 auto;
+  width: 100%;
 }
 .filter-list {
-  width: 450px;
   height: inherit;
   list-style-type: none;
-  margin: auto;
+  background-color: #FFAA00;
   overflow: hidden;
+  text-align: center;
   float: center;
+  margin: 0 auto;
+  width: 100%;
 }
 .filter-list li {
   float: left;
@@ -382,12 +385,21 @@ footer > p span  {
   height: inherit;
   font-weight: 500;
   color: white;
+  background-color: #FFAA00;
   padding-left: 2%;
   padding-right: 2%;
   text-transform: uppercase;
   padding-top: 20px;
+  text-align: center;
+  float: center;
+  margin: 0 auto;
 }
-
+#centerrr {
+  width: 100%;
+  text-align: center;
+  float: center;
+  margin: 0 auto;
+}
 .filter-list li a:hover, #campaign-list:hover{
   opacity: 0.5;
 }
