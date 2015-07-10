@@ -69,6 +69,7 @@ $(document).ready(function() {
   if(window.location.href.indexOf("about") > -1) {
     $('#aboutButton').trigger("click");
   };
+  
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
     $('.menu').animate({
@@ -79,16 +80,10 @@ $(document).ready(function() {
 
   $('.icon-close').click(function() {
     $('.menu').animate({
-
       left: "-52%"
     }, 200);
     $('body').animate({
       left: "-52%"
-
-      left: "-350px"
-    }, 200);
-    $('body').animate({
-      left: "-350px"
     }, 200);
   });
   
@@ -116,5 +111,6 @@ $(document).ready(function() {
 
 
 });
+
 
 
