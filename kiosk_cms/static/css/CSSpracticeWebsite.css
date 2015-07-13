@@ -1,5 +1,5 @@
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
-/*    Toms Shoes Hex Color Code #A4D7F4   */
+/*    Control Group: #00ABD5 */
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
 
 html, body {
@@ -354,11 +354,11 @@ footer > p span  {
 /*Header for Submit and About sections*/
 #campaign {                                    /*Vote Section Campaign Information*/
   overflow: auto;
-  background-color: white;
+  background-color: #f9f9f9;
   max-height: 300px;
   width: 100%;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
 }
 .filter {
   background: #FFAA00;
@@ -761,14 +761,25 @@ strong {
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
-
 #campaign-slogan {
   font-size: 20px;
   font-family:'Raleway';
   text-align: center;
   letter-spacing: 3px;
-  width: 100%;
+  padding-left: 10px;
+  float: center;
+  color: #00ABD5;
+  display: inline-block;
+}
+#campaign-intro {
+  font-size: 20px;
+  font-family:'Raleway';
+  text-align: center;
+  letter-spacing: 3px;
   color: #333333;
+  float: center;
+  text-transform: uppercase;
+  display: inline-block;
 }
 .ribbon {
   background-color: #DE4831;
@@ -958,6 +969,9 @@ strong {
     font-size: 20px;
   }
   #campaign-slogan {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  #campaign-intro {
+    font-size: 12px;
   }
 }
