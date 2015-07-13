@@ -13,7 +13,7 @@
     <div class="image-zoom-container-about">  <!--Grid of past campaign winning photos-->
         <div class="zoom-container-about" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
             <img id="{{photo.newId || 'hide'}}" src='{{photo.newSrc}}'>
-            <img src='{{photo.image}}'>
+            <a href="{{photo.image}}" data-lightbox="example"><img class="example-" src="{{photo.image}}" alt="image"/></a>
         </div>
     </div>
 </div>
