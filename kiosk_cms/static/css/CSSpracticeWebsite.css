@@ -625,13 +625,14 @@ footer > p span  {
   background-color: #f9f9f9;
 }
 #submit-info {
-  margin-top: -80px;
+  /*margin-top: -80px;*/
 }
 .uploadzone {
   width: 400px;
   height: 300px;
   margin: 0 auto;
   border: solid #333333 10px;
+  display: none;
 }
 .upload-container {
   margin: 0 auto;
@@ -640,7 +641,6 @@ footer > p span  {
 }
 #myfile {
   opacity: 0;
-  border: solid 30px #333333;
 }
 #select {                                             /*Choose me button*/
   font-family: "Raleway";
@@ -653,8 +653,10 @@ footer > p span  {
   text-transform: uppercase;
   margin: 0 auto;
   width: 300px;
-  margin-top: -100px;
-  margin-bottom: 10px;
+  padding-top: 6px;
+  border: solid #333333 2px;
+  margin-top: -40px;
+  margin-bottom: 30px;
   height: 25px;
 }
 strong {

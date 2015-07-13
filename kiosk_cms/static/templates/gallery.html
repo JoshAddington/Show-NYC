@@ -29,7 +29,7 @@
   </div>
     <div class="image-zoom-container-gallery">  <!--Grid of gallery photos-->
       <div class="zoom-container-gallery" ng-repeat="photo in photos | orderBy:sortType:sortReverse | filter:customFilter">
-        <img src='{{photo.image}}'>
+        <a href="{{photo.image}}" data-lightbox="example"><img class="example-" src="{{photo.image}}" alt="image"/></a>
           <!-- <p>Id: {{photo.id}}</p>
           <p>Votes: {{photo.score}}</p>
           <p>Votes: {{photo.rank}}</p>
