@@ -17,24 +17,25 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
   display: none;
-  width: 100%;
+/*  width: 100%;
+  height: 100%;*/
   overflow: none;
-  height: 100%;
 }
 
 .lightbox {
   position: absolute;
-  left: 0;
+/*  left: 0;*/
   width: 100%;
   z-index: 10000;
   text-align: center;
-  line-height: 0;
-  font-weight: normal;
+  /*line-height: 0;*/
+  /*font-weight: normal;*/
 }
 
 .lightbox .lb-image {
   display: block;
-  height: auto;
+  /*height: auto;*/
+  height: 400px;
   max-width: inherit;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -215,5 +216,10 @@ body:after {
       opacity: 0;
 
     }
+}
+@media only screen and (min-width:1400px) {
+  .lightbox .lb-image {
+    height: 600px;
+  }
 }
 

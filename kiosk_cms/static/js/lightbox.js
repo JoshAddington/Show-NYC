@@ -45,9 +45,9 @@
     fitImagesInViewport: true,
     // maxWidth: 800,
     // maxHeight: 600,
-    positionFromTop: 50,
+    positionFromTop: 100, //position from the top of the screen
     resizeDuration: 700,
-    showImageNumberLabel: true,
+    showImageNumberLabel: true, //showing image # of #
     wrapAround: false
   };
 
@@ -87,10 +87,10 @@
     this.$container      = this.$lightbox.find('.lb-container');
 
     // Store css values for future lookup
-    this.containerTopPadding = parseInt(this.$container.css('padding-top'), 10);
-    this.containerRightPadding = parseInt(this.$container.css('padding-right'), 10);
-    this.containerBottomPadding = parseInt(this.$container.css('padding-bottom'), 10);
-    this.containerLeftPadding = parseInt(this.$container.css('padding-left'), 10);
+    this.containerTopPadding = parseInt(this.$container.css('padding-top'), 0);
+    this.containerRightPadding = parseInt(this.$container.css('padding-right'), 0);
+    this.containerBottomPadding = parseInt(this.$container.css('padding-bottom'), 0);
+    this.containerLeftPadding = parseInt(this.$container.css('padding-left'), 0);
 
     // Attach event handlers to the newly minted DOM elements
     this.$overlay.hide().on('click', function() {
@@ -236,8 +236,8 @@
 
         windowWidth    = $(window).width();
         windowHeight   = $(window).height();
-        maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 20;
-        maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 120;
+        maxImageWidth  = windowWidth;
+        maxImageHeight = windowHeight;
 
         // Check if image size is larger then maxWidth|maxHeight in settings
         if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
