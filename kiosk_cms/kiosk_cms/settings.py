@@ -48,7 +48,7 @@ INSTALLED_APPS += (
     'images',
     'campaigns',
     'apis',
-    'ip',
+    'vote_id',
 )
 
 # Third Party Packages

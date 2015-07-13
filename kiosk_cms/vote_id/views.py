@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from .models import IP
+from .models import Vote_ID
 
 
-def user_ip(request):
-    print(request.GET.items())
+def get_vote_id(request):
     if request.GET.get('device_id') is not None:
-        ip, created = IP.objects.get_or_create(ip_address=request.GET.get('device_id'))
-        print(ip.ip_address)
+        vote_id, created = Vote_ID.objects.get_or_create(vote_id=request.GET.get('device_id'))
     else:
         x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
 
@@ -14,5 +12,5 @@ def user_ip(request):
             ipaddress = x_forwarded_for.split(',')[-1].strip()
         else:
             ipaddress = request.META.get('REMOTE_ADDR')
-        ip, created = IP.objects.get_or_create(ip_address=ipaddress)
-    return ip
+        vote_id, created = Vote_ID.objects.get_or_create(vote_id=ipaddress)
+    return vote_id

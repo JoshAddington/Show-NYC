@@ -37,7 +37,6 @@ angular.module('myApp.controllers', [])
     document.getElementById("emptyHeart"+id).id = 'fullHeart'
   };
 
-
   $scope.reloadRoute = function($scope) {
    $route.reload()
   }
