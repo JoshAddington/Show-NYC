@@ -25,7 +25,7 @@ angular.module('myApp.services', [])
   var myService = {
     async: function() {
       var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/campaigns/active/').then(function (response){
-        return response.data;
+        return response.data[0];
       });
       return promise;
     }

@@ -147,7 +147,7 @@ angular.module('myApp.controllers', [])
 
 }])
 
-.controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('SubmitCtrl', ['$scope', '$http', 'activeCampaign', function($scope, $http, activeCampaign) {
       $scope.cropper = {};
       $scope.cropper.sourceImage = null;
       $scope.cropper.croppedImage   = null;
@@ -207,6 +207,15 @@ angular.module('myApp.controllers', [])
             $scope.submit_info.submitted = true;
         }
     }
+
+    $scope.load = function() {
+    activeCampaign.async().then(function(d){
+      $scope.campaign = d;
+      console.log($scope.campaign);
+    })
+  }
+
+  $scope.load();
 }])
 
 .controller('AboutCtrl', ['$scope', 'winningPhotos', function($scope, winningPhotos) {
