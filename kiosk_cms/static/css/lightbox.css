@@ -8,21 +8,22 @@ body:after {
   display: none;
 }
 
-.lightboxOverlay {
-  position: absolute;
+.lightboxOverlay {                                /*Overlay*/
+  /*position for the overlay*/
+  position: absolute;                
   top: 0;
   left: 0;
   z-index: 9999;
   background-color: white;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  opacity: 0.75;
+  opacity: 0.7;
   display: none;
 /*  width: 100%;
   height: 100%;*/
   overflow: none;
 }
 
-.lightbox {
+.lightbox {                                        /*Image box*/
   position: absolute;
 /*  left: 0;*/
   width: 100%;
@@ -36,23 +37,12 @@ body:after {
   display: block;
   /*height: auto;*/
   height: 400px;
+  background-color: lightgreen;
   max-width: inherit;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
 }
-
-.lightbox a img {
-  border: none;
-}
-
-.lb-outerContainer {
+.lb-outerContainer {                               /*Image box background*/
   position: relative;
   *zoom: 1;
-  width: 250px;
-  height: 250px;
   margin: 0 auto;
 }
 
@@ -168,17 +158,19 @@ body:after {
   color: #ccc;
 }
 
-.lb-data .lb-details {
+.lb-data .lb-details {        
   width: 85%;
   float: left;
   text-align: left;
   line-height: 1.1em;
+  background-color: lightblue;
 }
 
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
+  background-color: pink;
 }
 
 .lb-data .lb-number {
@@ -187,6 +179,7 @@ body:after {
   padding-bottom: 1em;
   font-size: 12px;
   color: #333333;
+  background-color: magenta;
 }
 
 .lb-data .lb-close {
@@ -214,7 +207,6 @@ body:after {
     .lightbox, .lb-image, .lightboxOverlay  {
       display: none;
       opacity: 0;
-
     }
 }
 @media only screen and (min-width:1400px) {
