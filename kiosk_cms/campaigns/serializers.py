@@ -5,4 +5,4 @@ class CampaignSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Campaign
-		fields = ('name', 'id', 'sponsor_name', 'sponsor', 'start_date', 'end_date')
+		fields = ('name', 'id', 'description', 'sponsor_name', 'sponsor', 'start_date', 'end_date')
