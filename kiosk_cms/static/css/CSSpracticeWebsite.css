@@ -1,5 +1,5 @@
 /*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
-/*    Toms Shoes Hex Color Code #A4D7F4   */
+/*    Control Group: #00ABD5 */
 /*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
 
 html, body {
@@ -45,7 +45,7 @@ header > h1 {
   display: inline-block;
 }
 p{                                                  /*Paragraphs*/
-  color: black;
+  color: #333333;
   padding: 10px 10px 10px 10px;
   font-size: 15px;
 }
@@ -323,7 +323,7 @@ footer > p span  {
 .description {
   width: 80%;
   margin: 50px auto;
-  background-color: white;
+  background-color: #f9f9f9;
   text-align: left;
 }
 
@@ -354,11 +354,11 @@ footer > p span  {
 /*Header for Submit and About sections*/
 #campaign {                                    /*Vote Section Campaign Information*/
   overflow: auto;
-  background-color: white;
+  background-color: #f9f9f9;
   max-height: 300px;
   width: 100%;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
 }
 .filter {
   background: #FFAA00;
@@ -561,11 +561,27 @@ footer > p span  {
   font-size: 30px;
   color: #333333;
 }
-#submit-title p {
+#submit-title h4 {
   color: #333333;
   text-align: center;
   font-size: 20px;
   max-width: 800px;
+  margin: 0 auto;
+  display: inline-block;
+}
+#submit-title h5 {
+  color: #00ABD5;
+  text-align: center;
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: inline-block;
+}
+#submit-title p {
+  color: #333333;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
   margin: 0 auto;
 }
 #submit-step1 {                                   /*Submit Section enter your name*/
@@ -658,10 +674,7 @@ footer > p span  {
   margin-top: -40px;
   margin-bottom: 30px;
   height: 25px;
-}
-strong {
-  padding-right: 3px;
-}                              /*Scroll to the top button*/
+}                            /*Scroll to the top button*/
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -761,14 +774,25 @@ strong {
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
-
 #campaign-slogan {
   font-size: 20px;
   font-family:'Raleway';
   text-align: center;
   letter-spacing: 3px;
-  width: 100%;
+  padding-left: 10px;
+  float: center;
+  color: #00ABD5;
+  display: inline-block;
+}
+#campaign-intro {
+  font-size: 20px;
+  font-family:'Raleway';
+  text-align: center;
+  letter-spacing: 3px;
   color: #333333;
+  float: center;
+  text-transform: uppercase;
+  display: inline-block;
 }
 .ribbon {
   background-color: #DE4831;
@@ -825,12 +849,12 @@ strong {
   position: absolute;
   height: 18%;
   width: 15%;
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 100px;
+  max-height: 100px;
   top: 0px;
-  padding-top: 10px;
+  padding-top: 0px;
   right: 0;
-  padding-right: 10px;
+  padding-right: 0px;
   cursor: default;
 }
 #photoScore {
@@ -958,6 +982,9 @@ strong {
     font-size: 20px;
   }
   #campaign-slogan {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  #campaign-intro {
+    font-size: 12px;
   }
 }
