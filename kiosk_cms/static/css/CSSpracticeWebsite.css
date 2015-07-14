@@ -657,6 +657,20 @@ footer > p span  {
 }
 #myfile {
   opacity: 0;
+  cursor: pointer;
+  width: 60%;
+}
+#myfile-smaller {
+  width: 300px;
+  float: center;
+  text-align: center;
+  margin: 0 auto;
+}
+#myfile-center {
+  width: 100%;
+  float: center;
+  text-align: center;
+  margin: 0 auto;
 }
 #select {                                             /*Choose me button*/
   font-family: "Raleway";
