@@ -8,21 +8,22 @@ body:after {
   display: none;
 }
 
-.lightboxOverlay {
-  position: absolute;
+.lightboxOverlay {                                /*Overlay*/
+  /*position for the overlay*/
+  position: absolute;                
   top: 0;
   left: 0;
   z-index: 9999;
   background-color: white;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  opacity: 0.75;
+  opacity: 0.7;
   display: none;
 /*  width: 100%;
   height: 100%;*/
   overflow: none;
 }
 
-.lightbox {
+.lightbox {                                        /*Image box*/
   position: absolute;
 /*  left: 0;*/
   width: 100%;
@@ -35,38 +36,20 @@ body:after {
 .lightbox .lb-image {
   display: block;
   /*height: auto;*/
-  height: 400px;
+  height: 600px;
   max-width: inherit;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
 }
-
-.lightbox a img {
-  border: none;
-}
-
-.lb-outerContainer {
+.lb-outerContainer {                               /*Image box background*/
   position: relative;
   *zoom: 1;
-  width: 250px;
-  height: 250px;
   margin: 0 auto;
 }
-
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
 }
-
-.lb-container {
-  padding: 4px;
-}
-
-.lb-loader {
+.lb-loader {                                /*Loading icon*/
   position: absolute;
   top: 43%;
   left: 0;
@@ -108,53 +91,47 @@ body:after {
   display: block;
 }
 
-.lb-nav a.lb-prev {
+.lb-nav a.lb-prev {                           /*Previous button*/
   width: 34%;
   left: 0;
   float: left;
   background: url(/static/icons/prev.png) left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  opacity: .5;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
 
-.lb-nav a.lb-prev:hover {
+.lb-nav a.lb-prev:hover {                 /*Previous hover*/
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.lb-nav a.lb-next {
+.lb-nav a.lb-next {                          /*Next button*/
   width: 64%;
   right: 0;
   float: right;
   background: url(/static/icons/next.png) right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  opacity: .5;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
 
-.lb-nav a.lb-next:hover {
+.lb-nav a.lb-next:hover {                  /*Next hover*/
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.lb-dataContainer {
+.lb-dataContainer {                         /*Bottom div*/
   margin: 0 auto;
   padding-top: 5px;
   *zoom: 1;
   width: 100%;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 .lb-dataContainer:after {
@@ -163,12 +140,7 @@ body:after {
   clear: both;
 }
 
-.lb-data {
-  padding: 0 4px;
-  color: #ccc;
-}
-
-.lb-data .lb-details {
+.lb-data .lb-details {        
   width: 85%;
   float: left;
   text-align: left;
@@ -214,12 +186,11 @@ body:after {
     .lightbox, .lb-image, .lightboxOverlay  {
       display: none;
       opacity: 0;
-
     }
 }
 @media only screen and (min-width:1400px) {
   .lightbox .lb-image {
-    height: 600px;
+    height: 800px;
   }
 }
 
