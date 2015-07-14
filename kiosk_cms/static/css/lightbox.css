@@ -36,8 +36,7 @@ body:after {
 .lightbox .lb-image {
   display: block;
   /*height: auto;*/
-  height: 400px;
-  background-color: lightgreen;
+  height: 600px;
   max-width: inherit;
 }
 .lb-outerContainer {                               /*Image box background*/
@@ -45,18 +44,12 @@ body:after {
   *zoom: 1;
   margin: 0 auto;
 }
-
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
 }
-
-.lb-container {
-  padding: 4px;
-}
-
-.lb-loader {
+.lb-loader {                                /*Loading icon*/
   position: absolute;
   top: 43%;
   left: 0;
@@ -98,53 +91,47 @@ body:after {
   display: block;
 }
 
-.lb-nav a.lb-prev {
+.lb-nav a.lb-prev {                           /*Previous button*/
   width: 34%;
   left: 0;
   float: left;
   background: url(/static/icons/prev.png) left 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  opacity: .5;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
 
-.lb-nav a.lb-prev:hover {
+.lb-nav a.lb-prev:hover {                 /*Previous hover*/
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.lb-nav a.lb-next {
+.lb-nav a.lb-next {                          /*Next button*/
   width: 64%;
   right: 0;
   float: right;
   background: url(/static/icons/next.png) right 48% no-repeat;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  opacity: .5;
   -webkit-transition: opacity 0.6s;
   -moz-transition: opacity 0.6s;
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
 
-.lb-nav a.lb-next:hover {
+.lb-nav a.lb-next:hover {                  /*Next hover*/
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.lb-dataContainer {
+.lb-dataContainer {                         /*Bottom div*/
   margin: 0 auto;
   padding-top: 5px;
   *zoom: 1;
   width: 100%;
-  -moz-border-radius-bottomleft: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 .lb-dataContainer:after {
@@ -153,24 +140,17 @@ body:after {
   clear: both;
 }
 
-.lb-data {
-  padding: 0 4px;
-  color: #ccc;
-}
-
 .lb-data .lb-details {        
   width: 85%;
   float: left;
   text-align: left;
   line-height: 1.1em;
-  background-color: lightblue;
 }
 
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
-  background-color: pink;
 }
 
 .lb-data .lb-number {
@@ -179,7 +159,6 @@ body:after {
   padding-bottom: 1em;
   font-size: 12px;
   color: #333333;
-  background-color: magenta;
 }
 
 .lb-data .lb-close {
@@ -211,7 +190,7 @@ body:after {
 }
 @media only screen and (min-width:1400px) {
   .lightbox .lb-image {
-    height: 600px;
+    height: 800px;
   }
 }
 
