@@ -7,7 +7,7 @@ angular.module('myApp.controllers', [])
 })
 
 
-.controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
+.controller('VoteCtrl', ['$scope', 'activePhotos', 'activeCampaign', '$http', '$route', function($scope, activePhotos, activeCampaign, $http, $route) {
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
@@ -16,7 +16,6 @@ angular.module('myApp.controllers', [])
   $scope.upvote = function(id) {
     $http.get( 'http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
-        // $scope.load()
       }).
       error(function(data, status, headers, config) {
       });
@@ -32,14 +31,10 @@ angular.module('myApp.controllers', [])
   }
 
   $scope.changeImage = function(id){
-    // console.log($sco.isClicked)
     console.log(id);
     console.log(document.getElementById("emptyHeart"+id))
     document.getElementById("emptyHeart"+id).src = 'static/icons/FullHeartRed.png'
     document.getElementById("emptyHeart"+id).id = 'fullHeart'
-    // $scope.isClicked= true
-    // return false
-
   };
 
 
@@ -63,11 +58,13 @@ angular.module('myApp.controllers', [])
           else {
             item.loadHeart.id = ("emptyHeart" + item.id);
             item.loadHeart.src = "static/icons/EmptyHeartRed.png";
-            // photo.isClicked=false
           }
       })
-    });
-      // document.getElementById("fullHeart").hide;
+    })
+    activeCampaign.async().then(function(d){
+      $scope.campaign = d;
+      console.log($scope.campaign);
+    })
   }
 
   $scope.selectedFilter = 'newest';
@@ -89,7 +86,6 @@ angular.module('myApp.controllers', [])
       {id : 2, name : 'Campaigns', campaign: 'All' }
     ]
   };
-
 
   $scope.filterItem = {
    opt: $scope.filterOptions.opts[0]
