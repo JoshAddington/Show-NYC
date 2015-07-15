@@ -1,8 +1,23 @@
 <div id="vote" class="wrap">
   <div id = "campaign">
-    <h3 id = "campaign-slogan">ENTER THEME HERE</h3>
+    <h3 id = "campaign-intro">This week's campaign is <span id = "campaign-slogan" ng-bind="campaign.name"></span></h3>
   </div>
+  <div class="filter">
+        <ul class="filter-list">
+            <li><a href="#/vote" ng-click="sortType = 'id';sortReverse=true; setSelectedFilter('newest');" class="highlight" ng-class="{highlight : 'newest'=== selectedFilter}">
+              Newest
+              </a>
+              <span ng-show="sortType == 'id'"></span>
+            </li>
 
+
+            <li><a href="#/vote" ng-click="sortType='score';sortReverse=true; setSelectedFilter('trending');" ng-class="{highlight : 'trending'=== selectedFilter}">
+              Trending
+              </a>
+              <span ng-show="sortType == 'score'"></span>
+            </li>
+        </ul>
+  </div>
   <div class="image-zoom-container-vote"> <!--Grid of vote photos-->
     <div class="zoom-container-vote" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
       <!-- <img src='{{photo.image}}'> -->
@@ -19,7 +34,7 @@
         </style>
           <!-- <button ng-click='upvote(photo.id);photo.score = photo.score + 1;changeImage(photo.id);clicked=true' ng-disabled='clicked'> -->
           <div class="vote-space">
-            <img class="hvr-grow" id = '{{photo.loadHeart.id}}' ng-click='photo.isClicked || upvote(photo.id);photo.isClicked || (photo.score = photo.score + 1);photo.isClicked || changeImage(photo.id);photo.isClicked=true' ng-disabled="isClicked" src="{{photo.loadHeart.src}}"/>
+            <img class="hvr-grow" id = '{{photo.loadHeart.id}}' ng-click='photo.isClicked || upvote(photo.id);photo.isClicked || (photo.score = photo.score + 1);photo.isClicked || changeImage(photo.id);photo.isClicked=true' ng-disabled="isClicked" ng-src="{{photo.loadHeart.src}}"/>
             <span id="photoScore">{{photo.score}}</span>
           </div>
           <!-- </button> -->

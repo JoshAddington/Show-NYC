@@ -7,16 +7,15 @@ angular.module('myApp.controllers', [])
 })
 
 
-.controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
+.controller('VoteCtrl', ['$scope', 'activePhotos', 'activeCampaign', '$http', '$route', function($scope, activePhotos, activeCampaign, $http, $route) {
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
   $scope.isClicked = false
 
   $scope.upvote = function(id) {
-    $http.get( 'http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
+    $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
-        // $scope.load()
       }).
       error(function(data, status, headers, config) {
       });
@@ -32,16 +31,11 @@ angular.module('myApp.controllers', [])
   }
 
   $scope.changeImage = function(id){
-    // console.log($sco.isClicked)
     console.log(id);
     console.log(document.getElementById("emptyHeart"+id))
     document.getElementById("emptyHeart"+id).src = 'static/icons/FullHeartRed.png'
     document.getElementById("emptyHeart"+id).id = 'fullHeart'
-    // $scope.isClicked= true
-    // return false
-
   };
-
 
   $scope.reloadRoute = function($scope) {
    $route.reload()
@@ -63,20 +57,21 @@ angular.module('myApp.controllers', [])
           else {
             item.loadHeart.id = ("emptyHeart" + item.id);
             item.loadHeart.src = "static/icons/EmptyHeartRed.png";
-            // photo.isClicked=false
           }
       })
-    });
-      // document.getElementById("fullHeart").hide;
+    })
+    activeCampaign.async().then(function(d){
+      $scope.campaign = d;
+      console.log($scope.campaign);
+    })
   }
 
-  $scope.loadEmptyHeart = function(id){
-
-  }
-
-  $scope.loadFullHeart = function(id){
-
-  }
+  $scope.selectedFilter = 'newest';
+  $scope.setSelectedFilter = function(selectedFilter) {
+      $scope.selectedFilter = selectedFilter;
+      console.log(selectedFilter);
+   }
+   
   $scope.load()
 
 }])
@@ -87,10 +82,9 @@ angular.module('myApp.controllers', [])
   $scope.sortReverse  = true;  // set the default sort order
   $scope.filterOptions = {
     opts: [
-      {id : 2, name : 'Campaign', campaign_id: true }
+      {id : 2, name : 'Campaigns', campaign: 'All' }
     ]
   };
-
 
   $scope.filterItem = {
    opt: $scope.filterOptions.opts[0]
@@ -100,9 +94,9 @@ angular.module('myApp.controllers', [])
 
 
   $scope.customFilter = function (data) {
-  if (data.campaign_id === $scope.filterItem.opt.campaign_id) {
+  if (data.campaign === $scope.filterItem.opt.campaign) {
     return true;
-  } else if ($scope.filterItem.opt.campaign_id === true) {
+  } else if ($scope.filterItem.opt.campaign === "All") {
     return true;
   } else {
     return false;
@@ -123,13 +117,14 @@ angular.module('myApp.controllers', [])
       console.log('ctrl')
 
       angular.forEach($scope.photos, function(item) {
-        item.rank = 0.5 - Math.random()
-        if ($scope.filterOptions.opts.indexOf(item.campaign_id) == -1) {
-          $scope.filterOptions.opts.push({name: 'Campaign '+item.campaign_id, campaign_id: item.campaign_id}, item.campaign_id)
+        if ($scope.filterOptions.opts.indexOf(item.campaign) == -1) {
+          console.log(item)
+          $scope.filterOptions.opts.push({name: item.campaign, campaign: item.campaign}, item.campaign)
         }
       });
       angular.forEach($scope.filterOptions.opts, function(item, key){
         if (item.name == undefined) {
+          console.log(item)
           $scope.filterOptions.opts.splice(key,1)
         }
         else {
@@ -151,7 +146,7 @@ angular.module('myApp.controllers', [])
 
 }])
 
-.controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('SubmitCtrl', ['$scope', '$http', 'activeCampaign', function($scope, $http, activeCampaign) {
       $scope.cropper = {};
       $scope.cropper.sourceImage = null;
       $scope.cropper.croppedImage   = null;
@@ -194,7 +189,7 @@ angular.module('myApp.controllers', [])
           var data = $scope.imgData;
           var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
-  				$http.post('http://intern-cms-dev.elasticbeanstalk.com//api/images/',
+  				$http.post('http://intern-cms-dev.elasticbeanstalk.com/api/images/',
                   params
                   )
 
@@ -211,6 +206,15 @@ angular.module('myApp.controllers', [])
             $scope.submit_info.submitted = true;
         }
     }
+
+    $scope.load = function() {
+    activeCampaign.async().then(function(d){
+      $scope.campaign = d;
+      console.log($scope.campaign);
+    })
+  }
+
+  $scope.load();
 }])
 
 .controller('AboutCtrl', ['$scope', 'winningPhotos', function($scope, winningPhotos) {
@@ -223,7 +227,7 @@ angular.module('myApp.controllers', [])
       $scope.photos = d;
       photo = $scope.photos[d.length-1]
       photo.newId = "winning-icon"
-      photo.newSrc = "static/icons/prize-red.png"
+      photo.newSrc = "static/icons/wreath3.png"
     });
   }
   $scope.load()

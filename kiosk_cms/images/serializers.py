@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from .fields import Base64ImageField
 from .models import Image
-from ip.models import IP
-from ip.views import user_ip
+from vote_id.models import Vote_ID
+from vote_id.views import get_vote_id
 
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -23,11 +23,14 @@ class ImageVoteSerializer(serializers.ModelSerializer):
                   'campaign_id', 'score', 'flagged', 'voted')
 
     def VotedByUser(self, obj):
-        vote_ip = self.context.get('ip_addr', None)
-        if vote_ip is not None:
+        vote_id = self.context.get('vote_id', None)
+        if vote_id is not None:
             try:
-                voted = IP.objects.filter(images=obj, ip_address=vote_ip.ip_address).count()
+                voted = Vote_ID.objects.filter(
+                                        images=obj,
+                                        vote_id=vote_id.vote_id
+                                        ).count()
                 return voted == 1
-            except IP.DoesNotExist:
+            except Vote_ID.DoesNotExist:
                 return False
         return "error"

@@ -25,8 +25,8 @@ class Image(models.Model):
     def campaign(self):
         return self.campaign_id.name
 
-    def ip(self, ip):
-        return self.ip_set.filter(ip_address=ip).exists()
+    def vote_id(self, vote_id):
+        return self.vote_id_set.filter(vote_id=vote_id).exists()
 
     def upvote(self):
         if self.campaign_id.is_active():

@@ -69,21 +69,21 @@ $(document).ready(function() {
   if(window.location.href.indexOf("about") > -1) {
     $('#aboutButton').trigger("click");
   };
-
+  
   //Slide Out Navagation Menu Animation
   $('.icon-menu').click(function() {
     $('.menu').animate({
-      left: "0px"
+      left: "0%"
     }, 200);
-    $('.menu').css('left', '-300px');
+    $('.menu').css('left', '-52%');
   });
 
   $('.icon-close').click(function() {
     $('.menu').animate({
-      left: "-350px"
+      left: "-52%"
     }, 200);
     $('body').animate({
-      left: "-350px"
+      left: "-52%"
     }, 200);
   });
   

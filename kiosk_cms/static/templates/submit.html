@@ -1,8 +1,8 @@
 <div ng-controller="SubmitCtrl" id="submit" class="noselect web">
     <div id="submit-title">
         <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
-        <p>This week's campaign: <strong>TOMS One for One Initiative</strong></p>
-        <p>TOMS is inviting you to take photos of its shoes and take part in its philanthropic ideals. With every product you purchase, TOMS will help a person in need. One for One.</p>
+        <h4>This week's campaign is <h5 id = "campaign-slogan">{{campaign.name}}</h5></h4>
+        <p>{{campaign.description}}</p>
     </div>
 
     <form name="submit_info" novalidate ng-submit="submit()">
@@ -11,15 +11,21 @@
        <section class="submit-sec" id="submit-photo">
             <h3>What's Your Photo?</h3><!-- User photo input-->
             <div class="submit-container">
+                
                 <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+
                 <div id = "submit-info">
                     <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
                 </div>
             </div>
+
             <div class="upload-container">
+
                 <div class="uploadzone" img-cropper-fileread image="cropper.sourceImage" onclick="$('input[type=file]').click()" id="filebutton"> 
-                    <div ng-show="cropper.croppedImage!=null"><img ng-model='image.data' id="myImg" ng-src="{{cropper.croppedImage}}" /></div>
+
+                    <div ng-show="cropper.croppedImage!=null" id = "crop-image"><img ng-model='image.data' id="myImg" ng-src="{{cropper.croppedImage}}" /></div>
                 </div>
+
                 <div>
                      <canvas ng-show="cropper.sourceImage!=null" class="cropArea" width="400" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
                 </div>
@@ -72,10 +78,9 @@
 </div>
 <div class="mobile">
     <div class="info-text">
-        <h3>HEY!</h3>
-        <p>It seems you are on a mobile device!</p>
-        <p>Unfortunately you cannot submit a photo through through our website on a mobile phone. You can move to a device with a larger screen</p>
-        <button>Or click here to download the mobile app!</button>
+        <h2>HEY!</h2w>
+        <h3>It seems you are on a mobile device!</h3>
+        <p>Unfortunately you cannot submit a photo through our website on a mobile phone. You can move to a device with a larger screen. Alternatively, you can download our mobile app!</p>
     </div>
 </div>
 

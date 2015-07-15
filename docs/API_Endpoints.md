@@ -4,7 +4,7 @@
 
 #### `/api/images/`
 
-#####GET
+##### GET
 Displays a collection of active and unflagged images
 
 
@@ -24,7 +24,7 @@ GET /api/images/
     }
 ]
 ```
-#####POST
+##### POST
 Creates an image and returns JSON representation
 
 Data sent as JSON:
@@ -93,12 +93,18 @@ DELETE /api/images/<image_id>/
 #### Active Campaign Images
 
 Displays a collection of images from the currently active campaign.
-Includes boolean 'voted' that indicates whether the IP address used
-has voted for the image.
+
+Includes boolean 'voted' that indicates whether the user has placed a vote for the image. Votes are tracked by device ID, if included in request, or IP address if device ID is not included.
+
+To get votes using a device ID, include it as 'device_id'in the request params.
 
 
 ```json
-GET /api/images/active_campaigns/
+(for IP address tracking)
+GET /api/images/active_campaigns/ 
+
+(for device ID tracking)
+GET /api/images/active_campaigns/?device_id=device_id 
 {
     "id": 19,
     "image_name": "Ocean-waves.jpg",
@@ -117,26 +123,26 @@ GET /api/images/active_campaigns/
 
 Displays a collection of images from past campaigns
 
-`/api/images/inactive_campaigns/`
+`GET /api/images/inactive_campaigns/`
 
 #### Winning Images
 
 Displays a collection of images that have won a campaign
 
-`/api/images/winners/`
+`GET /api/images/winners/`
 
 #### Upvote Image
 
 Adds a vote to an image's score and displays image JSON
+Vote is tracked by device ID, if included in request, or IP address if device ID is not included.
 
-`/api/images/<image_id>/upvote/`
+To vote using a device ID, include it as 'device_id'in the request params.
 
-#### Downvote Image
+(if using IP address)
+`GET /api/images/<image_id>/upvote/`    
 
-Removes a vote from an image's score and displays image JSON
-
-`/api/images/<image_id>/downvote/`
-
+(for device ID tracking)
+`GET /api/images/<image_id>/upvote/?device_id=device_id`     
 
 
 ## Campaigns
@@ -145,7 +151,7 @@ Removes a vote from an image's score and displays image JSON
 
 Displays a collection of all campaigns
 
-`/api/campaigns/`
+`GET /api/campaigns/`
 
 ```json
 [
@@ -164,7 +170,7 @@ Displays a collection of all campaigns
 
 Displays a single campaign
 
-`/api/campaigns/<campaign_id>/`
+`GET /api/campaigns/<campaign_id>/`
 
 ```json
 {
@@ -181,7 +187,7 @@ Displays a single campaign
 
 Displays the currently active campaign
 
-`/api/campaigns/active/`
+`GET /api/campaigns/active/`
 
 
 ## API Endpoints - To Do

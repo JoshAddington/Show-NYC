@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from .models import Image
 from .serializers import ImageSerializer, ImageVoteSerializer
 from campaigns.models import Campaign
-from ip.views import user_ip
+from vote_id.views import get_vote_id
 
 
 # /api/images/
@@ -81,11 +81,11 @@ def image_element(request, pk):
 @api_view(['GET'])
 def active_campaign_images(request):
     if request.method == 'GET':
-        ip_addr = user_ip(request)
+        vote_id = get_vote_id(request)
         images = Image.objects.filter(campaign_id__active=True).filter(active=True).filter(flagged=False)
 
-        # sends the request object to the serializer, so it can compared 
-        serializer = ImageVoteSerializer(images, many=True, context={'ip_addr': ip_addr})
+        # sends the request object to the serializer, so it can compared
+        serializer = ImageVoteSerializer(images, many=True, context={'vote_id': vote_id})
         return Response(serializer.data)
 
 
@@ -101,7 +101,7 @@ def inactive_campaign_images(request):
 @api_view(['GET'])
 def image_winners_collection(request):
     if request.method == 'GET':
-        images = Image.objects.filter(campaign_winner=True).select_related().filter(active=True)
+        images = Image.objects.filter(campaign_winner=True).select_related().filter(active=True).order_by('id')
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
 
@@ -110,20 +110,20 @@ def image_winners_collection(request):
 def image_upvote(request, pk):
     if request.method == 'GET':
         image = get_object_or_404(Image, pk=pk)
-        ip_addr = user_ip(request)
+        vote_id = get_vote_id(request)
 
-        # checks to see if a relation has been created between the ip address
+        # checks to see if a relation has been created between ip address/device id
         # and the image, which indicates a vote.
-        if image.ip_set.filter(ip_address=ip_addr.ip_address).exists():
+        if image.vote_id_set.filter(vote_id=vote_id.vote_id).exists():
             serializer = ImageSerializer(image)
 
         # otherwise, adds a vote is the campaign is active.
-        # if a vote was added, creates an IP--Image relation
+        # if a vote was added, creates an Vote_ID--Image relation
         else:
             vote, voted = image.upvote()
             if voted:
-                ip_addr.images.add(image)
-                ip_addr.save()
+                vote_id.images.add(image)
+                vote_id.save()
             serializer = ImageSerializer(vote)
         return Response(serializer.data, status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
