@@ -132,7 +132,7 @@ footer > p span  {
 }
 #submit{
   text-align: center;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .mobile {
   display: none;
