@@ -10,16 +10,16 @@
 
         <section class="submit-sec" id="submit-photo">
             <h3>What's Your Photo?</h3>
-            <div class="submit-container">
+             <!--  <div class="submit-container">
                 
-                <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
+              <input img-cropper-fileread image="cropper.sourceImage" ng-model="image" type="file" id="myfile" name="myfile" accept =".jpg, .png" valid-file required>
 
                 <div id = "submit-info">
                     <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
                 </div>
             </div>
 
-           <!--  <div class="upload-container">
+            <div class="upload-container">
 
                 <div class="uploadzone" img-cropper-fileread image="cropper.sourceImage" onclick="$('input[type=file]').click()" id="filebutton"> 
 
@@ -29,12 +29,21 @@
                 <div>
                      <canvas ng-show="cropper.sourceImage!=null" class="cropArea" width="400" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="300" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
                 </div>
-            </div> -->
+            </div>
             <div class="error-container" ng-show="submit_info.myfile.$invalid && submit_info.submitted">
                 <small class="error">
                     Please upload a photo.
                 </small>
-            </div>
+            </div> -->
+
+            <div class-"upload-container">
+                <input type="file" ng-model-instant onchange="angular.element(this).scope().uploadPhoto(this)" id="myfile" name="myfile" accept=".jpg, .png">
+                <div id = "submit-info">
+                    <div onclick="$('input[type=file]').click()" id='select'>Choose Your Photo Here</div>
+                </div>
+                <div class="uploadzone" onclick="$('input[type=file]').click()" id="filebutton"> 
+                     <img ng-src={{imageUrl}} id="myImg" width="400" height="300"/>
+                </div>
         </section>
 
         <section class="submit-sec"  id="submit-step1">

@@ -187,7 +187,9 @@ angular.module('myApp.controllers', [])
     $scope.submit = function() {
         if ($scope.submit_info.$valid) {
           var data = $scope.imgData;
-          var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
+          var params = {'name': data.first_name, 'email': data.email, 'image': $scope.imageUrl};
+          //var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
+          
           console.log(params);
   				$http.post('http://intern-cms-dev.elasticbeanstalk.com/api/images/',
                   params

@@ -988,4 +988,11 @@ footer > p span  {
   #campaign-intro {
     font-size: 12px;
   }
+  .uploadzone {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    border: solid #333333 10px;
+    display: block;
+  }
 }
