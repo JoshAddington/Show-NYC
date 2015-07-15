@@ -644,10 +644,7 @@ footer > p span  {
   margin-top: -100px;
   margin-bottom: 10px;
   height: 25px;
-}
-strong {
-  padding-right: 3px;
-}                              /*Scroll to the top button*/
+}                            /*Scroll to the top button*/
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -861,19 +858,6 @@ strong {
   text-align: center;
   cursor: pointer;
 }
-.expand-me {
-  width: 400px;
-  height: 300px;
-}
-.enlarged {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: auto;
-  overflow: auto;
-  position: fixed;
-}
 #load {
   text-align: center;}
 #loading {
@@ -929,7 +913,7 @@ strong {
   }
   #submit{
     display: block;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .mobile {
     display: none;
