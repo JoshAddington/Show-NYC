@@ -928,10 +928,11 @@ strong {
     padding-top: 5%;
   }
   #submit{
-    display: none;
+    display: block;
+    overflow-y: scroll;
   }
   .mobile {
-    display: block;
+    display: none;
   }
   #share-buttons {                                 /*Share icon positioning*/
     margin-top: 15px;
