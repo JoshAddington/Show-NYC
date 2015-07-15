@@ -34,7 +34,7 @@
         </style>
           <!-- <button ng-click='upvote(photo.id);photo.score = photo.score + 1;changeImage(photo.id);clicked=true' ng-disabled='clicked'> -->
           <div class="vote-space">
-            <img class="hvr-grow" id = '{{photo.loadHeart.id}}' ng-click='photo.isClicked || upvote(photo.id);photo.isClicked || (photo.score = photo.score + 1);photo.isClicked || changeImage(photo.id);photo.isClicked=true' ng-disabled="isClicked" src="{{photo.loadHeart.src}}"/>
+            <img class="hvr-grow" id = '{{photo.loadHeart.id}}' ng-click='photo.isClicked || upvote(photo.id);photo.isClicked || (photo.score = photo.score + 1);photo.isClicked || changeImage(photo.id);photo.isClicked=true' ng-disabled="isClicked" ng-src="{{photo.loadHeart.src}}"/>
             <span id="photoScore">{{photo.score}}</span>
           </div>
           <!-- </button> -->

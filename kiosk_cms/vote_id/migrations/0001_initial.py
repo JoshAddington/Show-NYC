@@ -12,11 +12,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='IP',
+            name='Vote_ID',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('ip_address', models.CharField(max_length=15)),
-                ('image', models.ManyToManyField(to='images.Image', blank=True)),
+                ('vote_id', models.CharField(max_length=36)),
+                ('images', models.ManyToManyField(to='images.Image', blank=True)),
             ],
         ),
     ]
