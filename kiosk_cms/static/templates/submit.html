@@ -1,15 +1,15 @@
 <div ng-controller="SubmitCtrl" id="submit" class="noselect web">
     <div id="submit-title">
         <h3>Show NYC What You've Got</h3>  <!--Example of a campaign description/call to action that would be on the submit section-->
-        <h4>This week's campaign is <h5 id = "campaign-slogan">Control Group</h5></h4>
-        <p>Control Group is merging with Titan to form a new company, called Intersection! Intersection is an urban experience company that combines expertise in technology, user experience and interactive engagement to improve life in cities around the world.</p>
+        <h4>This week's campaign is <h5 id = "campaign-slogan">{{campaign.name}}</h5></h4>
+        <p>{{campaign.description}}</p>
     </div>
 
     <form name="submit_info" novalidate ng-submit="submit()">
         <input type="hidden" ng-model='imgData.campaign_id' value='2'>
 
-       <section class="submit-sec" id="submit-photo">
-            <h3>What's Your Photo?</h3><!-- User photo input-->
+        <section class="submit-sec" id="submit-photo">
+            <h3>What's Your Photo?</h3>
             <div class="submit-container">
                 <div id = "myfile-center">
                     <div id = "myfile-smaller">
@@ -80,10 +80,9 @@
 </div>
 <div class="mobile">
     <div class="info-text">
-        <h3>HEY!</h3>
-        <p>It seems you are on a mobile device!</p>
-        <p>Unfortunately you cannot submit a photo through through our website on a mobile phone. You can move to a device with a larger screen</p>
-        <button>Or click here to download the mobile app!</button>
+        <h2>HEY!</h2w>
+        <h3>It seems you are on a mobile device!</h3>
+        <p>Unfortunately you cannot submit a photo through our website on a mobile phone. You can move to a device with a larger screen. Alternatively, you can download our mobile app!</p>
     </div>
 </div>
 

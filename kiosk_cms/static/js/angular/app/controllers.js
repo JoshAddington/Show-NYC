@@ -7,16 +7,15 @@ angular.module('myApp.controllers', [])
 })
 
 
-.controller('VoteCtrl', ['$scope', 'activePhotos', '$http', '$route', function($scope, activePhotos, $http, $route) {
+.controller('VoteCtrl', ['$scope', 'activePhotos', 'activeCampaign', '$http', '$route', function($scope, activePhotos, activeCampaign, $http, $route) {
 
   $scope.sortType     = 'id'; // set the default sort type
   $scope.sortReverse  = true;  // set the default sort order
   $scope.isClicked = false
 
   $scope.upvote = function(id) {
-    $http.get( 'http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
+    $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/'+id+'/upvote/').
       success(function(data, status, headers, config) {
-        // $scope.load()
       }).
       error(function(data, status, headers, config) {
       });
@@ -32,16 +31,11 @@ angular.module('myApp.controllers', [])
   }
 
   $scope.changeImage = function(id){
-    // console.log($sco.isClicked)
     console.log(id);
     console.log(document.getElementById("emptyHeart"+id))
     document.getElementById("emptyHeart"+id).src = 'static/icons/FullHeartRed.png'
     document.getElementById("emptyHeart"+id).id = 'fullHeart'
-    // $scope.isClicked= true
-    // return false
-
   };
-
 
   $scope.reloadRoute = function($scope) {
    $route.reload()
@@ -63,11 +57,13 @@ angular.module('myApp.controllers', [])
           else {
             item.loadHeart.id = ("emptyHeart" + item.id);
             item.loadHeart.src = "static/icons/EmptyHeartRed.png";
-            // photo.isClicked=false
           }
       })
-    });
-      // document.getElementById("fullHeart").hide;
+    })
+    activeCampaign.async().then(function(d){
+      $scope.campaign = d;
+      console.log($scope.campaign);
+    })
   }
 
   $scope.selectedFilter = 'newest';
@@ -89,7 +85,6 @@ angular.module('myApp.controllers', [])
       {id : 2, name : 'Campaigns', campaign: 'All' }
     ]
   };
-
 
   $scope.filterItem = {
    opt: $scope.filterOptions.opts[0]
@@ -151,7 +146,7 @@ angular.module('myApp.controllers', [])
 
 }])
 
-.controller('SubmitCtrl', ['$scope', '$http', function($scope, $http) {
+.controller('SubmitCtrl', ['$scope', '$http', 'activeCampaign', function($scope, $http, activeCampaign) {
       $scope.cropper = {};
       $scope.cropper.sourceImage = null;
       $scope.cropper.croppedImage   = null;
@@ -194,7 +189,7 @@ angular.module('myApp.controllers', [])
           var data = $scope.imgData;
           var params = {'name': data.first_name, 'email': data.email, 'image': $scope.cropper.croppedImage};
           console.log(params);
-  				$http.post('http://intern-cms-dev.elasticbeanstalk.com//api/images/',
+  				$http.post('http://intern-cms-dev.elasticbeanstalk.com/api/images/',
                   params
                   )
 
@@ -211,6 +206,15 @@ angular.module('myApp.controllers', [])
             $scope.submit_info.submitted = true;
         }
     }
+
+    $scope.load = function() {
+    activeCampaign.async().then(function(d){
+      $scope.campaign = d;
+      console.log($scope.campaign);
+    })
+  }
+
+  $scope.load();
 }])
 
 .controller('AboutCtrl', ['$scope', 'winningPhotos', function($scope, winningPhotos) {
