@@ -872,10 +872,14 @@ footer > p span  {
 }
 #winning-icon {
   position: absolute;
-  height: 120px;
-  width: 140px;
+  height: 14%;
+  width: 18%;
+  min-height: 55px;
+  min-width: 77px;
+  max-height: 100px;
+  max-width: 127px;
   top: 0px;
-  margin-top: -30px;
+  margin-top: 0px;
   right: 0;
   padding-right: 0px;
   cursor: default;
