@@ -1,3 +1,4 @@
+from django.conf.urls import patterns, url
 from django.contrib import admin
 from .models import Campaign
 from .forms import CampaignAdminForm
@@ -23,6 +24,19 @@ class CampaignAdmin(admin.ModelAdmin):
     inlines = [ImageInline, ]
     prepopulated_fields = {'slug': ('name',), }
     form = CampaignAdminForm
+
+    def get_urls(self):
+        urls = super(CampaignAdmin, self).get_urls()
+        my_urls = patterns('',
+            (r'^(?P<pk>[0-9]+)/template/$', self.my_view)
+        )
+        return my_urls + urls
+
+    def my_view(self, request, pk):
+        pass
+
+    class Media:
+        js = ('js/kiosk_template.js',)
 
 
 # Register your models here.
