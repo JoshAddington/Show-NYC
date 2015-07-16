@@ -1,6 +1,6 @@
 <div id="vote" class="wrap">
   <div id = "campaign">
-    <h3 id = "campaign-intro">This week's campaign is <span id = "campaign-slogan" ng-bind="campaign.name"></span></h3>
+    <h3 id = "campaign-intro">This week's campaign is <span id="campaign-slogan">{{campaign.name}}</span></h3>
   </div>
   <div class="filter">
         <ul class="filter-list">
@@ -29,7 +29,6 @@
             width: 25px;
             position: absolute;
             display: inline-block;
-            margin-left: 8px;
           }
         </style>
           <!-- <button ng-click='upvote(photo.id);photo.score = photo.score + 1;changeImage(photo.id);clicked=true' ng-disabled='clicked'> -->
