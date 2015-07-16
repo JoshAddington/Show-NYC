@@ -94,6 +94,8 @@ WSGI_APPLICATION = 'kiosk_cms.wsgi.application'
 
 
 # Database
+# Django uses an AWS RDS db if the settings are in env vars,
+# local postgres otherwise.
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
@@ -102,7 +104,7 @@ if 'RDS_DB_NAME' in os.environ:
             'NAME': os.environ['RDS_DB_NAME'],
             'USER': os.environ['RDS_USERNAME'],
             'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': 'interncmsdb.cvfu0nmtfjvk.us-east-1.rds.amazonaws.com',
+            'HOST': os.environ['RDS_HOSTNAME'],
             'PORT': os.environ['RDS_PORT'],
         }
     }
