@@ -6,7 +6,7 @@ class CampaignAdminForm(forms.ModelForm):
 
     class Meta:
         model = Campaign
-        fields = ('sponsor', 'active', 'default_campaign', 'name',
+        fields = ('sponsor', 'active', 'next_active', 'default_campaign', 'name',
                   'slug', 'description', 'start_date', 'end_date')
 
     def save(self, commit=True):

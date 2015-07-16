@@ -15,6 +15,7 @@ class Campaign(models.Model):
     slug = models.SlugField(blank=True)
     description = models.TextField(default="Campaign")
     active = models.BooleanField(default=False)
+    next_active = models.BooleanField(default=False)
     default_campaign = models.BooleanField(default=False)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
@@ -34,14 +35,20 @@ class Campaign(models.Model):
             campaign.active = False
             campaign.save()
         self.active = True
+        self.next_active = False
         self.save()
         return self
 
     def deactivate(self):
-        default_campaigns = Campaign.objects.filter(default_campaign=True)
-        for campaign in default_campaigns:
-            campaign.active = True
-            campaign.save()
+        next_campaign = Campaign.objects.filter(next_active=True)
+        if next_campaign.count() != 0:
+            next_campaign[0].next_active = False
+            next_campaign[0].activate()
+        else:
+            default_campaigns = Campaign.objects.filter(default_campaign=True)
+            for campaign in default_campaigns:
+                campaign.active = True
+                campaign.save()
         self.active = False
         self.save()
         return self

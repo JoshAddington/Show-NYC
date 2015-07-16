@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, url
 from django.contrib import admin
+from django.shortcuts import render
 from .models import Campaign
 from .forms import CampaignAdminForm
 from images.models import Image
@@ -8,7 +9,7 @@ from images.models import Image
 class ImageInline(admin.TabularInline):
     model = Image
     fields = ('thumb', 'user_id', 'score', 'active', 'flagged', 'campaign_winner')
-    readonly_fields = ('thumb', )
+    readonly_fields = ('thumb', 'user_id' )
 
     def thumb(self, obj):
         if obj.image:
@@ -20,7 +21,7 @@ class ImageInline(admin.TabularInline):
 
 
 class CampaignAdmin(admin.ModelAdmin):
-    list_display = ('name', 'active', 'default_campaign', 'start_date', 'end_date')
+    list_display = ('name', 'active', 'next_active', 'default_campaign', 'start_date', 'end_date')
     inlines = [ImageInline, ]
     prepopulated_fields = {'slug': ('name',), }
     form = CampaignAdminForm
@@ -33,7 +34,14 @@ class CampaignAdmin(admin.ModelAdmin):
         return my_urls + urls
 
     def my_view(self, request, pk):
-        pass
+        campaign = Campaign.objects.get(pk=pk)
+        winning_image = Image.objects.filter(campaign_winner=True).filter(campaign_id=pk).select_related()
+        top_images = Image.objects.filter(campaign_winner=False).filter(active=True).filter(campaign_id=pk).order_by('-score').only('image')[0:7]
+        return render(request, 'template.html', {
+            'campaign': campaign,
+            'winning_image': winning_image,
+            'top_images': top_images
+        })
 
     class Media:
         js = ('js/kiosk_template.js',)
