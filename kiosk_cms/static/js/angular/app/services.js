@@ -5,7 +5,7 @@ angular.module('myApp.services', [])
   var myService = {
     async: function() {
       // $http returns a promise, which has a then function, which also returns a promise
-      var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/active_campaigns/').then(function (response) {
+      var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/active_campaigns/').then(function (response) {
         // The then function here is an opportunity to modify the response
         // console.log(response.data);
         // The return value gets picked up by the then in the controller.
@@ -24,7 +24,7 @@ angular.module('myApp.services', [])
 .factory('activeCampaign', function($http){
   var myService = {
     async: function() {
-      var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/campaigns/active/').then(function (response){
+      var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/campaigns/active/').then(function (response){
         return response.data[0];
       });
       return promise;
@@ -38,7 +38,7 @@ angular.module('myApp.services', [])
     var myService = {
       async: function() {
         // $http returns a promise, which has a then function, which also returns a promise
-        var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/inactive_campaigns/').then(function (response) {
+        var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/inactive_campaigns/').then(function (response) {
           // The then function here is an opportunity to modify the response
           // console.log(response);
           // The return value gets picked up by the then in the controller.
@@ -59,7 +59,7 @@ angular.module('myApp.services', [])
     var myService = {
       async: function() {
         // $http returns a promise, which has a then function, which also returns a promise
-        var promise = $http.get('http://intern-cms-dev.elasticbeanstalk.com/api/images/winners/').then(function (response) {
+        var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/winners/').then(function (response) {
           // The then function here is an opportunity to modify the response
           // console.log(response);
           // The return value gets picked up by the then in the controller.

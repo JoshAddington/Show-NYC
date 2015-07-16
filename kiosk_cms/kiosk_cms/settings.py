@@ -22,13 +22,16 @@ TEMPLATE_DEBUG = True
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-if 'RDS_DB_NAME' in os.environ:
+if 'DJ_SECRET_KEY' in os.environ:
     SECRET_KEY = os.environ['DJ_SECRET_KEY']
 else:
     SECRET_KEY = 'ftk25ozjp9x_x%5@*0r99t7&)=29vo*o1^dh_#srre_=t*7nezq52jg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if 'DJ_DEBUG' in os.environ:
+    DEBUG = (os.environ['DJ_DEBUG'] == 'True')
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -138,8 +141,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-if 'RDS_DB_NAME' in os.environ:
-    DEBUG = (os.environ['DJ_DEBUG'] is "False")
 
 STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
