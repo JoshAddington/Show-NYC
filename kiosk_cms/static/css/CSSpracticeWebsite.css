@@ -666,6 +666,7 @@ footer > p span  {
   margin: 0 auto;
   position: relative;
   margin-bottom: 50px;
+  width: 100%;
 }
 #myfile {
   opacity: 0;
@@ -808,7 +809,6 @@ footer > p span  {
   float: center;
   color: #00ABD5;
   display: inline-block;
-  padding-left: 5px;
 }
 #campaign-intro {
   font-size: 20px;
@@ -913,6 +913,9 @@ footer > p span  {
 .cropArea {
   padding: 15px;
   background-color: transparent;
+  float: center;
+  text-align: center;
+  margin: 0 auto;
 }
 .highlight {
   opacity: .5;
