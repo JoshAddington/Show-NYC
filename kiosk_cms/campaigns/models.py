@@ -19,6 +19,7 @@ class Campaign(models.Model):
     default_campaign = models.BooleanField(default=False)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
+    stock_image = models.ImageField()
 
     def __str__(self):
         return self.name

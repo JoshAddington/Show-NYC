@@ -35,8 +35,9 @@ class CampaignAdmin(admin.ModelAdmin):
 
     def my_view(self, request, pk):
         campaign = Campaign.objects.get(pk=pk)
-        winning_image = Image.objects.filter(campaign_winner=True).filter(campaign_id=pk).select_related()
+        winning_image = Image.objects.filter(campaign_winner=True).filter(campaign_id=pk).select_related()[0]
         top_images = Image.objects.filter(campaign_winner=False).filter(active=True).filter(campaign_id=pk).order_by('-score').only('image')[0:7]
+        print(winning_image.image.url)
         return render(request, 'template.html', {
             'campaign': campaign,
             'winning_image': winning_image,
