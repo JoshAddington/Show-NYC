@@ -1,7 +1,4 @@
-/*    NEW PALLET COLORS:    BLUE: #004459     GREEN: #1E8A6F    YELLOW: #F0D435     RED: #DE4831    ORANGE: #E37814   */
-/*    Control Group: #00ABD5 */
-/*    Taxi-cab yellow: #FFAA00      Central-Park green: #19A65C         Charcole:  #333333;      */
-
+/*  Colors:   Yellow: #FFAA00     Red: #DE4831      Green: #19A65C      Charcole: #333333*/
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -53,7 +50,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 input {                                              /*Form*/
   text-align: left;
   vertical-align: center;
@@ -225,6 +221,23 @@ footer > p span  {
     -ms-user-select: none;
     user-select: none;
 }
+#select {
+  font-family: "Raleway";
+  font-size: 15px;
+  color: #333333;
+  letter-spacing: 3px;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 300px;
+  padding-top: 6px;
+  border: solid #333333 2px;
+  margin-top: -40px;
+  margin-bottom: 30px;
+  height: 25px;
+}
 #submit h3 {                                     /*Submit section h3 headers*/
   letter-spacing: 2px;
   font-size: 20px;
@@ -252,9 +265,7 @@ footer > p span  {
   padding : 10px 30px;
   cursor: pointer;
 }
-
 /*Menu*/
-
 .menu {                                          /*Slide out menu*/
   background-color: #19A65C;
   cursor: default;
@@ -263,12 +274,12 @@ footer > p span  {
   top: 0;
   padding: 0;
   left: -300px;
-  width: 300px; /*width of the menu*/
+  width: 300px;
   z-index: 15;
 }
 .icon-close {                                   /*Menu slide out icon*/
   position: relative;
-  font-size: 30px; /*size of the "Menu" text*/
+  font-size: 30px;
   color: white;
   margin-top: 10%;
 }
@@ -283,7 +294,7 @@ footer > p span  {
   top: 4.5%;
   cursor: pointer;
 }
-#menu-shownyc {                                                  /*Heading 1*/
+#menu-shownyc {                                     /*Heading 1*/
   font-family: "Changa One";
   color: white;
   padding-top: 20px;
@@ -291,7 +302,6 @@ footer > p span  {
   font-size: 36px;
   background-color: none;
 }
-
 .wrap {
     position: relative;
 }
@@ -308,15 +318,12 @@ footer > p span  {
   letter-spacing: 3px;
   padding-top: 20px;
   max-width: 200px;
-
 }
-
-.menu li {                                      Menu option style
+.menu li {                                      /*Menu option style*/
   background-color: none;
   padding-bottom: 3px;
   padding-top: 25px;
 }
-
 .menu a {                                       /*Menu listing style*/
   font-family: "Raleway";
   letter-spacing: 2px;
@@ -331,14 +338,12 @@ footer > p span  {
   overflow: hidden;
   width: 100%;
 }
-
 .description {
   width: 80%;
   margin: 50px auto;
   background-color: #f9f9f9;
   text-align: left;
 }
-
 .about-heading {
   padding: 20px 20px 0px 0px;
   letter-spacing: 2px;
@@ -401,7 +406,6 @@ footer > p span  {
   text-transform: uppercase;
   padding-top: 20px;
 }
-
 .filter-list li a:hover, #campaign-list:hover{
   opacity: 0.5;
 }
@@ -420,8 +424,6 @@ footer > p span  {
 .filter-list li:hover {
   opacity: 0.5;
 }
-
-
 #campaign-list {
   text-transform: uppercase;
   color: white;
@@ -497,7 +499,6 @@ footer > p span  {
   display: block;
   opacity: .75;
 }
-
 .zoom-container-gallery:hover img {             /*image hover animation*/
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -514,7 +515,6 @@ footer > p span  {
   margin: 15px auto;
   color: #DE4831;
 }
-
 /* A B O U T   S E C T I O N   P H O T O   G R I D */
 .image-zoom-container-about{                    /*Photo grid layout*/
   list-style: none;
@@ -652,9 +652,6 @@ footer > p span  {
   margin: 0 auto;
   background-color: #f9f9f9;
 }
-#submit-info {
-  /*margin-top: -80px;*/
-}
 .uploadzone {
   width: 400px;
   height: 300px;
@@ -663,30 +660,28 @@ footer > p span  {
   display: none;
 }
 .upload-container {
-  margin: 0 auto;
   position: relative;
   margin-bottom: 50px;
+  width: 100%;
+  margin-left: 0px;
 }
 #myfile {
   opacity: 0;
-}
-#select {                                             /*Choose me button*/
-  font-family: "Raleway";
-  font-size : 15px;
-  color : #333333;
-  letter-spacing: 3px;
-  font-weight: 500;
-  background-color : #f9f9f9;
   cursor: pointer;
-  text-transform: uppercase;
-  margin: 0 auto;
+  width: 60%;
+}
+#myfile-smaller {
   width: 300px;
-  padding-top: 6px;
-  border: solid #333333 2px;
-  margin-top: -40px;
-  margin-bottom: 30px;
-  height: 25px;
-}                            /*Scroll to the top button*/
+  float: center;
+  text-align: center;
+  margin: 0 auto;
+}
+#myfile-center {
+  width: 100%;
+  float: center;
+  text-align: center;
+  margin: 0 auto;
+}
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -698,15 +693,14 @@ footer > p span  {
   line-height: 40px;
   width: 40px;
   height: 40px;
-  right: 15px; /*space between button and right side of the page*/
-  bottom: 15px; /*space between button and bottom of the page*/
+  right: 15px; 
+  bottom: 15px;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 .scroll-top-wrapper.show {
   visibility: visible;
   cursor: pointer;
@@ -717,49 +711,41 @@ footer > p span  {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
-
   50% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
-
   100% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 }
-
 @keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
-
   50% {
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);
   }
-
   100% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 }
-
 @-webkit-keyframes hvr-bob-float {
   100% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 }
-
 @keyframes hvr-bob-float {
   100% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 }
-
 .hvr-bob {
   display: inline-block;
   vertical-align: middle;
@@ -791,7 +777,6 @@ footer > p span  {
   font-family:'Raleway';
   text-align: center;
   letter-spacing: 3px;
-  padding-left: 10px;
   float: center;
   color: #00ABD5;
   display: inline-block;
@@ -839,7 +824,6 @@ footer > p span  {
 #emptyHeart, #fullHeart {
   height: 25px;
   width: 25px;
-  margin-left: 8px;
   display: inline-block;
   position: absolute;
 }
@@ -852,19 +836,20 @@ footer > p span  {
   overflow: none;
   position: absolute;
   margin-top: -35px;
-  width: 80px;
   height: 60px;
-  padding-top: 5px;
+  padding: 5px 14px 5px 12px;
   background-color: rgba(255,  255, 255, 0.5);
 }
 #winning-icon {
   position: absolute;
-  height: 18%;
-  width: 15%;
-  max-width: 100px;
+  height: 14%;
+  width: 18%;
+  min-height: 55px;
+  min-width: 77px;
   max-height: 100px;
+  max-width: 127px;
   top: 0px;
-  padding-top: 0px;
+  margin-top: 0px;
   right: 0;
   padding-right: 0px;
   cursor: default;
@@ -874,7 +859,7 @@ footer > p span  {
   color: #DE4831;
   font-size: 18px;
   font-style: "Raleway";
-  margin-left: 45px;
+  margin-left: 35px;
   margin-top: -1px;
 }
 .hvr-grow {
@@ -897,8 +882,10 @@ footer > p span  {
   cursor: pointer;
 }
 .cropArea {
-  padding: 15px;
   background-color: transparent;
+  float: center;
+  text-align: center;
+  margin: 0 auto;
 }
 .highlight {
   opacity: .5;
@@ -918,12 +905,9 @@ footer > p span  {
   width: 40px;
   height: 10px;
 }
-
-
 #hide {
   display: none;
 }
-
 @media only screen and (max-width:1000px) and (min-width:650px) { 
  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
       width: 50%;
@@ -972,7 +956,6 @@ footer > p span  {
   .mobile {
     display: none;
   }
-
   .menu { 
     width: 50%;
   }
@@ -980,12 +963,18 @@ footer > p span  {
     font-size: 28px;
   }
   #show-nyc {
-    font-size: 20px;
+    font-size: 150%;
   }
   #campaign-slogan {
     font-size: 12px;
   }
   #campaign-intro {
     font-size: 12px;
+  }
+  .menu ul {                                      /*Menu option layout*/
+  padding-top: 10px;
+  }
+  #share-buttons {                                 /*Share icon positioning*/
+    margin-top: 20px;
   }
 }

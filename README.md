@@ -69,6 +69,13 @@ Create your admin user with
 python manage.py createsuperuser
 ```
 
+#### AWS RDS Postgres usage
+
+As this project is already set up to run on AWS Elastic Beanstalk and use a RDS Postgres instance, in order to use a RDS Postgres instance on the local server, simply 
+
+- provide 'RDS_DB_NAME', 'RDS_USERNAME', 'RDS_PASSWORD', 'RDS_ENDPOINT', and 'RDS_PORT' as environment variables
+- add your CIDR/IP to the RDS instance's DB Security Group to allow access from your machine's IP address. To do this, go to Security Groups in the RDS Dashboard, select the instance's Security Group, and below where it lists authorized connection types select CIDR/IP from the Connection Types dropdown menu. The settings for your current machine will be filled in, so click on Authorize.
+
 #### AWS S3 Media setup
 
 This project is set up to use an AWS S3 bucket for serving media files.
