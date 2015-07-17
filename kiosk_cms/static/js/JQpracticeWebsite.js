@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // console.log("ready!");
 
   $('#voteButton').click(function() {
     var condition = true;
