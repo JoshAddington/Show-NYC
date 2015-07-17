@@ -986,7 +986,6 @@ footer > p span  {
   .mobile {
     display: none;
   }
-
   .menu { 
     width: 50%;
   }
@@ -994,7 +993,7 @@ footer > p span  {
     font-size: 28px;
   }
   #show-nyc {
-    font-size: 20px;
+    font-size: 150%;
   }
   #campaign-slogan {
     font-size: 12px;
