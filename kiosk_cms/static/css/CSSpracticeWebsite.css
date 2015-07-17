@@ -680,9 +680,10 @@ footer > p span  {
   display: none;
 }
 .upload-container {
-  margin: 0 auto;
   position: relative;
   margin-bottom: 50px;
+  width: 100%;
+  margin-left: 0px;
 }
 #myfile {
   opacity: 0;
@@ -808,7 +809,6 @@ footer > p span  {
   float: center;
   color: #00ABD5;
   display: inline-block;
-  padding-left: 5px;
 }
 #campaign-intro {
   font-size: 20px;
@@ -911,8 +911,10 @@ footer > p span  {
   cursor: pointer;
 }
 .cropArea {
-  padding: 15px;
   background-color: transparent;
+  float: center;
+  text-align: center;
+  margin: 0 auto;
 }
 .highlight {
   opacity: .5;
@@ -992,7 +994,7 @@ footer > p span  {
     font-size: 28px;
   }
   #show-nyc {
-    font-size: 20px;
+    font-size: 150%;
   }
   #campaign-slogan {
     font-size: 12px;
@@ -1000,4 +1002,11 @@ footer > p span  {
   #campaign-intro {
     font-size: 12px;
   }
+  .menu ul {                                      /*Menu option layout*/
+  padding-top: 10px;
+  }
+  #share-buttons {                                 /*Share icon positioning*/
+    margin-top: 20px;
+  }
 }
+
