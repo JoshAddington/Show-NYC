@@ -15,7 +15,6 @@ body:after {
   left: 0;
   z-index: 9999;
   background-color: white;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.7;
   display: none;
 /*  width: 100%;
@@ -31,6 +30,11 @@ body:after {
   text-align: center;
   /*line-height: 0;*/
   /*font-weight: normal;*/
+  opacity: 0.75;
+  display: none;
+  width: 100%;
+  overflow: none;
+  height: 100%;
 }
 
 .lightbox .lb-image {
@@ -44,6 +48,18 @@ body:after {
   *zoom: 1;
   margin: 0 auto;
 }
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
 .lb-outerContainer:after {
   content: "";
   display: table;
@@ -104,6 +120,7 @@ body:after {
   transition: opacity 0.6s;
 }
 
+
 .lb-nav a.lb-prev:hover {                 /*Previous hover*/
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -127,6 +144,7 @@ body:after {
   opacity: 1;
 }
 
+<<<<<<< Updated upstream
 .lb-dataContainer {                         /*Bottom div*/
   margin: 0 auto;
   padding-top: 5px;

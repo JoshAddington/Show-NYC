@@ -684,23 +684,6 @@ footer > p span  {
   text-align: center;
   margin: 0 auto;
 }
-#select {                                             /*Choose me button*/
-  font-family: "Raleway";
-  font-size : 15px;
-  color : #333333;
-  letter-spacing: 3px;
-  font-weight: 500;
-  background-color : #f9f9f9;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin: 0 auto;
-  width: 300px;
-  padding-top: 6px;
-  border: solid #333333 2px;
-  margin-top: -40px;
-  margin-bottom: 30px;
-  height: 25px;
-}                            /*Scroll to the top button*/
 .scroll-top-wrapper {                                   /*Scroll to the top button*/
   position: fixed;
   opacity: 0;
@@ -932,8 +915,6 @@ footer > p span  {
   width: 40px;
   height: 10px;
 }
-
-
 #hide {
   display: none;
 }
@@ -1003,3 +984,6 @@ footer > p span  {
     font-size: 12px;
   }
 }
+=======
+}
+>>>>>>> Stashed changes
