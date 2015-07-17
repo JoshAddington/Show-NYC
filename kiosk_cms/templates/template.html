@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8"> 
-    <title></title>
+    <title>SHOW NYC</title>
     <link rel="stylesheet" type="text/css" href="../css/app.css">
   </head>
   <body class="noselect">
@@ -12,52 +12,28 @@
         <header class="first-page-header">
           <h1 id="show-nyc">SHOW NYC</h1>
           <h3 id = "tag-line">Show NYC what you've got! </h3>
-          <p class="blurb">{{campaign.description}}</p>
+          <p class="blurb">No one knows what this should be :-(</p>
         </header>
         <main class="winner">
           <h5> Check out Last week's winner for</h5> 
           <h3 class="campaign-name">{{campaign.name}} </h3>
-          <img src="{{winning_image.image.url}}"/>
-          <p>Photo by <span id="photo-author">{{winning_image.user_id.name}}</span></p>
+          <img src="img/{{winning_image}}"/>
+          <p>Photo by <span id="photo-author">{{winning_image.user_id.first_name}}</span></p>
         </main>
       </section>
 
       <section id="section2" class="kiosk-sec">
         <header class="other-page-header">
           <h1>Show NYC</h1>
-          <h3 class="campaign-name"></h3>
+          <h3 class="campaign-name">{{campaign.name}}</h3>
         </header>
         <main class="photo-grid">
-          <div class="about-row" id="a-row1">
+        {% for image in top_images %}
             <div class="img-holder">
-              <img class="about-img" width="540" height="405" src="img/1.jpg"/>
+              <img class="about-img" width="540" height="405" src="img/{{image}}"/>
               <img class="nested-img" width="540" height="405"  src="img/"/>
             </div>
-            <div class="img-holder">
-              <img class="about-img" width="540" height="405" src="img/2.jpg"/>
-              <img class="nested-img" width="540" height="405"  src="img/"/>
-            </div>
-          </div>
-          <div class="about-row" id="a-row2">
-            <div class="img-holder">
-              <img class="about-img" width="540" height="405"  src="img/3.jpg"/>
-              <img class="nested-img" width="540" height="405"  src="img/"/>
-            </div>
-            <div class="img-holder">
-              <img class="about-img" width="540" height="405"  src="img/4.jpg"/>
-              <img class="nested-img" width="540" height="405" src="img/"/>
-            </div>
-          </div>
-          <div class="about-row" id="a-row3">
-            <div class="img-holder">
-              <img class="about-img" width="540" height="405" src="img/5.jpg"/>
-              <img class="nested-img" width="540" height="405"  src="img/"/>
-            </div>
-            <div class="img-holder">
-              <img class="about-img" width="540" height="405"  src="img/6.jpg"/>
-              <img class="nested-img" width="540" height="405"  src="img/"/>
-            </div>
-          </div>
+        {% endfor %}
         </main>
       </section>
 
@@ -66,15 +42,15 @@
           <h1>Show NYC</h1>
         </header>
         <div class="more">
-          <h3>Submit your Photos </h4>
+          <h3>Submit your Photos </h3>
           <img src=""/>
           <p>GO TO INTERN-CMS-DEV.ELASTICBEANSTALK.COM </p>
           <p>DOWNLOAD OUR MOBILE APP SHOW NYC </p>
         </div>
         <main class="weekly-theme">
           <h5>This week's theme is</h5>
-          <h3>Shakespeare in the Park</p>
-          <img src="img/next-week.jpg"/>
+          <h3>{{next_campaign.name}}</h3>
+          <img src="img/{{next_campaign.stock_image}}"/>
         </main>
       </section>
 

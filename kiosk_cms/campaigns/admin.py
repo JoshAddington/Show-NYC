@@ -38,16 +38,19 @@ class CampaignAdmin(admin.ModelAdmin):
         campaign = Campaign.objects.get(pk=pk)
         next_campaign = Campaign.objects.filter(next_active=True)
         winning_image = Image.objects.filter(campaign_winner=True).filter(campaign_id=pk).select_related()
+        top_images = Image.objects.filter(campaign_winner=False).filter(active=True).filter(campaign_id=pk).order_by('-score').only('image')[:6]
         if next_campaign:
             if winning_image:
-                top_images = Image.objects.filter(campaign_winner=False).filter(active=True).filter(campaign_id=pk).order_by('-score').only('image')[0:7]
-                print(winning_image[0].image.url)
-                return render(request, 'template.html', {
-                    'campaign': campaign,
-                    'next_campaign': next_campaign[0],
-                    'winning_image': winning_image,
-                    'top_images': top_images
-                })
+                if len(top_images) == 6:
+                    print(top_images)
+                    return render(request, 'template.html', {
+                        'campaign': campaign,
+                        'next_campaign': next_campaign[0],
+                        'winning_image': winning_image[0],
+                        'top_images': top_images
+                    })
+                else:
+                    messages.error(request, "The campaign must have 6 active images in order to generate the template.")
             else:
                 messages.error(request, "An image must be marked as the campaign winner to generate the template.")
 
