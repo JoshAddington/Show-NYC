@@ -30,11 +30,11 @@ class CampaignAdmin(admin.ModelAdmin):
     def get_urls(self):
         urls = super(CampaignAdmin, self).get_urls()
         my_urls = patterns('',
-            (r'^(?P<pk>[0-9]+)/template/$', self.my_view)
+            (r'^(?P<pk>[0-9]+)/template/$', self.generate_template)
         )
         return my_urls + urls
 
-    def my_view(self, request, pk):
+    def generate_template(self, request, pk):
         campaign = Campaign.objects.get(pk=pk)
         next_campaign = Campaign.objects.filter(next_active=True)
         winning_image = Image.objects.filter(campaign_winner=True).filter(campaign_id=pk).select_related()
