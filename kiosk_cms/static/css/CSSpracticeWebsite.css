@@ -133,6 +133,7 @@ footer > p span  {
 #submit{
   text-align: center;
   overflow-y: auto;
+  display: block;
 }
 .mobile {
   display: none;
@@ -979,8 +980,6 @@ footer > p span  {
     padding-top: 5%;
   }
   #submit{
-    display: block;
-    overflow-y: auto;
     height: 100%;
   }
   .mobile {
