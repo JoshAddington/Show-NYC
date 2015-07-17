@@ -1005,4 +1005,11 @@ footer > p span  {
   #campaign-intro {
     font-size: 12px;
   }
+  .menu ul {                                      /*Menu option layout*/
+  padding-top: 10px;
+  }
+  #share-buttons {                                 /*Share icon positioning*/
+    margin-top: 20px;
+  }
 }
+
