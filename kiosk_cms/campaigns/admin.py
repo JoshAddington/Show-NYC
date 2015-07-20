@@ -63,10 +63,12 @@ class CampaignAdmin(admin.ModelAdmin):
                         'winning_image': context['winning_image'],
                         'top_images': context['top_images']}).encode('utf-8')
 
-        f = StringIO()
+        readme = render_to_string('kiosk.md').encode('utf-8')
 
+        f = StringIO()
         zip = zipfile.ZipFile(f, 'w')
         zip.writestr('app/pages/index.html', page)
+        zip.writestr('app/generate-readme.md', readme)
 
         for image in context['top_images']:
             url = urllib2.urlopen(settings.MEDIA_URL+str(image.image.name))
