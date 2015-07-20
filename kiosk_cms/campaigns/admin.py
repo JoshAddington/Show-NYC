@@ -58,8 +58,8 @@ class CampaignAdmin(admin.ModelAdmin):
         """                                                                         
         Create a ZIP file on disk and transmit it in chunks of 8KB,
         without loading the whole file into memory. ZIP file contains
-        a folder with the index.html file and approriate images
-        for the active campaign.
+        a folder app/ with the index.html file in pages/ and approriate images
+        for the active campaign in img/.
         """
         temp = tempfile.TemporaryFile()
         archive = zipfile.ZipFile(temp, 'w', zipfile.ZIP_DEFLATED)
@@ -71,7 +71,7 @@ class CampaignAdmin(admin.ModelAdmin):
         for image in context['top_images']:
             self.zip_image(image.image, archive)
         self.zip_image(context['winning_image'].image, archive)
-        archive.writestr('index.html', page)
+        archive.writestr('app/pages/index.html', page)
         archive.close()
         chunk_size = 8192
         wrapper = FileWrapper(temp)
@@ -87,11 +87,10 @@ class CampaignAdmin(admin.ModelAdmin):
             if image.name:
                 name = image.name
             elif image:
-                print('hi')
                 name = image
             r = requests.get(settings.MEDIA_URL+str(name))
             content = PilImage.open(StringIO(r.content)).tobytes()
-            zipfile.writestr(name, content)
+            zipfile.writestr('app/img/'+name, content)
         except:
             pass
 
@@ -104,7 +103,6 @@ class CampaignAdmin(admin.ModelAdmin):
     def generate_template(self, request, pk):
         campaign = Campaign.objects.get(pk=pk)
         next_campaign = Campaign.objects.filter(next_active=True).select_related()
-        print(next_campaign[0].stock_image)
         winning_image = Image.objects.filter(campaign_winner=True).filter(campaign_id=pk).select_related()
         top_images = Image.objects.filter(campaign_winner=False).filter(active=True).filter(campaign_id=pk).order_by('-score').only('image')[:6]
         if next_campaign:
