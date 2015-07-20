@@ -1,5 +1,7 @@
 from rest_framework import serializers
+from images.models import Image
 from .models import Campaign
+
 
 class CampaignSerializer(serializers.ModelSerializer):
 
