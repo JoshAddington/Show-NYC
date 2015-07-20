@@ -791,6 +791,9 @@ footer > p span  {
   text-transform: uppercase;
   display: inline-block;
 }
+.ng-invalid {
+  color: #de4831;
+}
 .ribbon {
   background-color: #DE4831;
   overflow-x: hidden;
