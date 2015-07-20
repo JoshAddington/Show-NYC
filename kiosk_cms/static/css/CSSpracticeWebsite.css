@@ -371,7 +371,6 @@ footer > p span  {
 
 
 /*Campaign information for the vote and submit pages*/
-
 #campaign {                                   
   overflow: auto;
   background-color: #f9f9f9;
@@ -467,7 +466,7 @@ footer > p span  {
 .filter-list li:hover {
   opacity: 0.5;}
 
-/*Special classes*/
+
 /*No select class*/
 .noselect {                                      
     -webkit-touch-callout: none;
@@ -476,6 +475,7 @@ footer > p span  {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;}
+
 
 /*highlight class*/
 .highlight {
