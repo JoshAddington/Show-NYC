@@ -1,22 +1,23 @@
 /*  Colors:   Yellow: #FFAA00     Red: #DE4831      Green: #19A65C      Charcole: #333333*/
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-body {                                                  /*Body*/
+  max-width: 100%;
+  overflow-x: hidden;}
+
+body {                                         
   font-family: "Raleway";
   font-size: 16px;
   color: black;
-  background-color: #f9f9f9;
-}
-h1 {                                                  /*Heading 1*/
+  background-color: #f9f9f9;}
+
+/*Headings*/
+h1 {                                          
   font-family: "Changa One";
   color: white;
   letter-spacing: 4px;
   font-size: 30px;
-  background-color: none;
-}
-h2 {                                                  /*Heading 2*/
+  background-color: none;}
+
+h2 {                                                 
   font-family: "Raleway";
   margin-top: -30px;
   color: black;
@@ -24,41 +25,42 @@ h2 {                                                  /*Heading 2*/
   background-color: white;
   text-align: center;
   font-weight: bold;
-  vertical-align: center;
-}
-h3 {                                                  /*Heading 3*/
+  vertical-align: center;}
+
+h3 {                                            
   font-family: "Raleway";
   font-size: 20px;
   font-style: normal;
-  color: black;
-}
-header {                                              /*Header*/
+  color: black;}
+
+header {                                          
   background: #FFAA00;
   height: 80px;
   overflow: none;
-  width: 100%;
-}
+  width: 100%;}
+
 header > h1 {
-  display: inline-block;
-}
-p{                                                  /*Paragraphs*/
+  display: inline-block;}
+
+p {                                                  
   color: #333333;
   padding: 10px 10px 10px 10px;
-  font-size: 15px;
-}
+  font-size: 15px;}
+
 a {
   text-decoration: none;
-  color: inherit;
-}
-input {                                              /*Form*/
+  color: inherit;}
+
+/*form input*/
+input {                                          
   text-align: left;
   vertical-align: center;
   float: center;
   margin: 0 auto;
   padding-left: 33.33%;
-  padding-bottom: 10px;
-}
-input[type = "text"]{                              /*Text input*/
+  padding-bottom: 10px;}
+
+input[type = "text"]{
   display: block;
   width: 50%;
   height: 40px;
@@ -68,9 +70,9 @@ input[type = "text"]{                              /*Text input*/
   vertical-align: center;
   float: center;
   opacity: 1.0;
-  padding-left: 10px;
-}
-input[type = "email"]{                              /*Text input*/
+  padding-left: 10px;}
+
+input[type = "email"]{                       
   display: block;
   width: 50%;
   height: 40px;
@@ -80,27 +82,30 @@ input[type = "email"]{                              /*Text input*/
   vertical-align: center;
   float: center;
   opacity: 1.0;
-  padding-left: 10px;
-}
+  padding-left: 10px;}
+
+/*footer*/
 footer {
   background-color: #FFAA00;
   color: white;
   font-family: "Raleway";
   font-size: 18px;
   width: 100%;
-  height: 70px;
-}
+  height: 70px;}
+
 footer > p {
   text-transform: uppercase;
   color: white;
   font-size: 13px;
   text-align: center;
   margin: auto;
-  padding-top: 30px;
-}
+  padding-top: 30px;}
+
 footer > p span  {
-  opacity: 0.75;
-}
+  opacity: 0.75;}
+
+
+/*ShowNYC logo*/
 #show-nyc {
   font-family: "Changa One";
   color: white;
@@ -109,147 +114,76 @@ footer > p span  {
   width: 100%;
   text-align: center;
   margin: auto;
-  margin-top: 20px;
-}
-/*Four page displays and headers*/                 /*Initial page display*/
+  margin-top: 20px;}
+
+
+/*Four page displays, headers, and initial page display*/
 #about {
   background-color: #f9f9f9;
-  overflow: hidden;
-}
+  overflow: hidden;}
+
 #vote {
   display: block;
-  background-color: white;
-}
+  background-color: white;}
+
 #gallery{
   background-color: white;
   height: 100%;
   display: block;
-  overflow: hidden;
-}
+  overflow: hidden;}
+
 #submit{
   text-align: center;
-  overflow-y: auto;
-}
-.mobile {
-  display: none;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-}
-.info-text {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  height: 100%;
-  padding: 5%;
-}
-.info-text h2 {
-  text-align: center;
-  font-size: 20px;
-  background-color: #f9f9f9;
-}
-.info-text h3 {
-  text-align: center;
-  font-size: 20px;
-    color: #de4831;
-}
-.info-text p {
-  text-align: center;
-  font-size: 15px;
-}
-.info-text > button {
-  font-weight: 800;
-  background-color: #DE4831;
-  border: none;
-  color: white;
-  padding: 5px;
-}
-/*Buttons*/
-.tabs {                                            /*Buttons class (.tabs)*/
-    font-family: "Raleway";
-    padding-top: 10px;
-    text-align: center;
-  }
-/*Four buttons*/                                  /*Buttons*/
+  overflow-y: auto;}
+
+
+/*Four buttons and share buttons on the navigation menu*/
 #voteButton{
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    font-family: "Raleway";
-    display: block;
-    height: 30px;
-    width: 75px;
-  }
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  font-family: "Raleway";
+  display: block;
+  height: 30px;
+  width: 75px;}
+
 #submitButton{
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    display: block;
-    height: 30px;
-    width: 100px;
-  }
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  display: block;
+  height: 30px;
+  width: 100px;}
+
 #galleryButton{
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    display: block;
-    height: 30px;
-    width: 100px;
-  }
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  display: block;
+  height: 30px;
+  width: 100px;}
+
 #aboutButton{
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    display: block;
-    height: 30px;
-    width: 90px;
-  }
-#share-buttons {                                 /*Share icon positioning*/
-    margin-top: 100px;
-    margin-left: 10%;
-    max-width: 150px;
-}
-#share-buttons img {                             /*Share icon sizing*/
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  display: block;
+  height: 30px;
+  width: 90px;}
+
+#share-buttons {                             
+  margin-top: 100px;
+  margin-left: 10%;
+  max-width: 150px;}
+
+#share-buttons img {                           
   width: 20px;
   height: 20px;
-  padding: 10px;
-}
-.noselect {                                      /*No select class*/
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-#submit h3 {                                     /*Submit section h3 headers*/
-  letter-spacing: 2px;
-  font-size: 20px;
-}
-.btn-style{                                       /*Submit Button*/
-  font-family: "Raleway";
-  border : dashed 2px #333333;
-  font-size : 18px;
-  color : #333333;
-  letter-spacing: 3px;
-  font-weight: 400;
-  padding : 10px 30px;
-  background-color : #f9f9f9;
-  cursor: pointer;
-  margin-top: 30px;
-  text-transform: uppercase;
-}
-.btn-style:hover {                                /*Submit Button Hover*/
-  font-family: "Raleway";
-  border : solid 2px #DE4831;
-  font-size : 18px;
-  color : #DE4831;
-  letter-spacing: 3px;
-  font-weight: 400;
-  padding : 10px 30px;
-  cursor: pointer;
-}
-/*Menu*/
-.menu {                                          /*Slide out menu*/
+  padding: 10px;}
+
+
+/*Slide-out navigation menu*/
+.menu {                                        
   background-color: #19A65C;
   cursor: default;
   position: fixed;
@@ -258,431 +192,62 @@ footer > p span  {
   padding: 0;
   left: -300px;
   width: 300px;
-  z-index: 15;
-}
-.icon-close {                                   /*Menu slide out icon*/
+  z-index: 15;}
+
+.icon-close {                                   
   position: relative;
   font-size: 30px;
   color: white;
-  margin-top: 10%;
-}
+  margin-top: 10%;}
+
 .icon-close > h1 {
   font-size: 48px;
   margin-left: 15%;
-  max-width: 200px;
-}
+  max-width: 200px;}
+
+/*Three Line Menu Navicon*/
 .icon-menu {
-  position: absolute;                              /*Menu banner*/
+  position: absolute;                          
   margin-left: 5%;
   top: 4.5%;
-  cursor: pointer;
-}
-#menu-shownyc {                                     /*Heading 1*/
+  cursor: pointer;}
+
+/*Navigation menu heading*/
+#menu-shownyc {                                 
   font-family: "Changa One";
   color: white;
   padding-top: 20px;
   letter-spacing: 4px;
   font-size: 36px;
-  background-color: none;
-}
-.wrap {
-    position: relative;
-}
-.slide-menu {
-  height: 100%;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-}
-.menu ul {                                      /*Menu option layout*/
+  background-color: none;}
+
+/*Menu option layout*/
+.menu ul {                                      
   list-style: none;
   margin: 0;
   letter-spacing: 3px;
   padding-top: 20px;
-  max-width: 200px;
-}
-.menu li {                                      /*Menu option style*/
+  max-width: 200px;}
+
+/*Menu option style*/
+.menu li {                                      
   background-color: none;
   padding-bottom: 3px;
-  padding-top: 25px;
-}
-.menu a {                                       /*Menu listing style*/
+  padding-top: 25px;}
+
+/*Menu listing style*/
+.menu a {                                       
   font-family: "Raleway";
   letter-spacing: 2px;
   font-size: 18px;
-  text-decoration: none;
-}
+  text-decoration: none;}
+
 .menu a:hover {
-  opacity: 0.5;
-}
-#about-section {                                  /*About section extended header*/
-  color: #333333;
-  overflow: hidden;
-  width: 100%;
-}
-.description {
-  width: 80%;
-  margin: 50px auto;
-  background-color: #f9f9f9;
-  text-align: left;
-}
-.about-heading {
-  padding: 20px 20px 0px 0px;
-  letter-spacing: 2px;
-  font-size: 30px;
-  font-family: "Raleway";
-  color: #333333;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  background-color: #f9f9f9;
-}
-.about-par{
-  text-align: left;
-  color: #333333;
-  font-size: 17px;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 25px;
-  background-color: #f9f9f9;
-}
-#grid-head {
-  text-align: center;
-  margin-bottom: 0px;
-}
-/*Header for Submit and About sections*/
-#campaign {                                    /*Vote Section Campaign Information*/
-  overflow: auto;
-  background-color: #f9f9f9;
-  max-height: 300px;
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-}
-.filter {
-  background: #FFAA00;
-  width: 100%;
-  height: 55px;
-  border-top: 1px solid white;
-  margin: auto;
-  text-align: center;
-}
-.filter-list {
-  width: 450px;
-  padding-left: 0;
-  height: inherit;
-  list-style-type: none;
-  margin: 0 auto;
-  overflow: hidden;
-  float: center;
-}
-.filter-list li {
-  float: none;
-  font-size: 14px;
-  display: inline-block;
-  height: inherit;
-  font-weight: 500;
-  color: white;
-  padding-left: 2%;
-  padding-right: 2%;
-  text-transform: uppercase;
-  padding-top: 20px;
-}
-.filter-list li a:hover, #campaign-list:hover{
-  opacity: 0.5;
-}
-#campaignFilter {
-  width: 120px;
-}
-#campaignFilter > img {
-  position: absolute;
-  margin-top: 5px;
-  margin-left: -22px;
-  pointer-events: none;
-}
-#firstFilter {
-  border-left: 2px solid white;
-}
-.filter-list li:hover {
-  opacity: 0.5;
-}
-#campaign-list {
-  text-transform: uppercase;
-  color: white;
-  z-index: 10;
-  border: none;
-  outline:none;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  background: transparent;
-  cursor:pointer;
-  width: 110px;
-}
-/* V O T E   S E C T I O N   P H O T O   G R I D */
-.image-zoom-container-vote{                    /*Photo grid layout*/
-  list-style: none;
-  height: 20%;
-}
-.zoom-container-vote{                          /*Photo grid layout*/
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 33.33%;
-  padding-right: 0%;
-  vertical-align: top;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.zoom-container-vote img{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-/* G A L L E R Y   S E C T I O N   P H O T O   G R I D */
-.image-zoom-container-gallery{                 /*Photo grid layout*/
-  list-style: none;
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-}
-.zoom-container-gallery{                       /*Photo grid layout*/
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 33.33%;
-  vertical-align: top;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.zoom-container-gallery img{
-  display: block;
-  width: 100%;
-  height: auto;
-  -webkit-transition: all .7s ease; /*ease into image zoom*/
-  -moz-transition: all .7s ease;
-  -ms-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  transition: all .7s ease;
-}
-.zoom-container-gallery > div {
-    background-color: #DE4831;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 25%;
-    top: 75%;
-    left: 0;
-    -webkit-transition: opacity 0.3s linear;
-}
-.zoom-container-gallery:hover > div {
-  display: block;
-  opacity: .75;
-}
-.zoom-container-gallery:hover img {             /*image hover animation*/
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform:scale(1.1);
-}
-.loadingImages {
-  text-transform: uppercase;
-  font-size: 11px;
-  width: 110px;
-  height: 20px;
-  text-align: center;
-  margin: 15px auto;
-  color: #DE4831;
-}
-/* A B O U T   S E C T I O N   P H O T O   G R I D */
-.image-zoom-container-about{                    /*Photo grid layout*/
-  list-style: none;
-  background-color: #f9f9f9;
-  position: relative;
-  overflow: hidden;
-  font-size: 0px;
-  padding-top: 30px;
-}
-.zoom-container-about{                          /*Photo grid layout*/
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 50%;
-  vertical-align: top;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.zoom-container-about img{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.zoom-container-about > div {
-    background-color: #DE4831;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 25%;
-    top: 75%;
-    left: 0;
-    -webkit-transition: opacity 0.3s linear;
-}
-.zoom-container-about:hover > div {
-  display: block;
-  opacity: .75;
-}
-.zoom-container-about p {
-    text-transform: uppercase;
-    color: white;
-    text-align: center;
-    font-weight: 900;
-    letter-spacing: 2px;
-    opacity: 1.0;
-    z-index: 3;
-}
-/* S U B M I T    S E C T I O N */
-#submit-title {                                   /*Submit section campaign information*/
-  background-color: #f9f9f9;
-  height: 100%;
-  opacity: 1.0;
-}
-#submit-title h3{
-  letter-spacing: 2px;
-  font-size: 30px;
-  color: #333333;
-}
-#submit-title h4 {
-  color: #333333;
-  text-align: center;
-  font-size: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  display: inline-block;
-}
-#submit-title h5 {
-  color: #00ABD5;
-  text-align: center;
-  font-size: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  display: inline-block;
-}
-#submit-title p {
-  color: #333333;
-  text-align: center;
-  font-size: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-#submit-step1 {                                   /*Submit Section enter your name*/
-  background-color: #f9f9f9;
-  height: 100%;
-  opacity: 1.0;
-  cursor: default;
-}
-#submit-step1 h3 {
-  letter-spacing: 2px;
-  font-size: 30px;
-  color: #333333;
-}
-#submit-step1 p {
-  color: #333333;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-#submit-step2 {                                    /*Submit Section enter your email*/
-  background-color: #f9f9f9;
-  height: 100%;
-  padding-bottom: 50px;
-  opacity: 1.0;
-  cursor: default;
-}
-#submit-step2 h3 {
-  letter-spacing: 2px;
-  font-size: 30px;
-  color: #333333;
-}
-#submit-step2 p {
-  color: #333333;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-#submit-photo {                                        /*Submit Section choose your photo*/
-  background-color: #f9f9f9;
-  height: 100%;
-  padding-top: 20px;
-  opacity: 1.0;
-  cursor: default;
-  display: inline}
-#submit-photo h3 {
-  letter-spacing: 2px;
-  font-size: 30px;
-  background-color: #f9f9f9;
-  color: #333333;
-}
-#submit-photo p {
-  color: #333333;
-  text-align: center;
-  font-size: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-}
-.uploadzone {
-  width: 400px;
-  height: 300px;
-  margin: 0 auto;
-  border: solid #333333 10px;
-  display: none;
-}
-.upload-container {
-  position: relative;
-  margin-bottom: 50px;
-  width: 100%;
-  margin-left: 0px;
-}
-#myfile {
-  opacity: 0;
-  cursor: pointer;
-  width: 60%;
-}
-#myfile-smaller {
-  width: 300px;
-  float: center;
-  text-align: center;
-  margin: 0 auto;
-}
-#myfile-center {
-  width: 100%;
-  float: center;
-  text-align: center;
-  margin: 0 auto;
-}
-#select {                                             /*Choose me button*/
-  font-family: "Raleway";
-  font-size : 15px;
-  color : #333333;
-  letter-spacing: 3px;
-  font-weight: 500;
-  background-color : #f9f9f9;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin: 0 auto;
-  width: 300px;
-  padding-top: 6px;
-  border: solid #333333 2px;
-  margin-top: -40px;
-  margin-bottom: 30px;
-  height: 25px;
-}                            /*Scroll to the top button*/
-.scroll-top-wrapper {                                   /*Scroll to the top button*/
+  opacity: 0.5;}
+
+
+/*Scroll to the top button*/
+.scroll-top-wrapper {                        
   position: fixed;
   opacity: 0;
   visibility: hidden;
@@ -699,53 +264,43 @@ footer > p span  {
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
+  transition: all 0.5s ease-in-out;}
+
 .scroll-top-wrapper.show {
   visibility: visible;
   cursor: pointer;
   opacity: .80;
 }
+/*Scroll to top button animation*/
 @-webkit-keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
+    transform: translateY(-8px);}
   50% {
     -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
+    transform: translateY(-4px);}
   100% {
     -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
+    transform: translateY(-8px);}}
 @keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
+    transform: translateY(-8px);}
   50% {
     -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-  }
+    transform: translateY(-4px);}
   100% {
     -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
+    transform: translateY(-8px);}}
 @-webkit-keyframes hvr-bob-float {
   100% {
     -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
+    transform: translateY(-8px);}}
 @keyframes hvr-bob-float {
   100% {
     -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-}
+    transform: translateY(-8px);}}
+
 .hvr-bob {
   display: inline-block;
   vertical-align: middle;
@@ -754,8 +309,8 @@ footer > p span  {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale;}
+
 .hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
   -webkit-animation-name: hvr-bob-float, hvr-bob;
   animation-name: hvr-bob-float, hvr-bob;
@@ -770,30 +325,10 @@ footer > p span  {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-direction: normal, alternate;
-  animation-direction: normal, alternate;
-}
-#campaign-slogan {
-  font-size: 20px;
-  font-family:'Raleway';
-  text-align: center;
-  letter-spacing: 3px;
-  float: center;
-  color: #00ABD5;
-  display: inline-block;
-}
-#campaign-intro {
-  font-size: 20px;
-  font-family:'Raleway';
-  text-align: center;
-  letter-spacing: 3px;
-  color: #333333;
-  float: center;
-  text-transform: uppercase;
-  display: inline-block;
-}
-.ng-invalid {
-  color: #de4831;
-}
+  animation-direction: normal, alternate;}
+
+
+/*Submit your photo here coner banner*/
 .ribbon {
   background-color: #DE4831;
   overflow-x: hidden;
@@ -812,8 +347,8 @@ footer > p span  {
   /* shadow */
   -webkit-box-shadow: 0 0 2px #DE4831;
      -moz-box-shadow: 0 0 2px #DE4831;
-          box-shadow: 0 0 2px #DE4831;
-}
+          box-shadow: 0 0 2px #DE4831;}
+
 .ribbon a {
   color: white;
   display: block;
@@ -822,17 +357,190 @@ footer > p span  {
   padding: 10px 40px;
   text-align: center;
   text-decoration: none;
+  overflow: hidden;}
+
+
+/*Loading icon*/
+#load {
+  text-align: center;}
+
+#loading {
+  margin-bottom: -20px;
+  width: 40px;
+  height: 10px;}
+
+
+/*Campaign information for the vote and submit pages*/
+
+#campaign {                                   
+  overflow: auto;
+  background-color: #f9f9f9;
+  max-height: 300px;
+  width: 100%;
   overflow: hidden;
+  text-align: center;}
+
+/*Introducing the campaign*/
+#campaign-intro {
+  font-size: 20px;
+  font-family:'Raleway';
+  text-align: center;
+  letter-spacing: 3px;
+  color: #333333;
+  float: center;
+  text-transform: uppercase;
+  display: inline-block;}
+
+/*Campaign name and or slogan*/
+#campaign-slogan {
+  font-size: 20px;
+  font-family:'Raleway';
+  text-align: center;
+  letter-spacing: 3px;
+  float: center;
+  color: #00ABD5;
+  display: inline-block;}
+
+
+/*photo sorting options and filters*/
+.filter {
+  background: #FFAA00;
+  width: 100%;
+  height: 55px;
+  border-top: 1px solid white;
+  margin: auto;
+  text-align: center;}
+
+/*List of filter options*/
+.filter-list {
+  width: 450px;
+  padding-left: 0;
+  height: inherit;
+  list-style-type: none;
+  margin: 0 auto;
+  overflow: hidden;
+  float: center;}
+
+/*Individual filter options*/
+.filter-list li {
+  float: none;
+  font-size: 14px;
+  display: inline-block;
+  height: inherit;
+  font-weight: 500;
+  color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-transform: uppercase;
+  padding-top: 20px;}
+
+/*List of campaign sorting options*/
+#campaign-list {
+  text-transform: uppercase;
+  color: white;
+  z-index: 10;
+  border: none;
+  outline:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background: transparent;
+  cursor:pointer;
+  width: 110px;}
+
+/*Filter hovering and highlighting*/
+.filter-list li a:hover, #campaign-list:hover{
+  opacity: 0.5;}
+
+#campaignFilter {
+  width: 120px;}
+
+#campaignFilter > img {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -22px;
+  pointer-events: none;}
+
+#firstFilter {
+  border-left: 2px solid white;
 }
+.filter-list li:hover {
+  opacity: 0.5;}
+
+/*Special classes*/
+/*No select class*/
+.noselect {                                      
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+
+/*highlight class*/
+.highlight {
+  opacity: .5;}
+
+
+/* V O T E    S E C T I O N */
+
+/*Vote section photo grid*/
+.image-zoom-container-vote{                
+  list-style: none;
+  height: 20%;}
+
+.zoom-container-vote{                      
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 33.33%;
+  padding-right: 0%;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+
+.zoom-container-vote img{
+  display: block;
+  width: 100%;
+  height: auto;}
+
+/*Voting heart icon*/
 #emptyHeart, #fullHeart {
   height: 25px;
   width: 25px;
   display: inline-block;
-  position: absolute;
-}
+  position: absolute;}
+
 #fullHeart{
-  cursor: auto;
-}
+  cursor: auto;}
+/*heart icon animation*/
+.hvr-grow {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);}
+
+/*vote count*/
+#photoScore {
+  display: inline-block;
+  color: #DE4831;
+  font-size: 18px;
+  font-style: "Raleway";
+  margin-left: 35px;
+  margin-top: -1px;}
+
+/*background behind the heart icon and vote count*/
 .vote-space {
   cursor: pointer;
   font-size: 0;
@@ -841,8 +549,264 @@ footer > p span  {
   margin-top: -35px;
   height: 60px;
   padding: 5px 14px 5px 12px;
-  background-color: rgba(255,  255, 255, 0.5);
-}
+  background-color: rgba(255,  255, 255, 0.5);}
+
+.wrap {                                  
+    position: relative;}
+
+
+/* G A L L E R Y    S E C T I O N */
+
+/*Gallery section photo grid*/
+.image-zoom-container-gallery{               
+  list-style: none;
+  background-color: white;
+  position: relative;
+  overflow: hidden;}
+
+.zoom-container-gallery{                    
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+
+.zoom-container-gallery img{
+  display: block;
+  width: 100%;
+  height: auto;
+  /*ease into image zoom*/
+  -webkit-transition: all .7s ease; 
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;}
+
+.zoom-container-gallery > div {
+    background-color: #DE4831;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 75%;
+    left: 0;
+    -webkit-transition: opacity 0.3s linear;}
+
+.zoom-container-gallery:hover > div {
+  display: block;
+  opacity: .75;}
+
+/*image hover animation*/
+.zoom-container-gallery:hover img {             
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform:scale(1.1);}
+
+
+/* S U B M I T    S E C T I O N */
+
+/*Submit page header*/
+#submit h3 {                                    
+  letter-spacing: 2px;
+  font-size: 20px;}
+
+.submit-container {
+  margin: 0 auto;
+  width: 100%;}
+
+/*Submit section campaign information*/
+#submit-title {                                   
+  background-color: #f9f9f9;
+  height: 100%;
+  opacity: 1.0;}
+
+#submit-title h3{
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #333333;}
+
+#submit-title h4 {
+  color: #333333;
+  text-align: center;
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: inline-block;}
+
+#submit-title h5 {
+  color: #00ABD5;
+  text-align: center;
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: inline-block;}
+
+#submit-title p {
+  color: #333333;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;}
+
+/*Submit Section choose your photo*/
+#submit-photo {                                        
+  background-color: #f9f9f9;
+  height: 100%;
+  padding-top: 20px;
+  opacity: 1.0;
+  cursor: default;
+  display: inline}
+
+#submit-photo h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  background-color: #f9f9f9;
+  color: #333333;}
+
+#submit-photo p {
+  color: #333333;
+  text-align: center;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;}
+
+/*Submit Section enter your name*/
+#submit-step1 {                                   
+  background-color: #f9f9f9;
+  height: 100%;
+  opacity: 1.0;
+  cursor: default;}
+
+#submit-step1 h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #333333;}
+
+#submit-step1 p {
+  color: #333333;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;}
+
+/*Submit Section enter your email*/
+#submit-step2 {                                    
+  background-color: #f9f9f9;
+  height: 100%;
+  padding-bottom: 50px;
+  opacity: 1.0;
+  cursor: default;}
+
+#submit-step2 h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #333333;}
+
+#submit-step2 p {
+  color: #333333;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;}
+
+/*Upload photo section*/
+.upload-container {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  margin-left: 0px;}
+
+/*hidden preview canvas*/
+.uploadzone {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  border: solid #333333 10px;
+  display: none;}
+
+/*cropping tool*/
+.cropArea {
+  background-color: transparent;
+  float: center;
+  text-align: center;
+  margin: 0 auto;}
+
+/*Hidden choose photo selection*/
+#myfile {
+  opacity: 0;
+  cursor: pointer;
+  width: 60%;}
+
+#myfile-smaller {
+  width: 300px;
+  float: center;
+  text-align: center;
+  margin: 0 auto;}
+
+#myfile-center {
+  width: 100%;
+  float: center;
+  text-align: center;
+  margin: 0 auto;}
+
+/*Choose Your Photo Here button*/
+#select {                                           
+  font-family: "Raleway";
+  font-size : 15px;
+  color : #333333;
+  letter-spacing: 3px;
+  font-weight: 500;
+  background-color : #f9f9f9;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 300px;
+  padding-top: 6px;
+  border: solid #333333 2px;
+  margin-top: -40px;
+  margin-bottom: 30px;
+  height: 25px;}
+
+#myImg {
+  cursor: pointer;}
+
+/*Invalid input response message*/
+.ng-invalid {
+  color: #de4831;}
+
+/*End of page submit button*/
+.btn-style{                                     
+  font-family: "Raleway";
+  border : dashed 2px #333333;
+  font-size : 18px;
+  color : #333333;
+  letter-spacing: 3px;
+  font-weight: 400;
+  padding : 10px 30px;
+  background-color : #f9f9f9;
+  cursor: pointer;
+  margin-top: 30px;
+  text-transform: uppercase;}
+
+/*End of page submit button hover*/
+.btn-style:hover {                                
+  font-family: "Raleway";
+  border : solid 2px #DE4831;
+  font-size : 18px;
+  color : #DE4831;
+  letter-spacing: 3px;
+  font-weight: 400;
+  padding : 10px 30px;
+  cursor: pointer;}
+
+
+/* A B O U T    S E C T I O N */
+
+/*Last weel's winner icon*/
 #winning-icon {
   position: absolute;
   height: 14%;
@@ -855,68 +819,137 @@ footer > p span  {
   margin-top: 0px;
   right: 0;
   padding-right: 0px;
-  cursor: default;
-}
-#photoScore {
+  cursor: default;}
+
+#about-section {                                  
+  color: #333333;
+  overflow: hidden;
+  width: 100%;}
+
+/*section divider*/
+.description {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  text-align: left;}
+
+/*heading*/
+.about-heading {
+  padding: 20px 20px 0px 0px;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-family: "Raleway";
+  color: #333333;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #f9f9f9;}
+
+/*detailed paragraphs*/
+.about-par{
+  text-align: left;
+  color: #333333;
+  font-size: 17px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 25px;
+  background-color: #f9f9f9;}
+
+/*About section photo grid*/
+.image-zoom-container-about{                   
+  list-style: none;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  font-size: 0px;
+  padding-top: 30px;}
+
+.zoom-container-about{                  
+  position: relative;
+  overflow: hidden;
   display: inline-block;
-  color: #DE4831;
-  font-size: 18px;
-  font-style: "Raleway";
-  margin-left: 35px;
-  margin-top: -1px;
-}
-.hvr-grow {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-#myImg {
-  cursor: pointer;
-}
-.cropArea {
-  background-color: transparent;
-  float: center;
-  text-align: center;
-  margin: 0 auto;
-}
-.highlight {
-  opacity: .5;
-}
-.submit-container {
-  margin: 0 auto;
+  width: 50%;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;}
+
+.zoom-container-about img{
+  display: block;
   width: 100%;
-}
-#photo{
+  height: auto;}
+
+.zoom-container-about > div {
+    background-color: #DE4831;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    top: 75%;
+    left: 0;
+    -webkit-transition: opacity 0.3s linear;}
+
+.zoom-container-about:hover > div {
+  display: block;
+  opacity: .75;}
+
+.zoom-container-about p {
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+    opacity: 1.0;
+    z-index: 3;}
+
+/*Check Out Past Campaign Winners heading*/
+#grid-head {
   text-align: center;
-  cursor: pointer;
-}
-#load {
-  text-align: center;}
-#loading {
-  margin-bottom: -20px;
-  width: 40px;
-  height: 10px;
-}
-#hide {
-  display: none;
-}
+  margin-bottom: 0px;}
+
+
+/*Media query: making the website mobile friendly*/
 @media only screen and (max-width:1000px) and (min-width:650px) { 
  .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
-      width: 50%;
-  }
-}
+      width: 50%;}}
 @media only screen and (max-width:650px) {
+  /*Headings*/
+  #show-nyc {
+    font-size: 150%;}
+
+  #campaign-slogan {
+    font-size: 12px;}
+
+  #campaign-intro {
+    font-size: 12px;}
+
+  /*Navigation menu*/
+  .menu { 
+    width: 50%;}
+
+  #menu-shownyc {
+    font-size: 28px;}
+
+  .menu ul {                                     
+  padding-top: 10px;}
+
+  #share-buttons {                              
+    margin-top: 20px;}
+
+  /*footer*/
+  footer > p {
+    width: 70%;
+    font-size: 13px;
+    padding-top: 5%;}
+
+  /*photo sorting options and filters*/
+  .filter-list{
+    width: 400px;}
+
+  .filter-list li {
+    font-size: 12px;}
+
+  /*Removing css transitions, transformations, and animations*/
   .zoom-container-gallery img, .zoom-container-vote img, .zoom-container-about img {
   /*CSS transitions*/
   -o-transition-property: none !important;
@@ -935,49 +968,13 @@ footer > p span  {
   -moz-animation: none !important;
   -o-animation: none !important;
   -ms-animation: none !important;
-  animation: none !important;
-  }
-  .filter-list{
-    width: 400px;
-  }
-  .filter-list li {
-    font-size: 12px;
-  }
+  animation: none !important;}
+
   .zoom-container-gallery, .zoom-container-vote, .zoom-container-about{
-      width: 100%;
-  }
-  footer > p {
-    width: 70%;
-    font-size: 13px;
-    padding-top: 5%;
-  }
+      width: 100%;}
+
   #submit{
     display: block;
     overflow-y: auto;
-    height: 100%;
-  }
-  .mobile {
-    display: none;
-  }
-  .menu { 
-    width: 50%;
-  }
-  #menu-shownyc {
-    font-size: 28px;
-  }
-  #show-nyc {
-    font-size: 150%;
-  }
-  #campaign-slogan {
-    font-size: 12px;
-  }
-  #campaign-intro {
-    font-size: 12px;
-  }
-  .menu ul {                                      /*Menu option layout*/
-  padding-top: 10px;
-  }
-  #share-buttons {                                 /*Share icon positioning*/
-    margin-top: 20px;
-  }
+    height: 100%;}
 }
