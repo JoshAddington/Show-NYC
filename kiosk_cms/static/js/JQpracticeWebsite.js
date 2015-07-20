@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  //Vote Button: Page Display
   $('#voteButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -10,7 +11,7 @@ $(document).ready(function() {
       $('#aboutButton').removeClass("highlight")}
   }); 
 
-  //Gallery Button Display
+  //Gallery Button: Page Display
   $('#galleryButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -21,7 +22,7 @@ $(document).ready(function() {
       $('#aboutButton').removeClass("highlight")}
   }); 
 
-  //Submit Button Display
+  //Submit Button: Page Display
   $('#submitButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -32,6 +33,7 @@ $(document).ready(function() {
       $('#aboutButton').removeClass("highlight")}
   }); 
 
+  //Submit Corner Ribbon: Page Display
   $('.ribbon').click(function() {
     var condition = true;
     if (condition === true){
@@ -42,7 +44,7 @@ $(document).ready(function() {
       $('#aboutButton').removeClass("highlight")}
   }); 
 
-   //About Button Display
+  //About Button: Page Display
   $('#aboutButton').click(function() {
     var condition = true;
     if (condition === true){
@@ -53,8 +55,7 @@ $(document).ready(function() {
       $('#aboutButton').addClass("highlight")}
   }); 
 
-
-  // Fixing the highlight on the navigation section
+  // Highlight on navigation menu dependent on URL
   if(window.location.href.indexOf("vote") > -1) {
     $('#voteButton').trigger("click");
   };
@@ -103,11 +104,6 @@ $(document).ready(function() {
     offsetTop = offset.top;
     $('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
   };
-
-  $('#photo').click(function(){
-    $('#photo').addClass('.enlarged');
-  })
-
 
 });
 
