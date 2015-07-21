@@ -9,41 +9,14 @@ Mobile App repo is at https://github.com/sagekieran/mobile-cms
 These install instructions are based on running [Postgres.app](http://postgresapp.com/) version 9.4 on Mac OSX Yosemite, so make sure you have it installed 
 
 #### Python Setup
-First, get Python's package installer called pip by downloading [get-pip.py](https://bootstrap.pypa.io/get-pip.py) and running with `python get-pip.py`.
 
-Python has a utility called virtualenv that is intended to keep python packages installed for projects separate from other projects and from python packages installed on your system. To set up python's virtualenv, run
+[Go here for a more in-depth install documentation](docs/python.md)
 
-```
-sudo pip install -r virtual.txt
-```
+Add Postgres.app to the system PATH. For 9.4, do this by adding `PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:${PATH}"`
+to your .bash_profile.
 
 
-To set up the system for running Python's virtualenv and add Postgres.app to the $PATH, append .bash_profile to your systems .bash_profile with
-
-```
-cat .bash_profile >> ~/.bash_profile 
-```
-
-
-Once virtualenv is installed, create a virtualenv called intern-cms by running
-
-```
-mkvirtualenv intern-cms
-```
-We will be installing all our packages in this virtualenv because it keeps these packages from interfering with the rest of our system. Since we're installing our packages in the virtualenv, we'll also need to interact with Django from this virtualenv every time as well.
-
-To deactivate the virtualenv, run 
-```
-deactivate
-```
-
-to enable the virtualenv, run 
-```
-workon intern-cms
-```
-
-
-then install the project packages by running
+If you're already familiar with and have used virtualenv, then create a new virtualenv and install the project packages by running
 
 ```
 pip install -r requirements.txt
