@@ -3,7 +3,7 @@
 ### Django
 
 Django is used on the backend, with Django Rest Framework serving the REST API.
-The django project is called kiosk_cms.
+The Django project is called kiosk_cms.
 
 Django Apps
 - Apis: only used for routing /api/ urls to their perspective apps through urls.py.
@@ -21,3 +21,7 @@ Templates:
 
 
 ### Angular
+
+Angular is used on the frontend, consuming the REST API served by Django
+
+The Angular app is located at kiosk_cms/static/js.angular/app/
