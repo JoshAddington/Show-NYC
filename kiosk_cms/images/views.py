@@ -22,6 +22,7 @@ def image_collection(request):
         images = Image.objects.filter(active=True).filter(flagged=False).select_related()
         serializer = ImageSerializer(images, many=True)
         return Response(serializer.data)
+
     elif request.method == 'POST':
         try:
             campaign = Campaign.objects.get(active=True)
@@ -57,6 +58,7 @@ def image_element(request, pk):
     if request.method == 'GET':
         serializer = ImageSerializer(image)
         return Response(serializer.data)
+
     elif request.method == 'PUT':
         raw_data = request.data
         user, created = User.objects.get_or_create(

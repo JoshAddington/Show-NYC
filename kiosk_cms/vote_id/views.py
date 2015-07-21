@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Vote_ID
 
 
+# gets or creates a record for the device_id, if supplied, or the IP address,
+# if the device_id is not supplied, and then returns the record.
 def get_vote_id(request):
     if request.GET.get('device_id') is not None:
         vote_id, created = Vote_ID.objects.get_or_create(vote_id=request.GET.get('device_id'))

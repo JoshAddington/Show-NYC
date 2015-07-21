@@ -28,6 +28,7 @@ class Image(models.Model):
     def vote_id(self, vote_id):
         return self.vote_id_set.filter(vote_id=vote_id).exists()
 
+    # only allows upvotes on images in an active campaign
     def upvote(self):
         if self.campaign_id.is_active():
             self.score += 1
@@ -43,6 +44,7 @@ class Image(models.Model):
                 return (self, True)
         return (self, False)
 
+    # return html for displaying an image thumbnail
     def thumb(self):
         if self.image:
             return u'<img src="%s" width=80 height=80 />' % (self.image.url)

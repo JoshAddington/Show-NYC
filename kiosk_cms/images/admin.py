@@ -11,6 +11,8 @@ class ImageAdmin(admin.ModelAdmin):
     # set the thumbnail to read only
     readonly_fields = ('thumb', )
 
+    # inverts django's boolean symbol for more intuitive indication
+    # of flagged content
     def flagged_col(self, obj):
         return not obj.flagged # invert the boolean value
     flagged_col.boolean = True
