@@ -7,7 +7,11 @@ The django project is called kiosk_cms.
 
 Django Apps
 - Apis: only used for routing /api/ urls to their perspective apps through urls.py.
-- Campaigns: handles campaign admin pages, which includes generating the kiosk template
+- Campaigns: Handles campaigns to be run on the kiosk.
+    - Includes database models; url routes, views, and serializers for the API; and admin pages, which includes generation of the kiosk template.
+- Images: Handles images submitted to each campaign.
+    - Includes database models; url routes, views, and serializers for the API, fields adds the Base64ImageField to the serializer for REST API image submission; and admin pages.
+- Vote_ID: used for limiting users to one vote per image. Creates a relation between a vote_id and an image.
 
 
 Templates:
