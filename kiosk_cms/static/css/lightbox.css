@@ -30,7 +30,7 @@ body:after {
   text-align: center;
   /*line-height: 0;*/
   /*font-weight: normal;*/
-  opacity: 0.75;
+  opacity: 1.0;
   display: none;
   width: 100%;
   overflow: none;
