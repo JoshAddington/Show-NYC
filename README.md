@@ -4,6 +4,8 @@ Initial deployment is at http://intern-cms-dev.elasticbeanstalk.com/
 
 Mobile App repo is at https://github.com/sagekieran/mobile-cms
 
+Description of the project structure is [here](docs/project.md)
+
 [REST API Endpoints](docs/API_Endpoints.md)
 
 These install instructions are based on running [Postgres.app](http://postgresapp.com/) version 9.4 on Mac OSX Yosemite, so make sure you have it installed 
