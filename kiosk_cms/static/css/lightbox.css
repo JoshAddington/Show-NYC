@@ -30,7 +30,7 @@ body:after {
   text-align: center;
   /*line-height: 0;*/
   /*font-weight: normal;*/
-  opacity: 0.75;
+  opacity: 1.0;
   display: none;
   width: 100%;
   overflow: none;
@@ -144,7 +144,6 @@ body:after {
   opacity: 1;
 }
 
-<<<<<<< Updated upstream
 .lb-dataContainer {                         /*Bottom div*/
   margin: 0 auto;
   padding-top: 5px;
