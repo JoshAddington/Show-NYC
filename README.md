@@ -4,7 +4,7 @@ Initial deployment is at http://intern-cms-dev.elasticbeanstalk.com/
 
 Mobile App repo is at https://github.com/sagekieran/mobile-cms
 
-Description of the project structure is [here](docs/project.md)
+Description of the [project structure is here](docs/project.md)
 
 [REST API Endpoints](docs/API_Endpoints.md)
 
@@ -60,22 +60,18 @@ AWS_ACCESS_KEY=*IAM User Access Key ID*
 
 
 #### Running the local server
-Every time you run the local server, make sure that you have the virtualenv running. Your terminal wiil show the currently running virtualenv at the beginning of each command prompt line. If you followed the detailed python instructions, the command prompt will read `(intern-cms)<username>:<current folder> <user>$`.
-
+The virtualenv must be running to run the local server. The terminal will show the current virtualenv at each command prompt line. If you followed the detailed python instructions, the command prompt will read `(intern-cms)<computer-name>:<current folder> <user>$`.
 If the command prompt does not have the virtualenv name at the front, then activate it by running `workon intern-cms`.
 
-To get Angular running for the server, Node.js and npm will need to be installed. You can get them from [http://nodejs.org/](http://nodejs.org/).
-
+To run Angular on the server, Node.js and npm will need to be installed. You can get them from [http://nodejs.org/](http://nodejs.org/).
 Once Node and npm are installed, install Angular and it's dependencies 
 listed in bower.json and package.json with
 ```
 npm install
 ```
-That only needs to be done for the initial project set up. 
 
 
-
-Now, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder to serve them from( This is set up in the kiosk/settings.py file. STATICFILES_DIRS is a list of folders that Django collects files from, and STATIC_ROOT is the folder where Django puts that collection of files to serve them from. 
+Now, you'll need to have Django collect the static files(CSS, JS, icons) and put them into the folder to serve them from (This is set up in the kiosk/settings.py file. STATICFILES_DIRS is a list of folders that Django collects files from, and STATIC_ROOT is the folder where Django puts that collection of files to serve them from). 
 
 To do this, `cd kiosk_cms` and run `python manage.py collectstatic --noinput`
 

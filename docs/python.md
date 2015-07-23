@@ -19,7 +19,7 @@ Next, create a virtualenv called intern-cms by running
 ```
 mkvirtualenv intern-cms
 ```
-We will be installing all our packages in this virtualenv because it keeps these packages from interfering with the rest of our system. Since we're installing our packages in the virtualenv, we'll also need to interact with Django from this virtualenv every time as well.
+We will be installing all our packages in this virtualenv because it keeps these packages from interfering with the rest of our system. Since we're installing our packages in the virtualenv, we'll also need to interact with Django from this virtualenv, which means the virtualenv needs to be running any time we run the local server.
 
 To deactivate the virtualenv, run 
 ```
