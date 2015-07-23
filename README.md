@@ -36,7 +36,7 @@ cd kiosk_cms
 python manage.py migrate
 ```
  
-Create your admin user with  `python manage.py createsuperuser `
+Create your admin user with  `python manage.py createsuperuser`
 
 #### AWS RDS Postgres usage
 
@@ -48,7 +48,7 @@ As this project is already set up to run on AWS Elastic Beanstalk and use a RDS 
 #### AWS S3 Media setup
 
 This project is set up to use an AWS S3 bucket for serving media files.
-If you need help setting up your S3 bucketand an IAM user, reference [this file](docs/AWS.md)
+If you need help setting up your S3 bucket and an IAM user, reference [this file](docs/AWS.md)
 
 With your bucket set up, add the following environment variables to your system, replacing the italics with the respective info. The IAM info will be in the credentials file that you downloaded when you created the IAM User. Be sure to save the credentials file somewhere safe and secure, as you will not be able to download it again.
 
@@ -75,4 +75,4 @@ Now, you'll need to have Django collect the static files(CSS, JS, icons) and put
 
 To do this, `cd kiosk_cms` and run `python manage.py collectstatic --noinput`
 
-To start the deveelopment server run `python manage.py runserver`
+To start the development server run `python manage.py runserver`
