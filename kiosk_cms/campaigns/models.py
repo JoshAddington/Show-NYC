@@ -30,6 +30,9 @@ class Campaign(models.Model):
     def is_active(self):
         return self.active
 
+    # deactivates any active campaigns, then activates itself
+    # sets next_active to False, in case it was not activated by another
+    # campaign's deactivation.
     def activate(self):
         old_campaigns = Campaign.objects.filter(active=True)
         for campaign in old_campaigns:
@@ -40,6 +43,8 @@ class Campaign(models.Model):
         self.save()
         return self
 
+    # activates either the next active campaign or the default campaign,
+    # and then deactivates itself
     def deactivate(self):
         next_campaign = Campaign.objects.filter(next_active=True)
         if next_campaign.count() != 0:

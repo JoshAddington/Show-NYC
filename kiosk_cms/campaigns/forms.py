@@ -10,6 +10,8 @@ class CampaignAdminForm(forms.ModelForm):
                   'stock_image', 'default_campaign', 'name',
                   'slug', 'description', 'start_date', 'end_date')
 
+    # checks if the 'active' field was changed, and called the 
+    # appropriate model method if it was changed.
     def save(self, commit=True):
         instance = super(CampaignAdminForm, self).save(commit=False)
 

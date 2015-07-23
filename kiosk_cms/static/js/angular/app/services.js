@@ -2,51 +2,51 @@ angular.module('myApp.services', [])
 
 .factory('activePhotos', function($http) {
 
-  var myService = {
-    async: function() {
-      // $http returns a promise, which has a then function, which also returns a promise
-      var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/active_campaigns/').then(function (response) {
-        // The then function here is an opportunity to modify the response
-        // console.log(response.data);
-        // The return value gets picked up by the then in the controller.
-        return response.data;
-      });
-      // Return the promise to the controller
-      return promise;
+    var myService = {
+        async: function() {
+            // $http returns a promise, which has a then function, which also returns a promise
+            var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/active_campaigns/').then(function(response) {
+                // The then function here is an opportunity to modify the response
+                // console.log(response.data);
+                // The return value gets picked up by the then in the controller.
+                return response.data;
+            });
+            // Return the promise to the controller
+            return promise;
+        }
     }
-  }
-  return myService;
+    return myService;
 
-  // active_campaign
+    // active_campaign
 
 })
 
-.factory('activeCampaign', function($http){
-  var myService = {
-    async: function() {
-      var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/campaigns/active/').then(function (response){
-        return response.data[0];
-      });
-      return promise;
+.factory('activeCampaign', function($http) {
+    var myService = {
+        async: function() {
+            var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/campaigns/active/').then(function(response) {
+                return response.data[0];
+            });
+            return promise;
+        }
     }
-  } 
-  return myService;
+    return myService;
 })
 
 .factory('inactivePhotos', function($http) {
 
     var myService = {
-      async: function() {
-        // $http returns a promise, which has a then function, which also returns a promise
-        var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/inactive_campaigns/').then(function (response) {
-          // The then function here is an opportunity to modify the response
-          // console.log(response);
-          // The return value gets picked up by the then in the controller.
-          return response.data;
-        });
-        // Return the promise to the controller
-        return promise;
-      }
+        async: function() {
+            // $http returns a promise, which has a then function, which also returns a promise
+            var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/inactive_campaigns/').then(function(response) {
+                // The then function here is an opportunity to modify the response
+                // console.log(response);
+                // The return value gets picked up by the then in the controller.
+                return response.data;
+            });
+            // Return the promise to the controller
+            return promise;
+        }
     }
     return myService;
 
@@ -57,17 +57,17 @@ angular.module('myApp.services', [])
 .factory('winningPhotos', function($http) {
 
     var myService = {
-      async: function() {
-        // $http returns a promise, which has a then function, which also returns a promise
-        var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/winners/').then(function (response) {
-          // The then function here is an opportunity to modify the response
-          // console.log(response);
-          // The return value gets picked up by the then in the controller.
-          return response.data;
-        });
-        // Return the promise to the controller
-        return promise;
-      }
+        async: function() {
+            // $http returns a promise, which has a then function, which also returns a promise
+            var promise = $http.get(window.location.protocol + '//' + window.location.host + '/api/images/winners/').then(function(response) {
+                // The then function here is an opportunity to modify the response
+                // console.log(response);
+                // The return value gets picked up by the then in the controller.
+                return response.data;
+            });
+            // Return the promise to the controller
+            return promise;
+        }
     }
     return myService;
 
