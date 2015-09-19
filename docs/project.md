@@ -24,12 +24,11 @@ Templates:
 
 Angular is used on the frontend, consuming the REST API served by Django
 
-The Angular app is located at kiosk_cms/static/js.angular/app/
+The Angular app is located at app/
 - app.js is the app config, with each module's config within it's own folder (about/, gallery/, submit/, vote/)
 - controllers.js contains the controller for each module, as well as the filter used for displaying strings as HTML.
 - services.js contains the service factories for returning API data.
-- the html templates used by Angular are at kiosk_cms/static/templates/
+- templates/ holds the html templates.
 
 Angular-img-cropper is used to crop images before submission. It's supplied with the static/js files instead
-of being bower installed because we had to change line 153 of angular-img-cropper.min.js to use canvas for event listeners instead of window event listeners, as the window event listeners broke scrolling on mobile devices.
-
+of being bower installed because we had to change line 153 of angular-img-cropper.min.js to use canvas event listeners instead of window event listeners, as the window event listeners broke scrolling on mobile devices.
