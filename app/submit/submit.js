@@ -4,7 +4,7 @@ angular.module('myApp.submit', ['ngRoute', 'myApp.services', 'angular-img-croppe
 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/submit', {
-        templateUrl: 'static/templates/submit.html',
+        templateUrl: 'static/app/templates/submit.html',
         controller: 'SubmitCtrl'
     });
 }])

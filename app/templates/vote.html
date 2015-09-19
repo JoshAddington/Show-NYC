@@ -21,7 +21,7 @@
   <div class="image-zoom-container-vote"> <!--Grid of vote photos-->
     <div class="zoom-container-vote" ng-repeat="photo in photos | orderBy:sortType:sortReverse">
       <!-- <img src='{{photo.image}}'> -->
-      <a href="{{photo.image}}" data-lightbox="example"><img class="example-" src="{{photo.image}}" alt="image"/></a>
+      <a href="{{photo.image}}" data-lightbox="example"><img class="example-" ng-src="{{photo.image}}" alt="image"/></a>
       <div>
         <style>
           #emptyHeart{{photo.id}}{
@@ -50,4 +50,3 @@
   </div>
   <br>
 </div>
-
