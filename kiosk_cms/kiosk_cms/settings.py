@@ -143,7 +143,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, '..', 'bower')
+    os.path.join(BASE_DIR, '..', 'bower'),
+    ('app', os.path.join(BASE_DIR, '..', 'app'))
 )
 
 # Amazon Web Services settings
@@ -163,7 +164,5 @@ MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'kiosk_cms.custom_storages.MediaStorage'
 
-
 # Django CORS Headers Settings
-
 CORS_ORIGIN_ALLOW_ALL = True
