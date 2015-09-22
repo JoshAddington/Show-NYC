@@ -150,7 +150,7 @@ STATICFILES_DIRS = (
 # Amazon Web Services settings
 
 # Name of AWS S3 bucket to be used for media storage
-AWS_STORAGE_BUCKET_NAME = 'cg-intern'
+AWS_STORAGE_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
 
 # Access Key ID and Secret Access Key are AWS User credentials
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY']
