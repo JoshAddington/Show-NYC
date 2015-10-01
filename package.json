@@ -3,11 +3,10 @@
     "unsafe-perm":true
   },
   "repository": "https://github.com/angular/angular-seed",
-  "devDependencies": {
-    "bower": "^1.3.1"
+  "dependencies": {
+    "bower": "^1.5.1"
   },
   "scripts": {
-    "postinstall": "bower install"
-	}
-
+      "postinstall": "bower install --allow-root"
+  }
 }

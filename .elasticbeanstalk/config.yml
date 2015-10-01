@@ -1,12 +1,10 @@
 branch-defaults:
-  aws:
-    environment: intern-cms-dev
-  master:
-    environment: intern-cms-dev
+  minor_css:
+    environment: show-nyc
 global:
-  application_name: intern-cms
-  default_ec2_keyname: cg-intern
-  default_platform: Python 2.7
+  application_name: show-nyc
+  default_ec2_keyname: code_key
+  default_platform: 64bit Amazon Linux 2015.03 v2.0.1 running Python 2.7
   default_region: us-east-1
-  profile: null
+  profile: eb-cli
   sc: git
